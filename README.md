@@ -22,6 +22,8 @@ ideas/（选题池） ──► drafts/（AI 草稿+改稿） ──► publishe
 | `drafts/` | 写作中的文章，frontmatter `status: draft` |
 | `published/` | 发布后归档，`status: published` |
 | `assets/` | doocs/md 主题 CSS 备份（`theme.css`）、题图等素材 |
+| `wiki/` | **claude-obsidian 插件管的知识库**（带溯源的素材沉淀），文章不进这里 |
+| `inbox/` | 插件的捕获暂存区，外部资料先落这再由 wiki-ingest 消化 |
 
 ## 环境备忘
 

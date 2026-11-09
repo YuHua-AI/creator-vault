@@ -10,6 +10,19 @@ ideas/（选题池，一行一个想法）→ drafts/（AI 草稿+改稿）→ p
 
 发布完成的标志：frontmatter `status: published`，文件移入 `published/`，git commit。
 
+## 双体系分界（claude-obsidian 插件 vs 写作管线）
+
+`wiki/`、`inbox/`、`.raw/` 归 claude-obsidian 插件管；`ideas/`、`drafts/`、`published/` 是写作管线。判别一条内容归属：
+
+- **值得长期记住的知识/素材**（调研结论、参考来源、可复用观点）→ `wiki/`，走 wiki-ingest/save
+- **一篇要发布的文章** → `drafts/`，绝不能把文章草稿写进 `wiki/`
+
+规则：
+
+- 不手工编辑 `wiki/meta/ledgers/`（插件的溯源账本，由其事务机制维护）
+- 文章 frontmatter 用本库约定（title/date/status/tags）；wiki 页跟随插件自己的元数据格式，两套格式不互用
+- 发布后的文章若含可复用观点，可 `save` 回 wiki（可选，非必须）
+
 ## frontmatter 约定（每篇必带）
 
 ```yaml
