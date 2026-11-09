@@ -1,0 +1,48 @@
+{
+  "approval_sha256": "f83f3634441dfbecf879c78fd0e2c346267961168f4bdbcf8f4bc9a8ed9f92ea",
+  "bundle_sha256": "0b2d8e1fb98079e25555958b467153b1ac91941a1ff9acff8b2197459bc498ce",
+  "changed_paths": [
+    ".claude-obsidian.json",
+    ".obsidian/graph.json",
+    ".obsidian/snippets/vault-colors.css",
+    ".raw/.manifest.json",
+    "inbox/.gitkeep",
+    "wiki/hot.md",
+    "wiki/index.md",
+    "wiki/log.md",
+    "wiki/meta/ledgers/claim-ledger.json",
+    "wiki/meta/ledgers/source-ledger.json",
+    "wiki/overview.md"
+  ],
+  "expanded_bundle_sha256": "0b2d8e1fb98079e25555958b467153b1ac91941a1ff9acff8b2197459bc498ce",
+  "hashes": {
+    ".claude-obsidian.json": "5701c6910dcdb39cd0494769e6e8e2814cbb01cf2bc5c29d2b40fcf5094e1453",
+    ".obsidian/graph.json": "574d00b8e5c2e16724678023c50a85e727af9067839f8612c55958e525f90c99",
+    ".obsidian/snippets/vault-colors.css": "908fd97fabd94e989cc979605bb7b17b4da33c409e4846fd701780aea53107fd",
+    ".raw/.manifest.json": "3061feca9f7973930654de66ebf3bb0959e23783f0129ce899634c91e2c050fb",
+    "inbox/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "wiki/hot.md": "cc9608f6dff3215ef99664eb604dbd6caabc8dfb049a659b6efb7eaa3cdd321e",
+    "wiki/index.md": "040534897c6921a59f0cf1b4a4926ac730917820648065772e111f627424e3ed",
+    "wiki/log.md": "400339fea482ca98b0ed216460a1e8a05518f0cfb165d8ded5a338bf0cf6f23a",
+    "wiki/meta/ledgers/claim-ledger.json": "4de1e61043935558accf68414cf8de5d52faba35aa2630c2c9996dbf1ab25491",
+    "wiki/meta/ledgers/source-ledger.json": "9204fc6085c48924bec781ee0dd8782af8484d5bcd515ea8b623bdab6fae0632",
+    "wiki/overview.md": "1478a5b4539afe7e7bda4e772d9efd1756b56cc65acdd9f805cc06edc7228414"
+  },
+  "modes": {
+    ".claude-obsidian.json": 384,
+    ".obsidian/graph.json": 384,
+    ".obsidian/snippets/vault-colors.css": 384,
+    ".raw/.manifest.json": 384,
+    "inbox/.gitkeep": 384,
+    "wiki/hot.md": 384,
+    "wiki/index.md": 384,
+    "wiki/log.md": 384,
+    "wiki/meta/ledgers/claim-ledger.json": 384,
+    "wiki/meta/ledgers/source-ledger.json": 384,
+    "wiki/overview.md": 384
+  },
+  "operation_id": "adopt-20261109T095713Z",
+  "operation_type": "migration",
+  "schema": "claude-obsidian.transaction-result.v1",
+  "status": "complete"
+}
