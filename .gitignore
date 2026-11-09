@@ -1,0 +1,10 @@
+# Obsidian 设备态（每设备不同，不入库）
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/plugins/remotely-save/data.json
+
+# 系统杂项
+.DS_Store
+
+# git bundle 灾备文件（体积大，按需手动生成）
+backups/
