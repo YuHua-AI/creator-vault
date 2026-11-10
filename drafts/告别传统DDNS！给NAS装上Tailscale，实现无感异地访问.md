@@ -1,11 +1,11 @@
 ---
-title: '没有公网 IP，也能随时回家：群晖 NAS 装 Tailscale 保姆级实录'
+title: '告别传统 DDNS！给 NAS 装上 Tailscale，实现无感异地访问'
 date: 2026-11-10
 status: draft
 tags: [NAS, Tailscale, 内网穿透, 自建服务]
 ---
 
-# 没有公网 IP，也能随时回家：群晖 NAS 装 Tailscale 保姆级实录
+# 告别传统 DDNS！给 NAS 装上 Tailscale，实现无感异地访问
 
 欢迎登陆「屿华AI」数字岛屿。大家好，我是屿华。
 
