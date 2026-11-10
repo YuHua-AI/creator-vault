@@ -1,11 +1,11 @@
 ---
-title: 'NAS 跑个主页就卡死？老 MacBook 再就业，我的极客数字岛屿搭建指南'
+title: 'DS218play 跑个 Homepage 就卡死？老 MacBook 再就业'
 date: 2026-11-09
 status: review
 tags: [NAS, Mac, 自建服务, 数字生活]
 ---
 
-# NAS 跑个主页就卡死？老 MacBook 再就业，我的极客数字岛屿搭建指南
+# DS218play 跑个 Homepage 就卡死？老 MacBook 再就业
 
 欢迎登陆「屿华AI」数字岛屿。大家好，我是屿华。
 
