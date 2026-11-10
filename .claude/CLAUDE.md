@@ -10,6 +10,8 @@ ideas/（选题池，一行一个想法）→ drafts/（AI 草稿+改稿）→ p
 
 发布完成的标志：frontmatter `status: published`，文件移入 `published/`，git commit。
 
+每篇文章一个文件夹：`drafts/<文章短名>/article.md + img/`（短名去掉标点用连字符连接；图片命名主图 `cover.jpg`、插图 `01-xxx.jpg` 递增，正文用相对路径 `img/…` 引用）。发布归档时整个文件夹移入 `published/`。
+
 ## 双体系分界（claude-obsidian 插件 vs 写作管线）
 
 `wiki/`、`inbox/`、`.raw/` 归 claude-obsidian 插件管；`ideas/`、`drafts/`、`published/` 是写作管线。判别一条内容归属：
