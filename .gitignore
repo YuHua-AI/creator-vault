@@ -8,3 +8,4 @@
 
 # git bundle 灾备文件（体积大，按需手动生成）
 backups/
+.claude/skills/write-article/scripts/node_modules/

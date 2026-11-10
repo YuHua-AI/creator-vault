@@ -1,0 +1,16 @@
+{
+  "name": "write-article-scripts",
+  "version": "1.0.0",
+  "description": "gzh-vault write-article skill tooling (creds stay outside the vault)",
+  "main": "verify-draft.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.65.0"
+  }
+}
