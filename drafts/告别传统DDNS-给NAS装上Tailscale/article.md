@@ -5,8 +5,6 @@ status: draft
 tags: [NAS, Tailscale, 内网穿透, 自建服务]
 ---
 
-# 告别传统 DDNS！给 NAS 装上 Tailscale，实现无感异地访问
-
 上周五下班，我还在地铁上，编辑微信催稿：那篇稿子改得怎么样了？
 
 稿子在哪？在我家 NAS 的写作库里。人在地下一层，NAS 在家里书架上。
