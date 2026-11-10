@@ -36,7 +36,7 @@ tags: [主题标签]
 
 ## 写作规范
 
-- **实例必须取材自 nas-ops 真实运维库**（`/Users/yaohua/Workspace/06_Tools/nas-ops`）：文章中的具体场景、端口、脚本、服务清单、架构细节一律先读该库求证（重点：`docs/architecture.md`、`docs/network_topology.md`、`docker-compose/`、`configs-backup/`、`scripts/`），写真实发生过的事，不编造与真实环境矛盾的"假实例"。转述时脱敏：遵守 nas-ops 安全红线，密码/内网真实 IP/密钥绝不入文。
+- **实例必须取材自 nas-ops 真实运维库**（`/Users/yaohua/Workspace/06_Tools/nas-ops`）：文章中的具体场景、端口、脚本、服务清单、架构细节一律先读该库求证（重点：`docs/architecture.md`、`docs/network_topology.md`、`docker-compose/`、`configs-backup/`、`scripts/`），写真实发生过的事，不编造与真实环境矛盾的"假实例"。转述时脱敏：遵守 nas-ops 安全红线，密码/内网真实 IP/密钥绝不入文；**正文中不出现设备具体型号（如 NAS/Mac/手机型号）与具体端口号**，教程写成通用指引（"对应自己机型的架构包"、"平时访问的地址换个开头"这类表述）。
 - 面向公众号读者：段落短（3~5 行内），金句/结论前置，善用小标题分节
 - 中文排版：中英文与数字之间加空格，全角标点
 - 代码块和技术内容：给出最小可运行示例，公众号端展示靠 doocs/md 的代码主题
