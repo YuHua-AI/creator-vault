@@ -87,10 +87,15 @@ tags: [NAS, Tailscale, 内网穿透, 自建服务]
 - **关闭密钥过期**：Machines → 找到 NAS → Disable key expiry。默认密钥 90 天过期，到时候 NAS 悄悄掉线，而你人在外地干瞪眼；
 - **开启 MagicDNS**：DNS 页 → Enable MagicDNS。以后地址里那串 IP 直接换成设备名就能访问，连 IP 都不用背。
 
-### 第三步：Mac 与 iPhone 入网（各 2 分钟）
+### 第三步：Mac、iPhone、Windows 入网（各 2 分钟）
 
 - **Mac**：官网下载客户端，登录同一个账号，菜单栏常驻一个小图标；
-- **iPhone**：App Store 搜 Tailscale，安装后允许添加 VPN 配置（这就是加密隧道的载体），开关保持 Active 即可。
+- **iPhone**：App Store 搜 Tailscale，安装后允许添加 VPN 配置（这就是加密隧道的载体），开关保持 Active 即可；
+- **Windows**：两种装法任选——官网下载 .exe 安装包（需要管理员权限），或者直接在 Microsoft Store 搜 Tailscale（商店版免管理员权限，公司电脑也能装）。登录同一账号后，系统托盘常驻图标，右键即可连接或断开。
+
+Windows 用户还有一个专属爽点：打开文件资源管理器，在地址栏输入 `\\NAS 的设备名`，家里的共享文件夹直接弹出来——跟在公司打开局域网共享一模一样的体验。
+
+我家里剩下的两台 Windows 就是这么挂着的：平时不开机，开机即在网内，不需要任何手动操作。
 
 **验收时刻**：Mac 连上手机热点，把平时访问 DSM 的地址开头那串局域网 IP，换成 NAS 的 Tailscale IP（或设备名）——登录页秒开。
 
