@@ -5,8 +5,6 @@ status: review
 tags: [NAS, Mac, 自建服务, 数字生活]
 ---
 
-# DS218play 跑个 Homepage 就卡死？老 MacBook 再就业
-
 欢迎登陆「屿华AI」数字岛屿。大家好，我是屿华。
 
 今天这篇不聊 AI，聊聊我家的数字基建——一套被一次"卡死事故"逼出来的方案。
