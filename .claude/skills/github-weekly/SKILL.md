@@ -27,7 +27,7 @@ cd tools/github-weekly-rank && git pull    # GitHub 访问走 https_proxy=http:/
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
 - `coverIntro` + `coverTags`：封面榜单行的短介绍与 2 个标签；`tags`：卡片底部 3 个标签
-- 口吻面向公众号读者：说人话、有钩子，参考往期 `published/GitHub周榜-*/img-src/data.json`
+- 口吻面向公众号读者：说人话、有钩子，参考往期 `published/GitHub周榜/*/img-src/data.json`
 
 ### ③ 图标映射
 
@@ -35,7 +35,7 @@ cd tools/github-weekly-rank && git pull    # GitHub 访问走 https_proxy=http:/
 
 ### ④ 建 draft + 填 data.json
 
-- 文件夹：`drafts/GitHub周榜-<周文件日期>/`（如 `GitHub周榜-20261109`）
+- 文件夹：`drafts/GitHub周榜/<周文件日期>/`——系列父目录 + 周日期子目录（如 `drafts/GitHub周榜/20261116/`），目录即体现周报时间；归档时整个周目录移入 `published/GitHub周榜/`
 - `img-src/data.json`（本 skill 唯一数据源，schema 见下）
 - `article.md` 壳：frontmatter（`title`；`post_title` ≤32 字；`date`；`status: draft`；`tags: [GitHub, 开源周报, AI Agent]`；`platform: [公众号]`）+ 开场 2~3 行（本周趋势一句话）+ 9 图连排（cover 在首）+ 收尾互动
 
