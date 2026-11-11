@@ -1,7 +1,7 @@
 ---
 title: GitHub 周榜｜本周涨星最快的 8 个开源项目，7 个和 Agent 有关
 date: 2026-11-11
-status: draft
+status: review
 tags: [GitHub, 开源周报, AI Agent]
 platform: [公众号]
 ---
