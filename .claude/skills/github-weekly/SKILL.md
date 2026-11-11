@@ -12,17 +12,19 @@ argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一�
 
 ## 每期流程
 
-### ① 拉数据
+### ① 拉数据（一键自动）
 
 ```
-cd tools/github-weekly-rank && git pull    # GitHub 访问走 https_proxy=http://127.0.0.1:7890
+node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116]   # 缺省取最新一周
 ```
 
-取当周文件 `YYYY/MM/YYYYMMDD.md`，解析「一周增长星数」Top 8：owner/repo、总星标、周增长、语言、建仓时间。**星数一律以该文件为准，不凭印象写。**
+自动完成：`tools/github-weekly-rank` git pull（走代理，失败用本地数据继续）→ 定位当周 `YYYY/MM/YYYYMMDD.md` → 解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 若 `drafts/GitHub周榜/<week>/` 不存在则脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
 
-### ② 调研 8 个仓库
+**星数一律以周榜文件解析结果为准，不凭印象写。**
 
-每仓读 README 与仓库元数据（GitHub API，同样走代理，如 `https_proxy=http://127.0.0.1:7890 gh api repos/<owner>/<repo>/readme`），按卡片字段提炼：
+### ② 调研 8 个仓库，补齐 data.json 的 TODO
+
+脚手架已把数值字段填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API，同样走代理，如 `https_proxy=http://127.0.0.1:7890 gh api repos/<owner>/<repo>/readme`），提炼：
 
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
@@ -33,11 +35,11 @@ cd tools/github-weekly-rank && git pull    # GitHub 访问走 https_proxy=http:/
 
 每个项目映射 `scripts/icons.js` 的 ICONS key；没有贴题的就**新画一个**追加进 icons.js（随本批 commit，图标库逐期积累）。图标规范：中心原点、覆盖约 ±60、线框风——`#35D0FF` 描边 3.5 / `#12294D` 填充 / `#3EE8B0` 点缀，封面行内 scale(0.7)、卡片 scale(1.6)。
 
-### ④ 建 draft + 填 data.json
+### ④ 壳文案收尾
 
-- 文件夹：`drafts/GitHub周榜/<周文件日期>/`——系列父目录 + 周日期子目录（如 `drafts/GitHub周榜/20261116/`），目录即体现周报时间；归档时整个周目录移入 `published/GitHub周榜/`
-- `img-src/data.json`（本 skill 唯一数据源，schema 见下）
-- `article.md` 壳：frontmatter（`title`；`post_title` ≤32 字；`date`；`status: draft`；`tags: [GitHub, 开源周报, AI Agent]`；`platform: [公众号]`）+ 开场 2~3 行（本周趋势一句话）+ 9 图连排（cover 在首）+ 收尾互动
+脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤32 字。目录约定：`drafts/GitHub周榜/<周文件日期>/`（系列父目录 + 周日期子目录），归档时整个周目录移入 `published/GitHub周榜/`。
+
+data.json schema（脚手架产物同构，把 TODO 字段替换为实文即可）：
 
 ```json
 {
