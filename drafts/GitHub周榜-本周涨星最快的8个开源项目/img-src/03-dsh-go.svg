@@ -9,66 +9,75 @@
     <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
       <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
     </pattern>
-    <g id="ic-phone" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <rect x="-24" y="-34" width="42" height="68" rx="9" fill="#12294D"/><line x1="-10" y1="24" x2="4" y2="24"/>
-      <path d="M-8 -8 L6 0 L-8 8 Z" fill="#3EE8B0" stroke="none"/><path d="M28 -18 Q40 0 28 18" stroke="#3EE8B0"/></g>
+    <g id="ic-remote" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-32" width="36" height="64" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="22" x2="-30" y2="22"/>
+      <path d="M-14 -14 Q0 0 -14 14"/>
+      <path d="M-6 -24 Q16 0 -6 24" stroke="#3EE8B0"/>
+      <rect x="10" y="-26" width="46" height="34" rx="5" fill="#12294D"/>
+      <line x1="33" y1="8" x2="33" y2="16"/>
+      <line x1="21" y1="16" x2="45" y2="16"/>
+      <path d="M22 -15 L33 -7 L25 -1 Z" fill="#3EE8B0" stroke="none"/></g>
   </defs>
 
   <rect width="1350" height="1800" fill="url(#bgGlow)"/>
   <rect width="1350" height="1800" fill="url(#grid)"/>
-  <ellipse cx="240" cy="1560" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
   <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
   <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
   <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
 
   <!-- 顶部胶囊 -->
-  <rect x="64" y="64" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="299" y="100" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
-  <text x="64" y="152" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
-  <rect x="1074" y="64" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="1.8"/>
-  <text x="1180" y="101" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#3EE8B0">NO.03</text>
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#3EE8B0">NO.03</text>
 
-  <!-- 图标 -->
-  <use href="#ic-phone" x="675" y="330" transform="translate(675 330) scale(1.75) translate(-675 -330)"/>
+  <!-- 专属图标 -->
+  <use href="#ic-remote" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 项目名 -->
-  <text x="675" y="492" text-anchor="middle" font-size="30" letter-spacing="3" fill="#6B8299">ccch1mneyyy</text>
-  <text x="675" y="590" text-anchor="middle" font-size="92" font-weight="800" fill="#FFFFFF">dsh-Go</text>
+  <!-- 标题 + 作者/仓库小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">口袋 Agent 遥控器</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">ccch1mneyyy / dsh-Go · Dart</text>
 
-  <!-- 定位句 -->
-  <text x="675" y="706" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把 Agent 遥控器装进口袋</text>
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把 Agent 遥控器装进口袋</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 7.3k</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#3EE8B0" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">本周增长 WEEKLY</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">▲ 4,915</text>
 
   <!-- 分隔线 -->
-  <line x1="220" y1="768" x2="1130" y2="768" stroke="#29527A" stroke-width="2"/>
-  <circle cx="675" cy="768" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
-  <!-- 描述 -->
-  <text x="675" y="846" text-anchor="middle" font-size="30" fill="#B8CCDF">DeepSeek Harness 的 Android 客户端：手机本地直接跑，</text>
-  <text x="675" y="900" text-anchor="middle" font-size="30" fill="#B8CCDF">也能遥控电脑上的 DSH。躺在沙发刷手机，</text>
-  <text x="675" y="954" text-anchor="middle" font-size="30" fill="#B8CCDF">顺手盯一眼 Agent 干活、发个新指令。</text>
-
-  <!-- 数据 2×2 -->
-  <rect x="110" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">总星标</text>
-      <text x="385" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">7.3k</text>
-<rect x="690" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">周增长</text>
-      <text x="965" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#3EE8B0">+4915</text>
-<rect x="110" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">开源时间</text>
-      <text x="385" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">2026-10-31</text>
-<rect x="690" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">主语言</text>
-      <text x="965" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">Dart</text>
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+    <text x="110" y="1044" font-size="27" fill="#B8CCDF">DeepSeek Harness 的 Android 客户端，手机本地直接</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">跑，也能连回电脑上的 DSH 一起用。</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="110" y="1260" font-size="27" fill="#B8CCDF">躺在沙发刷手机时，顺手盯一眼电脑里 Agent 的进度，</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">发个新指令让它接着干。</text>
+  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+    <text x="110" y="1476" font-size="27" fill="#B8CCDF">挂着长任务出门、需要随时照看 Agent 干活状态</text>
+  <text x="110" y="1522" font-size="27" fill="#B8CCDF">的重度 Agent 用户。</text>
 
   <!-- 标签 -->
-  <rect x="304.0" y="1306" width="259.9" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="433.9" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Android</text><rect x="587.9" y="1306" width="259.9" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="717.8" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Flutter</text><rect x="871.8" y="1306" width="174.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="958.9" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">遥控电脑</text>
+  <rect x="330.3" y="1564" width="241.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="451.1" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Android</text><rect x="594.0" y="1564" width="241.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="714.8" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Flutter</text><rect x="857.6" y="1564" width="162.1" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="938.6" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">遥控电脑</text>
 
   <!-- 底部 -->
-  <line x1="64" y1="1656" x2="1286" y2="1656" stroke="#1E3A56" stroke-width="2"/>
-  <text x="64" y="1712" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
-  <text x="1286" y="1712" text-anchor="end" font-size="24" fill="#4E6A85">github.com/ccch1mneyyy/dsh-Go</text>
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/ccch1mneyyy/dsh-Go</text>
 </svg>

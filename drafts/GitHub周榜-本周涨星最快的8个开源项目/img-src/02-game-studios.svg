@@ -9,67 +9,71 @@
     <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
       <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
     </pattern>
-    <g id="ic-gamepad" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M-38 -14 Q-38 -26 -24 -26 H24 Q38 -26 38 -14 V10 Q38 24 24 22 L14 16 H-14 L-24 22 Q-38 24 -38 10 Z" fill="#12294D"/>
-      <path d="M-20 -6 V8 M-27 1 H-13"/>
-      <circle cx="16" cy="-4" r="4.5" fill="#3EE8B0" stroke="none"/><circle cx="27" cy="6" r="4.5" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-gamestudio" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-40 -12 Q-40 -26 -24 -26 H24 Q40 -26 40 -12 V10 Q40 24 26 22 L14 15 H-14 L-26 22 Q-40 24 -40 10 Z" fill="#12294D"/>
+      <path d="M-22 -6 V8 M-29 1 H-15"/>
+      <path d="M12 -9 L28 0 L12 9 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M32 -20 Q42 -16 40 -6" stroke="#3EE8B0"/></g>
   </defs>
 
   <rect width="1350" height="1800" fill="url(#bgGlow)"/>
   <rect width="1350" height="1800" fill="url(#grid)"/>
-  <ellipse cx="240" cy="1560" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
   <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
   <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
   <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
 
   <!-- 顶部胶囊 -->
-  <rect x="64" y="64" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="299" y="100" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
-  <text x="64" y="152" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
-  <rect x="1074" y="64" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="1.8"/>
-  <text x="1180" y="101" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#3EE8B0">NO.02</text>
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#3EE8B0">NO.02</text>
 
-  <!-- 图标 -->
-  <use href="#ic-gamepad" x="675" y="330" transform="translate(675 330) scale(1.75) translate(-675 -330)"/>
+  <!-- 专属图标 -->
+  <use href="#ic-gamestudio" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 项目名 -->
-  <text x="675" y="492" text-anchor="middle" font-size="30" letter-spacing="3" fill="#6B8299">Donchitos</text>
-  <text x="675" y="600" text-anchor="middle" font-size="54" font-weight="800" fill="#FFFFFF">Claude-Code-Game-Studios</text>
+  <!-- 标题 + 作者/仓库小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">AI 游戏工作室</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">Donchitos / Claude-Code-Game-Studios · Shell</text>
 
-  <!-- 定位句 -->
-  <text x="675" y="706" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">一句话，出一个能玩的游戏</text>
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">一句话，出一个能玩的游戏</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 34.5k</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#3EE8B0" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">本周增长 WEEKLY</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">▲ 6,071</text>
 
   <!-- 分隔线 -->
-  <line x1="220" y1="768" x2="1130" y2="768" stroke="#29527A" stroke-width="2"/>
-  <circle cx="675" cy="768" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
-  <!-- 描述 -->
-  <text x="675" y="846" text-anchor="middle" font-size="30" fill="#B8CCDF">描述一个游戏，Claude Code 追问几个问题、写一页</text>
-  <text x="675" y="900" text-anchor="middle" font-size="30" fill="#B8CCDF">策划案，直接产出能玩的浏览器游戏。49 个 AI agent</text>
-  <text x="675" y="954" text-anchor="middle" font-size="30" fill="#B8CCDF">按真实游戏工作室的层级分工协作。</text>
-
-  <!-- 数据 2×2 -->
-  <rect x="110" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">总星标</text>
-      <text x="385" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">34.5k</text>
-<rect x="690" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">周增长</text>
-      <text x="965" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#3EE8B0">+6071</text>
-<rect x="110" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">开源时间</text>
-      <text x="385" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">2026-02-12</text>
-<rect x="690" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">主语言</text>
-      <text x="965" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">Shell</text>
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+    <text x="110" y="1044" font-size="27" fill="#B8CCDF">把 Claude Code 变成完整游戏工作室：49 个 AI agent、</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">72 项工作流技能，按真实工作室的层级分工协作。</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="110" y="1260" font-size="27" fill="#B8CCDF">描述一个游戏想法，agent 先追问细节、写一页策划案，</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">然后直接产出能在浏览器里玩的游戏。</text>
+  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+    <text x="110" y="1476" font-size="27" fill="#B8CCDF">想体验多 agent 协作威力、快速产出游戏原型的</text>
+  <text x="110" y="1522" font-size="27" fill="#B8CCDF">独立开发者和小团队。</text>
 
   <!-- 标签 -->
-  <rect x="232.6" y="1306" width="374.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="419.6" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Claude Code</text><rect x="630.7" y="1306" width="174.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="717.8" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">游戏开发</text><rect x="829.0" y="1306" width="288.5" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="973.2" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Agent 协作</text>
+  <rect x="264.0" y="1564" width="347.7" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="437.9" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Claude Code</text><rect x="633.7" y="1564" width="162.1" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="714.8" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">游戏开发</text><rect x="817.8" y="1564" width="268.2" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="951.9" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Agent 协作</text>
 
   <!-- 底部 -->
-  <line x1="64" y1="1656" x2="1286" y2="1656" stroke="#1E3A56" stroke-width="2"/>
-  <text x="64" y="1712" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
-  <text x="1286" y="1712" text-anchor="end" font-size="24" fill="#4E6A85">github.com/Donchitos/Claude-Code-Game-Studios</text>
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/Donchitos/Claude-Code-Game-Studios</text>
 </svg>

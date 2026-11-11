@@ -1,240 +1,207 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
   <defs>
-    <radialGradient id="bgGlow" cx="38%" cy="28%" r="85%">
-      <stop offset="0%" stop-color="#16294A"/>
-      <stop offset="100%" stop-color="#0A1826"/>
+    <radialGradient id="bgGlow" cx="42%" cy="22%" r="90%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
     </radialGradient>
     <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#35D0FF"/>
-      <stop offset="100%" stop-color="#5B8CFF"/>
+      <stop offset="0" stop-color="#35D0FF"/><stop offset="1" stop-color="#3EE8B0"/>
     </linearGradient>
     <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#35D0FF"/>
     </filter>
     <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3EE8B0"/>
     </filter>
     <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
       <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
     </pattern>
-
-    <!-- 图标 1: 机器人（超级 Agent） -->
-    <g id="ic1" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <line x1="0" y1="-38" x2="0" y2="-26"/>
-      <circle cx="0" cy="-42" r="5" fill="#3EE8B0" stroke="none"/>
-      <rect x="-33" y="-26" width="66" height="52" rx="12" fill="#12294D"/>
-      <circle cx="-14" cy="-2" r="6" fill="#3EE8B0" stroke="none"/>
-      <circle cx="14" cy="-2" r="6" fill="#3EE8B0" stroke="none"/>
-      <path d="M-12 14 H12"/>
-    </g>
-    <!-- 图标 2: 游戏手柄 -->
-    <g id="ic2" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M-38 -14 Q-38 -26 -24 -26 H24 Q38 -26 38 -14 V10 Q38 24 24 22 L14 16 H-14 L-24 22 Q-38 24 -38 10 Z" fill="#12294D"/>
-      <path d="M-20 -6 V8 M-27 1 H-13"/>
-      <circle cx="16" cy="-4" r="4.5" fill="#3EE8B0" stroke="none"/>
-      <circle cx="27" cy="6" r="4.5" fill="#3EE8B0" stroke="none"/>
-    </g>
-    <!-- 图标 3: 手机 + 遥控弧 -->
-    <g id="ic3" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <rect x="-24" y="-34" width="42" height="68" rx="9" fill="#12294D"/>
-      <line x1="-10" y1="24" x2="4" y2="24"/>
-      <path d="M-8 -8 L6 0 L-8 8 Z" fill="#3EE8B0" stroke="none"/>
-      <path d="M28 -18 Q40 0 28 18" stroke="#3EE8B0"/>
-    </g>
-    <!-- 图标 4: 盾牌 + 对勾（纪律） -->
-    <g id="ic4" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M0 -36 L30 -24 V4 Q30 26 0 38 Q-30 26 -30 4 V-24 Z" fill="#12294D"/>
-      <path d="M-13 0 L-3 11 L15 -12" stroke="#3EE8B0"/>
-    </g>
-    <!-- 图标 5: 画笔 -->
-    <g id="ic5" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M-30 30 L-8 8" />
-      <path d="M-8 8 L22 -30 L34 -18 L2 14 Z" fill="#12294D"/>
-      <path d="M-8 8 L2 14 L-14 20 Z" fill="#3EE8B0" stroke="none"/>
-      <path d="M-36 -18 Q-24 -26 -12 -18" stroke="#3EE8B0"/>
-    </g>
-    <!-- 图标 6: 扳手 -->
-    <g id="ic6" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M24 -34 Q4 -30 -2 -12 Q-6 -2 -14 6 L-30 22 Q-36 28 -30 34 Q-24 40 -18 34 L-2 18 Q6 10 16 6 Q32 0 34 -20 Z" fill="#12294D"/>
-      <circle cx="-26" cy="26" r="5" fill="#3EE8B0" stroke="none"/>
-    </g>
-    <!-- 图标 7: 等距立方体 -->
-    <g id="ic7" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <g id="ic-superagent" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <ellipse cx="0" cy="16" rx="54" ry="20" stroke="#5B8CFF" stroke-dasharray="5 9" opacity="0.85"/>
+      <circle cx="-54" cy="16" r="5.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="47" cy="-2" r="4.5" fill="#35D0FF" stroke="none"/>
+      <line x1="0" y1="-14" x2="0" y2="-25"/><circle cx="0" cy="-29" r="4.5" fill="#3EE8B0" stroke="none"/>
+      <rect x="-27" y="-14" width="54" height="48" rx="11" fill="#12294D"/>
+      <circle cx="-12" cy="8" r="5" fill="#3EE8B0" stroke="none"/><circle cx="12" cy="8" r="5" fill="#3EE8B0" stroke="none"/>
+      <path d="M-10 26 H10"/></g>
+    <g id="ic-gamestudio" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-40 -12 Q-40 -26 -24 -26 H24 Q40 -26 40 -12 V10 Q40 24 26 22 L14 15 H-14 L-26 22 Q-40 24 -40 10 Z" fill="#12294D"/>
+      <path d="M-22 -6 V8 M-29 1 H-15"/>
+      <path d="M12 -9 L28 0 L12 9 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M32 -20 Q42 -16 40 -6" stroke="#3EE8B0"/></g>
+    <g id="ic-remote" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-32" width="36" height="64" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="22" x2="-30" y2="22"/>
+      <path d="M-14 -14 Q0 0 -14 14"/>
+      <path d="M-6 -24 Q16 0 -6 24" stroke="#3EE8B0"/>
+      <rect x="10" y="-26" width="46" height="34" rx="5" fill="#12294D"/>
+      <line x1="33" y1="8" x2="33" y2="16"/>
+      <line x1="21" y1="16" x2="45" y2="16"/>
+      <path d="M22 -15 L33 -7 L25 -1 Z" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-skillfile" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-30 -40 H12 L34 -18 V40 H-30 Z" fill="#12294D"/>
+      <path d="M12 -40 V-18 H34"/>
+      <path d="M-20 -4 L-14 2 L-2 -10" stroke="#3EE8B0"/>
+      <path d="M-20 16 L-14 22 L-2 10" stroke="#3EE8B0"/>
+      <line x1="-8" y1="32" x2="16" y2="32"/></g>
+    <g id="ic-uiwin" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-32" width="92" height="64" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="-12" x2="46" y2="-12"/>
+      <circle cx="-36" cy="-22" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-27" cy="-22" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-18" cy="-22" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <rect x="-34" y="-2" width="32" height="26" rx="4" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/>
+      <line x1="6" y1="2" x2="34" y2="2"/><line x1="6" y1="14" x2="26" y2="14"/><line x1="6" y1="26" x2="34" y2="26"/></g>
+    <g id="ic-craft" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-50" y="-30" width="80" height="58" rx="8" fill="#12294D"/>
+      <line x1="-50" y1="-12" x2="30" y2="-12"/>
+      <circle cx="-40" cy="-21" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-31" cy="-21" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-38" y1="4" x2="6" y2="4"/>
+      <circle cx="-20" cy="16" r="4" fill="#3EE8B0" stroke="none"/>
+      <line x1="14" y1="34" x2="42" y2="6" stroke-width="5"/>
+      <line x1="31" y1="-5" x2="55" y2="19" stroke-width="10"/></g>
+    <g id="ic-isoplay" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
       <path d="M0 -36 L32 -18 L32 18 L0 36 L-32 18 L-32 -18 Z" fill="#12294D"/>
-      <path d="M0 -36 L0 0 L32 18 M0 0 L-32 18" />
-      <path d="M0 -36 L32 -18 L0 0 L-32 -18 Z" fill="#3EE8B0" fill-opacity="0.22" stroke="none"/>
-    </g>
-    <!-- 图标 8: 安卓机器人 -->
-    <g id="ic8" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M-28 -6 Q-28 -30 0 -30 Q28 -30 28 -6 V18 H-28 Z" fill="#12294D"/>
-      <line x1="-18" y1="-30" x2="-24" y2="-40"/>
-      <line x1="18" y1="-30" x2="24" y2="-40"/>
-      <circle cx="-11" cy="-14" r="4" fill="#3EE8B0" stroke="none"/>
-      <circle cx="11" cy="-14" r="4" fill="#3EE8B0" stroke="none"/>
-      <line x1="-38" y1="-4" x2="-38" y2="10"/>
-      <line x1="38" y1="-4" x2="38" y2="10"/>
-    </g>
-
-    <!-- 单行榜单卡：内容按 use 之外的 text 覆盖，这里只定义底板 -->
+      <path d="M0 -36 L0 0 L32 18 M0 0 L-32 18"/>
+      <path d="M-26 -6 L-12 2 L-26 10 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M36 -34 Q46 -22 40 -8" stroke="#3EE8B0"/></g>
+    <g id="ic-boltphone" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-40" y="-26" width="44" height="72" rx="9" stroke="#5B8CFF" stroke-dasharray="5 7" opacity="0.75"/>
+      <rect x="-18" y="-36" width="44" height="72" rx="9" fill="#12294D"/>
+      <line x1="-6" y1="24" x2="14" y2="24"/>
+      <path d="M10 -20 L-2 2 L4 2 L0 20 L12 -2 L6 -2 Z" fill="#3EE8B0" stroke="none"/></g>
   </defs>
 
-  <!-- 背景 -->
-  <rect width="2848" height="1600" fill="url(#bgGlow)"/>
-  <rect width="2848" height="1600" fill="url(#grid)"/>
-  <ellipse cx="420" cy="1360" rx="620" ry="340" fill="#14405E" opacity="0.30"/>
-  <circle cx="2620" cy="118" r="3" fill="#7FA8D0" opacity="0.45"/>
-  <circle cx="2480" cy="330" r="2.5" fill="#7FA8D0" opacity="0.30"/>
-  <circle cx="120" cy="300" r="2.5" fill="#7FA8D0" opacity="0.35"/>
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="1100" cy="240" rx="420" ry="260" fill="#14405E" opacity="0.25"/>
 
   <!-- 顶部胶囊 -->
-  <rect x="64" y="52" width="600" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="364" y="88" text-anchor="middle" font-size="28" letter-spacing="6" fill="#D6E6F5" font-weight="600">GITHUB WEEKLY · 开源周榜</text>
-  <rect x="2100" y="52" width="684" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="2442" y="88" text-anchor="middle" font-size="28" letter-spacing="3" fill="#D6E6F5">统计周期 2026.11.03 – 11.08</text>
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
+  <rect x="790" y="56" width="496" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1038" y="92" text-anchor="middle" font-size="24" letter-spacing="2" fill="#D6E6F5">统计周期 2026.11.03 – 11.08</text>
 
-  <!-- 标题区 -->
-  <text x="64" y="252" font-size="124" font-weight="800" letter-spacing="4" fill="url(#titleGrad)" filter="url(#glowCyan)">GitHub 周榜</text>
-  <text x="70" y="330" font-size="48" font-weight="700" fill="#FFFFFF">本周涨星最快的 8 个开源项目，<tspan fill="#3EE8B0">7 个和 Agent 有关</tspan></text>
+  <!-- 标题 -->
+  <circle cx="1120" cy="196" r="5" fill="#3EE8B0" filter="url(#glowGreen)"/>
+  <circle cx="1190" cy="252" r="3.5" fill="#35D0FF" opacity="0.8"/>
+  <circle cx="1060" cy="286" r="3" fill="#7FA8D0" opacity="0.6"/>
+  <text x="675" y="268" text-anchor="middle" font-size="118" font-weight="800" letter-spacing="6" fill="url(#titleGrad)" filter="url(#glowCyan)">GitHub 周榜</text>
+  <text x="675" y="344" text-anchor="middle" font-size="36" fill="#D6E6F5">本周涨星最快的 8 个开源项目 · <tspan fill="#3EE8B0" font-weight="700">7 个和 Agent 有关</tspan></text>
 
-  <!-- 右上装饰：轨道星 -->
-  <g stroke="#35D0FF" stroke-width="3" fill="none" opacity="0.85">
-    <circle cx="2520" cy="230" r="86" opacity="0.35" stroke-dasharray="6 10"/>
-    <circle cx="2520" cy="230" r="56" opacity="0.55"/>
-    <path d="M2520 174 L2538 223 L2589 223 L2548 253 L2563 302 L2520 272 L2477 302 L2492 253 L2451 223 L2502 223 Z" fill="#3EE8B0" fill-opacity="0.18" filter="url(#glowGreen)"/>
-    <circle cx="2606" cy="174" r="7" fill="#3EE8B0" stroke="none"/>
+  <!-- 8 行榜单 -->
+  <g>
+    <rect x="50" y="412" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="426" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="506" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">01</text>
+    <line x1="178" y1="438" x2="178" y2="528" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-superagent" transform="translate(248 483) scale(0.7)"/>
+    <text x="316" y="474" font-size="34" font-weight="700" fill="#FFFFFF">dsh-superagent-prototype</text>
+    <text x="316" y="510" font-size="22" fill="#8FAECB">DeepSeek 超级 Agent 研究原型</text>
+    <rect x="316" y="520" width="155.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="393.7" y="539" text-anchor="middle" font-size="16" fill="#9FBFDA">DeepSeek</text><rect x="483.44" y="520" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="529.8" y="539" text-anchor="middle" font-size="16" fill="#9FBFDA">研究原型</text>
+    <text x="1226" y="494" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲14,286</text>
+    <text x="1226" y="526" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
   </g>
-  <text x="2784" y="330" text-anchor="end" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
-
-  <!-- ===== 8 行榜单卡 ===== -->
-  <!-- 行参数: y_i = 372 + i*149，卡高 134 -->
-  <g font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-
-    <!-- 1 -->
-    <g transform="translate(0 372)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#3EE8B0" stroke-width="2" stroke-opacity="0.85"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">01</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic1" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">dsh-superagent-prototype</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">DeepSeek 的「超级 Agent」研究原型，建仓 6 天</text>
-      <rect x="1888" y="30" width="220" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1998" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">DeepSeek 官方</text>
-      <rect x="2126" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2201" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Agent</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#3EE8B0"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">+14286</text>
-    </g>
-
-    <!-- 2 -->
-    <g transform="translate(0 521)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#3EE8B0" stroke-width="2" stroke-opacity="0.6"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#3EE8B0">02</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic2" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">Claude-Code-Game-Studios</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">把 Claude Code 变成 49 个 Agent 协作的游戏工作室</text>
-      <rect x="1888" y="30" width="220" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1998" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Claude Code</text>
-      <rect x="2126" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2201" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">游戏开发</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#3EE8B0"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#3EE8B0">+6071</text>
-    </g>
-
-    <!-- 3 -->
-    <g transform="translate(0 670)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#3EE8B0" stroke-width="2" stroke-opacity="0.45"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#3EE8B0">03</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic3" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">dsh-Go</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">DeepSeek Harness 装进口袋：手机跑，也能遥控电脑</text>
-      <rect x="1888" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1963" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Android</text>
-      <rect x="2056" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2131" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">遥控电脑</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+4915</text>
-    </g>
-
-    <!-- 4 -->
-    <g transform="translate(0 819)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#7FA8D0">04</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic4" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">ub-mode</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">《代码整洁之道》作者 Uncle Bob 给 Agent 立规矩</text>
-      <rect x="1888" y="30" width="190" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1983" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Agent Skill</text>
-      <rect x="2096" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2171" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">工程纪律</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+4603</text>
-    </g>
-
-    <!-- 5 -->
-    <g transform="translate(0 968)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#7FA8D0">05</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic5" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">unslop</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">一键去掉界面上的「AI 味」，还你一个有性格的设计</text>
-      <rect x="1888" y="30" width="190" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1983" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Claude Skill</text>
-      <rect x="2096" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2171" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">UI 设计</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+3945</text>
-    </g>
-
-    <!-- 6 -->
-    <g transform="translate(0 1117)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#7FA8D0">06</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic6" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">craft-anything</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">看懂任何软件怎么造的，然后按你的技术栈复刻它</text>
-      <rect x="1888" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1963" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">桌面应用</text>
-      <rect x="2056" y="30" width="110" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2111" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Rust</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+3836</text>
-    </g>
-
-    <!-- 7 -->
-    <g transform="translate(0 1266)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#7FA8D0">07</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic7" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">anatomy</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">把概念画成会动的等距插画，SVG / WebGL / 3D</text>
-      <rect x="1888" y="30" width="190" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1983" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Agent Skill</text>
-      <rect x="2096" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2171" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">可视化</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+3391</text>
-    </g>
-
-    <!-- 8 -->
-    <g transform="translate(0 1415)">
-      <rect x="64" y="0" width="2720" height="134" rx="20" fill="#0E2038" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
-      <text x="118" y="86" font-size="54" font-weight="800" fill="#7FA8D0">08</text>
-      <line x1="184" y1="28" x2="184" y2="106" stroke="#29527A" stroke-width="2"/>
-      <use href="#ic8" x="258" y="67"/>
-      <text x="330" y="58" font-size="40" font-weight="700" fill="#FFFFFF">Mika</text>
-      <text x="330" y="104" font-size="26" fill="#8FAECB">Android 端侧 Agent：替你操作 App 和网页直到办完</text>
-      <rect x="1888" y="30" width="150" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="1963" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">Android</text>
-      <rect x="2056" y="30" width="170" height="38" rx="19" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="2141" y="56" text-anchor="middle" font-size="22" fill="#D6E6F5">端侧 Agent</text>
-      <path d="M2444 60 L2462 30 L2480 60 Z" fill="#35D0FF"/>
-      <text x="2700" y="84" text-anchor="end" font-size="46" font-weight="800" fill="#35D0FF">+3339</text>
-    </g>
+  <g>
+    <rect x="50" y="570" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="584" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="664" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">02</text>
+    <line x1="178" y1="596" x2="178" y2="686" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-gamestudio" transform="translate(248 641) scale(0.7)"/>
+    <text x="316" y="632" font-size="34" font-weight="700" fill="#FFFFFF">Claude-Code-Game-Studios</text>
+    <text x="316" y="668" font-size="22" fill="#8FAECB">49 个 AI agent 组成的游戏工作室</text>
+    <rect x="316" y="678" width="202.5" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="417.2" y="697" text-anchor="middle" font-size="16" fill="#9FBFDA">Claude Code</text><rect x="530.48" y="678" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="576.8" y="697" text-anchor="middle" font-size="16" fill="#9FBFDA">游戏开发</text>
+    <text x="1226" y="652" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲6,071</text>
+    <text x="1226" y="684" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
   </g>
+  <g>
+    <rect x="50" y="728" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="742" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="822" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">03</text>
+    <line x1="178" y1="754" x2="178" y2="844" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-remote" transform="translate(248 799) scale(0.7)"/>
+    <text x="316" y="790" font-size="34" font-weight="700" fill="#FFFFFF">dsh-Go</text>
+    <text x="316" y="826" font-size="22" fill="#8FAECB">手机本地跑，还能遥控电脑</text>
+    <rect x="316" y="836" width="139.8" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="385.9" y="855" text-anchor="middle" font-size="16" fill="#9FBFDA">Android</text><rect x="467.76" y="836" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="514.1" y="855" text-anchor="middle" font-size="16" fill="#9FBFDA">遥控电脑</text>
+    <text x="1226" y="810" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲4,915</text>
+    <text x="1226" y="842" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="886" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="980" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">04</text>
+    <line x1="178" y1="912" x2="178" y2="1002" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-skillfile" transform="translate(248 957) scale(0.7)"/>
+    <text x="316" y="948" font-size="34" font-weight="700" fill="#FFFFFF">ub-mode</text>
+    <text x="316" y="984" font-size="22" fill="#8FAECB">大叔给 Agent 立的工程纪律</text>
+    <rect x="316" y="994" width="202.5" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="417.2" y="1013" text-anchor="middle" font-size="16" fill="#9FBFDA">Agent Skill</text><rect x="530.48" y="994" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="576.8" y="1013" text-anchor="middle" font-size="16" fill="#9FBFDA">工程纪律</text>
+    <text x="1226" y="968" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲4,603</text>
+    <text x="1226" y="1000" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1044" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1138" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">05</text>
+    <line x1="178" y1="1070" x2="178" y2="1160" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-uiwin" transform="translate(248 1115) scale(0.7)"/>
+    <text x="316" y="1106" font-size="34" font-weight="700" fill="#FFFFFF">unslop</text>
+    <text x="316" y="1142" font-size="22" fill="#8FAECB">把界面的一眼 AI 味洗掉</text>
+    <rect x="316" y="1152" width="218.2" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="425.1" y="1171" text-anchor="middle" font-size="16" fill="#9FBFDA">Claude Skill</text><rect x="546.16" y="1152" width="108.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="600.4" y="1171" text-anchor="middle" font-size="16" fill="#9FBFDA">UI 设计</text>
+    <text x="1226" y="1126" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲3,945</text>
+    <text x="1226" y="1158" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1202" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1296" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">06</text>
+    <line x1="178" y1="1228" x2="178" y2="1318" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-craft" transform="translate(248 1273) scale(0.7)"/>
+    <text x="316" y="1264" font-size="34" font-weight="700" fill="#FFFFFF">craft-anything</text>
+    <text x="316" y="1300" font-size="22" fill="#8FAECB">四步流水线复刻桌面软件</text>
+    <rect x="316" y="1310" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="362.4" y="1329" text-anchor="middle" font-size="16" fill="#9FBFDA">Rust</text><rect x="420.72" y="1310" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="467.1" y="1329" text-anchor="middle" font-size="16" fill="#9FBFDA">复刻软件</text>
+    <text x="1226" y="1284" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲3,836</text>
+    <text x="1226" y="1316" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1360" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1454" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">07</text>
+    <line x1="178" y1="1386" x2="178" y2="1476" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-isoplay" transform="translate(248 1431) scale(0.7)"/>
+    <text x="316" y="1422" font-size="34" font-weight="700" fill="#FFFFFF">anatomy</text>
+    <text x="316" y="1458" font-size="22" fill="#8FAECB">把概念画成会动的等距插画</text>
+    <rect x="316" y="1468" width="92.7" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="362.4" y="1487" text-anchor="middle" font-size="16" fill="#9FBFDA">等距插画</text><rect x="420.72" y="1468" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="459.2" y="1487" text-anchor="middle" font-size="16" fill="#9FBFDA">可视化</text>
+    <text x="1226" y="1442" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲3,391</text>
+    <text x="1226" y="1474" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1518" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1612" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">08</text>
+    <line x1="178" y1="1544" x2="178" y2="1634" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-boltphone" transform="translate(248 1589) scale(0.7)"/>
+    <text x="316" y="1580" font-size="34" font-weight="700" fill="#FFFFFF">Mika</text>
+    <text x="316" y="1616" font-size="22" fill="#8FAECB">Android 端侧贴身 Agent</text>
+    <rect x="316" y="1626" width="139.8" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="385.9" y="1645" text-anchor="middle" font-size="16" fill="#9FBFDA">Android</text><rect x="467.76" y="1626" width="155.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="545.5" y="1645" text-anchor="middle" font-size="16" fill="#9FBFDA">端侧 Agent</text>
+    <text x="1226" y="1600" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲3,339</text>
+    <text x="1226" y="1632" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">周涨星</text>
+  </g>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1712" x2="1286" y2="1712" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1768" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">数据源 OpenGithubs/github-weekly-rank</text>
 </svg>

@@ -9,67 +9,71 @@
     <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
       <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
     </pattern>
-    <g id="ic-cube" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <g id="ic-isoplay" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
       <path d="M0 -36 L32 -18 L32 18 L0 36 L-32 18 L-32 -18 Z" fill="#12294D"/>
       <path d="M0 -36 L0 0 L32 18 M0 0 L-32 18"/>
-      <path d="M0 -36 L32 -18 L0 0 L-32 -18 Z" fill="#3EE8B0" fill-opacity="0.22" stroke="none"/></g>
+      <path d="M-26 -6 L-12 2 L-26 10 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M36 -34 Q46 -22 40 -8" stroke="#3EE8B0"/></g>
   </defs>
 
   <rect width="1350" height="1800" fill="url(#bgGlow)"/>
   <rect width="1350" height="1800" fill="url(#grid)"/>
-  <ellipse cx="240" cy="1560" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
   <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
   <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
   <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
 
   <!-- 顶部胶囊 -->
-  <rect x="64" y="64" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="299" y="100" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
-  <text x="64" y="152" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
-  <rect x="1074" y="64" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.8"/>
-  <text x="1180" y="101" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#7FA8D0">NO.07</text>
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#7FA8D0">NO.07</text>
 
-  <!-- 图标 -->
-  <use href="#ic-cube" x="675" y="330" transform="translate(675 330) scale(1.75) translate(-675 -330)"/>
+  <!-- 专属图标 -->
+  <use href="#ic-isoplay" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 项目名 -->
-  <text x="675" y="492" text-anchor="middle" font-size="30" letter-spacing="3" fill="#6B8299">wheresryan22</text>
-  <text x="675" y="590" text-anchor="middle" font-size="92" font-weight="800" fill="#FFFFFF">anatomy</text>
+  <!-- 标题 + 作者/仓库小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">概念动画解剖图</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">wheresryan22 / anatomy · JavaScript</text>
 
-  <!-- 定位句 -->
-  <text x="675" y="706" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把概念画成会动的机器</text>
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把概念画成会动的机器</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 24.4k</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#3EE8B0" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">本周增长 WEEKLY</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">▲ 3,391</text>
 
   <!-- 分隔线 -->
-  <line x1="220" y1="768" x2="1130" y2="768" stroke="#29527A" stroke-width="2"/>
-  <circle cx="675" cy="768" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
-  <!-- 描述 -->
-  <text x="675" y="846" text-anchor="middle" font-size="30" fill="#B8CCDF">解释一个概念的方式，是把它建成真实运转的物体：</text>
-  <text x="675" y="900" text-anchor="middle" font-size="30" fill="#B8CCDF">零件精确的等距插画，SVG / WebGL / 3D，还能交互。</text>
-  <text x="675" y="954" text-anchor="middle" font-size="30" fill="#B8CCDF">Claude Code 之外，多家 Agent 平台都能跑。</text>
-
-  <!-- 数据 2×2 -->
-  <rect x="110" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">总星标</text>
-      <text x="385" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">24.4k</text>
-<rect x="690" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">周增长</text>
-      <text x="965" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#3EE8B0">+3391</text>
-<rect x="110" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="385" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">开源时间</text>
-      <text x="385" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">2026-10-12</text>
-<rect x="690" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
-      <text x="965" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">主语言</text>
-      <text x="965" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">JavaScript</text>
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+    <text x="110" y="1044" font-size="27" fill="#B8CCDF">一个 Agent 技能：把真实机器和复杂系统画成零件</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">精确的等距插画，支持 SVG / WebGL / 3D 效果。</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="110" y="1260" font-size="27" fill="#B8CCDF">输入一个概念，生成分层、可交互、会动的「解剖图」，</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">Claude Code 之外多家 Agent 平台都能跑。</text>
+  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+    <text x="110" y="1476" font-size="27" fill="#B8CCDF">做技术科普、产品演示，需要把复杂原理</text>
+  <text x="110" y="1522" font-size="27" fill="#B8CCDF">讲明白的内容创作者。</text>
 
   <!-- 标签 -->
-  <rect x="304.0" y="1306" width="374.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="491.0" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Agent Skill</text><rect x="702.1" y="1306" width="174.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="789.2" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">等距插画</text><rect x="900.4" y="1306" width="145.7" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-      <text x="973.2" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">可视化</text>
+  <rect x="330.3" y="1564" width="347.7" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="504.2" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Agent Skill</text><rect x="700.0" y="1564" width="162.1" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="781.1" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">等距插画</text><rect x="884.1" y="1564" width="135.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="951.9" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">可视化</text>
 
   <!-- 底部 -->
-  <line x1="64" y1="1656" x2="1286" y2="1656" stroke="#1E3A56" stroke-width="2"/>
-  <text x="64" y="1712" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
-  <text x="1286" y="1712" text-anchor="end" font-size="24" fill="#4E6A85">github.com/wheresryan22/anatomy</text>
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/wheresryan22/anatomy</text>
 </svg>
