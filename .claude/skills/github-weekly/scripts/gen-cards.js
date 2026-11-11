@@ -1,92 +1,19 @@
+#!/usr/bin/env node
 // 生成 8 张竖版项目卡 SVG（1350×1800，同一模板换数据，保证风格一致）
-// 版式：项目名标题 / 作者·语言小字 / 一句话介绍 / 星数（总星标+周增长）/ 正文三段（是什么·能做什么·适合谁）
-// 用法: node img-src/gen-cards.js  → 输出 img-src/01-xxx.svg … 08-xxx.svg
+// 版式：项目名标题 / 作者·语言小字 / 一句话介绍 / 星数（总星标+周增长）/ 正文三段（项目速览·核心玩法·适用人群）
+// 用法: node gen-cards.js <img-src/data.json>  → 输出到 data.json 同目录 <file>.svg
+// 规则见 ../references/rules.md（版式变更=改本脚本并 commit）
 const fs = require('fs');
 const path = require('path');
 const { ICONS } = require('./icons');
 
-const CARDS = [
-  {
-    file: '01-dsh-superagent', icon: 'superagent', no: 1, owner: 'deepseek-ai',
-    repo: 'dsh-superagent-prototype', lang: 'TypeScript',
-    pitch: '迈向更自主的 Agent',
-    total: '16.4k', growth: '14,286',
-    what: ['DeepSeek 官方放出的研究原型，最大胆的一点：训练', '反馈全部由 AI 给出，没有人工标注——「AI 写的 AI」。'],
-    can: ['把长任务自主拆解、执行、复盘，README 自述大量工程', '由 coding agent 完成，可当 Agent 工作流的参考实现。'],
-    who: ['做 Agent 研究与开发的工程师，想提前摸一摸下一代', '自主系统形态的人。'],
-    tags: ['DeepSeek 官方', 'Agent', '研究原型'],
-  },
-  {
-    file: '02-game-studios', icon: 'gamestudio', no: 2, owner: 'Donchitos',
-    repo: 'Claude-Code-Game-Studios', lang: 'Shell',
-    pitch: '一句话，出一个能玩的游戏',
-    total: '34.5k', growth: '6,071',
-    what: ['把 Claude Code 变成完整游戏工作室：49 个 AI agent、', '72 项工作流技能，按真实工作室的层级分工协作。'],
-    can: ['描述一个游戏想法，agent 先追问细节、写一页策划案，', '然后直接产出能在浏览器里玩的游戏。'],
-    who: ['想体验多 agent 协作威力、快速产出游戏原型的', '独立开发者和小团队。'],
-    tags: ['Claude Code', '游戏开发', 'Agent 协作'],
-  },
-  {
-    file: '03-dsh-go', icon: 'remote', no: 3, owner: 'ccch1mneyyy',
-    repo: 'dsh-Go', lang: 'Dart',
-    pitch: '把 Agent 遥控器装进口袋',
-    total: '7.3k', growth: '4,915',
-    what: ['DeepSeek Harness 的 Android 客户端，手机本地直接', '跑，也能连回电脑上的 DSH 一起用。'],
-    can: ['躺在沙发刷手机时，顺手盯一眼电脑里 Agent 的进度，', '发个新指令让它接着干。'],
-    who: ['挂着长任务出门、需要随时照看 Agent 干活状态', '的重度 Agent 用户。'],
-    tags: ['Android', 'Flutter', '遥控电脑'],
-  },
-  {
-    file: '04-ub-mode', icon: 'skillfile', no: 4, owner: 'unclebob',
-    repo: 'ub-mode', lang: 'Skill 文件',
-    pitch: '给 Agent 立工程纪律',
-    total: '6.8k', growth: '4,603',
-    what: ['《代码整洁之道》作者 Uncle Bob 出品的 Agent 技能，', '仓库里只有一份 SKILL.md，没有一行多余代码。'],
-    can: ['先让 Agent 读懂你的工程规范，改完自动跑质量门禁：', '圈复杂度、重复率超标就不放行。'],
-    who: ['团队技术负责人，想让 AI 按自家规矩写代码、', '守住工程质量底线的人。'],
-    tags: ['Agent Skill', '工程纪律', 'TDD'],
-  },
-  {
-    file: '05-unslop', icon: 'uiwin', no: 5, owner: 'heydamir',
-    repo: 'unslop', lang: 'JavaScript',
-    pitch: '去掉界面的一眼 AI 味',
-    total: '7.3k', growth: '3,945',
-    what: ['一份通用界面设计技能，专治「一眼 AI」的模板脸：', '紫色渐变、到处发光、emoji 堆砌。'],
-    can: ['先揪出界面里的 slop 套路，再按你的产品气质', '重新定方向，把整个界面修出性格。'],
-    who: ['用 AI 做产品、却总被用户吐槽「太 AI」的', '独立开发者与设计师。'],
-    tags: ['Claude Skill', 'UI 设计', '反 AI 味'],
-  },
-  {
-    file: '06-craft-anything', icon: 'craft', no: 6, owner: 'storytold',
-    repo: 'craft-anything', lang: 'Rust',
-    pitch: '看懂它，然后复刻它',
-    total: '7.7k', growth: '3,836',
-    what: ['Rust 桌面应用，内置 Study → Build → Check → Ready', '四步流水线，320 个工具个个是 CLI + MCP 双形态。'],
-    can: ['给它一个想复刻的软件：先拆解学习它的结构，', '再按你的技术栈重建、自检差距后交付。'],
-    who: ['想快速复刻工具类桌面软件、验证产品想法的', '原型党。'],
-    tags: ['桌面应用', 'Rust', '复刻软件'],
-  },
-  {
-    file: '07-anatomy', icon: 'isoplay', no: 7, owner: 'wheresryan22',
-    repo: 'anatomy', lang: 'JavaScript',
-    pitch: '把概念画成会动的机器',
-    total: '24.4k', growth: '3,391',
-    what: ['一个 Agent 技能：把真实机器和复杂系统画成零件', '精确的等距插画，支持 SVG / WebGL / 3D 效果。'],
-    can: ['输入一个概念，生成分层、可交互、会动的「解剖图」，', 'Claude Code 之外多家 Agent 平台都能跑。'],
-    who: ['做技术科普、产品演示，需要把复杂原理', '讲明白的内容创作者。'],
-    tags: ['Agent Skill', '等距插画', '可视化'],
-  },
-  {
-    file: '08-mika', icon: 'boltphone', no: 8, owner: 'wangzan101',
-    repo: 'Mika', lang: 'Kotlin',
-    pitch: '手机里的贴身 Agent',
-    total: '6.0k', growth: '3,339',
-    what: ['Android 端侧 AI 助手：利用手机隐藏的后台屏替你', '操作 App 和网页，前台照常归你用。'],
-    can: ['说一句话，它在后台把事情办完才向你汇报；', 'Kotlin 原生开发，APK 装上就能用。'],
-    who: ['想在安卓机上常驻 Agent、又不想被前台', '打断的极客玩家。'],
-    tags: ['Android', '端侧 Agent', '自动化'],
-  },
-];
+const dataPath = process.argv[2];
+if (!dataPath || !dataPath.endsWith('.json')) {
+  console.error('用法: node gen-cards.js <img-src/data.json 路径>');
+  process.exit(1);
+}
+const data = JSON.parse(fs.readFileSync(path.resolve(dataPath), 'utf8'));
+const outDir = path.dirname(path.resolve(dataPath));
 
 // 三段正文的小节：标签胶囊 + 两行左对齐文字
 const SECTIONS = [
@@ -160,7 +87,7 @@ function card(c) {
   <!-- 顶部胶囊 -->
   <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
   <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
-  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 ${data.period}</text>
   <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="${noStroke}" stroke-width="1.8"/>
   <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="${noColor}">NO.${String(c.no).padStart(2, '0')}</text>
 
@@ -195,8 +122,7 @@ function card(c) {
 `;
 }
 
-const outDir = __dirname;
-CARDS.forEach(c => {
+data.cards.forEach(c => {
   fs.writeFileSync(path.join(outDir, `${c.file}.svg`), card(c));
   console.log(`✓ ${c.file}.svg`);
 });
