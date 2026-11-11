@@ -1,5 +1,5 @@
 // 生成 8 张竖版项目卡 SVG（1350×1800，同一模板换数据，保证风格一致）
-// 版式：中文标题 / 作者·仓库小字 / 一句话介绍 / 星数（总星标+周增长）/ 正文三段（是什么·能做什么·适合谁）
+// 版式：项目名标题 / 作者·语言小字 / 一句话介绍 / 星数（总星标+周增长）/ 正文三段（是什么·能做什么·适合谁）
 // 用法: node img-src/gen-cards.js  → 输出 img-src/01-xxx.svg … 08-xxx.svg
 const fs = require('fs');
 const path = require('path');
@@ -8,7 +8,7 @@ const { ICONS } = require('./icons');
 const CARDS = [
   {
     file: '01-dsh-superagent', icon: 'superagent', no: 1, owner: 'deepseek-ai',
-    repo: 'dsh-superagent-prototype', lang: 'TypeScript', cn: '超级 Agent 原型',
+    repo: 'dsh-superagent-prototype', lang: 'TypeScript',
     pitch: '迈向更自主的 Agent',
     total: '16.4k', growth: '14,286',
     what: ['DeepSeek 官方放出的研究原型，最大胆的一点：训练', '反馈全部由 AI 给出，没有人工标注——「AI 写的 AI」。'],
@@ -18,7 +18,7 @@ const CARDS = [
   },
   {
     file: '02-game-studios', icon: 'gamestudio', no: 2, owner: 'Donchitos',
-    repo: 'Claude-Code-Game-Studios', lang: 'Shell', cn: 'AI 游戏工作室',
+    repo: 'Claude-Code-Game-Studios', lang: 'Shell',
     pitch: '一句话，出一个能玩的游戏',
     total: '34.5k', growth: '6,071',
     what: ['把 Claude Code 变成完整游戏工作室：49 个 AI agent、', '72 项工作流技能，按真实工作室的层级分工协作。'],
@@ -28,7 +28,7 @@ const CARDS = [
   },
   {
     file: '03-dsh-go', icon: 'remote', no: 3, owner: 'ccch1mneyyy',
-    repo: 'dsh-Go', lang: 'Dart', cn: '口袋 Agent 遥控器',
+    repo: 'dsh-Go', lang: 'Dart',
     pitch: '把 Agent 遥控器装进口袋',
     total: '7.3k', growth: '4,915',
     what: ['DeepSeek Harness 的 Android 客户端，手机本地直接', '跑，也能连回电脑上的 DSH 一起用。'],
@@ -38,7 +38,7 @@ const CARDS = [
   },
   {
     file: '04-ub-mode', icon: 'skillfile', no: 4, owner: 'unclebob',
-    repo: 'ub-mode', lang: 'Skill 文件', cn: '大叔的工程纪律',
+    repo: 'ub-mode', lang: 'Skill 文件',
     pitch: '给 Agent 立工程纪律',
     total: '6.8k', growth: '4,603',
     what: ['《代码整洁之道》作者 Uncle Bob 出品的 Agent 技能，', '仓库里只有一份 SKILL.md，没有一行多余代码。'],
@@ -48,7 +48,7 @@ const CARDS = [
   },
   {
     file: '05-unslop', icon: 'uiwin', no: 5, owner: 'heydamir',
-    repo: 'unslop', lang: 'JavaScript', cn: '去 AI 味界面术',
+    repo: 'unslop', lang: 'JavaScript',
     pitch: '去掉界面的一眼 AI 味',
     total: '7.3k', growth: '3,945',
     what: ['一份通用界面设计技能，专治「一眼 AI」的模板脸：', '紫色渐变、到处发光、emoji 堆砌。'],
@@ -58,7 +58,7 @@ const CARDS = [
   },
   {
     file: '06-craft-anything', icon: 'craft', no: 6, owner: 'storytold',
-    repo: 'craft-anything', lang: 'Rust', cn: '桌面软件复刻机',
+    repo: 'craft-anything', lang: 'Rust',
     pitch: '看懂它，然后复刻它',
     total: '7.7k', growth: '3,836',
     what: ['Rust 桌面应用，内置 Study → Build → Check → Ready', '四步流水线，320 个工具个个是 CLI + MCP 双形态。'],
@@ -68,7 +68,7 @@ const CARDS = [
   },
   {
     file: '07-anatomy', icon: 'isoplay', no: 7, owner: 'wheresryan22',
-    repo: 'anatomy', lang: 'JavaScript', cn: '概念动画解剖图',
+    repo: 'anatomy', lang: 'JavaScript',
     pitch: '把概念画成会动的机器',
     total: '24.4k', growth: '3,391',
     what: ['一个 Agent 技能：把真实机器和复杂系统画成零件', '精确的等距插画，支持 SVG / WebGL / 3D 效果。'],
@@ -78,7 +78,7 @@ const CARDS = [
   },
   {
     file: '08-mika', icon: 'boltphone', no: 8, owner: 'wangzan101',
-    repo: 'Mika', lang: 'Kotlin', cn: '隐形屏端侧 Agent',
+    repo: 'Mika', lang: 'Kotlin',
     pitch: '手机里的贴身 Agent',
     total: '6.0k', growth: '3,339',
     what: ['Android 端侧 AI 助手：利用手机隐藏的后台屏替你', '操作 App 和网页，前台照常归你用。'],
@@ -135,6 +135,7 @@ function card(c) {
   const top3 = c.no <= 3;
   const noColor = top3 ? '#3EE8B0' : '#7FA8D0';
   const noStroke = top3 ? '#3EE8B0' : '#3E6E9E';
+  const titleFs = c.repo.length > 16 ? 54 : 72; // 长项目名缩小一档，防止撑爆宽度
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
   <defs>
     <radialGradient id="bgGlow" cx="42%" cy="30%" r="85%">
@@ -166,9 +167,9 @@ function card(c) {
   <!-- 专属图标 -->
   <use href="#ic-${c.icon}" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 标题 + 作者/仓库小字 -->
-  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">${c.cn}</text>
-  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">${c.owner} / ${c.repo} · ${c.lang}</text>
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="${titleFs}" font-weight="800" fill="#FFFFFF">${c.repo}</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">${c.owner} · ${c.lang}</text>
 
   <!-- 一句话介绍 -->
   <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">${c.pitch}</text>

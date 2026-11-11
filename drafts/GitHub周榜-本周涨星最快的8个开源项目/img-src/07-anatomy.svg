@@ -33,9 +33,9 @@
   <!-- 专属图标 -->
   <use href="#ic-isoplay" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 标题 + 作者/仓库小字 -->
-  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">概念动画解剖图</text>
-  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">wheresryan22 / anatomy · JavaScript</text>
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">anatomy</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">wheresryan22 · JavaScript</text>
 
   <!-- 一句话介绍 -->
   <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把概念画成会动的机器</text>

@@ -34,9 +34,9 @@
   <!-- 专属图标 -->
   <use href="#ic-skillfile" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 标题 + 作者/仓库小字 -->
-  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">大叔的工程纪律</text>
-  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">unclebob / ub-mode · Skill 文件</text>
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">ub-mode</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">unclebob · Skill 文件</text>
 
   <!-- 一句话介绍 -->
   <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">给 Agent 立工程纪律</text>

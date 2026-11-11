@@ -33,9 +33,9 @@
   <!-- 专属图标 -->
   <use href="#ic-boltphone" transform="translate(675 305) scale(1.6)"/>
 
-  <!-- 标题 + 作者/仓库小字 -->
-  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">隐形屏端侧 Agent</text>
-  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">wangzan101 / Mika · Kotlin</text>
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">Mika</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">wangzan101 · Kotlin</text>
 
   <!-- 一句话介绍 -->
   <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">手机里的贴身 Agent</text>
