@@ -54,16 +54,16 @@
   <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
   <!-- 正文三段 -->
-  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
     <text x="110" y="1044" font-size="27" fill="#B8CCDF">《代码整洁之道》作者 Uncle Bob 出品的 Agent 技能，</text>
   <text x="110" y="1090" font-size="27" fill="#B8CCDF">仓库里只有一份 SKILL.md，没有一行多余代码。</text>
   <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
     <text x="110" y="1260" font-size="27" fill="#B8CCDF">先让 Agent 读懂你的工程规范，改完自动跑质量门禁：</text>
   <text x="110" y="1306" font-size="27" fill="#B8CCDF">圈复杂度、重复率超标就不放行。</text>
-  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
     <text x="110" y="1476" font-size="27" fill="#B8CCDF">团队技术负责人，想让 AI 按自家规矩写代码、</text>
   <text x="110" y="1522" font-size="27" fill="#B8CCDF">守住工程质量底线的人。</text>
 

@@ -57,16 +57,16 @@
   <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
   <!-- 正文三段 -->
-  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
     <text x="110" y="1044" font-size="27" fill="#B8CCDF">DeepSeek Harness 的 Android 客户端，手机本地直接</text>
   <text x="110" y="1090" font-size="27" fill="#B8CCDF">跑，也能连回电脑上的 DSH 一起用。</text>
   <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
     <text x="110" y="1260" font-size="27" fill="#B8CCDF">躺在沙发刷手机时，顺手盯一眼电脑里 Agent 的进度，</text>
   <text x="110" y="1306" font-size="27" fill="#B8CCDF">发个新指令让它接着干。</text>
-  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
     <text x="110" y="1476" font-size="27" fill="#B8CCDF">挂着长任务出门、需要随时照看 Agent 干活状态</text>
   <text x="110" y="1522" font-size="27" fill="#B8CCDF">的重度 Agent 用户。</text>
 

@@ -90,9 +90,9 @@ const CARDS = [
 
 // 三段正文的小节：标签胶囊 + 两行左对齐文字
 const SECTIONS = [
-  { key: 'what', label: '是什么' },
-  { key: 'can', label: '能做什么' },
-  { key: 'who', label: '适合谁' },
+  { key: 'what', label: '项目速览' },
+  { key: 'can', label: '核心玩法' },
+  { key: 'who', label: '适用人群' },
 ];
 const SECTION_TOPS = [952, 1168, 1384]; // 每节顶边 y
 

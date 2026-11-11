@@ -56,16 +56,16 @@
   <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
   <!-- 正文三段 -->
-  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
     <text x="110" y="1044" font-size="27" fill="#B8CCDF">DeepSeek 官方放出的研究原型，最大胆的一点：训练</text>
   <text x="110" y="1090" font-size="27" fill="#B8CCDF">反馈全部由 AI 给出，没有人工标注——「AI 写的 AI」。</text>
   <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
     <text x="110" y="1260" font-size="27" fill="#B8CCDF">把长任务自主拆解、执行、复盘，README 自述大量工程</text>
   <text x="110" y="1306" font-size="27" fill="#B8CCDF">由 coding agent 完成，可当 Agent 工作流的参考实现。</text>
-  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
     <text x="110" y="1476" font-size="27" fill="#B8CCDF">做 Agent 研究与开发的工程师，想提前摸一摸下一代</text>
   <text x="110" y="1522" font-size="27" fill="#B8CCDF">自主系统形态的人。</text>
 

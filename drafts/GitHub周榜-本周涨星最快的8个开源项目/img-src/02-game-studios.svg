@@ -53,16 +53,16 @@
   <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
   <!-- 正文三段 -->
-  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
     <text x="110" y="1044" font-size="27" fill="#B8CCDF">把 Claude Code 变成完整游戏工作室：49 个 AI agent、</text>
   <text x="110" y="1090" font-size="27" fill="#B8CCDF">72 项工作流技能，按真实工作室的层级分工协作。</text>
   <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
     <text x="110" y="1260" font-size="27" fill="#B8CCDF">描述一个游戏想法，agent 先追问细节、写一页策划案，</text>
   <text x="110" y="1306" font-size="27" fill="#B8CCDF">然后直接产出能在浏览器里玩的游戏。</text>
-  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
     <text x="110" y="1476" font-size="27" fill="#B8CCDF">想体验多 agent 协作威力、快速产出游戏原型的</text>
   <text x="110" y="1522" font-size="27" fill="#B8CCDF">独立开发者和小团队。</text>
 

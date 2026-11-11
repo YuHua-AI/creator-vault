@@ -56,16 +56,16 @@
   <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
 
   <!-- 正文三段 -->
-  <rect x="110" y="952" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">是什么</text>
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
     <text x="110" y="1044" font-size="27" fill="#B8CCDF">Rust 桌面应用，内置 Study → Build → Check → Ready</text>
   <text x="110" y="1090" font-size="27" fill="#B8CCDF">四步流水线，320 个工具个个是 CLI + MCP 双形态。</text>
   <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">能做什么</text>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
     <text x="110" y="1260" font-size="27" fill="#B8CCDF">给它一个想复刻的软件：先拆解学习它的结构，</text>
   <text x="110" y="1306" font-size="27" fill="#B8CCDF">再按你的技术栈重建、自检差距后交付。</text>
-  <rect x="110" y="1384" width="116" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
-    <text x="168" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适合谁</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
     <text x="110" y="1476" font-size="27" fill="#B8CCDF">想快速复刻工具类桌面软件、验证产品想法的</text>
   <text x="110" y="1522" font-size="27" fill="#B8CCDF">原型党。</text>
 
