@@ -4,10 +4,10 @@
  *
  * 流程：读 article.md → 按正文图片引用顺序逐张传永久素材 → draft/add 建 newspic 草稿
  *   - 首张图即帖图封面（约定 img/cover.jpg 排第一）
- *   - 标题：--title > frontmatter tietu_title > title（图片消息标题 ≤32 字，超长报错）
+ *   - 标题：--title > frontmatter post_title > title（图片消息标题 ≤32 字，超长报错）
  *   - 文案：--text <文件> > 正文去图去格式后的纯文本（≤1000 字）
  *
- * 用法：node push-tietu.js <文章文件夹> [--title 标题] [--text 文案路径]
+ * 用法：node push-image-post.js <文章文件夹> [--title 标题] [--text 文案路径]
  * 依赖：~/.config/gzh/env（GZH_APPID / GZH_SECRET，可选 GZH_AUTHOR ≤8 字）
  */
 import { readFileSync, existsSync } from 'node:fs';
@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 const args = process.argv.slice(2);
 const target = args.find(a => !a.startsWith('--'));
 if (!target) {
-  console.error('用法: node push-tietu.js <文章文件夹> [--title 标题] [--text 文案路径]');
+  console.error('用法: node push-image-post.js <文章文件夹> [--title 标题] [--text 文案路径]');
   process.exit(1);
 }
 const opt = (k) => { const i = args.indexOf(`--${k}`); return i >= 0 ? args[i + 1] : ''; };
@@ -36,10 +36,10 @@ const pick = (k) => (fmText.match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1] ?? ''
   .replace(/^['"]|['"]$/g, '').trim();
 
 // ---------- 标题（newspic ≤32 字） ----------
-const title = opt('title') || pick('tietu_title') || pick('title');
-if (!title) fail('没有可用标题（--title / frontmatter tietu_title / title 均缺）');
+const title = opt('title') || pick('post_title') || pick('title');
+if (!title) fail('没有可用标题（--title / frontmatter post_title / title 均缺）');
 const titleLen = Array.from(title).length;
-if (titleLen > 32) fail(`标题 ${titleLen} 字，超过图片消息上限 32 字（可在 frontmatter 加 tietu_title: 短标题）`);
+if (titleLen > 32) fail(`标题 ${titleLen} 字，超过图片消息上限 32 字（可在 frontmatter 加 post_title: 短标题）`);
 
 // ---------- 文案（纯文本，≤1000 字） ----------
 const textPath = opt('text');

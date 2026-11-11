@@ -1,5 +1,5 @@
 ---
-name: write-tietu
+name: image-post
 description: 公众号「帖图」（图片消息）全流程管线：选题 → 数据 → 卡片图生成 → 人工审图 → 图片消息草稿推送 → 发布归档。做「发帖图」类稿件（GitHub 周榜等图片为主的选题）用这个；写图文文章用 write-article，两条管线不混用。
 argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当前进度]
 ---
@@ -15,10 +15,10 @@ argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当
 ## 形态与硬性限制（微信图片消息）
 
 - 图片 ≤20 张，**首图即封面**（约定 `img/cover.jpg` 在正文排第一）
-- 标题 ≤32 字：frontmatter 可选字段 `tietu_title`，缺省用 `title`（超 32 字推送时报错）
+- 标题 ≤32 字：frontmatter 可选字段 `post_title`，缺省用 `title`（超 32 字推送时报错）
 - 文案：纯文本 ≤1000 字，自动取 article.md 去图后的正文
 - 文件结构沿用写作管线约定：`drafts/<短名>/article.md + img/ + img-src/`；article.md 是壳：开场 2~3 行 + 按序引用全部图片 + 收尾互动
-- frontmatter 用库约定（title/date/status/tags，另加可选 tietu_title）
+- frontmatter 用库约定（title/date/status/tags，另加可选 post_title）
 
 ## 第 0 步：定位阶段（每次必做）
 
@@ -37,7 +37,7 @@ argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当
 
 - **先列清单再出图**：几张、每张画什么、封面怎么排，与用户确认后再产出
 - 手写 SVG 生成脚本存 `img-src/`：gen-cover.js + gen-cards.js + 共享 icons.js，**数据驱动，下一期只改数据数组**
-- 渲染：`node .claude/skills/write-tietu/scripts/render-img.js <in.svg> <out.jpg>`（headless Chrome；playwright 未安装时自动回落到 write-article 的 node_modules）
+- 渲染：`node .claude/skills/image-post/scripts/render-img.js <in.svg> <out.jpg>`（headless Chrome；playwright 未安装时自动回落到 write-article 的 node_modules）
 - 风格沿用库内深蓝霓虹线框风，规格文档见 `.claude/skills/write-article/references/illustration-spec.md`（共享的是设计规格，不是流程）
 - 渲染后逐张视觉自检：文字截断 / 重叠 / 溢出，有问题改脚本重渲染，不手改 JPG
 - article.md 壳文案同步写好，status: draft
@@ -51,7 +51,7 @@ argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当
 ## 阶段 5：推帖图草稿（AI 自动执行）
 
 ```
-node .claude/skills/write-tietu/scripts/push-tietu.js <文章文件夹> [--title 标题] [--text 文案路径]
+node .claude/skills/image-post/scripts/push-image-post.js <文章文件夹> [--title 标题] [--text 文案路径]
 ```
 
 - 按正文图片引用顺序逐张传永久素材 → 建 newspic 图片消息草稿（首图即封面，文案 = 去图正文）

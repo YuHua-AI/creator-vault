@@ -9,7 +9,7 @@
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 
-// playwright 优先本地解析；write-tietu 未单独安装时回落到 write-article 的 node_modules（共享依赖，不重复装）
+// playwright 优先本地解析；image-post 未单独安装时回落到 write-article 的 node_modules（共享依赖，不重复装）
 let chromium;
 try { ({ chromium } = await import('playwright')); }
 catch {
