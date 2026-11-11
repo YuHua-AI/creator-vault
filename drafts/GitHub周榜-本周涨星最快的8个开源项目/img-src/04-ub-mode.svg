@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <g id="ic-shield" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0 -36 L30 -24 V4 Q30 26 0 38 Q-30 26 -30 4 V-24 Z" fill="#12294D"/>
+      <path d="M-13 0 L-3 11 L15 -12" stroke="#3EE8B0"/></g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="240" cy="1560" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
+  <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="64" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="100" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 开源周榜</text>
+  <text x="64" y="152" font-size="20" letter-spacing="2" fill="#4E6A85">统计周期 2026.11.03 – 11.08</text>
+  <rect x="1074" y="64" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.8"/>
+  <text x="1180" y="101" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#7FA8D0">NO.04</text>
+
+  <!-- 图标 -->
+  <use href="#ic-shield" x="675" y="330" transform="translate(675 330) scale(1.75) translate(-675 -330)"/>
+
+  <!-- 项目名 -->
+  <text x="675" y="492" text-anchor="middle" font-size="30" letter-spacing="3" fill="#6B8299">unclebob</text>
+  <text x="675" y="590" text-anchor="middle" font-size="92" font-weight="800" fill="#FFFFFF">ub-mode</text>
+
+  <!-- 定位句 -->
+  <text x="675" y="706" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">给 Agent 立工程纪律</text>
+
+  <!-- 分隔线 -->
+  <line x1="220" y1="768" x2="1130" y2="768" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="768" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+
+  <!-- 描述 -->
+  <text x="675" y="846" text-anchor="middle" font-size="30" fill="#B8CCDF">《代码整洁之道》作者 Robert C. Martin 出品，仓库里</text>
+  <text x="675" y="900" text-anchor="middle" font-size="30" fill="#B8CCDF">只有一份 SKILL.md：先让它工作、再让它正确、保持</text>
+  <text x="675" y="954" text-anchor="middle" font-size="30" fill="#B8CCDF">实践，配套 Crapper / Dryer / Mutator 三个质量门。</text>
+
+  <!-- 数据 2×2 -->
+  <rect x="110" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+      <text x="385" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">总星标</text>
+      <text x="385" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">6.8k</text>
+<rect x="690" y="1000" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+      <text x="965" y="1038" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">周增长</text>
+      <text x="965" y="1084" text-anchor="middle" font-size="42" font-weight="700" fill="#3EE8B0">+4603</text>
+<rect x="110" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+      <text x="385" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">开源时间</text>
+      <text x="385" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">2026-10-28</text>
+<rect x="690" y="1124" width="550" height="104" rx="16" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+      <text x="965" y="1162" text-anchor="middle" font-size="22" letter-spacing="3" fill="#6B8299">主语言</text>
+      <text x="965" y="1208" text-anchor="middle" font-size="42" font-weight="700" fill="#FFFFFF">Skill 文件</text>
+
+  <!-- 标签 -->
+  <rect x="304.0" y="1306" width="374.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+      <text x="491.0" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">Agent Skill</text><rect x="702.1" y="1306" width="174.2" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+      <text x="789.2" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">工程纪律</text><rect x="900.4" y="1306" width="145.7" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+      <text x="973.2" y="1344" text-anchor="middle" font-size="28" fill="#D6E6F5">TDD</text>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1656" x2="1286" y2="1656" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1712" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1712" text-anchor="end" font-size="24" fill="#4E6A85">github.com/unclebob/ub-mode</text>
+</svg>

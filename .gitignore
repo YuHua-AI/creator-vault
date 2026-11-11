@@ -9,3 +9,6 @@
 # git bundle 灾备文件（体积大，按需手动生成）
 backups/
 .claude/skills/write-article/scripts/node_modules/
+
+# 外部克隆的数据源仓库（自带 .git，周榜数据用 git pull 更新）
+tools/
