@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.72" cy="0.22" r="1">
+      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
+    </radialGradient>
+    <radialGradient id="softL">
+      <stop offset="0" stop-color="#14405E" stop-opacity="0.45"/><stop offset="1" stop-color="#14405E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    </pattern>
+    <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3EE8B0"/><stop offset="1" stop-color="#35D0FF"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
+  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+  <ellipse cx="500" cy="1100" rx="900" ry="500" fill="url(#softL)"/>
+
+  <circle cx="220" cy="240" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="700" cy="150" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1200" cy="230" r="3" fill="#7FA8D0" opacity="0.4"/>
+  <circle cx="1750" cy="170" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="2200" cy="300" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="2150" cy="1100" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="180" cy="900" r="2" fill="#7FA8D0" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="920" y="88" width="560" height="64" rx="32" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1200" y="130" text-anchor="middle" font-size="30" fill="#D6E6F5" letter-spacing="6">SCENE · 声音跟着人走</text>
+
+  <!-- ===== 左：门外的人（耳机直连） ===== -->
+  <rect x="220" y="380" width="220" height="520" rx="12" fill="none" stroke="#3B9FE8" stroke-width="4" opacity="0.8"/>
+  <circle cx="330" cy="560" r="42" fill="#3B9FE8" filter="url(#glow)"/>
+  <rect x="286" y="616" width="88" height="190" rx="30" fill="#16293E" stroke="#3B9FE8" stroke-width="4"/>
+  <circle cx="292" cy="556" r="8" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="368" cy="556" r="8" fill="#3EE8B0" filter="url(#glowG)"/>
+  <path d="M 292 566 C 288 640 306 660 322 664" fill="none" stroke="#3EE8B0" stroke-width="2.5" opacity="0.8"/>
+  <path d="M 368 566 C 372 640 354 660 338 664" fill="none" stroke="#3EE8B0" stroke-width="2.5" opacity="0.8"/>
+  <rect x="386" y="672" width="64" height="110" rx="10" fill="#12294D" stroke="#3B9FE8" stroke-width="3.5"/>
+  <path d="M 410 715 L 432 727 L 410 739 Z" fill="#35D0FF" filter="url(#glow)"/>
+
+  <!-- ===== 中：音乐波形（同一座曲库的声音流） ===== -->
+  <path d="M 470 640 C 570 560 640 720 740 640 C 840 560 910 720 1010 640 C 1110 560 1180 720 1280 640 C 1380 560 1450 720 1550 640 C 1620 585 1660 640 1740 640"
+        fill="none" stroke="url(#flowGrad)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="605" cy="600" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="1135" cy="600" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- ===== 右：进门的书架音箱 ===== -->
+  <line x1="1680" y1="900" x2="2280" y2="900" stroke="#3B9FE8" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+  <rect x="1830" y="440" width="230" height="460" rx="26" fill="#12294D" stroke="#35D0FF" stroke-width="4" filter="url(#glow)"/>
+  <circle cx="1945" cy="556" r="46" fill="none" stroke="#3B9FE8" stroke-width="4"/>
+  <circle cx="1945" cy="724" r="84" fill="none" stroke="#3B9FE8" stroke-width="4"/>
+  <circle cx="1945" cy="724" r="38" fill="none" stroke="#3B9FE8" stroke-width="3" opacity="0.7"/>
+  <circle cx="2026" cy="852" r="7" fill="#3EE8B0" filter="url(#glowG)"/>
+  <path d="M 2100 566 A 84 84 0 0 1 2100 734" fill="none" stroke="#35D0FF" stroke-width="4" stroke-linecap="round" opacity="0.55" filter="url(#glow)"/>
+  <path d="M 2118 526 A 124 124 0 0 1 2118 774" fill="none" stroke="#35D0FF" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <path d="M 2136 486 A 164 164 0 0 1 2136 814" fill="none" stroke="#35D0FF" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- 场景标注 -->
+  <g text-anchor="middle">
+    <text x="330" y="1000" font-size="36" font-weight="700" fill="#E8F0F8">在外 · 耳机直连</text>
+    <text x="330" y="1048" font-size="28" fill="#6B8299">Substreamer + 虚拟局域网</text>
+    <text x="1945" y="1000" font-size="36" font-weight="700" fill="#E8F0F8">进门 · 音箱落地</text>
+    <text x="1945" y="1048" font-size="28" fill="#6B8299">AirPlay 输出一键切</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1230" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">同一座曲库，<tspan fill="#3EE8B0" filter="url(#glowG)">声音跟着人走</tspan></text>
+</svg>
