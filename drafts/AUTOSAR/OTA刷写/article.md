@@ -4,6 +4,7 @@ date: 2026-11-12
 status: draft
 tags: [AUTOSAR, UDS, 诊断, OTA, 刷写]
 platform: [公众号]
+collection: AUTOSAR 入门
 ---
 
 ## 开场：4S 店那 20 分钟

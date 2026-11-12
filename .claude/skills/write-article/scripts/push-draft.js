@@ -40,6 +40,8 @@ const pick = (k) => (fmText.match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1] ?? ''
   .replace(/^['"]|['"]$/g, '').trim();
 const title = pick('title');
 if (!title) fail('frontmatter 缺 title');
+// collection：可选，标记文章所属公众号合集；API 不支持草稿关联合集，推送后提醒人工在后台勾选
+const collection = pick('collection');
 
 // digest：优先 frontmatter，否则取正文第一个自然段，截到 120 字内
 const digestSrc = pick('digest') || body
@@ -240,3 +242,4 @@ if (draft.errcode) apiFail(draft.errcode, draft.errmsg);
 
 console.log(`✓ 已进草稿箱！《${title}》media_id: ${draft.media_id}`);
 console.log('  下一步：后台 → 草稿箱 → 预览 → 勾选 AI 生成内容标识 → 发布');
+if (collection) console.log(`  ⚠ 记得把本篇加入合集「${collection}」（API 不支持，需后台手动勾选）`);

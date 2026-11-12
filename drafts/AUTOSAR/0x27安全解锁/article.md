@@ -4,6 +4,7 @@ date: 2026-11-12
 status: draft
 tags: [AUTOSAR, UDS, 诊断, 安全]
 platform: [公众号]
+collection: AUTOSAR 入门
 ---
 
 ## 开场：第二道锁
