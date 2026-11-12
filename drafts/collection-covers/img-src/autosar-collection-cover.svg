@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：AUTOSAR 合集封面（竖图 3:4） -->
+  <defs>
+    <pattern id="gp" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1440" fill="#0E2A47"/>
+  <rect width="1080" height="1440" fill="url(#gp)"/>
+  <rect x="36" y="36" width="1008" height="1368" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="54" y="54" width="972" height="1332" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="90" y="200" fill="#9FC3E8" font-size="34" letter-spacing="8">AUTOSAR · UDS · 诊断</text>
+  <line x1="90" y1="230" x2="560" y2="230" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="90" y="340" fill="#F4F9FE" font-size="96" font-weight="800">AUTOSAR</text>
+  <text x="90" y="450" fill="#F4F9FE" font-size="96" font-weight="800">入 门</text>
+  <text x="90" y="530" fill="#E8A44C" font-size="38">七篇讲透车载诊断协议</text>
+
+  <!-- 七篇目录 -->
+  <g font-size="32" font-family="'SF Mono','Menlo',monospace">
+    <text x="90" y="680" fill="#9FC3E8">①  UDS 逐字节拆解 · 26 服务</text>
+    <text x="90" y="755" fill="#9FC3E8">②  0x10 会话控制</text>
+    <text x="90" y="830" fill="#9FC3E8">③  0x27 安全解锁 Seed/Key</text>
+    <text x="90" y="905" fill="#9FC3E8">④  DID 数据读写 0x22/2E</text>
+    <text x="90" y="980" fill="#9FC3E8">⑤  0x31 例程控制 RID</text>
+    <text x="90" y="1055" fill="#9FC3E8">⑥  DTC 故障码 0x14/19</text>
+    <text x="90" y="1130" fill="#9FC3E8">⑦  OTA 刷写 0x34-38</text>
+  </g>
+
+  <!-- 底部报文点缀 -->
+  <text x="90" y="1250" fill="#E8A44C" font-size="30" font-family="'SF Mono','Menlo',monospace">22 F1 90 → 62 F1 90 …</text>
+  <text x="90" y="1330" fill="#F4F9FE" font-size="40" font-weight="700">协议是 ISO 的，实现是 <tspan fill="#E8A44C">AUTOSAR 的</tspan></text>
+
+  <!-- 图纸角标（右上） -->
+  <g font-size="24" fill="#9FC3E8">
+    <rect x="740" y="150" width="270" height="110" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="762" y="192">FIG. SERIES COVER</text>
+    <text x="762" y="232">UDS / DCM / DEM</text>
+    <text x="950" y="192">REV. 1.0</text>
+    <text x="950" y="232">SHEET 01</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 暖色家居风：NAS 折腾记合集封面（竖图 3:4） -->
+  <defs>
+    <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B2620"/>
+      <stop offset="1" stop-color="#1F1B16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1440" fill="url(#warm)"/>
+  <rect x="36" y="36" width="1008" height="1368" fill="none" stroke="#C8A87C" stroke-opacity="0.5" stroke-width="3"/>
+
+  <text x="90" y="210" fill="#C8A87C" font-size="34" letter-spacing="8">家庭服务器 · 折腾实录</text>
+  <line x1="90" y1="240" x2="560" y2="240" stroke="#C8A87C" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="90" y="380" fill="#F5EDE0" font-size="110" font-weight="800">NAS</text>
+  <text x="90" y="500" fill="#F5EDE0" font-size="110" font-weight="800">折腾记</text>
+  <text x="90" y="580" fill="#C8A87C" font-size="38">吃灰设备再就业指南</text>
+
+  <!-- 篇目 -->
+  <g font-size="34">
+    <text x="90" y="740" fill="#F5EDE0">♪  老苹果路由 + 有源音箱</text>
+    <text x="90" y="800" fill="#F5EDE0">    组 NAS 无线 Hi-Fi</text>
+    <text x="90" y="900" fill="#F5EDE0">⇄  无损音乐自动补货管线</text>
+    <text x="90" y="960" fill="#F5EDE0">    网盘转存 · 标签整理</text>
+  </g>
+
+  <!-- 底部点缀：机柜呼吸灯 -->
+  <g>
+    <rect x="90" y="1100" width="900" height="120" rx="10" fill="none" stroke="#C8A87C" stroke-opacity="0.4" stroke-width="2"/>
+    <circle cx="150" cy="1160" r="10" fill="#7FB2E8"/>
+    <circle cx="210" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.7"/>
+    <circle cx="270" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.4"/>
+    <circle cx="330" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.2"/>
+    <text x="920" y="1172" fill="#C8A87C" font-size="28" text-anchor="end" font-family="'SF Mono','Menlo',monospace">· · · idle</text>
+  </g>
+
+  <text x="90" y="1330" fill="#F5EDE0" font-size="42" font-weight="700">设备会吃灰，<tspan fill="#C8A87C">折腾不会</tspan></text>
+</svg>

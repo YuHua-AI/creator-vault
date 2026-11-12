@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- B 终端风：GitHub 周榜合集封面（竖图 3:4） -->
+  <rect width="1080" height="1440" fill="#0D1117"/>
+  <!-- 终端窗口 -->
+  <rect x="40" y="80" width="1000" height="1280" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+  <circle cx="100" cy="140" r="12" fill="#FF5F57"/>
+  <circle cx="145" cy="140" r="12" fill="#FEBC2E"/>
+  <circle cx="190" cy="140" r="12" fill="#28C840"/>
+  <text x="540" y="150" fill="#8B949E" font-size="28" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">weekly-rank — zsh</text>
+  <line x1="40" y1="180" x2="1040" y2="180" stroke="#30363D" stroke-width="2"/>
+
+  <g font-family="'SF Mono','Menlo',monospace" font-size="34">
+    <text x="100" y="290" fill="#C9D1D9">$ <tspan fill="#7EE787">github-weekly-rank</tspan> --top 8</text>
+
+    <text x="100" y="420" fill="#F4F9FE" font-size="84" font-weight="700">GitHub</text>
+    <text x="100" y="520" fill="#F4F9FE" font-size="84" font-weight="700">周 榜</text>
+    <text x="100" y="590" fill="#79C0FF" font-size="36">每周涨星最快的 8 个项目</text>
+
+    <text x="100" y="700" fill="#8B949E" font-size="30">★ star 增速 · 一图一项目</text>
+    <text x="100" y="760" fill="#8B949E" font-size="30">◆ AI 解析 · 人话点评</text>
+    <text x="100" y="820" fill="#8B949E" font-size="30">▲ 趋势信号 · 技术风向</text>
+
+    <text x="100" y="960" fill="#C9D1D9" font-size="30">→ 每周一期 · 数据实测</text>
+    <text x="100" y="1010" fill="#C9D1D9" font-size="30">→ 不搬运 · 只拆解</text>
+
+    <text x="100" y="1200" fill="#7EE787" font-size="34">$ _</text>
+  </g>
+</svg>
