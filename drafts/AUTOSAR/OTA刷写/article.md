@@ -65,11 +65,23 @@ blockSequenceCounter 的规则（Table 451，原文值得细读）：
 
 ![0x34 与 0x36 报文格式](img/01-download-negotiate.jpg)
 
-刷写途中 ECU 还会盯着电源：NRC 0x92/0x93（电压过高/过低）保护 Flash 写入——半途断电写坏 Bootloader 是最贵的事故。其他常客：0x71 transferDataSuspended（流程被打断后继续发 36）、0x72 generalProgrammingFailure（Flash 操作失败，⑤ 篇见过）、0x73 wrongBlockSequenceCounter（块序号错乱）。
+刷写途中 ECU 还会盯着电源：NRC 0x92/0x93（电压过高/过低）保护 Flash 写入——半途断电写坏 Bootloader 是最贵的事故。其他常客：0x71 transferDataSuspended（流程被打断后继续发 36）、0x72 generalProgrammingFailure（Flash 操作失败，⑤ 篇见过）、0x73 wrongBlockSequenceCounter（块序号错乱）。电压检查排在 0x36 流水线的很后面——收到 0x92 时说明谈判、会话、解锁全过了，纯粹是电源的锅（顺序规则见 ① 篇）。
 
 ## 0x37 与 0x38
 
 `→ 37 <transferResponseParameterRecord>` → `← 77`（§15.5）——签收仪式，通常带上厂商自定义的校验信息。0x38 RequestFileTransfer（§15.6）把 memoryAddress 换成文件名路径，其余机制同 0x34——给车机这类有文件系统的 ECU 用的。
+
+## 配角三件套：刷写前的预备动作
+
+五件套开演前，还有一串配角服务把舞台收拾干净：
+
+- **0x28 CommunicationControl**：静音总线（§10.5）。controlType 四档收发组合（Table 54），`28 03 <通信类型>` = 收发全停；通信类型是位编码、可组合（如同时关应用报文和网络管理报文，Annex B.1）。目的：给传输腾带宽，也防止半死不活的应用报文干扰刷写
+- **0x85 ControlDTCSetting**：关掉 DTC 记录（⑥ 篇已拆——`85 02`/`85 01`），防止刷写中的电压波动写成假故障码
+- **0x87 LinkControl**：切换波特率——500K 的诊断段刷 2MB 太慢，刷写前常用它协商提速（Table 22）
+- **0x3E TesterPresent**：② 篇的老朋友，编程会话里照常保活
+- **0x11 ECUReset**：落幕动作——`11 01` hardReset 让新固件真正跑起来；rapidPowerShutdown 变体还带 powerDownTime 参数（§10.3, Table 34）
+
+配角们在 0x34 之前集体亮相，构成刷写的"预备节拍"。
 
 ## 完整剧本：一次刷写的报文级回放
 
@@ -83,6 +95,8 @@ blockSequenceCounter 的规则（Table 451，原文值得细读）：
 → 7E0: 27 01 / 27 02 <key>      解锁（boot 侧等级） （③）
 → 7E0: 31 01 0A FF              派工单：擦 Flash    （⑤）
 ← 7E8: 71 01 0A FF
+→ 7DF: 28 03 <通信类型>          静音总线            （本篇配角）
+→ 7DF: 85 02                    暂停 DTC 记录       （⑥）
 → 7E0: 34 00 44 <addr> <size>   谈判：往哪写多大    （本篇）
 ← 7E8: 74 0F <maxBlockLen>
 → 7E0: 36 01 <data…>            第 1 块
