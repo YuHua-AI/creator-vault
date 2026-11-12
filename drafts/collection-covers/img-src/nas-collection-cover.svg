@@ -20,34 +20,39 @@
   <text x="90" y="430" fill="#1B3A6B" font-size="120" font-weight="800">折腾记</text>
   <text x="90" y="510" fill="#B3541E" font-size="40">让数据住进自己家</text>
 
-  <!-- 中央 NAS：产品手册式正视剖面 -->
+  <!-- 中央 NAS：产品手册式正视剖面（带投影） -->
   <g>
-    <rect x="290" y="620" width="500" height="250" rx="14" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"/>
-    <!-- 盘位 -->
+    <rect x="310" y="634" width="480" height="246" rx="14" fill="#1B3A6B" fill-opacity="0.18"/>
+    <rect x="300" y="620" width="480" height="246" rx="14" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"/>
+    <!-- 4 大盘位 -->
     <g fill="none" stroke="#1B3A6B" stroke-width="2.5">
-      <rect x="330" y="655" width="190" height="56" rx="5"/>
-      <rect x="330" y="727" width="190" height="56" rx="5"/>
-      <rect x="330" y="799" width="190" height="56" rx="5"/>
-      <rect x="550" y="655" width="190" height="56" rx="5"/>
-      <rect x="550" y="727" width="190" height="56" rx="5"/>
-      <rect x="550" y="799" width="190" height="56" rx="5"/>
+      <rect x="340" y="652" width="400" height="48" rx="5"/>
+      <rect x="340" y="714" width="400" height="48" rx="5"/>
+      <rect x="340" y="776" width="400" height="48" rx="5"/>
     </g>
+    <!-- 第四盘位：空槽（虚线） -->
+    <rect x="340" y="820" width="400" height="30" rx="5" fill="none" stroke="#1B3A6B" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="8 6"/>
     <!-- 硬盘拉手 -->
-    <g stroke="#1B3A6B" stroke-width="2">
-      <line x1="470" y1="683" x2="505" y2="683"/>
-      <line x1="470" y1="755" x2="505" y2="755"/>
-      <line x1="470" y1="827" x2="505" y2="827"/>
+    <g stroke="#1B3A6B" stroke-width="2.5">
+      <line x1="680" y1="676" x2="716" y2="676"/>
+      <line x1="680" y1="738" x2="716" y2="738"/>
+      <line x1="680" y1="800" x2="716" y2="800"/>
     </g>
-    <!-- 呼吸灯 -->
-    <circle cx="310" cy="683" r="8" fill="#B3541E"/>
-    <circle cx="310" cy="755" r="8" fill="#B3541E" fill-opacity="0.55"/>
-    <circle cx="310" cy="827" r="8" fill="#B3541E" fill-opacity="0.25"/>
+    <!-- 每盘位 LED -->
+    <g fill="#B3541E">
+      <circle cx="362" cy="676" r="7"/>
+      <circle cx="362" cy="738" r="7" fill-opacity="0.55"/>
+      <circle cx="362" cy="800" r="7" fill-opacity="0.25"/>
+    </g>
+    <!-- 电源键 -->
+    <circle cx="740" cy="838" r="11" fill="none" stroke="#1B3A6B" stroke-width="3"/>
+    <line x1="740" y1="830" x2="740" y2="842" stroke="#1B3A6B" stroke-width="3"/>
     <text x="540" y="920" fill="#1B3A6B" font-size="32" text-anchor="middle" font-weight="700">存储池 · 数据的家</text>
   </g>
 
   <!-- 四端线描图标 + 虚线取数 -->
   <g stroke="#B3541E" stroke-width="3" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
-    <path d="M240,600 L360,650"/>
+    <path d="M245,520 L335,632"/>
     <path d="M840,600 L720,650"/>
     <path d="M260,1030 L380,890"/>
     <path d="M820,1030 L700,890"/>
@@ -55,10 +60,10 @@
 
   <!-- 手机 -->
   <g fill="none" stroke="#1B3A6B" stroke-width="3.5">
-    <rect x="185" y="470" width="86" height="140" rx="14"/>
-    <line x1="212" y1="586" x2="244" y2="586"/>
+    <rect x="150" y="440" width="86" height="140" rx="14"/>
+    <line x1="177" y1="556" x2="209" y2="556"/>
   </g>
-  <text x="228" y="660" fill="#1B3A6B" font-size="28" text-anchor="middle">手机</text>
+  <text x="193" y="636" fill="#1B3A6B" font-size="28" text-anchor="middle">手机</text>
 
   <!-- 笔记本 -->
   <g fill="#FFFFFF" stroke="#1B3A6B" stroke-width="3.5">
