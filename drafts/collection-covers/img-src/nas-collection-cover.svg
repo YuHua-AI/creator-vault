@@ -51,7 +51,7 @@
 
   <!-- 四端线描图标 + 虚线取数 -->
   <g stroke="#E8A44C" stroke-width="3" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
-    <path d="M245,520 L335,632"/>
+    <path d="M250,640 L330,730"/>
     <path d="M840,600 L720,650"/>
     <path d="M260,1030 L380,890"/>
     <path d="M820,1030 L700,890"/>
@@ -59,10 +59,10 @@
 
   <!-- 手机 -->
   <g fill="none" stroke="#C8A87C" stroke-width="3.5">
-    <rect x="150" y="440" width="86" height="140" rx="14"/>
-    <line x1="177" y1="556" x2="209" y2="556"/>
+    <rect x="150" y="560" width="86" height="140" rx="14"/>
+    <line x1="177" y1="676" x2="209" y2="676"/>
   </g>
-  <text x="193" y="636" fill="#F5EDE0" font-size="28" text-anchor="middle">手机</text>
+  <text x="193" y="756" fill="#F5EDE0" font-size="28" text-anchor="middle">手机</text>
 
   <!-- 笔记本 -->
   <g fill="#171310" stroke="#C8A87C" stroke-width="3.5">
