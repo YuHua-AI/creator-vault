@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：三层分工 -->
+  <defs>
+    <pattern id="g1" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g1)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- 标题 -->
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">LAYERS · 三层分工</text>
+  <line x1="120" y1="175" x2="720" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="56" font-weight="800">UDS 只管"说什么"，不管"怎么送"</text>
+
+  <!-- 三个层级堆叠（自上而下） -->
+  <g text-anchor="middle">
+    <!-- 应用层 -->
+    <g transform="translate(1200,430)">
+      <rect x="-820" y="-120" width="1640" height="240" fill="#0B2440" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-50" fill="#F4F9FE" font-size="48" font-weight="800">应用层 · ISO 14229-1</text>
+      <text y="20" fill="#9FC3E8" font-size="36">说什么：服务、SID、参数、应答语义</text>
+      <text y="80" fill="#7FB2E8" font-size="30">—— 剧本 ——</text>
+    </g>
+    <!-- 会话层 -->
+    <g transform="translate(1200,730)">
+      <rect x="-820" y="-120" width="1640" height="240" fill="#0B2440" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-50" fill="#F4F9FE" font-size="48" font-weight="800">会话层 · ISO 14229-2</text>
+      <text y="20" fill="#9FC3E8" font-size="36">什么时候说：超时、重试、会话保持</text>
+      <text y="80" fill="#7FB2E8" font-size="30">—— 导演的调度规则 ——</text>
+    </g>
+    <!-- 传输层 -->
+    <g transform="translate(1200,1030)">
+      <rect x="-820" y="-120" width="1640" height="240" fill="#0B2440" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-50" fill="#F4F9FE" font-size="48" font-weight="800">传输层（CAN 上）· ISO 15765-2</text>
+      <text y="20" fill="#9FC3E8" font-size="36">怎么送：单帧装不下就拆多帧（FF/FC/CF）</text>
+      <text y="80" fill="#7FB2E8" font-size="30">—— 快递系统 ——</text>
+    </g>
+  </g>
+
+  <!-- 层间连接线 + 尺寸标注 -->
+  <g stroke="#7FB2E8" stroke-width="2">
+    <line x1="330" y1="310" x2="330" y2="610"/>
+    <line x1="310" y1="310" x2="350" y2="310"/>
+    <line x1="310" y1="610" x2="350" y2="610"/>
+    <line x1="330" y1="610" x2="330" y2="910"/>
+    <line x1="310" y1="910" x2="350" y2="910"/>
+  </g>
+  <text x="370" y="475" fill="#7FB2E8" font-size="28">请求/应答语义</text>
+  <text x="370" y="780" fill="#7FB2E8" font-size="28">时序约束</text>
+  <!-- 右侧贯穿箭头：报文流 -->
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M2100,430 L2100,1150" stroke-opacity="0.8"/>
+    <path d="M2100,1150 L2082,1118 M2100,1150 L2118,1118"/>
+  </g>
+  <text x="2130" y="800" fill="#E8A44C" font-size="28" writing-mode="tb">一条报文的下沉之路</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. 14229-1 T.1</text>
+    <text x="1830" y="1258">OSI L5-L7 / L2-L4</text>
+    <text x="2100" y="1218">REV. 2020</text>
+    <text x="2100" y="1258">SHEET 01</text>
+  </g>
+</svg>

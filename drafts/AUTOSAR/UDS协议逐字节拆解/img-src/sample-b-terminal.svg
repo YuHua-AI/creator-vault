@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- 风格 B：终端抓包风。黑底 + 绿/白等宽报文流，像 candump 现场 -->
+  <rect width="2848" height="1600" fill="#0D1117"/>
+  <!-- 细网格 -->
+  <defs>
+    <pattern id="tgrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="url(#tgrid)"/>
+
+  <!-- 终端窗口栏 -->
+  <rect x="120" y="120" width="2608" height="1360" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="120" y="120" width="2608" height="88" rx="24" fill="#161B22"/>
+  <circle cx="200" cy="164" r="16" fill="#DD4B4B"/>
+  <circle cx="256" cy="164" r="16" fill="#D29922"/>
+  <circle cx="312" cy="164" r="16" fill="#3FB950"/>
+  <text x="1424" y="176" fill="#8B949E" font-size="34" text-anchor="middle">~/autosar/uds — candump -tz can0</text>
+
+  <!-- 标题（大号 ASCII 感） -->
+  <g font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+    <text x="240" y="360" fill="#3FB950" font-size="40">$ ./uds --intro 1 --topic "UDS 协议逐字节拆解"</text>
+    <text x="240" y="490" fill="#F0F6FC" font-size="104" font-weight="800">诊断仪和 ECU 在 CAN 上说什么？</text>
+  </g>
+
+  <!-- 报文流 -->
+  <g font-size="46">
+    <text x="240" y="640" fill="#8B949E">(4821.123)  can0  TX  7E0  [3]  <tspan fill="#3FB950">22 F1 90</tspan>        <tspan fill="#6E7781"># ReadDataByIdentifier · DID=F190 (VIN)</tspan></text>
+    <text x="240" y="724" fill="#8B949E">(4821.175)  can0  RX  7E8  [8]  <tspan fill="#79C0FF">62 F1 90</tspan> 57 30 4C 30 30 <tspan fill="#6E7781"># +0x40 → 0x62</tspan></text>
+    <text x="240" y="808" fill="#8B949E">(4821.176)  can0  RX  7E8  [8]  30 34 33 4D 42 35 34 31 <tspan fill="#6E7781"># "043MB541…"</tspan></text>
+    <text x="240" y="892" fill="#8B949E">(4830.002)  can0  TX  <tspan fill="#D29922">7DF</tspan>  [2]  <tspan fill="#3FB950">10 03</tspan>        <tspan fill="#6E7781"># 功能寻址 · 全车广播</tspan></text>
+    <text x="240" y="976" fill="#8B949E">(4830.051)  can0  RX  7E8  [6]  <tspan fill="#FF7B72">7F 27 33</tspan>  <tspan fill="#6E7781"># NRC 0x33 securityAccessDenied</tspan></text>
+  </g>
+
+  <!-- 底部状态栏 -->
+  <g font-size="38">
+    <rect x="240" y="1120" width="2368" height="240" rx="16" fill="#161B22" stroke="#30363D" stroke-width="2.5"/>
+    <text x="300" y="1200" fill="#3FB950">─ SERVICES: <tspan fill="#F0F6FC">26</tspan> ── GROUPS: <tspan fill="#F0F6FC">6</tspan> ── TRANSPORT: <tspan fill="#F0F6FC">CAN / ISO-TP</tspan> ── STD: <tspan fill="#F0F6FC">ISO 14229-1:2020</tspan></text>
+    <text x="300" y="1290" fill="#8B949E">│ 10 会话 · 27 解锁 · 22/2E 数据 · 31 例程 · 14/19 故障码 · 34-38 刷写</text>
+    <text x="2560" y="1290" fill="#3FB950">▮</text>
+  </g>
+  <text x="240" y="1450" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">AUTOSAR 入门 ① · 下期：0x10 会话控制</text>
+</svg>

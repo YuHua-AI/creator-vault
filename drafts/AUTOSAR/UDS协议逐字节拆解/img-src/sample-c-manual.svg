@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- 风格 C：技术手册风。米白底 + 深蓝/橙双色，像 AUTOSAR/Bosch 官方手册 -->
+  <rect width="2848" height="1600" fill="#F7F5F0"/>
+  <!-- 页眉线 -->
+  <line x1="160" y1="200" x2="2688" y2="200" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="160" y1="214" x2="2688" y2="214" stroke="#1B3A6B" stroke-width="2"/>
+
+  <text x="160" y="150" fill="#1B3A6B" font-size="44" font-weight="700" letter-spacing="6">AUTOSAR 入门 · 第一讲</text>
+  <text x="2688" y="150" fill="#B3541E" font-size="44" text-anchor="end">ISO 14229-1:2020</text>
+
+  <!-- 主标题 -->
+  <text x="160" y="400" fill="#1B3A6B" font-size="120" font-weight="800">诊断仪和 ECU 在 CAN 上说什么？</text>
+  <text x="160" y="520" fill="#3D4A5C" font-size="64">UDS 协议逐字节拆解 · 二十六个服务全景</text>
+
+  <!-- Figure 1：报文结构示意（手册式线框图） -->
+  <g>
+    <text x="160" y="700" fill="#1B3A6B" font-size="44" font-weight="700">Figure 1</text>
+    <line x1="320" y1="686" x2="2688" y2="686" stroke="#C9C2B4" stroke-width="2"/>
+
+    <!-- 请求报文格子 -->
+    <g font-size="48" font-weight="700" text-anchor="middle">
+      <rect x="160" y="780" width="280" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+      <text x="300" y="862" fill="#1B3A6B">22</text>
+      <rect x="440" y="780" width="280" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+      <text x="580" y="862" fill="#1B3A6B">F1</text>
+      <rect x="720" y="780" width="280" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+      <text x="860" y="862" fill="#1B3A6B">90</text>
+      <!-- 箭头 -->
+      <text x="1120" y="865" fill="#B3541E" font-size="60">→</text>
+      <!-- 应答报文格子 -->
+      <rect x="1260" y="780" width="280" height="130" fill="#1B3A6B"/>
+      <text x="1400" y="862" fill="#F7F5F0">62</text>
+      <rect x="1540" y="780" width="280" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+      <text x="1680" y="862" fill="#1B3A6B">F1</text>
+      <rect x="1820" y="780" width="280" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+      <text x="1960" y="862" fill="#1B3A6B">90</text>
+      <rect x="2100" y="780" width="460" height="130" fill="none" stroke="#B3541E" stroke-width="4" stroke-dasharray="14 10"/>
+      <text x="2330" y="862" fill="#B3541E">17 B</text>
+    </g>
+    <!-- 标注 -->
+    <g font-size="32" fill="#3D4A5C">
+      <line x1="300" y1="910" x2="300" y2="960" stroke="#8A94A6" stroke-width="2"/>
+      <text x="300" y="1000" text-anchor="middle">SID（服务号）</text>
+      <line x1="1400" y1="910" x2="1400" y2="960" stroke="#8A94A6" stroke-width="2"/>
+      <text x="1400" y="1000" text-anchor="middle">SID + 0x40（正应答）</text>
+      <line x1="2330" y1="910" x2="2330" y2="960" stroke="#8A94A6" stroke-width="2"/>
+      <text x="2330" y="1000" text-anchor="middle">dataRecord（VIN）</text>
+    </g>
+  </g>
+
+  <!-- Figure 2：服务分组表（手册式表格） -->
+  <g>
+    <text x="160" y="1170" fill="#1B3A6B" font-size="44" font-weight="700">Table 1</text>
+    <line x1="360" y1="1156" x2="2688" y2="1156" stroke="#C9C2B4" stroke-width="2"/>
+
+    <g font-size="36">
+      <rect x="160" y="1220" width="2528" height="90" fill="#1B3A6B"/>
+      <text x="200" y="1278" fill="#F7F5F0" font-weight="700">功能单元</text>
+      <text x="900" y="1278" fill="#F7F5F0" font-weight="700">SID</text>
+      <text x="1800" y="1278" fill="#F7F5F0" font-weight="700">本系列篇目</text>
+
+      <rect x="160" y="1310" width="2528" height="80" fill="#FFFFFF"/>
+      <text x="200" y="1364" fill="#1B3A6B">诊断管理（9）</text>
+      <text x="900" y="1364" fill="#3D4A5C">10 · 11 · 27 · 28 · 3E …</text>
+      <text x="1800" y="1364" fill="#B3541E">② 会话 ③ 解锁</text>
+
+      <rect x="160" y="1390" width="2528" height="80" fill="#F0EDE4"/>
+      <text x="200" y="1444" fill="#1B3A6B">数据传送（7） / 清读 DTC（2）</text>
+      <text x="900" y="1444" fill="#3D4A5C">22 · 2E · 23 … / 14 · 19</text>
+      <text x="1800" y="1444" fill="#B3541E">④ DID ⑥ 故障码</text>
+    </g>
+  </g>
+
+  <!-- 页脚 -->
+  <line x1="160" y1="1512" x2="2688" y2="1512" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="160" y="1566" fill="#8A94A6" font-size="30">AUTOSAR 入门系列 · 屿华AI 出品</text>
+  <text x="2688" y="1566" fill="#8A94A6" font-size="30" text-anchor="end">1 / 7</text>
+</svg>

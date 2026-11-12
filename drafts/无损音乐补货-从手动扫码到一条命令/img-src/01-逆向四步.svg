@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.72" cy="0.22" r="1">
+      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
+    </radialGradient>
+    <radialGradient id="softL">
+      <stop offset="0" stop-color="#14405E" stop-opacity="0.45"/><stop offset="1" stop-color="#14405E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
+  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+  <ellipse cx="500" cy="1100" rx="900" ry="500" fill="url(#softL)"/>
+
+  <circle cx="220" cy="240" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="700" cy="150" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1200" cy="230" r="3" fill="#7FA8D0" opacity="0.4"/>
+  <circle cx="1750" cy="170" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="2200" cy="300" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="2150" cy="1100" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="180" cy="900" r="2" fill="#7FA8D0" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="940" y="88" width="520" height="64" rx="32" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1200" y="130" text-anchor="middle" font-size="30" fill="#D6E6F5" letter-spacing="6">REVERSE · 逆向四步</text>
+
+  <!-- 连线：抓页面 → 读脚本 -->
+  <line x1="400" y1="640" x2="770" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="400" cy="640" r="9" fill="#0A1826" stroke="#E8F0F8" stroke-width="3"/>
+  <circle cx="585" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 连线：读脚本 → 找接口 -->
+  <line x1="990" y1="640" x2="1300" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1145" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 连线：找接口 → 实测 -->
+  <line x1="1580" y1="640" x2="1850" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1715" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="2150" cy="640" r="9" fill="#0A1826" stroke="#E8F0F8" stroke-width="3"/>
+
+  <!-- 节点 1：抓页面（折角文档） -->
+  <g filter="url(#glow)">
+    <path d="M 250 490 H 340 L 390 540 V 790 H 250 Z" fill="#12294D" stroke="#35D0FF" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M 340 490 V 540 H 390" fill="none" stroke="#35D0FF" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g stroke="#3B9FE8" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="280" y1="590" x2="360" y2="590"/>
+    <line x1="280" y1="640" x2="360" y2="640"/>
+    <line x1="280" y1="690" x2="340" y2="690"/>
+  </g>
+
+  <!-- 节点 2：读脚本（</>） -->
+  <g stroke="#35D0FF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" fill="none">
+    <path d="M 840 560 L 770 640 L 840 720"/>
+    <path d="M 920 560 L 990 640 L 920 720"/>
+    <line x1="886" y1="548" x2="854" y2="732"/>
+  </g>
+
+  <!-- 节点 3：找接口（JSON 卡） -->
+  <rect x="1300" y="510" width="280" height="240" rx="14" fill="#12294D" stroke="#35D0FF" stroke-width="4" filter="url(#glow)"/>
+  <text x="1340" y="596" font-size="30" fill="#8FAECB">{ "code": <tspan fill="#3EE8B0" filter="url(#glowG)">200</tspan>,</text>
+  <text x="1340" y="646" font-size="30" fill="#8FAECB">"url":</text>
+  <text x="1340" y="696" font-size="30" fill="#8FAECB">"夸克链接" }</text>
+
+  <!-- 节点 4：实测（终端） -->
+  <rect x="1850" y="500" width="300" height="220" rx="14" fill="#12294D" stroke="#35D0FF" stroke-width="4" filter="url(#glow)"/>
+  <line x1="1850" y1="556" x2="2150" y2="556" stroke="#3B9FE8" stroke-width="3" opacity="0.8"/>
+  <circle cx="1880" cy="528" r="6" fill="#3B9FE8"/>
+  <circle cx="1906" cy="528" r="6" fill="#3B9FE8" opacity="0.6"/>
+  <circle cx="1932" cy="528" r="6" fill="#3B9FE8" opacity="0.3"/>
+  <text x="1880" y="620" font-size="32" fill="#E8F0F8" font-weight="700">&gt;_ curl</text>
+  <rect x="1880" y="650" width="150" height="44" rx="22" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="2"/>
+  <text x="1955" y="681" text-anchor="middle" font-size="26" fill="#3EE8B0" filter="url(#glowG)">200 OK</text>
+
+  <!-- 节点标注 -->
+  <g text-anchor="middle">
+    <text x="320" y="950" font-size="36" font-weight="700" fill="#E8F0F8">抓页面</text>
+    <text x="320" y="998" font-size="28" fill="#6B8299">搜索页 HTML</text>
+    <text x="880" y="950" font-size="36" font-weight="700" fill="#E8F0F8">读脚本</text>
+    <text x="880" y="998" font-size="28" fill="#6B8299">按钮的真身</text>
+    <text x="1440" y="950" font-size="36" font-weight="700" fill="#E8F0F8">找接口</text>
+    <text x="1440" y="998" font-size="28" fill="#6B8299">JSON 藏着链接</text>
+    <text x="2000" y="950" font-size="36" font-weight="700" fill="#E8F0F8">实测</text>
+    <text x="2000" y="998" font-size="28" fill="#6B8299">带上 cookie 一发入魂</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1230" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">二维码，只是 URL 的<tspan fill="#3EE8B0" filter="url(#glowG)">图片外衣</tspan></text>
+</svg>

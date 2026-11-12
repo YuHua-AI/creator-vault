@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：开场读 VIN 对话 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g0)"/>
+
+  <text x="100" y="120" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7E0:7FF   <tspan fill="#6E7781"># 修车时，总线上发生的全部</tspan></text>
+
+  <!-- 终端窗口 -->
+  <rect x="100" y="170" width="2200" height="980" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="170" width="2200" height="80" rx="24" fill="#161B22"/>
+  <circle cx="172" cy="210" r="14" fill="#DD4B4B"/>
+  <circle cx="224" cy="210" r="14" fill="#D29922"/>
+  <circle cx="276" cy="210" r="14" fill="#3FB950"/>
+
+  <g font-size="42">
+    <text x="180" y="360" fill="#8B949E">(0000.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [3]  <tspan fill="#3FB950">22 F1 90</tspan></text>
+    <text x="180" y="460" fill="#8B949E">(0000.052)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [8]  <tspan fill="#3FB950">62 F1 90</tspan> 57 30 4C 30 30</text>
+    <text x="180" y="560" fill="#8B949E">(0000.053)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [8]  34 33 4D 42 35 34 31 33</text>
+    <text x="180" y="660" fill="#8B949E">(0000.054)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [4]  32 36 XX XX</text>
+  </g>
+
+  <!-- 注释框：逐字节解码 -->
+  <g font-size="34">
+    <rect x="180" y="760" width="2040" height="330" rx="16" fill="#161B22" stroke="#30363D" stroke-width="2.5"/>
+    <text x="240" y="838" fill="#6E7781"># 逐字节解码 DID F190 的 dataRecord：</text>
+    <text x="240" y="916" fill="#8B949E">57→<tspan fill="#F0F6FC">W</tspan>  30→<tspan fill="#F0F6FC">0</tspan>  4C→<tspan fill="#F0F6FC">L</tspan>  30→<tspan fill="#F0F6FC">0</tspan>  30→<tspan fill="#F0F6FC">0</tspan>  30→<tspan fill="#F0F6FC">0</tspan>  34→<tspan fill="#F0F6FC">4</tspan>  33→<tspan fill="#F0F6FC">3</tspan> …</text>
+    <text x="240" y="1000" fill="#3FB950">= "W0L00043MB541326"  <tspan fill="#6E7781"># 17 位 VIN 码，ASCII 编码</tspan></text>
+    <text x="2100" y="1040" fill="#3FB950">▮</text>
+  </g>
+
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">没有魔法，只是一次三字节的提问 · UDS 0x22 ReadDataByIdentifier</text>
+</svg>

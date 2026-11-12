@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：DCM 流水线 -->
+  <defs>
+    <pattern id="g5" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g5)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">AUTOSAR · DCM 流水线</text>
+  <line x1="120" y1="175" x2="980" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="245" fill="#F4F9FE" font-size="54" font-weight="800">一条 22 F1 90 的旅程</text>
+
+  <!-- OSI 层带 -->
+  <g font-size="26" fill="#9FC3E8">
+    <rect x="120" y="420" width="2160" height="70" fill="none" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="440" y="464" text-anchor="middle">L2-4 传输层</text>
+    <line x1="760" y1="420" x2="760" y2="490" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="1200" y="464" text-anchor="middle" fill="#E8A44C">L5-7 全归 DCM（SWS Table 1.1）</text>
+    <line x1="1640" y1="420" x2="1640" y2="490" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="1960" y="464" text-anchor="middle">应用 / DEM</text>
+  </g>
+
+  <!-- 流水线节点 -->
+  <g text-anchor="middle" font-family="'SF Mono','Menlo',monospace">
+    <!-- CanTp -->
+    <g transform="translate(300,720)">
+      <rect x="-150" y="-90" width="300" height="180" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="42" font-weight="700">CanTp</text>
+      <text y="45" fill="#9FC3E8" font-size="26">多帧拆装</text>
+    </g>
+    <!-- PduR -->
+    <g transform="translate(700,720)">
+      <rect x="-140" y="-90" width="280" height="180" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="42" font-weight="700">PduR</text>
+      <text y="45" fill="#9FC3E8" font-size="26">路由分发</text>
+    </g>
+    <!-- DSL -->
+    <g transform="translate(1130,720)">
+      <rect x="-150" y="-90" width="300" height="180" rx="14" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-10" fill="#F4F9FE" font-size="42" font-weight="800">DSL</text>
+      <text y="45" fill="#9FC3E8" font-size="26">前台接待·会话/定时</text>
+    </g>
+    <!-- DSD -->
+    <g transform="translate(1560,720)">
+      <rect x="-150" y="-90" width="300" height="180" rx="14" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-10" fill="#F4F9FE" font-size="42" font-weight="800">DSD</text>
+      <text y="45" fill="#9FC3E8" font-size="26">质检·会话/解锁校验</text>
+    </g>
+    <!-- DSP -->
+    <g transform="translate(1990,720)">
+      <rect x="-150" y="-90" width="300" height="180" rx="14" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+      <text y="-10" fill="#F4F9FE" font-size="42" font-weight="800">DSP</text>
+      <text y="45" fill="#9FC3E8" font-size="26">干活·解析执行</text>
+    </g>
+  </g>
+
+  <!-- 连接箭头 -->
+  <g stroke="#F4F9FE" stroke-width="3" fill="none">
+    <path d="M450,720 L555,720 M555,720 L527,702 M555,720 L527,738"/>
+    <path d="M845,720 L975,720 M975,720 L947,702 M975,720 L947,738"/>
+    <path d="M1285,720 L1405,720 M1405,720 L1377,702 M1405,720 L1377,738"/>
+    <path d="M1715,720 L1835,720 M1835,720 L1807,702 M1835,720 L1807,738"/>
+  </g>
+
+  <!-- DSP 向上取数 -->
+  <g stroke="#7FB2E8" stroke-width="2.5" stroke-dasharray="10 8" fill="none">
+    <path d="M1990,630 L1990,540 M1990,540 L2160,540"/>
+    <path d="M1990,630 L1990,540 M1990,540 L1820,540"/>
+  </g>
+  <text x="2160" y="525" fill="#7FB2E8" font-size="28" text-anchor="middle">RTE · 应用</text>
+  <text x="1820" y="525" fill="#7FB2E8" font-size="28" text-anchor="middle">DEM · 故障存储</text>
+
+  <!-- DCM 外框 -->
+  <rect x="950" y="580" width="1220" height="290" fill="none" stroke="#E8A44C" stroke-width="2.5" stroke-dasharray="18 12"/>
+  <text x="2150" y="900" fill="#E8A44C" font-size="30" text-anchor="end">Dcm 模块（SWS Fig 7.1）</text>
+
+  <!-- 报文标签随行 -->
+  <text x="300" y="880" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">22 F1 90</text>
+  <text x="1130" y="880" fill="#9FC3E8" font-size="26" text-anchor="middle">"当前会话允许 0x22 吗？"</text>
+  <text x="1990" y="880" fill="#9FC3E8" font-size="26" text-anchor="middle">"DID F190 → 去应用层拿 VIN"</text>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1130" fill="#F4F9FE" font-size="44" font-weight="700" text-anchor="middle">协议是 ISO 的，实现是 <tspan fill="#E8A44C">AUTOSAR 的</tspan></text>
+  <text x="1200" y="1200" fill="#9FC3E8" font-size="30" text-anchor="middle">DaVinci 配置树与这条流水线一一对应：DcmDslProtocol · DcmDspSession · DcmDspDid …</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="1830" y="1218">FIG. SWS_DCM FIG 7.1</text>
+    <text x="1830" y="1258">DSL / DSD / DSP</text>
+    <text x="2120" y="1218">REV. R4.3.0</text>
+    <text x="2120" y="1258">SHEET 04</text>
+  </g>
+</svg>

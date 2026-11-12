@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：26 服务全地图（六组），橙色批注标系列篇目 -->
+  <defs>
+    <pattern id="g4" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g4)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">SERVICE MAP · 服务全地图</text>
+  <line x1="120" y1="175" x2="1020" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="245" fill="#F4F9FE" font-size="54" font-weight="800">26 个服务 · 六本"对话手册"</text>
+  <text x="2280" y="245" fill="#9FC3E8" font-size="28" text-anchor="end">橙色＝本系列展开篇目 · 标准原文并无总表，此图由六组 Overview 合并</text>
+
+  <!-- 六宫格 3×2 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <!-- Row 1 -->
+    <g transform="translate(140,340)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">① 诊断管理 ×9</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">10 会话  11 复位  27 解锁</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">28 通信控  3E 心跳</text>
+      <text x="36" y="240" fill="#9FC3E8" font-size="30">84~87 低频四兄弟</text>
+      <rect x="36" y="290" width="150" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="111" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">②篇 0x10</text>
+      <rect x="210" y="290" width="150" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="285" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">③篇 0x27</text>
+    </g>
+    <g transform="translate(850,340)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">② 数据传送 ×7</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">22 读DID  2E 写DID</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">23/3D 按地址读写  2A 周期读</text>
+      <text x="36" y="240" fill="#9FC3E8" font-size="30">2C 动态DID  24 缩放信息</text>
+      <rect x="36" y="290" width="150" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="111" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">④篇 0x22</text>
+      <text x="210" y="330" fill="#E8A44C" font-size="30" font-family="'PingFang SC',sans-serif">/ 0x2E</text>
+    </g>
+    <g transform="translate(1560,340)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">③ 清读 DTC ×2</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">14 清码  19 读码</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">快照 / 扩展数据 / 永久DTC</text>
+      <text x="36" y="240" fill="#9FC3E8" font-size="30">都在 19 的子功能里</text>
+      <rect x="36" y="290" width="180" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="126" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">⑥篇 0x14/19</text>
+    </g>
+    <!-- Row 2 -->
+    <g transform="translate(140,790)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">④ IO 控制 ×1</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">2F 直接控制执行器</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">信号替换 / 瞬时控制</text>
+      <text x="36" y="240" fill="#9FC3E8" font-size="30">与例程的边界见⑤篇</text>
+    </g>
+    <g transform="translate(850,790)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">⑤ 例程控制 ×1</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">31 启动/停止/查结果</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">自检 · Flash 擦除 · 怠速学习</text>
+      <rect x="36" y="290" width="180" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="126" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">⑤篇 0x31</text>
+    </g>
+    <g transform="translate(1560,790)">
+      <rect x="0" y="0" width="700" height="400" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="36" y="72" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'PingFang SC',sans-serif">⑥ 上传下载 ×5</text>
+      <text x="36" y="140" fill="#9FC3E8" font-size="30">34/35 协商  36 搬运</text>
+      <text x="36" y="190" fill="#9FC3E8" font-size="30">37 签收  38 文件传输</text>
+      <text x="36" y="240" fill="#9FC3E8" font-size="30">OTA 刷写全家桶</text>
+      <rect x="36" y="290" width="240" height="60" rx="10" fill="none" stroke="#E8A44C" stroke-width="2.5"/>
+      <text x="156" y="330" fill="#E8A44C" font-size="30" text-anchor="middle" font-family="'PingFang SC',sans-serif">⑦篇 0x34~38</text>
+    </g>
+  </g>
+
+  <!-- 底注 -->
+  <text x="120" y="1270" fill="#7FB2E8" font-size="28">另：0x29 Authentication（2020 版新增，证书认证）——26 = 25 经典服务 + 1 新贵</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="1830" y="1218">FIG. OVERVIEW ×6</text>
+    <text x="1830" y="1258">T.22/185/295/398/424/439</text>
+    <text x="2120" y="1218">REV. 2020</text>
+    <text x="2120" y="1258">SHEET 03</text>
+  </g>
+</svg>

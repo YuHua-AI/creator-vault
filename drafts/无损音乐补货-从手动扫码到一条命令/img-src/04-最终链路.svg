@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.72" cy="0.22" r="1">
+      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
+    </radialGradient>
+    <radialGradient id="softL">
+      <stop offset="0" stop-color="#14405E" stop-opacity="0.45"/><stop offset="1" stop-color="#14405E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
+  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+  <ellipse cx="500" cy="1100" rx="900" ry="500" fill="url(#softL)"/>
+
+  <circle cx="220" cy="240" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="700" cy="150" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1200" cy="230" r="3" fill="#7FA8D0" opacity="0.4"/>
+  <circle cx="1750" cy="170" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="2200" cy="300" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="2150" cy="1100" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="180" cy="900" r="2" fill="#7FA8D0" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="930" y="88" width="540" height="64" rx="32" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1200" y="130" text-anchor="middle" font-size="30" fill="#D6E6F5" letter-spacing="6">PIPELINE · 最终链路</text>
+
+  <!-- 连线：命令 → 转存 -->
+  <line x1="420" y1="640" x2="760" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="590" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  <!-- 连线：转存 → NAS -->
+  <line x1="1000" y1="640" x2="1310" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1155" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  <!-- 连线：NAS → 入库 -->
+  <line x1="1590" y1="640" x2="1840" y2="640" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1715" cy="640" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="2140" cy="640" r="9" fill="#0A1826" stroke="#E8F0F8" stroke-width="3"/>
+
+  <!-- 节点 1：一条命令（终端） -->
+  <rect x="170" y="500" width="250" height="220" rx="14" fill="#12294D" stroke="#35D0FF" stroke-width="4" filter="url(#glow)"/>
+  <line x1="170" y1="556" x2="420" y2="556" stroke="#3B9FE8" stroke-width="3" opacity="0.8"/>
+  <circle cx="200" cy="528" r="6" fill="#3B9FE8"/>
+  <circle cx="226" cy="528" r="6" fill="#3B9FE8" opacity="0.6"/>
+  <circle cx="252" cy="528" r="6" fill="#3B9FE8" opacity="0.3"/>
+  <text x="200" y="622" font-size="32" fill="#E8F0F8" font-weight="700">&gt;_</text>
+  <rect x="200" y="652" width="12" height="36" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 节点 2：标签页转存（浏览器多标签） -->
+  <rect x="770" y="530" width="220" height="76" rx="10" fill="#12294D" stroke="#3B9FE8" stroke-width="3.5" opacity="0.8"/>
+  <text x="880" y="580" text-anchor="middle" font-size="26" fill="#8FAECB">保存到网盘 ✓</text>
+  <g filter="url(#glow)">
+    <rect x="770" y="600" width="230" height="130" rx="12" fill="#12294D" stroke="#35D0FF" stroke-width="4"/>
+  </g>
+  <line x1="770" y1="650" x2="1000" y2="650" stroke="#3B9FE8" stroke-width="3" opacity="0.8"/>
+  <circle cx="800" cy="625" r="6" fill="#3B9FE8"/>
+  <circle cx="826" cy="625" r="6" fill="#3B9FE8" opacity="0.6"/>
+  <text x="800" y="700" font-size="24" fill="#8FAECB">夸克网盘 ×N</text>
+
+  <!-- 节点 3：直落 NAS（下载箭头 + 服务器） -->
+  <g stroke="#3EE8B0" stroke-width="6" stroke-linecap="round" filter="url(#glowG)" fill="none">
+    <line x1="1440" y1="480" x2="1440" y2="540"/>
+    <path d="M 1408 522 L 1440 556 L 1472 522"/>
+  </g>
+  <g stroke="#35D0FF" stroke-width="4" fill="#12294D" filter="url(#glow)">
+    <rect x="1320" y="590" width="260" height="70" rx="10"/>
+    <rect x="1320" y="674" width="260" height="70" rx="10"/>
+  </g>
+  <g stroke="#3B9FE8" stroke-width="3" stroke-linecap="round">
+    <line x1="1344" y1="614" x2="1384" y2="614"/><line x1="1344" y1="626" x2="1374" y2="626"/>
+    <line x1="1344" y1="698" x2="1384" y2="698"/><line x1="1344" y1="710" x2="1374" y2="710"/>
+  </g>
+  <circle cx="1550" cy="625" r="8" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="1550" cy="709" r="8" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 节点 4：自动入库（音符 + 扫描环） -->
+  <circle cx="2040" cy="640" r="100" fill="none" stroke="#3B9FE8" stroke-width="3" opacity="0.5"/>
+  <path d="M 2040 540 A 100 100 0 0 1 2140 640" fill="none" stroke="#3EE8B0" stroke-width="5" stroke-linecap="round" filter="url(#glowG)"/>
+  <!-- 八分音符 -->
+  <g transform="rotate(-14 2072 672)">
+    <ellipse cx="2072" cy="672" rx="38" ry="27" fill="#3EE8B0" filter="url(#glowG)"/>
+    <line x1="2104" y1="666" x2="2104" y2="556" stroke="#3EE8B0" stroke-width="9" stroke-linecap="round" filter="url(#glowG)"/>
+    <path d="M 2104 556 C 2130 566 2142 582 2144 606" fill="none" stroke="#3EE8B0" stroke-width="9" stroke-linecap="round" filter="url(#glowG)"/>
+  </g>
+
+  <!-- 节点标注 -->
+  <g text-anchor="middle">
+    <text x="295" y="950" font-size="36" font-weight="700" fill="#E8F0F8">一条命令</text>
+    <text x="295" y="998" font-size="28" fill="#6B8299">批量出二维码</text>
+    <text x="885" y="950" font-size="36" font-weight="700" fill="#E8F0F8">标签页转存</text>
+    <text x="885" y="998" font-size="28" fill="#6B8299">官方网页逐个保存</text>
+    <text x="1450" y="950" font-size="36" font-weight="700" fill="#E8F0F8">直落 NAS</text>
+    <text x="1450" y="998" font-size="28" fill="#6B8299">挂载路径直达</text>
+    <text x="2040" y="950" font-size="36" font-weight="700" fill="#E8F0F8">自动入库</text>
+    <text x="2040" y="998" font-size="28" fill="#6B8299">Navidrome 每小时扫库</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1230" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">机器跑腿，<tspan fill="#3EE8B0" filter="url(#glowG)">人只拍板</tspan></text>
+</svg>

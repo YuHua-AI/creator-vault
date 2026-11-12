@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 风格 A：工程蓝图风。深蓝图纸底 + 白细线 + 尺寸标注 + 图纸角标 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <!-- 图纸外框（工程制图边框） -->
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- 标题区 -->
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 入门 · ①</text>
+  <text x="160" y="330" fill="#F4F9FE" font-size="96" font-weight="800">诊断仪和 ECU 在 CAN 上说什么？</text>
+  <text x="160" y="430" fill="#9FC3E8" font-size="52">UDS 协议逐字节拆解 · 26 个服务全景</text>
+  <line x1="160" y1="470" x2="1750" y2="470" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 中心 ECU -->
+  <g transform="translate(1500,1080)">
+    <path d="M0,-130 L113,-65 L113,65 L0,130 L-113,65 L-113,-65 Z" fill="#123A63" stroke="#F4F9FE" stroke-width="4"/>
+    <text x="0" y="12" fill="#F4F9FE" font-size="64" font-weight="800" text-anchor="middle">ECU</text>
+    <text x="0" y="72" fill="#9FC3E8" font-size="30" text-anchor="middle">SERVER</text>
+  </g>
+
+  <!-- 六个服务组节点（拓扑环绕） -->
+  <g font-size="34" text-anchor="middle">
+    <g transform="translate(760,760)">
+      <rect x="-170" y="-52" width="340" height="104" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="-2" fill="#F4F9FE" font-weight="700">诊断管理 ×9</text>
+      <text y="36" fill="#9FC3E8" font-size="26">10 11 27 28 3E…</text>
+    </g>
+    <g transform="translate(2240,760)">
+      <rect x="-170" y="-52" width="340" height="104" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="-2" fill="#F4F9FE" font-weight="700">数据传送 ×7</text>
+      <text y="36" fill="#9FC3E8" font-size="26">22 2E 23 2A…</text>
+    </g>
+    <g transform="translate(600,1260)">
+      <rect x="-170" y="-52" width="340" height="104" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="-2" fill="#F4F9FE" font-weight="700">上传下载 ×5</text>
+      <text y="36" fill="#9FC3E8" font-size="26">34 35 36 37 38</text>
+    </g>
+    <g transform="translate(2400,1260)">
+      <rect x="-170" y="-52" width="340" height="104" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="-2" fill="#F4F9FE" font-weight="700">清读 DTC ×2</text>
+      <text y="36" fill="#9FC3E8" font-size="26">14 19</text>
+    </g>
+    <g transform="translate(1120,1460)">
+      <rect x="-140" y="-48" width="280" height="96" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="8" fill="#F4F9FE" font-weight="700">例程 ×1 · 31</text>
+    </g>
+    <g transform="translate(1880,1460)">
+      <rect x="-140" y="-48" width="280" height="96" fill="#0B2440" stroke="#DCE9F5" stroke-width="2.5"/>
+      <text y="8" fill="#F4F9FE" font-weight="700">IO 控制 ×1 · 2F</text>
+    </g>
+  </g>
+
+  <!-- 连线：中心到各节点（白细线 + 端点圆） -->
+  <g stroke="#DCE9F5" stroke-opacity="0.75" stroke-width="2.5" fill="none">
+    <path d="M760,812 L1340,1000"/>
+    <path d="M2240,812 L1660,1000"/>
+    <path d="M740,1210 L1345,1110"/>
+    <path d="M2260,1210 L1655,1110"/>
+    <path d="M1240,1430 L1420,1210"/>
+    <path d="M1760,1430 L1580,1210"/>
+  </g>
+
+  <!-- 尺寸标注线（工程图特征） -->
+  <g stroke="#7FB2E8" stroke-width="2">
+    <line x1="600" y1="580" x2="2240" y2="580"/>
+    <line x1="600" y1="560" x2="600" y2="600"/>
+    <line x1="2240" y1="560" x2="2240" y2="600"/>
+    <text x="1420" y="552" fill="#7FB2E8" font-size="30" text-anchor="middle" stroke="none">6 GROUPS · 26 SERVICES</text>
+  </g>
+
+  <!-- 报文样例（等宽） -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="2240" y="330" fill="#F4F9FE" font-size="44">→ 22 F1 90</text>
+    <text x="2240" y="396" fill="#9FC3E8" font-size="44">← 62 F1 90 57 30 4C…</text>
+  </g>
+
+  <!-- 图纸角标（title block） -->
+  <g font-size="26" fill="#9FC3E8">
+    <rect x="2088" y="1392" width="664" height="104" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="2088" y1="1444" x2="2752" y2="1444" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2400" y1="1392" x2="2400" y2="1496" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="2110" y="1428">DWG NO. 14229-1</text>
+    <text x="2110" y="1480">SCALE 1:1</text>
+    <text x="2420" y="1428">REV. 2020</text>
+    <text x="2420" y="1480">SHEET 1/1</text>
+  </g>
+</svg>

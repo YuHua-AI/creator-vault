@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.72" cy="0.22" r="1">
+      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
+    </radialGradient>
+    <radialGradient id="softL">
+      <stop offset="0" stop-color="#14405E" stop-opacity="0.45"/><stop offset="1" stop-color="#14405E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+    </filter>
+    <filter id="glowR" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#DD4B4B"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
+  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+  <ellipse cx="500" cy="1100" rx="900" ry="500" fill="url(#softL)"/>
+
+  <circle cx="220" cy="240" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="700" cy="150" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1200" cy="230" r="3" fill="#7FA8D0" opacity="0.4"/>
+  <circle cx="1750" cy="170" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="2200" cy="300" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="2150" cy="1100" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="180" cy="900" r="2" fill="#7FA8D0" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="910" y="88" width="580" height="64" rx="32" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1200" y="130" text-anchor="middle" font-size="30" fill="#D6E6F5" letter-spacing="6">DECISIONS · 脚本三决策</text>
+
+  <!-- 连线：歌手过滤 → 无损优先 -->
+  <line x1="680" y1="660" x2="1000" y2="660" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="840" cy="660" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 连线：无损优先 → 增量清单 -->
+  <line x1="1420" y1="660" x2="1740" y2="660" stroke="#35D0FF" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1580" cy="660" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+
+  <!-- 节点 1：歌手过滤（漏斗） -->
+  <g stroke="#35D0FF" stroke-width="4" fill="#12294D" filter="url(#glow)" stroke-linejoin="round">
+    <path d="M 330 560 H 630 L 530 700 H 430 Z"/>
+    <rect x="462" y="700" width="36" height="50" fill="#0A1826"/>
+  </g>
+  <!-- 待选结果落入：三个点，一个红（DJ 版） -->
+  <circle cx="420" cy="480" r="12" fill="#7FA8D0" opacity="0.7"/>
+  <circle cx="480" cy="452" r="12" fill="#DD4B4B" filter="url(#glowR)"/>
+  <circle cx="540" cy="480" r="12" fill="#7FA8D0" opacity="0.7"/>
+  <!-- 漏下的原唱（青绿）、拦下的 DJ（红叉） -->
+  <circle cx="480" cy="800" r="12" fill="#3EE8B0" filter="url(#glowG)"/>
+  <g stroke="#DD4B4B" stroke-width="6" stroke-linecap="round" filter="url(#glowR)">
+    <line x1="620" y1="770" x2="680" y2="830"/>
+    <line x1="680" y1="770" x2="620" y2="830"/>
+  </g>
+  <text x="650" y="880" text-anchor="middle" font-size="26" fill="#DD4B4B">DJ 版</text>
+
+  <!-- 节点 2：无损优先（双层卡） -->
+  <rect x="1030" y="530" width="340" height="120" rx="12" fill="#12294D" stroke="#3B9FE8" stroke-width="3.5" opacity="0.55"/>
+  <text x="1200" y="606" text-anchor="middle" font-size="40" fill="#6B8299" font-weight="700" opacity="0.8">MP3 · 有损</text>
+  <rect x="1000" y="620" width="340" height="120" rx="12" fill="#12294D" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
+  <text x="1170" y="696" text-anchor="middle" font-size="40" fill="#3EE8B0" font-weight="700" filter="url(#glowG)">FLAC · 无损</text>
+
+  <!-- 节点 3：增量清单（清单 + 追加徽章） -->
+  <rect x="1770" y="520" width="300" height="280" rx="14" fill="#12294D" stroke="#35D0FF" stroke-width="4" filter="url(#glow)"/>
+  <g stroke="#3B9FE8" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="1806" y1="586" x2="2034" y2="586"/>
+    <line x1="1806" y1="650" x2="2000" y2="650"/>
+    <line x1="1806" y1="714" x2="2034" y2="714"/>
+  </g>
+  <circle cx="1786" cy="580" r="7" fill="#3EE8B0" filter="url(#glowG)"/>
+  <circle cx="1786" cy="644" r="7" fill="#3EE8B0" filter="url(#glowG)"/>
+  <!-- 追加徽章 -->
+  <circle cx="2080" cy="780" r="44" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
+  <g stroke="#3EE8B0" stroke-width="7" stroke-linecap="round">
+    <line x1="2056" y1="780" x2="2104" y2="780"/>
+    <line x1="2080" y1="756" x2="2080" y2="804"/>
+  </g>
+
+  <!-- 节点标注 -->
+  <g text-anchor="middle">
+    <text x="480" y="960" font-size="36" font-weight="700" fill="#E8F0F8">歌手过滤</text>
+    <text x="480" y="1008" font-size="28" fill="#6B8299">原唱 8 分命中 · DJ 出局</text>
+    <text x="1170" y="960" font-size="36" font-weight="700" fill="#E8F0F8">无损优先</text>
+    <text x="1170" y="1008" font-size="28" fill="#6B8299">FLAC 打头 · 拿不到再降级</text>
+    <text x="1930" y="960" font-size="36" font-weight="700" fill="#E8F0F8">增量清单</text>
+    <text x="1930" y="1008" font-size="28" fill="#6B8299">同歌更新 · 新歌追加</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1230" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">搜索不过滤，只是更快地<tspan fill="#3EE8B0" filter="url(#glowG)">下错歌</tspan></text>
+</svg>

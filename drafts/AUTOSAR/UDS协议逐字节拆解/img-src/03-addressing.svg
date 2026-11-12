@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：功能寻址 vs 物理寻址 -->
+  <defs>
+    <pattern id="g3" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g3)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">ADDRESSING · 广播与点名</text>
+  <line x1="120" y1="175" x2="900" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">应答，永远走物理寻址</text>
+
+  <!-- 左：物理寻址 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="140" y="360" fill="#F4F9FE" font-size="40" font-weight="700" font-family="'PingFang SC',sans-serif">物理寻址 · 点名</text>
+    <text x="140" y="410" fill="#9FC3E8" font-size="28" font-family="'PingFang SC',sans-serif">一对一，请求 7E0~7E7</text>
+
+    <rect x="180" y="560" width="360" height="150" rx="16" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+    <text x="360" y="640" fill="#F4F9FE" font-size="44" font-weight="800" text-anchor="middle">TESTER</text>
+    <text x="360" y="686" fill="#9FC3E8" font-size="28" text-anchor="middle">诊断仪</text>
+
+    <!-- 双向箭头 -->
+    <line x1="360" y1="710" x2="360" y2="930" stroke="#F4F9FE" stroke-width="3"/>
+    <path d="M360,930 L342,900 M360,930 L378,900" stroke="#F4F9FE" stroke-width="3" fill="none"/>
+    <line x1="420" y1="930" x2="420" y2="710" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M420,710 L402,740 M420,710 L438,740" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="3" fill="none"/>
+    <text x="300" y="830" fill="#F4F9FE" font-size="32">7E0</text>
+    <text x="460" y="830" fill="#9FC3E8" font-size="32">7E8</text>
+
+    <rect x="180" y="930" width="360" height="150" rx="16" fill="#0B2440" stroke="#F4F9FE" stroke-width="3.5"/>
+    <text x="360" y="1010" fill="#F4F9FE" font-size="44" font-weight="800" text-anchor="middle">ECU #1</text>
+    <text x="360" y="1056" fill="#9FC3E8" font-size="28" text-anchor="middle">被点名，必须应答</text>
+  </g>
+
+  <!-- 中缝分隔线 -->
+  <line x1="1200" y1="330" x2="1200" y2="1180" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="16 12"/>
+
+  <!-- 右：功能寻址 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="1330" y="360" fill="#F4F9FE" font-size="40" font-weight="700" font-family="'PingFang SC',sans-serif">功能寻址 · 广播</text>
+    <text x="1330" y="410" fill="#9FC3E8" font-size="28" font-family="'PingFang SC',sans-serif">一对多，统一发 7DF</text>
+
+    <rect x="1330" y="470" width="360" height="140" rx="16" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+    <text x="1510" y="556" fill="#F4F9FE" font-size="44" font-weight="800" text-anchor="middle">TESTER</text>
+
+    <!-- 一发三收 -->
+    <g stroke="#F4F9FE" stroke-width="3" fill="none">
+      <path d="M1510,610 L1510,680 M1510,680 L1420,760 M1510,680 L1600,760 M1510,680 L1510,760" />
+    </g>
+    <text x="1560" y="680" fill="#E8A44C" font-size="30">7DF</text>
+
+    <g text-anchor="middle" font-family="'SF Mono','Menlo',monospace">
+      <rect x="1340" y="760" width="200" height="110" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="1440" y="828" fill="#F4F9FE" font-size="36" font-weight="700">ECU1</text>
+      <rect x="1580" y="760" width="200" height="110" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="1680" y="828" fill="#F4F9FE" font-size="36" font-weight="700">ECU2</text>
+      <rect x="1450" y="920" width="200" height="110" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text x="1550" y="988" fill="#F4F9FE" font-size="36" font-weight="700">ECU3</text>
+    </g>
+
+    <!-- 应答虚线（各自物理寻址回） -->
+    <g stroke="#7FB2E8" stroke-width="2.5" stroke-dasharray="10 8" fill="none">
+      <path d="M1340,815 Q1220,815 1180,870"/>
+      <path d="M1780,815 Q1980,815 2020,870"/>
+      <path d="M1650,975 Q1600,1090 1500,1120"/>
+    </g>
+    <text x="2040" y="920" fill="#9FC3E8" font-size="26" font-family="'PingFang SC',sans-serif">各自应答：</text>
+    <text x="2040" y="960" fill="#9FC3E8" font-size="26" font-family="'PingFang SC',sans-serif">7E8 / 7E9 / 7EA</text>
+    <text x="2040" y="1000" fill="#E8A44C" font-size="26" font-family="'PingFang SC',sans-serif">不支持的不许吭声</text>
+    <text x="2040" y="1040" fill="#9FC3E8" font-size="26" font-family="'PingFang SC',sans-serif">(§8.7.1)</text>
+  </g>
+
+  <!-- 底部示例 -->
+  <text x="140" y="1180" fill="#9FC3E8" font-size="30" font-family="'SF Mono','Menlo',monospace">例：7DF [3] 11 01 → 全车 ECU 硬复位 · "全体起立"</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="1830" y="1218">FIG. 14229-1 §7.4</text>
+    <text x="1830" y="1258">PHYSICAL / FUNCTIONAL</text>
+    <text x="2120" y="1218">REV. 2020</text>
+    <text x="2120" y="1258">SHEET 02</text>
+  </g>
+</svg>
