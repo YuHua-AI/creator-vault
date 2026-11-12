@@ -76,12 +76,12 @@
 
   <!-- DCM 外框 -->
   <rect x="950" y="580" width="1220" height="290" fill="none" stroke="#E8A44C" stroke-width="2.5" stroke-dasharray="18 12"/>
-  <text x="2150" y="900" fill="#E8A44C" font-size="30" text-anchor="end">Dcm 模块（SWS Fig 7.1）</text>
+  <text x="2150" y="565" fill="#E8A44C" font-size="30" text-anchor="end">Dcm 模块（SWS Fig 7.1）</text>
 
   <!-- 报文标签随行 -->
-  <text x="300" y="880" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">22 F1 90</text>
-  <text x="1130" y="880" fill="#9FC3E8" font-size="26" text-anchor="middle">"当前会话允许 0x22 吗？"</text>
-  <text x="1990" y="880" fill="#9FC3E8" font-size="26" text-anchor="middle">"DID F190 → 去应用层拿 VIN"</text>
+  <text x="300" y="910" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">22 F1 90</text>
+  <text x="1130" y="910" fill="#9FC3E8" font-size="26" text-anchor="middle">"当前会话允许 0x22 吗？"</text>
+  <text x="1900" y="910" fill="#9FC3E8" font-size="26" text-anchor="middle">"F190 → 去 RTE 拿 VIN"</text>
 
   <!-- 底部金句 -->
   <text x="1200" y="1130" fill="#F4F9FE" font-size="44" font-weight="700" text-anchor="middle">协议是 ISO 的，实现是 <tspan fill="#E8A44C">AUTOSAR 的</tspan></text>

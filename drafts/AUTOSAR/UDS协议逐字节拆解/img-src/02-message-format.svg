@@ -56,7 +56,7 @@
     <text x="610" y="1182" fill="#1B3A6B">22</text>
     <rect x="760" y="1100" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
     <text x="910" y="1182" fill="#1B3A6B">31</text>
-    <text x="1120" y="1182" fill="#3D4A5C" font-size="34" font-weight="400">"0x22 的请求被拒：NRC 0x31 参数越界"</text>
+    <text x="1140" y="1182" fill="#3D4A5C" font-size="34" font-weight="400" text-anchor="start">"0x22 的请求被拒：NRC 0x31 参数越界"</text>
   </g>
   <g font-size="30" fill="#3D4A5C" text-anchor="middle">
     <line x1="310" y1="1230" x2="310" y2="1280" stroke="#8A94A6" stroke-width="2"/>
