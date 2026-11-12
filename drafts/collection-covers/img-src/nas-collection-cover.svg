@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
-  <!-- C 手册风：NAS 折腾记合集封面（竖图 3:4，米白纸面线描版） -->
+  <!-- 深棕手册风：NAS 折腾记合集封面（竖图 3:4，四角对称版） -->
   <defs>
     <pattern id="dots" width="56" height="56" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="2" fill="#C8A87C" fill-opacity="0.08"/>
@@ -14,7 +14,7 @@
   <rect x="36" y="36" width="1008" height="1368" fill="none" stroke="#C8A87C" stroke-width="4"/>
   <rect x="52" y="52" width="976" height="1336" fill="none" stroke="#C8A87C" stroke-opacity="0.3" stroke-width="1.5"/>
 
-  <!-- 顶部题头 -->
+  <!-- 题头 -->
   <line x1="90" y1="130" x2="990" y2="130" stroke="#C8A87C" stroke-width="5"/>
   <line x1="90" y1="144" x2="990" y2="144" stroke="#C8A87C" stroke-width="2"/>
   <text x="90" y="106" fill="#C8A87C" font-size="34" font-weight="700" letter-spacing="6">家庭数据中心 · 产品手册</text>
@@ -24,70 +24,67 @@
   <text x="90" y="430" fill="#F5EDE0" font-size="120" font-weight="800">折腾记</text>
   <text x="90" y="510" fill="#E8A44C" font-size="40">让数据住进自己家</text>
 
-  <!-- 中央 NAS：产品手册式正视剖面 -->
+  <!-- 中央 NAS（水平居中 x=540，垂直带 640~890） -->
   <g>
-    <rect x="290" y="620" width="500" height="250" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="4"/>
-    <!-- 盘位 -->
+    <rect x="300" y="640" width="480" height="250" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="4"/>
     <g fill="none" stroke="#C8A87C" stroke-width="2.5">
-      <rect x="330" y="655" width="190" height="56" rx="5"/>
-      <rect x="330" y="727" width="190" height="56" rx="5"/>
-      <rect x="330" y="799" width="190" height="56" rx="5"/>
-      <rect x="550" y="655" width="190" height="56" rx="5"/>
-      <rect x="550" y="727" width="190" height="56" rx="5"/>
-      <rect x="550" y="799" width="190" height="56" rx="5"/>
+      <rect x="340" y="673" width="190" height="56" rx="5"/>
+      <rect x="340" y="745" width="190" height="56" rx="5"/>
+      <rect x="340" y="817" width="190" height="56" rx="5"/>
+      <rect x="550" y="673" width="190" height="56" rx="5"/>
+      <rect x="550" y="745" width="190" height="56" rx="5"/>
+      <rect x="550" y="817" width="190" height="56" rx="5"/>
     </g>
-    <!-- 硬盘拉手 -->
     <g stroke="#C8A87C" stroke-width="2">
-      <line x1="470" y1="683" x2="505" y2="683"/>
-      <line x1="470" y1="755" x2="505" y2="755"/>
-      <line x1="470" y1="827" x2="505" y2="827"/>
+      <line x1="480" y1="701" x2="515" y2="701"/>
+      <line x1="480" y1="773" x2="515" y2="773"/>
+      <line x1="480" y1="845" x2="515" y2="845"/>
     </g>
-    <!-- 呼吸灯 -->
-    <circle cx="310" cy="683" r="8" fill="#E8A44C"/>
-    <circle cx="310" cy="755" r="8" fill="#E8A44C" fill-opacity="0.55"/>
-    <circle cx="310" cy="827" r="8" fill="#E8A44C" fill-opacity="0.25"/>
-    <text x="540" y="920" fill="#C8A87C" font-size="32" text-anchor="middle" font-weight="700">存储池 · 数据的家</text>
+    <circle cx="320" cy="701" r="8" fill="#E8A44C"/>
+    <circle cx="320" cy="773" r="8" fill="#E8A44C" fill-opacity="0.55"/>
+    <circle cx="320" cy="845" r="8" fill="#E8A44C" fill-opacity="0.25"/>
+    <text x="540" y="946" fill="#C8A87C" font-size="32" text-anchor="middle" font-weight="700">存储池 · 数据的家</text>
   </g>
 
-  <!-- 四端线描图标 + 虚线取数 -->
+  <!-- 四角对称虚线（统一 45° 指向 NAS 四角） -->
   <g stroke="#E8A44C" stroke-width="3" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
-    <path d="M250,640 L330,730"/>
-    <path d="M840,600 L720,650"/>
-    <path d="M260,1030 L380,890"/>
-    <path d="M820,1030 L700,890"/>
+    <path d="M280,568 L322,610"/>
+    <path d="M800,568 L758,610"/>
+    <path d="M280,1108 L322,1066"/>
+    <path d="M800,1108 L758,1066"/>
   </g>
 
-  <!-- 手机 -->
+  <!-- 左上：手机（图标带 560~680，中心 y=620） -->
   <g fill="none" stroke="#C8A87C" stroke-width="3.5">
-    <rect x="150" y="560" width="86" height="140" rx="14"/>
-    <line x1="177" y1="676" x2="209" y2="676"/>
+    <rect x="170" y="560" width="86" height="120" rx="14"/>
+    <line x1="197" y1="662" x2="229" y2="662"/>
   </g>
-  <text x="193" y="756" fill="#F5EDE0" font-size="28" text-anchor="middle">手机</text>
+  <text x="213" y="724" fill="#F5EDE0" font-size="28" text-anchor="middle">手机</text>
 
-  <!-- 笔记本 -->
+  <!-- 右上：笔记本 -->
   <g fill="#171310" stroke="#C8A87C" stroke-width="3.5">
-    <rect x="790" y="470" width="120" height="80" rx="6"/>
-    <path d="M770,550 L930,550 L950,596 L750,596 Z"/>
+    <rect x="820" y="560" width="120" height="80" rx="6"/>
+    <path d="M800,640 L960,640 L980,686 L780,686 Z"/>
   </g>
-  <text x="850" y="660" fill="#F5EDE0" font-size="28" text-anchor="middle">电脑</text>
+  <text x="880" y="724" fill="#F5EDE0" font-size="28" text-anchor="middle">电脑</text>
 
-  <!-- 电视 -->
+  <!-- 左下：电视（图标带 1060~1180，中心 y=1120） -->
   <g fill="#171310" stroke="#C8A87C" stroke-width="3.5">
-    <rect x="165" y="1040" width="170" height="104" rx="8"/>
-    <line x1="250" y1="1144" x2="250" y2="1170"/>
-    <line x1="210" y1="1174" x2="290" y2="1174"/>
+    <rect x="170" y="1060" width="170" height="96" rx="8"/>
+    <line x1="255" y1="1156" x2="255" y2="1176"/>
+    <line x1="220" y1="1180" x2="290" y2="1180"/>
   </g>
-  <text x="250" y="1232" fill="#F5EDE0" font-size="28" text-anchor="middle">电视</text>
+  <text x="255" y="1236" fill="#F5EDE0" font-size="28" text-anchor="middle">电视</text>
 
-  <!-- 云 -->
+  <!-- 右下：云 -->
   <g fill="#171310" stroke="#C8A87C" stroke-width="3.5">
-    <path d="M820,1080 a30,30 0 0 1 6,-59 a38,38 0 0 1 72,-8 a26,26 0 0 1 12,51 a20,20 0 0 1 -14,16 Z"/>
+    <path d="M830,1112 a28,28 0 0 1 6,-55 a36,36 0 0 1 68,-8 a25,25 0 0 1 11,48 a19,19 0 0 1 -13,15 Z"/>
   </g>
-  <path d="M865,1090 L865,1125 M865,1125 L852,1112 M865,1125 L878,1112" stroke="#E8A44C" stroke-width="3.5" fill="none"/>
-  <text x="865" y="1232" fill="#F5EDE0" font-size="28" text-anchor="middle">云端</text>
+  <path d="M872,1116 L872,1148 M872,1148 L860,1136 M872,1148 L884,1136" stroke="#E8A44C" stroke-width="3.5" fill="none"/>
+  <text x="880" y="1236" fill="#F5EDE0" font-size="28" text-anchor="middle">云端</text>
 
   <!-- 底部金句 + 规格行 -->
   <line x1="90" y1="1280" x2="990" y2="1280" stroke="#C8A87C" stroke-width="2"/>
   <text x="90" y="1360" fill="#F5EDE0" font-size="44" font-weight="700">设备会吃灰，<tspan fill="#E8A44C">折腾不会</tspan></text>
-  <text x="990" y="1360" fill="#C8A87C" fill-opacity="0.6" font-size="26" text-anchor="end" font-family="'SF Mono','Menlo',monospace">FIG. 03 · REV 2.0</text>
+  <text x="990" y="1360" fill="#C8A87C" fill-opacity="0.6" font-size="26" text-anchor="end" font-family="'SF Mono','Menlo',monospace">FIG. 03 · REV 2.1</text>
 </svg>
