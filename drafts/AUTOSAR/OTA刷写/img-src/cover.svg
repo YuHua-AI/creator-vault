@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 风格 A：刷写时间线 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 入门 · ⑦ · 系列收官</text>
+  <text x="160" y="330" fill="#F4F9FE" font-size="96" font-weight="800">一次 OTA 刷写的总线上</text>
+  <text x="160" y="430" fill="#9FC3E8" font-size="52">0x34~0x38 传输五件套 · 七篇知识全串联</text>
+  <line x1="160" y1="470" x2="1750" y2="470" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 时间线 -->
+  <line x1="240" y1="900" x2="2608" y2="900" stroke="#DCE9F5" stroke-opacity="0.7" stroke-width="3"/>
+  <g text-anchor="middle" font-size="28">
+    <g transform="translate(360,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">10 02</text><text y="-115" fill="#9FC3E8">编程会话 ②</text></g>
+    <g transform="translate(680,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">27 xx</text><text y="-115" fill="#9FC3E8">解锁 ③</text></g>
+    <g transform="translate(1000,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">31 01</text><text y="-115" fill="#9FC3E8">擦除例程 ⑤</text></g>
+    <g transform="translate(1424,900)"><circle r="20" fill="#E8A44C"/><rect x="-190" y="-260" width="380" height="180" rx="12" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/><text y="-195" fill="#E8A44C" font-family="'SF Mono',monospace" font-size="32">34 → 36 → 37</text><text y="-150" fill="#F4F9FE">谈判 · 搬运 · 签收</text><text y="-110" fill="#9FC3E8">本篇主角</text></g>
+    <g transform="translate(1848,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">31 01</text><text y="-115" fill="#9FC3E8">校验例程 ⑤</text></g>
+    <g transform="translate(2168,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">11 01</text><text y="-115" fill="#9FC3E8">复位生效 ①</text></g>
+    <g transform="translate(2488,900)"><circle r="16" fill="#9FC3E8"/><rect x="-110" y="-220" width="220" height="140" rx="12" fill="#0B2440" stroke="#9FC3E8" stroke-width="2"/><text y="-160" fill="#F4F9FE" font-family="'SF Mono',monospace">10 01</text><text y="-115" fill="#9FC3E8">回默认 ②</text></g>
+  </g>
+
+  <!-- 五件套小图例 -->
+  <g font-size="30" text-anchor="middle">
+    <g transform="translate(760,1300)"><rect x="-280" y="-60" width="560" height="120" rx="14" fill="#0B2440" stroke="#DCE9F5" stroke-width="2"/><text y="-8" fill="#F4F9FE">0x34 谈判 · 0x36 搬运 · 0x37 签收</text><text y="36" fill="#9FC3E8" font-size="26">0x35 上传 · 0x38 文件传输</text></g>
+    <g transform="translate(2088,1300)"><rect x="-280" y="-60" width="560" height="120" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="2"/><text y="-8" fill="#F4F9FE">跑在 Bootloader 里,不在 App DCM</text><text y="36" fill="#9FC3E8" font-size="26">擦除/校验是 0x31 例程的活</text></g>
+  </g>
+
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="2240" y="300" fill="#F4F9FE" font-size="42">→ 36 01 &lt;data…&gt;</text>
+    <text x="2240" y="362" fill="#9FC3E8" font-size="42">→ 36 02 &lt;data…&gt; …×N</text>
+  </g>
+  <text x="160" y="1500" fill="#6E96C2" font-size="28">ISO 14229-1:2020 §15 · Tables 440–454</text>
+</svg>

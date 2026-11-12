@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：S3 心跳与超时 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g1" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g1)"/>
+  <text x="100" y="120" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7DF:7DF can0,7E0:7E0   <tspan fill="#6E7781"># 扩展会话里的心跳与断线</tspan></text>
+
+  <rect x="100" y="170" width="2200" height="980" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="170" width="2200" height="80" rx="24" fill="#161B22"/>
+  <circle cx="172" cy="210" r="14" fill="#DD4B4B"/><circle cx="224" cy="210" r="14" fill="#D29922"/><circle cx="276" cy="210" r="14" fill="#3FB950"/>
+
+  <g font-size="42">
+    <text x="180" y="340" fill="#8B949E">(0010.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [2]  <tspan fill="#3FB950">10 03</tspan>            <tspan fill="#6E7781"># 进扩展会话</tspan></text>
+    <text x="180" y="440" fill="#8B949E">(0010.052)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [6]  <tspan fill="#3FB950">50 03 00 32 01 F4</tspan></text>
+    <text x="180" y="560" fill="#8B949E">(0012.400)  can0  TX  <tspan fill="#79C0FF">7DF</tspan>  [2]  <tspan fill="#58A6FF">3E 80</tspan>          <tspan fill="#6E7781"># 心跳:TesterPresent+抑制位</tspan></text>
+    <text x="180" y="660" fill="#8B949E">(0015.400)  can0  TX  <tspan fill="#79C0FF">7DF</tspan>  [2]  <tspan fill="#58A6FF">3E 80</tspan></text>
+    <text x="180" y="760" fill="#8B949E">(0018.400)  can0  TX  <tspan fill="#79C0FF">7DF</tspan>  [2]  <tspan fill="#58A6FF">3E 80</tspan></text>
+    <text x="180" y="860" fill="#D29922">(0021.400)  <tspan fill="#DD4B4B">--- 诊断仪拔线，心跳停止 ---</tspan></text>
+    <text x="180" y="960" fill="#8B949E">(0024.500)  <tspan fill="#DD4B4B">7E8</tspan>  <tspan fill="#DD4B4B">[2]  50 01 00 32 01 F4</tspan>  <tspan fill="#6E7781"># S3 超时,自动回默认会话</tspan></text>
+  </g>
+
+  <g font-size="34">
+    <rect x="180" y="1020" width="2040" height="90" rx="16" fill="#161B22" stroke="#30363D" stroke-width="2.5"/>
+    <text x="240" y="1078" fill="#6E7781"># 3E 80: 0x80 的 bit7=抑制位,广播到 7DF 且不要应答——全车 ECU 心跳归零重计</text>
+  </g>
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">拔掉诊断仪,3 秒内全车自动回到默认会话——故障安全设计</text>
+</svg>

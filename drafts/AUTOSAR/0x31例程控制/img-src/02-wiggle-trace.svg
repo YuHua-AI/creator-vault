@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：wiggle test 全程 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g5" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g5)"/>
+  <text x="100" y="120" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7E0:7E8   <tspan fill="#6E7781"># 晃线束测试的完整生命周期 (RID 0x0201)</tspan></text>
+
+  <rect x="100" y="170" width="2200" height="980" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="170" width="2200" height="80" rx="24" fill="#161B22"/>
+  <circle cx="172" cy="210" r="14" fill="#DD4B4B"/><circle cx="224" cy="210" r="14" fill="#D29922"/><circle cx="276" cy="210" r="14" fill="#3FB950"/>
+
+  <g font-size="42">
+    <text x="180" y="350" fill="#8B949E">(0000.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [4]  <tspan fill="#3FB950">31 01 02 01</tspan>        <tspan fill="#6E7781"># 派活:start</tspan></text>
+    <text x="180" y="450" fill="#8B949E">(0000.015)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [5]  <tspan fill="#3FB950">71 01 02 01 32</tspan>     <tspan fill="#6E7781"># 已启动</tspan></text>
+    <text x="180" y="560" fill="#D29922">            <tspan fill="#D29922">… 技师疯狂晃插头,ECU 默默记录 …</tspan></text>
+    <text x="180" y="670" fill="#8B949E">(0032.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [4]  <tspan fill="#3FB950">31 02 02 01</tspan>        <tspan fill="#6E7781"># 撤活:stop</tspan></text>
+    <text x="180" y="770" fill="#8B949E">(0032.012)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [4]  <tspan fill="#3FB950">71 02 02 01</tspan>      <tspan fill="#6E7781"># 停了</tspan></text>
+    <text x="180" y="880" fill="#8B949E">(0033.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [4]  <tspan fill="#58A6FF">31 03 02 01</tspan>        <tspan fill="#6E7781"># 要结果</tspan></text>
+    <text x="180" y="980" fill="#8B949E">(0033.040)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [n]  <tspan fill="#58A6FF">71 03 02 01 &lt;结果&gt;</tspan> <tspan fill="#6E7781"># 哪根线在闪断</tspan></text>
+  </g>
+
+  <g font-size="32">
+    <rect x="180" y="1030" width="2040" height="90" rx="16" fill="#161B22" stroke="#30363D" stroke-width="2.5"/>
+    <text x="240" y="1088" fill="#6E7781"># 注意:三个动作的正应答 SID 都是 0x71——区分动作的是子功能字节,不是 SID</text>
+  </g>
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">派活 → 执行 → 撤活 → 要结果:一张工单的完整生命周期</text>
+</svg>

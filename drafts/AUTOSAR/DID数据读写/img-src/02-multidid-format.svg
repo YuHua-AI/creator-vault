@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- C 技术手册：批量读 DID 格式 -->
+  <rect width="2400" height="1350" fill="#F7F5F0"/>
+  <line x1="120" y1="130" x2="2280" y2="130" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="120" y1="144" x2="2280" y2="144" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="120" y="106" fill="#1B3A6B" font-size="36" font-weight="700" letter-spacing="4">0x22 的批量读：一次点名三个门牌</text>
+  <text x="2280" y="106" fill="#B3541E" font-size="36" text-anchor="end">ISO 14229-1 §11.2 · Tables 186/188</text>
+
+  <text x="120" y="260" fill="#1B3A6B" font-size="40" font-weight="700">Figure 1　请求：SID + DID 列表（无子功能字节）</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="300" width="260" height="130" fill="#1B3A6B"/>
+    <text x="290" y="382" fill="#F7F5F0">22</text>
+    <rect x="420" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="550" y="382" fill="#1B3A6B">F1</text>
+    <rect x="680" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="810" y="382" fill="#1B3A6B">87</text>
+    <rect x="940" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1070" y="382" fill="#1B3A6B">F1</text>
+    <rect x="1200" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1330" y="382" fill="#1B3A6B">88</text>
+    <rect x="1460" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1590" y="382" fill="#1B3A6B">F1</text>
+    <rect x="1720" y="300" width="260" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1850" y="382" fill="#1B3A6B">89</text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <line x1="290" y1="430" x2="290" y2="480" stroke="#8A94A6" stroke-width="2"/>
+    <text x="290" y="518">SID（无子功能）</text>
+    <text x="550" y="560">F187 备件号</text>
+    <line x1="550" y1="430" x2="550" y2="530" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1330" y="560">F188 软件号</text>
+    <line x1="1330" y1="430" x2="1330" y2="530" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1850" y="560">F189 版本号</text>
+    <line x1="1850" y1="430" x2="1850" y2="530" stroke="#8A94A6" stroke-width="2"/>
+  </g>
+
+  <text x="120" y="720" fill="#1B3A6B" font-size="40" font-weight="700">Figure 2　正应答：62 + 「DID 回显 + data」× N</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="760" width="260" height="130" fill="#1B3A6B"/>
+    <text x="290" y="842" fill="#F7F5F0">62</text>
+    <rect x="420" y="760" width="640" height="130" fill="none" stroke="#B3541E" stroke-width="4" stroke-dasharray="14 10"/>
+    <text x="740" y="842" fill="#B3541E">F1 87 <data…></text>
+    <rect x="1060" y="760" width="640" height="130" fill="none" stroke="#B3541E" stroke-width="4" stroke-dasharray="14 10"/>
+    <text x="1380" y="842" fill="#B3541E">F1 88 <data…></text>
+    <rect x="1700" y="760" width="640" height="130" fill="none" stroke="#B3541E" stroke-width="4" stroke-dasharray="14 10"/>
+    <text x="2020" y="842" fill="#B3541E">F1 89 <data…></text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <text x="290" y="968">SID+0x40</text>
+    <text x="740" y="968">依次排列,顺序与请求一致</text>
+    <text x="1700" y="968">应答总长超上限 → NRC 0x14 responseTooLong</text>
+  </g>
+
+  <text x="120" y="1140" fill="#B3541E" font-size="32">注意：0x22 第二字节直接就是 DID 高位——没有子功能字节，因此也没有抑制位</text>
+  <text x="120" y="1210" fill="#3D4A5C" font-size="32">一次贪多会撞传输层上限：请多少个 DID,ECU 应答要装得下才行</text>
+</svg>

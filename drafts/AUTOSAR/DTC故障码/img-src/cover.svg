@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 风格 A：八盏灯 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 入门 · ⑥</text>
+  <text x="160" y="330" fill="#F4F9FE" font-size="96" font-weight="800">八盏故障灯的秘密</text>
+  <text x="160" y="430" fill="#9FC3E8" font-size="52">DTC 状态字节 · 0x19 读码与 0x14 清码</text>
+  <line x1="160" y1="470" x2="1750" y2="470" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 状态字节 = 八盏灯 -->
+  <g text-anchor="middle">
+    <g transform="translate(1424,620)">
+      <text y="-60" fill="#F4F9FE" font-size="38" font-weight="700">每个 DTC 身后的 1 字节状态（Table 342）</text>
+    </g>
+    <!-- 8 lamps, bit0 left -->
+    <g font-family="'SF Mono','Menlo',monospace" font-size="30">
+      <g transform="translate(644,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/><circle cy="10" r="26" fill="#E8A44C"/><text y="-15" fill="#E8A44C" text-anchor="middle" font-size="26">bit0</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">此刻失败</text></g>
+      <g transform="translate(844,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#DCE9F5" stroke-width="2"/><circle cy="10" r="26" fill="#1E4A78"/><text y="-15" fill="#DCE9F5" text-anchor="middle" font-size="26">bit1</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">本周期败</text></g>
+      <g transform="translate(1044,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/><circle cy="10" r="26" fill="#E8A44C"/><text y="-15" fill="#E8A44C" text-anchor="middle" font-size="26">bit2</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">待定</text></g>
+      <g transform="translate(1244,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/><circle cy="10" r="26" fill="#E8A44C"/><text y="-15" fill="#E8A44C" text-anchor="middle" font-size="26">bit3</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">已确认</text></g>
+      <g transform="translate(1444,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#DCE9F5" stroke-width="2"/><circle cy="10" r="26" fill="#1E4A78"/><text y="-15" fill="#DCE9F5" text-anchor="middle" font-size="26">bit4</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">清后未测</text></g>
+      <g transform="translate(1644,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#DCE9F5" stroke-width="2"/><circle cy="10" r="26" fill="#1E4A78"/><text y="-15" fill="#DCE9F5" text-anchor="middle" font-size="26">bit5</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">清后败过</text></g>
+      <g transform="translate(1844,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#DCE9F5" stroke-width="2"/><circle cy="10" r="26" fill="#1E4A78"/><text y="-15" fill="#DCE9F5" text-anchor="middle" font-size="26">bit6</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">本周期未测</text></g>
+      <g transform="translate(2044,760)"><rect x="-85" y="-45" width="170" height="220" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/><circle cy="10" r="26" fill="#E8A44C"/><text y="-15" fill="#E8A44C" text-anchor="middle" font-size="26">bit7</text><text y="90" fill="#9FC3E8" text-anchor="middle" font-size="24" font-family="'PingFang SC',sans-serif">请求亮灯</text></g>
+    </g>
+    <!-- 示例 -->
+    <g transform="translate(1424,1080)" font-family="'SF Mono','Menlo',monospace" font-size="36">
+      <text fill="#F4F9FE">0x2F = 0010 1111</text>
+      <text y="60" fill="#9FC3E8" font-family="'PingFang SC',sans-serif" font-size="30">实锤 + 正在发生 + 历史重犯</text>
+    </g>
+  </g>
+
+  <!-- 报文 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="2240" y="300" fill="#F4F9FE" font-size="44">→ 19 02 FF</text>
+    <text x="2240" y="366" fill="#9FC3E8" font-size="44">← 59 02 7F &lt;DTC+状态&gt;…</text>
+  </g>
+  <text x="160" y="1500" fill="#6E96C2" font-size="28">ISO 14229-1:2020 §12 · Table 342</text>
+</svg>

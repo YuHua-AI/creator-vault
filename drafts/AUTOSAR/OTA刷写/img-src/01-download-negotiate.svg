@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- C 技术手册：0x34/0x36 格式 -->
+  <rect width="2400" height="1350" fill="#F7F5F0"/>
+  <line x1="120" y1="130" x2="2280" y2="130" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="120" y1="144" x2="2280" y2="144" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="120" y="106" fill="#1B3A6B" font-size="36" font-weight="700" letter-spacing="4">0x34 谈判与 0x36 搬运的报文格式</text>
+  <text x="2280" y="106" fill="#B3541E" font-size="36" text-anchor="end">ISO 14229-1 §15.2/15.4 · Tables 440–451</text>
+
+  <text x="120" y="250" fill="#1B3A6B" font-size="38" font-weight="700">Figure 1　RequestDownload 请求：两个"半字节一组"的字节</text>
+  <g font-size="42" font-weight="700" text-anchor="middle" font-family="'SF Mono',monospace">
+    <rect x="160" y="290" width="220" height="120" fill="#1B3A6B"/>
+    <text x="270" y="365" fill="#F7F5F0">34</text>
+    <rect x="380" y="290" width="340" height="120" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="550" y="365" fill="#B3541E">00</text>
+    <rect x="720" y="290" width="340" height="120" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="890" y="365" fill="#B3541E">44</text>
+    <rect x="1060" y="290" width="600" height="120" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1360" y="365" fill="#1B3A6B">addr…</text>
+    <rect x="1660" y="290" width="600" height="120" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1960" y="365" fill="#1B3A6B">size…</text>
+  </g>
+  <g font-size="28" fill="#3D4A5C" text-anchor="middle">
+    <text x="270" y="452">SID</text>
+    <text x="550" y="452">DFI：高半字节压缩/低半字节加密</text>
+    <text x="890" y="452">ALFID：高位=size 长度/低位=addr 长度</text>
+    <text x="1360" y="452">memoryAddress（0x44 → 4 字节）</text>
+    <text x="1960" y="452">memorySize（0x44 → 4 字节）</text>
+  </g>
+
+  <text x="120" y="590" fill="#1B3A6B" font-size="38" font-weight="700">Figure 2　正应答：ECU 报出每块上限</text>
+  <g font-size="42" font-weight="700" text-anchor="middle" font-family="'SF Mono',monospace">
+    <rect x="160" y="630" width="220" height="120" fill="#1B3A6B"/>
+    <text x="270" y="705" fill="#F7F5F0">74</text>
+    <rect x="380" y="630" width="340" height="120" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="550" y="705" fill="#B3541E">0F</text>
+    <rect x="720" y="630" width="600" height="120" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1020" y="705" fill="#1B3A6B">00 FF</text>
+  </g>
+  <g font-size="28" fill="#3D4A5C" text-anchor="middle">
+    <text x="270" y="792">SID+0x40</text>
+    <text x="550" y="792">高半字节=后面长度字段占几字节</text>
+    <text x="1020" y="792">maxNumberOfBlockLength=0x00FF（含 SID 的整条报文长）</text>
+  </g>
+
+  <text x="120" y="940" fill="#1B3A6B" font-size="38" font-weight="700">Figure 3　TransferData：块计数器从 0x01 起，FF 后翻 00</text>
+  <g font-size="42" font-weight="700" text-anchor="middle" font-family="'SF Mono',monospace">
+    <rect x="160" y="980" width="220" height="120" fill="#1B3A6B"/>
+    <text x="270" y="1055" fill="#F7F5F0">36</text>
+    <rect x="380" y="980" width="340" height="120" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="550" y="1055" fill="#B3541E">01</text>
+    <rect x="720" y="980" width="940" height="120" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1190" y="1055" fill="#1B3A6B">transferRequestParameterRecord…</text>
+    <rect x="1660" y="980" width="540" height="120" fill="none" stroke="#8A94A6" stroke-width="3" stroke-dasharray="12 9"/>
+    <text x="1930" y="1048" fill="#8A94A6" font-size="30" font-weight="400">… 02, 03 … FE, FF,</text>
+    <text x="1930" y="1088" fill="#8A94A6" font-size="30" font-weight="400">00（翻回零!）, 01 …</text>
+  </g>
+  <text x="120" y="1190" fill="#B3541E" font-size="30">收到重复计数器 = 重传：ECU 直接补应答，不再写一遍 Flash——一个字节区分"应答丢"和"数据丢"</text>
+  <text x="120" y="1250" fill="#3D4A5C" font-size="30">刷写途中电压异常 → NRC 0x92/0x93 保护 Flash；块序号错乱 → 0x73</text>
+</svg>

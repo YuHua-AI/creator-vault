@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：读码与清码 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g6" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g6)"/>
+  <text x="100" y="120" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7E0:7E8   <tspan fill="#6E7781"># 4S 店读码 → 清码 → 复发的全过程</tspan></text>
+
+  <rect x="100" y="170" width="2200" height="980" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="170" width="2200" height="80" rx="24" fill="#161B22"/>
+  <circle cx="172" cy="210" r="14" fill="#DD4B4B"/><circle cx="224" cy="210" r="14" fill="#D29922"/><circle cx="276" cy="210" r="14" fill="#3FB950"/>
+
+  <g font-size="42">
+    <text x="180" y="350" fill="#8B949E">(0000.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [3]  <tspan fill="#3FB950">19 02 08</tspan>          <tspan fill="#6E7781"># 只读实锤(mask=0x08)</tspan></text>
+    <text x="180" y="450" fill="#8B949E">(0000.060)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [n]  <tspan fill="#3FB950">59 02 7F 0A 9B 17 2F …</tspan>  <tspan fill="#6E7781"># 两条故障</tspan></text>
+    <text x="180" y="550" fill="#8B949E">(0005.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [2]  <tspan fill="#58A6FF">19 04 0A 9B 17</tspan>    <tspan fill="#6E7781"># 读快照:故障瞬间定格</tspan></text>
+    <text x="180" y="650" fill="#8B949E">(0005.080)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [n]  <tspan fill="#58A6FF">59 04 … &lt;车速/水温/电压&gt;</tspan></text>
+    <text x="180" y="770" fill="#8B949E">(0010.000)  can0  TX  <tspan fill="#79C0FF">7E0</tspan>  [4]  <tspan fill="#D29922">14 FF FF FF</tspan>       <tspan fill="#6E7781"># 清码:全部</tspan></text>
+    <text x="180" y="870" fill="#8B949E">(0010.090)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>  [1]  <tspan fill="#D29922">54</tspan>               <tspan fill="#6E7781"># 清了</tspan></text>
+    <text x="180" y="990" fill="#DD4B4B">(3600.000)  <tspan fill="#DD4B4B">--- 下个运行周期,故障仍在,测试再失败 ---</tspan></text>
+    <text x="180" y="1070" fill="#8B949E">(3601.000)  can0  RX  <tspan fill="#79C0FF">7E8</tspan>       <tspan fill="#DD4B4B">0A 9B 17 | 2F</tspan>  <tspan fill="#6E7781"># DTC 回来了</tspan></text>
+  </g>
+
+  <g font-size="32">
+    <rect x="180" y="1110" width="2040" height="0" rx="16"/>
+  </g>
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">清码清的是记录,不是病——硬件坏了信号丢了,下个周期 DTC 立刻回来;永久 DTC(0x15)甚至清不掉</text>
+</svg>

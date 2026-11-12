@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 风格 A：DcmDspSecurityRow 配置结构 -->
+  <defs>
+    <pattern id="grid3" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#grid3)"/>
+  <rect x="48" y="48" width="2304" height="1254" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+
+  <text x="120" y="140" fill="#9FC3E8" font-size="34" letter-spacing="6">真实工程的安全等级配置 · ETAS J6B_Dcm_EcucValues.arxml</text>
+  <text x="120" y="210" fill="#F4F9FE" font-size="46" font-weight="800">DcmDspSecurityRow "Unlocked_L1"</text>
+  <line x1="120" y1="240" x2="2280" y2="240" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="2"/>
+
+  <g font-family="'SF Mono','Menlo',monospace" font-size="34">
+    <text x="160" y="330" fill="#9FC3E8">DcmDspSecurityLevel</text>
+    <text x="1400" y="330" fill="#F4F9FE">= 1</text>
+    <text x="160" y="400" fill="#9FC3E8">DcmDspSecuritySeedSize / KeySize</text>
+    <text x="1400" y="400" fill="#F4F9FE">= 4 / 4 字节</text>
+    <text x="160" y="470" fill="#9FC3E8">DcmDspSecurityNumAttDelay</text>
+    <text x="1400" y="470" fill="#E8A44C">= 2</text>
+    <text x="160" y="540" fill="#9FC3E8">DcmDspSecurityDelayTime</text>
+    <text x="1400" y="540" fill="#E8A44C">= 10.0 s</text>
+    <text x="160" y="610" fill="#9FC3E8">DcmDspSecurityDelayTimeOnBoot</text>
+    <text x="1400" y="610" fill="#E8A44C">= 10.0 s</text>
+    <text x="160" y="680" fill="#9FC3E8">DcmDspSecurityAttemptCounterEnabled</text>
+    <text x="1400" y="680" fill="#F4F9FE">= true</text>
+    <text x="160" y="750" fill="#9FC3E8">DcmDspSecurityGetSeedFnc</text>
+    <text x="1400" y="750" fill="#7FB2E8">= AppSecurityGetSeed</text>
+    <text x="160" y="820" fill="#9FC3E8">DcmDspSecurityCompareKeyFnc</text>
+    <text x="1400" y="820" fill="#7FB2E8">= AppSecurityCompareKey</text>
+  </g>
+
+  <!-- 注释框 -->
+  <g font-size="30">
+    <rect x="160" y="890" width="2120" height="340" rx="16" fill="#0B2440" stroke="#7FB2E8" stroke-width="2"/>
+    <text x="240" y="960" fill="#7FB2E8">▎DelayTimeOnBoot = 防拔插头:断电重启照样先锁 10s,时间躲不掉</text>
+    <text x="240" y="1030" fill="#7FB2E8">▎ECU 侧没有"算法 DLL"——GetSeed/CompareKey 是编译进应用的 C 回调</text>
+    <text x="240" y="1100" fill="#7FB2E7">▎Seed&Key DLL 是诊断仪侧的东西:车厂把同一算法发给工具商本地算 key</text>
+    <text x="240" y="1170" fill="#7FB2E7">▎同 ECU 的 Boot 侧另配 BootSecurityGetSeed——App 与 Boot 各一把锁</text>
+  </g>
+</svg>

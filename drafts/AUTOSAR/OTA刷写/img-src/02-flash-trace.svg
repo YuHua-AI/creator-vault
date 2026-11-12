@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：完整刷写剧本 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g7" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g7)"/>
+  <text x="100" y="110" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7E0:7E8   <tspan fill="#6E7781"># 一次刷写的报文级剧本（七篇串联）</tspan></text>
+
+  <rect x="100" y="150" width="2200" height="1030" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="150" width="2200" height="70" rx="24" fill="#161B22"/>
+  <circle cx="168" cy="185" r="12" fill="#DD4B4B"/><circle cx="216" cy="185" r="12" fill="#D29922"/><circle cx="264" cy="185" r="12" fill="#3FB950"/>
+
+  <g font-size="36">
+    <text x="180" y="300" fill="#8B949E">7E0  <tspan fill="#3FB950">10 02</tspan>                <tspan fill="#6E7781"># 进编程会话(boot) ……②</tspan></text>
+    <text x="180" y="375" fill="#8B949E">7E0  <tspan fill="#3FB950">27 01 / 27 02 &lt;key&gt;</tspan>  <tspan fill="#6E7781"># 解锁 ……③</tspan></text>
+    <text x="180" y="450" fill="#8B949E">7E0  <tspan fill="#3FB950">31 01 0A FF</tspan>          <tspan fill="#6E7781"># 派工:擦 Flash ……⑤(真实工程 RID)</tspan></text>
+    <text x="180" y="540" fill="#8B949E">7E0  <tspan fill="#58A6FF">34 00 44 0800_0000 0020_0000</tspan></text>
+    <text x="180" y="605" fill="#8B949E">7E8  <tspan fill="#58A6FF">74 0F 00 FF</tspan>          <tspan fill="#6E7781"># 每块最多 255 字节</tspan></text>
+    <text x="180" y="695" fill="#8B949E">7E0  <tspan fill="#3FB950">36 01</tspan> &lt;249B data&gt;   <tspan fill="#6E7781"># 第 1 块</tspan></text>
+    <text x="180" y="760" fill="#8B949E">7E0  <tspan fill="#3FB950">36 02</tspan> &lt;249B data&gt;   <tspan fill="#6E7781"># 第 2 块</tspan></text>
+    <text x="180" y="815" fill="#6E7781">      <tspan fill="#6E7781">… 2MB 固件,约 8000+ 块,CAN 上跑十几分钟 …</tspan></text>
+    <text x="180" y="890" fill="#8B949E">7E0  <tspan fill="#3FB950">37</tspan> &lt;校验&gt;            <tspan fill="#6E7781"># 签收</tspan></text>
+    <text x="180" y="965" fill="#8B949E">7E0  <tspan fill="#3FB950">31 01 0A FE</tspan>          <tspan fill="#6E7781"># 派工:校验 Flash ……⑤</tspan></text>
+    <text x="180" y="1040" fill="#8B949E">7E0  <tspan fill="#D29922">11 01</tspan>                <tspan fill="#6E7781"># ECU 复位,新固件生效 ……①</tspan></text>
+    <text x="180" y="1115" fill="#8B949E">7E0  <tspan fill="#3FB950">10 01</tspan>                <tspan fill="#6E7781"># 回默认会话 ……② 剧终</tspan></text>
+  </g>
+
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">4S 店那 20 分钟 = 这份剧本 + CAN 带宽的物理极限;换以太网 DoIP,同样的 36,几分钟跑完</text>
+</svg>

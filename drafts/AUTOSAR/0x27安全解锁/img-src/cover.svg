@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- 风格 A：挑战-应答 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 入门 · ③</text>
+  <text x="160" y="330" fill="#F4F9FE" font-size="96" font-weight="800">ECU 的钥匙怎么发？</text>
+  <text x="160" y="430" fill="#9FC3E8" font-size="52">0x27 安全解锁 · Seed 与 Key 的攻防</text>
+  <line x1="160" y1="470" x2="1750" y2="470" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 诊断仪 -->
+  <g transform="translate(700,1050)">
+    <rect x="-260" y="-150" width="520" height="300" rx="20" fill="#0B2440" stroke="#F4F9FE" stroke-width="4"/>
+    <text y="-40" fill="#F4F9FE" font-size="52" font-weight="800" text-anchor="middle">诊断仪</text>
+    <text y="30" fill="#9FC3E8" font-size="30" text-anchor="middle">CLIENT</text>
+    <text y="100" fill="#7FB2E8" font-size="28" text-anchor="middle">本地持有 Key 算法</text>
+  </g>
+  <!-- ECU -->
+  <g transform="translate(2148,1050)">
+    <rect x="-260" y="-150" width="520" height="300" rx="20" fill="#0B2440" stroke="#F4F9FE" stroke-width="4"/>
+    <text y="-40" fill="#F4F9FE" font-size="52" font-weight="800" text-anchor="middle">ECU</text>
+    <text y="30" fill="#9FC3E8" font-size="30" text-anchor="middle">SERVER</text>
+    <text y="100" fill="#7FB2E8" font-size="28" text-anchor="middle">只验 Key,不外发算法</text>
+  </g>
+
+  <!-- 总线连线 -->
+  <line x1="700" y1="1050" x2="2148" y2="1050" stroke="#DCE9F5" stroke-opacity="0.75" stroke-width="3"/>
+  <text x="1424" y="1000" fill="#9FC3E8" font-size="30" text-anchor="middle">CAN 总线</text>
+
+  <!-- 三步报文 -->
+  <g font-family="'SF Mono','Menlo',monospace" font-size="40">
+    <rect x="880" y="640" width="1088" height="100" rx="14" fill="#123A63" stroke="#7FB2E8" stroke-width="2.5"/>
+    <text x="940" y="706" fill="#F4F9FE">→ 27 01            <tspan fill="#9FC3E8">"给我 seed"</tspan></text>
+    <rect x="880" y="780" width="1088" height="100" rx="14" fill="#0B2440" stroke="#E8A44C" stroke-width="2.5"/>
+    <text x="940" y="846" fill="#F4F9FE">← 67 01 <tspan fill="#E8A44C">4A 7B 22 91</tspan>  <tspan fill="#9FC3E8">随机 seed</tspan></text>
+    <rect x="880" y="920" width="1088" height="100" rx="14" fill="#123A63" stroke="#7FB2E8" stroke-width="2.5"/>
+    <text x="940" y="986" fill="#F4F9FE">→ 27 02 <tspan fill="#7FB2E8">33 8C AA 10</tspan>  <tspan fill="#9FC3E8">"配好的 key"</tspan></text>
+  </g>
+  <!-- 算法锁 -->
+  <g transform="translate(1424,1250)" text-anchor="middle">
+    <text y="0" fill="#6E96C2" font-size="30">Seed → Key 算法:烧进 ECU + 发给诊断仪厂商 · 永不上总线</text>
+  </g>
+
+  <!-- 防御注释 -->
+  <g font-size="30" fill="#7FB2E8" font-family="'PingFang SC',sans-serif">
+    <text x="2240" y="300">防爆破三道闸:</text>
+    <text x="2240" y="360">· 错误计数 → NRC 0x36</text>
+    <text x="2240" y="420">· 延时定时器 → NRC 0x37</text>
+    <text x="2240" y="480">· 顺序校验 → NRC 0x24</text>
+  </g>
+  <text x="160" y="1500" fill="#6E96C2" font-size="28">ISO 14229-1:2020 §10.4 SecurityAccess</text>
+</svg>

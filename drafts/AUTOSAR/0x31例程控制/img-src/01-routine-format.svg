@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- C 技术手册：0x31 报文格式 -->
+  <rect width="2400" height="1350" fill="#F7F5F0"/>
+  <line x1="120" y1="130" x2="2280" y2="130" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="120" y1="144" x2="2280" y2="144" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="120" y="106" fill="#1B3A6B" font-size="36" font-weight="700" letter-spacing="4">0x31 报文格式：以官方 wiggle test 为例</text>
+  <text x="2280" y="106" fill="#B3541E" font-size="36" text-anchor="end">ISO 14229-1 §14.2.5.1 · Tables 431/432</text>
+
+  <text x="120" y="260" fill="#1B3A6B" font-size="40" font-weight="700">Figure 1　请求：SID + 子功能 + RID + 可选参数</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="300" width="300" height="130" fill="#1B3A6B"/>
+    <text x="310" y="382" fill="#F7F5F0">31</text>
+    <rect x="460" y="300" width="300" height="130" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="610" y="382" fill="#B3541E">01</text>
+    <rect x="760" y="300" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="910" y="382" fill="#1B3A6B">02</text>
+    <rect x="1060" y="300" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1210" y="382" fill="#1B3A6B">01</text>
+    <rect x="1360" y="300" width="560" height="130" fill="none" stroke="#8A94A6" stroke-width="3" stroke-dasharray="12 9"/>
+    <text x="1640" y="382" fill="#8A94A6">optionRecord…</text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <line x1="310" y1="430" x2="310" y2="480" stroke="#8A94A6" stroke-width="2"/>
+    <text x="310" y="518">SID</text>
+    <line x1="610" y1="430" x2="610" y2="480" stroke="#8A94A6" stroke-width="2"/>
+    <text x="610" y="518">startRoutine</text>
+    <line x1="910" y1="430" x2="910" y2="480" stroke="#8A94A6" stroke-width="2"/>
+    <line x1="1210" y1="430" x2="1210" y2="480" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1060" y="518">RID = 0x0201（wiggle test）</text>
+    <text x="1640" y="518">例程参数（此例无）</text>
+  </g>
+
+  <text x="120" y="700" fill="#1B3A6B" font-size="40" font-weight="700">Figure 2　正应答：71 + 回显 + 状态记录</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="740" width="300" height="130" fill="#1B3A6B"/>
+    <text x="310" y="822" fill="#F7F5F0">71</text>
+    <rect x="460" y="740" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="610" y="822" fill="#1B3A6B">01</text>
+    <rect x="760" y="740" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="910" y="822" fill="#1B3A6B">02</text>
+    <rect x="1060" y="740" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1210" y="822" fill="#1B3A6B">01</text>
+    <rect x="1360" y="740" width="560" height="130" fill="#B3541E"/>
+    <text x="1640" y="822" fill="#F7F5F0">32</text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <text x="310" y="948">SID+0x40=0x71</text>
+    <text x="1060" y="948">子功能与 RID 原样回显</text>
+    <text x="1640" y="948">routineStatusRecord（厂商自定义）</text>
+  </g>
+
+  <text x="120" y="1120" fill="#3D4A5C" font-size="32">测试条件（原文）：点火 ON · 发动机 OFF · 车速 0 —— 技师晃动线束插头，ECU 全速监测信号通断</text>
+  <text x="120" y="1190" fill="#B3541E" font-size="32">没 start 就 stop / 就要结果 → NRC 0x24 requestSequenceError</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- C 技术手册：0x50 正应答字段 -->
+  <rect width="2400" height="1350" fill="#F7F5F0"/>
+  <line x1="120" y1="130" x2="2280" y2="130" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="120" y1="144" x2="2280" y2="144" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="120" y="106" fill="#1B3A6B" font-size="36" font-weight="700" letter-spacing="4">0x10 正应答：ECU 自报家门</text>
+  <text x="2280" y="106" fill="#B3541E" font-size="36" text-anchor="end">ISO 14229-1 §10.2 · Tables 26–29</text>
+
+  <text x="120" y="270" fill="#1B3A6B" font-size="40" font-weight="700">Figure 1　正应答 0x50 的六个字节（示例 50 03 00 32 01 F4）</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="320" width="300" height="130" fill="#1B3A6B"/>
+    <text x="310" y="402" fill="#F7F5F0">50</text>
+    <rect x="460" y="320" width="300" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="610" y="402" fill="#1B3A6B">03</text>
+    <rect x="760" y="320" width="300" height="130" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="910" y="402" fill="#B3541E">00</text>
+    <rect x="1060" y="320" width="300" height="130" fill="none" stroke="#B3541E" stroke-width="4"/>
+    <text x="1210" y="402" fill="#B3541E">32</text>
+    <rect x="1360" y="320" width="300" height="130" fill="none" stroke="#3D7A4F" stroke-width="4"/>
+    <text x="1510" y="402" fill="#3D7A4F">01</text>
+    <rect x="1660" y="320" width="300" height="130" fill="none" stroke="#3D7A4F" stroke-width="4"/>
+    <text x="1810" y="402" fill="#3D7A4F">F4</text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <line x1="310" y1="450" x2="310" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <text x="310" y="538">SID = 0x10+0x40</text>
+    <line x1="610" y1="450" x2="610" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <text x="610" y="538">会话值回显</text>
+    <line x1="910" y1="450" x2="910" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <line x1="1210" y1="450" x2="1210" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1060" y="538">P2ServerMax = 0x0032</text>
+    <line x1="1510" y1="450" x2="1510" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <line x1="1810" y1="450" x2="1810" y2="500" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1660" y="538">P2*ServerMax = 0x01F4</text>
+  </g>
+
+  <text x="120" y="720" fill="#1B3A6B" font-size="40" font-weight="700">Table 1　两个时序参数的含义</text>
+  <g font-size="34">
+    <rect x="160" y="770" width="2040" height="440" fill="#FFFFFF" stroke="#C9C2B4" stroke-width="2"/>
+    <line x1="160" y1="880" x2="2200" y2="880" stroke="#C9C2B4" stroke-width="2"/>
+    <text x="240" y="840" fill="#B3541E" font-weight="700">P2ServerMax</text>
+    <text x="700" y="840" fill="#3D4A5C">2 字节 · 分辨率 1 ms · "问我话，最迟这么久必答"</text>
+    <text x="240" y="840" fill="#3D4A5C">　</text>
+    <text x="240" y="960" fill="#3D4A5C" font-weight="700">例：0x0032 = 50 ms（标准示例值）</text>
+    <line x1="160" y1="1000" x2="2200" y2="1000" stroke="#C9C2B4" stroke-width="2"/>
+    <text x="240" y="1070" fill="#3D4A5C" fill-opacity="0" font-weight="700">.</text>
+    <text x="240" y="1060" fill="#B3541E" font-weight="700">P2*ServerMax</text>
+    <text x="700" y="1060" fill="#3D4A5C">2 字节 · 分辨率 10 ms · "我说 NRC 0x78 稍等后，最终答复的时限"</text>
+    <text x="240" y="1150" fill="#3D4A5C">例：0x01F4 × 10ms = 5000 ms</text>
+  </g>
+  <text x="120" y="1290" fill="#B3541E" font-size="32">注：50/5000ms 只是标准示例——真实值由每个 ECU、每个会话各自配置上报（见正文 ETAS 实例）</text>
+</svg>

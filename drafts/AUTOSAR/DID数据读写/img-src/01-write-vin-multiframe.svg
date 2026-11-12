@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','Courier New',monospace">
+  <!-- B 终端抓包：多帧写 VIN -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <defs>
+    <pattern id="g4" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#3FB950" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#g4)"/>
+  <text x="100" y="120" fill="#3FB950" font-size="34" font-family="'PingFang SC',sans-serif">$ candump -tz can0,7E0:7E8   <tspan fill="#6E7781"># 写 VIN:20 字节数据的多帧之旅 (ISO-TP + UDS)</tspan></text>
+
+  <rect x="100" y="170" width="2200" height="980" rx="24" fill="#090C10" stroke="#30363D" stroke-width="3"/>
+  <rect x="100" y="170" width="2200" height="80" rx="24" fill="#161B22"/>
+  <circle cx="172" cy="210" r="14" fill="#DD4B4B"/><circle cx="224" cy="210" r="14" fill="#D29922"/><circle cx="276" cy="210" r="14" fill="#3FB950"/>
+
+  <g font-size="40">
+    <text x="180" y="350" fill="#8B949E">7E0  TX  <tspan fill="#58A6FF">10 14</tspan> <tspan fill="#3FB950">2E F1 90</tspan> 57 41 4C  <tspan fill="#6E7781"># 首帧:共0x14=20字节</tspan></text>
+    <text x="180" y="450" fill="#8B949E">7E8  RX  <tspan fill="#58A6FF">30 00 00</tspan>                  <tspan fill="#6E7781"># 流控帧:继续发,间隔0</tspan></text>
+    <text x="180" y="570" fill="#8B949E">7E0  TX  <tspan fill="#58A6FF">21</tspan> <tspan fill="#3FB950">54 4F 4E 53 2D 57 45</tspan>   <tspan fill="#6E7781"># CF#1</tspan></text>
+    <text x="180" y="670" fill="#8B949E">7E0  TX  <tspan fill="#58A6FF">22</tspan> <tspan fill="#3FB950">42 2E 43 4F 4D 20 20</tspan>   <tspan fill="#6E7781"># CF#2</tspan></text>
+    <text x="180" y="790" fill="#8B949E">7E8  RX  <tspan fill="#3FB950">03 6E F1 90</tspan>              <tspan fill="#6E7781"># 单帧:6E=2E+0x40,写好了</tspan></text>
+  </g>
+
+  <g font-size="32">
+    <rect x="180" y="860" width="2040" height="230" rx="16" fill="#161B22" stroke="#30363D" stroke-width="2.5"/>
+    <text x="240" y="930" fill="#58A6FF">蓝色 = ISO 15765-2 快递面单 (10 14 / 30 / 21 / 22 …)</text>
+    <text x="240" y="1000" fill="#3FB950">绿色 = UDS 内容 (2E F1 90 + 17 字节 VIN)</text>
+    <text x="240" y="1060" fill="#6E7781"># 三层分工:应用层只管数据,传输层管拆包组包</text>
+  </g>
+  <text x="100" y="1250" fill="#6E7781" font-size="30" font-family="'PingFang SC',sans-serif">写的前提:扩展会话(②) + 安全解锁(③),否则 7F 2E 7F / 7F 2E 33</text>
+</svg>
