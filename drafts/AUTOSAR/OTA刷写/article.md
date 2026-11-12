@@ -65,7 +65,7 @@ blockSequenceCounter 的规则（Table 451，原文值得细读）：
 
 ![0x34 与 0x36 报文格式](img/01-download-negotiate.jpg)
 
-刷写途中 ECU 还会盯着电源：NRC 0x92/0x93（电压过高/过低）保护 Flash 写入——半途断电写坏 Bootloader 是最贵的事故。其他常客：0x71 transferDataSuspended（流程被打断后继续发 36）、0x72 generalProgrammingFailure（Flash 操作失败，⑤ 篇见过）、0x73 wrongBlockSequenceCounter（块序号错乱）。电压检查排在 0x36 流水线的很后面——收到 0x92 时说明谈判、会话、解锁全过了，纯粹是电源的锅（顺序规则见 ① 篇）。
+刷写途中 ECU 还会盯着电源：NRC 0x92/0x93（电压过高/过低）保护 Flash 写入——半途断电写坏 Bootloader 是最贵的事故。其他常客：0x71 transferDataSuspended（流程被打断后继续发 36）、0x72 generalProgrammingFailure（Flash 操作失败，⑤ 篇见过）、0x73 wrongBlockSequenceCounter（块序号错乱）。电压检查排在 0x36 流水线的很后面——收到 0x92 时说明谈判、会话、解锁全过了，纯粹是电源的锅（顺序规则见 ① 篇）。还有一个高频角色：**NRC 0x78 responsePending**——擦 Flash、算校验这种耗时步骤，ECU 会先回一句 `7F 36 78`"稍等"续命。① 篇的 P2/P2\* 就是为这一刻设计的：说完"稍等"，接话时限就从 50ms 档切换到秒级的 P2\* 档——刷写会话里 P2\* 往往放宽到 5 秒以上，因为擦除就是慢。
 
 ## 0x37 与 0x38
 

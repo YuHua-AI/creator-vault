@@ -229,6 +229,8 @@ DCM 内部分工也很讲道理，三个子模块像一条流水线（SWS Figure
 
 工程里怎么配？以 Vector MICROSAR 为例，DaVinci Configurator 里 Dcm 的配置树就是按这条流水线组织的：`DcmDslProtocol` 配协议和 P2 定时、`DcmDspSession` 配会话、`DcmDspSecurity` 配安全等级、`DcmDspDid` 配每一个 DID 的读写权限——本系列后面每讲一个服务，都会带你回到这棵树上找到它对应的位置。
 
+顺带一提，`DcmDslProtocol` 可以配多行：一个 DCM 同时挂 CAN、CAN FD、DoIP（以太网）多条诊断通道，各自独立 P2 定时、互不干扰。同一套 UDS 服务原样跑在不同总线上——这是分层的红利，DoIP 值得单开一篇，先挖个坑。
+
 这也是 AUTOSAR 的价值所在：**协议是 ISO 的，实现是 AUTOSAR 的**。车厂换供应商、换芯片，诊断行为不变——因为大家用的是同一本剧本、同一套模块接口。
 ![DCM 流水线](img/05-dcm-pipeline.jpg)
 
