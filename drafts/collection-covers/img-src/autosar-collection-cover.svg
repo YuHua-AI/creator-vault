@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-  <!-- A 工程蓝图：AUTOSAR 合集封面（竖图 3:4） -->
+  <!-- A 工程蓝图：AUTOSAR 合集封面（竖图 3:4，图文并茂版） -->
   <defs>
     <pattern id="gp" width="80" height="80" patternUnits="userSpaceOnUse">
       <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
@@ -16,19 +16,52 @@
   <text x="90" y="450" fill="#F4F9FE" font-size="96" font-weight="800">入 门</text>
   <text x="90" y="530" fill="#E8A44C" font-size="38">七篇讲透车载诊断协议</text>
 
-  <!-- 七篇目录 -->
-  <g font-size="32" font-family="'SF Mono','Menlo',monospace">
-    <text x="90" y="680" fill="#9FC3E8">①  UDS 逐字节拆解 · 26 服务</text>
-    <text x="90" y="755" fill="#9FC3E8">②  0x10 会话控制</text>
-    <text x="90" y="830" fill="#9FC3E8">③  0x27 安全解锁 Seed/Key</text>
-    <text x="90" y="905" fill="#9FC3E8">④  DID 数据读写 0x22/2E</text>
-    <text x="90" y="980" fill="#9FC3E8">⑤  0x31 例程控制 RID</text>
-    <text x="90" y="1055" fill="#9FC3E8">⑥  DTC 故障码 0x14/19</text>
-    <text x="90" y="1130" fill="#9FC3E8">⑦  OTA 刷写 0x34-38</text>
+  <!-- 诊断仪 -->
+  <g>
+    <rect x="100" y="660" width="300" height="200" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+    <rect x="130" y="690" width="240" height="110" rx="6" fill="#123A63"/>
+    <text x="250" y="765" fill="#7FB2E8" font-size="34" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">22 F1 90</text>
+    <text x="250" y="832" fill="#9FC3E8" font-size="28" text-anchor="middle">诊断仪</text>
+  </g>
+  <!-- ECU -->
+  <g>
+    <rect x="680" y="660" width="300" height="200" rx="14" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+    <rect x="710" y="690" width="240" height="110" rx="6" fill="#123A63"/>
+    <text x="830" y="765" fill="#7FB2E8" font-size="34" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">62 F1 90</text>
+    <text x="830" y="832" fill="#9FC3E8" font-size="28" text-anchor="middle">ECU</text>
+  </g>
+  <!-- CAN 总线双线 -->
+  <line x1="90" y1="930" x2="990" y2="930" stroke="#E8A44C" stroke-width="4"/>
+  <line x1="90" y1="948" x2="990" y2="948" stroke="#E8A44C" stroke-opacity="0.5" stroke-width="2"/>
+  <line x1="250" y1="860" x2="250" y2="930" stroke="#F4F9FE" stroke-width="3"/>
+  <line x1="830" y1="860" x2="830" y2="930" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="540" y="915" fill="#F4F9FE" font-size="28" text-anchor="middle">CAN 总线</text>
+  <!-- 报文包在飞行 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <rect x="360" y="640" width="52" height="52" rx="8" fill="#1B3A6B" stroke="#7FB2E8" stroke-width="2"/>
+    <rect x="440" y="700" width="52" height="52" rx="8" fill="#1B3A6B" stroke="#7FB2E8" stroke-width="2"/>
+    <rect x="520" y="640" width="52" height="52" rx="8" fill="#1B3A6B" stroke="#7FB2E8" stroke-width="2"/>
+    <path d="M560,780 L620,780 M620,780 L596,764 M620,780 L596,796" stroke="#E8A44C" stroke-width="3" fill="none"/>
   </g>
 
-  <!-- 底部报文点缀 -->
-  <text x="90" y="1250" fill="#E8A44C" font-size="30" font-family="'SF Mono','Menlo',monospace">22 F1 90 → 62 F1 90 …</text>
+  <!-- 26 服务仪表 -->
+  <g font-family="'SF Mono','Menlo',monospace">
+    <text x="90" y="1080" fill="#9FC3E8" font-size="30">26 services</text>
+    <text x="90" y="1130" fill="#9FC3E8" font-size="30">7 sessions… </text>
+    <g fill="#7FB2E8">
+      <rect x="90" y="1180" width="34" height="60"/>
+      <rect x="140" y="1160" width="34" height="80"/>
+      <rect x="190" y="1190" width="34" height="50"/>
+      <rect x="240" y="1150" width="34" height="90"/>
+      <rect x="290" y="1170" width="34" height="70"/>
+      <rect x="340" y="1195" width="34" height="45"/>
+    </g>
+    <g fill="#E8A44C">
+      <rect x="400" y="1140" width="34" height="100"/>
+      <rect x="450" y="1175" width="34" height="65"/>
+    </g>
+  </g>
+
   <text x="90" y="1330" fill="#F4F9FE" font-size="40" font-weight="700">协议是 ISO 的，实现是 <tspan fill="#E8A44C">AUTOSAR 的</tspan></text>
 
   <!-- 图纸角标（右上） -->
@@ -36,7 +69,7 @@
     <rect x="740" y="150" width="270" height="110" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
     <text x="762" y="192">FIG. SERIES COVER</text>
     <text x="762" y="232">UDS / DCM / DEM</text>
-    <text x="950" y="192">REV. 1.0</text>
+    <text x="950" y="192">REV. 2.0</text>
     <text x="950" y="232">SHEET 01</text>
   </g>
 </svg>

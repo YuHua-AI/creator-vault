@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-  <!-- 暖色家居风：NAS 折腾记合集封面（竖图 3:4） -->
+  <!-- 暖色家居风：NAS 折腾记合集封面（竖图 3:4，图文并茂版） -->
   <defs>
     <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#2B2620"/>
@@ -15,23 +15,52 @@
   <text x="90" y="500" fill="#F5EDE0" font-size="110" font-weight="800">折腾记</text>
   <text x="90" y="580" fill="#C8A87C" font-size="38">吃灰设备再就业指南</text>
 
-  <!-- 篇目 -->
-  <g font-size="34">
-    <text x="90" y="740" fill="#F5EDE0">♪  老苹果路由 + 有源音箱</text>
-    <text x="90" y="800" fill="#F5EDE0">    组 NAS 无线 Hi-Fi</text>
-    <text x="90" y="900" fill="#F5EDE0">⇄  无损音乐自动补货管线</text>
-    <text x="90" y="960" fill="#F5EDE0">    网盘转存 · 标签整理</text>
-  </g>
-
-  <!-- 底部点缀：机柜呼吸灯 -->
+  <!-- NAS 主机 -->
   <g>
-    <rect x="90" y="1100" width="900" height="120" rx="10" fill="none" stroke="#C8A87C" stroke-opacity="0.4" stroke-width="2"/>
-    <circle cx="150" cy="1160" r="10" fill="#7FB2E8"/>
-    <circle cx="210" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.7"/>
-    <circle cx="270" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.4"/>
-    <circle cx="330" cy="1160" r="10" fill="#7FB2E8" fill-opacity="0.2"/>
-    <text x="920" y="1172" fill="#C8A87C" font-size="28" text-anchor="end" font-family="'SF Mono','Menlo',monospace">· · · idle</text>
+    <rect x="120" y="700" width="360" height="220" rx="12" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <g fill="#7FB2E8">
+      <circle cx="170" cy="760" r="8"/>
+      <circle cx="170" cy="810" r="8"/>
+      <circle cx="170" cy="860" r="8"/>
+    </g>
+    <g fill="none" stroke="#C8A87C" stroke-width="2">
+      <rect x="220" y="740" width="220" height="40" rx="4"/>
+      <rect x="220" y="800" width="220" height="40" rx="4"/>
+      <rect x="220" y="860" width="220" height="40" rx="4"/>
+    </g>
+    <text x="300" y="968" fill="#C8A87C" font-size="30" text-anchor="middle">NAS · 网盘转存</text>
   </g>
 
-  <text x="90" y="1330" fill="#F5EDE0" font-size="42" font-weight="700">设备会吃灰，<tspan fill="#C8A87C">折腾不会</tspan></text>
+  <!-- WiFi 波纹 -->
+  <g stroke="#7FB2E8" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M500,800 a40,40 0 0 1 0,60"/>
+    <path d="M540,770 a80,80 0 0 1 0,120"/>
+    <path d="M580,740 a120,120 0 0 1 0,180"/>
+  </g>
+
+  <!-- 老路由器 -->
+  <g>
+    <rect x="680" y="740" width="220" height="120" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <line x1="710" y1="740" x2="690" y2="640" stroke="#C8A87C" stroke-width="4"/>
+    <line x1="870" y1="740" x2="890" y2="640" stroke="#C8A87C" stroke-width="4"/>
+    <circle cx="740" cy="800" r="8" fill="#7FB2E8"/>
+    <text x="790" y="812" fill="#C8A87C" font-size="30" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">wifi</text>
+    <text x="790" y="968" fill="#C8A87C" font-size="30" text-anchor="middle">老苹果路由</text>
+  </g>
+
+  <!-- 音箱 + 声波 -->
+  <g>
+    <rect x="120" y="1080" width="200" height="280" rx="100" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <circle cx="220" cy="1180" r="52" fill="none" stroke="#C8A87C" stroke-width="3"/>
+    <circle cx="220" cy="1300" r="24" fill="#C8A87C" fill-opacity="0.6"/>
+    <text x="220" y="1410" fill="#C8A87C" font-size="30" text-anchor="middle">有源音箱</text>
+  </g>
+  <g stroke="#C8A87C" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M380,1160 a30,30 0 0 1 0,60"/>
+    <path d="M430,1120 a70,70 0 0 1 0,140"/>
+    <path d="M480,1080 a110,110 0 0 1 0,200"/>
+  </g>
+
+  <text x="660" y="1180" fill="#F5EDE0" font-size="42" font-weight="700">设备会吃灰，</text>
+  <text x="660" y="1250" fill="#C8A87C" font-size="42" font-weight="700">折腾不会</text>
 </svg>

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-  <!-- B 终端风：GitHub 周榜合集封面（竖图 3:4） -->
+  <!-- B 终端风：GitHub 周榜合集封面（竖图 3:4，图文并茂版） -->
   <rect width="1080" height="1440" fill="#0D1117"/>
-  <!-- 终端窗口 -->
   <rect x="40" y="80" width="1000" height="1280" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
   <circle cx="100" cy="140" r="12" fill="#FF5F57"/>
   <circle cx="145" cy="140" r="12" fill="#FEBC2E"/>
@@ -10,19 +9,33 @@
   <line x1="40" y1="180" x2="1040" y2="180" stroke="#30363D" stroke-width="2"/>
 
   <g font-family="'SF Mono','Menlo',monospace" font-size="34">
-    <text x="100" y="290" fill="#C9D1D9">$ <tspan fill="#7EE787">github-weekly-rank</tspan> --top 8</text>
+    <text x="100" y="280" fill="#C9D1D9">$ <tspan fill="#7EE787">github-weekly-rank</tspan> --top 8</text>
 
-    <text x="100" y="420" fill="#F4F9FE" font-size="84" font-weight="700">GitHub</text>
-    <text x="100" y="520" fill="#F4F9FE" font-size="84" font-weight="700">周 榜</text>
-    <text x="100" y="590" fill="#79C0FF" font-size="36">每周涨星最快的 8 个项目</text>
+    <text x="100" y="410" fill="#F4F9FE" font-size="84" font-weight="700" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">GitHub</text>
+    <text x="100" y="510" fill="#F4F9FE" font-size="84" font-weight="700" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">周 榜</text>
+    <text x="100" y="580" fill="#79C0FF" font-size="36" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">每周涨星最快的 8 个项目</text>
 
-    <text x="100" y="700" fill="#8B949E" font-size="30">★ star 增速 · 一图一项目</text>
-    <text x="100" y="760" fill="#8B949E" font-size="30">◆ AI 解析 · 人话点评</text>
-    <text x="100" y="820" fill="#8B949E" font-size="30">▲ 趋势信号 · 技术风向</text>
+    <!-- 涨星柱状图 -->
+    <g>
+      <rect x="100" y="680" width="80" height="240" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+      <rect x="210" y="620" width="80" height="300" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+      <rect x="320" y="700" width="80" height="220" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+      <rect x="430" y="640" width="80" height="280" rx="6" fill="#1F6FEB" fill-opacity="0.9"/>
+      <rect x="540" y="600" width="80" height="320" rx="6" fill="#1F6FEB" fill-opacity="0.75"/>
+      <!-- 增量高亮 -->
+      <rect x="430" y="640" width="80" height="70" rx="6" fill="#7EE787"/>
+      <rect x="540" y="600" width="80" height="90" rx="6" fill="#7EE787"/>
+      <!-- 星标 -->
+      <text x="470" y="595" fill="#E3B341" font-size="44" text-anchor="middle">★</text>
+      <text x="580" y="552" fill="#E3B341" font-size="56" text-anchor="middle">★</text>
+      <!-- 上升箭头 -->
+      <path d="M130,560 L470,470 M470,470 L428,466 M470,470 L448,502" stroke="#7EE787" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <text x="100" y="975" fill="#8B949E" font-size="26">stars / week</text>
+    </g>
 
-    <text x="100" y="960" fill="#C9D1D9" font-size="30">→ 每周一期 · 数据实测</text>
-    <text x="100" y="1010" fill="#C9D1D9" font-size="30">→ 不搬运 · 只拆解</text>
+    <text x="100" y="1120" fill="#C9D1D9" font-size="30">→ 每周一期 · 数据实测</text>
+    <text x="100" y="1170" fill="#C9D1D9" font-size="30">→ 不搬运 · 只拆解</text>
 
-    <text x="100" y="1200" fill="#7EE787" font-size="34">$ _</text>
+    <text x="100" y="1280" fill="#7EE787" font-size="34">$ _</text>
   </g>
 </svg>
