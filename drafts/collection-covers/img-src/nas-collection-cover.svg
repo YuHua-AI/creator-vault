@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-  <!-- 暖色家居风：NAS 折腾记合集封面（竖图 3:4，图文并茂版） -->
+  <!-- 暖色家居风：NAS 折腾记合集封面（竖图 3:4，家庭数据中心本体版） -->
   <defs>
     <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#2B2620"/>
@@ -9,58 +9,61 @@
   <rect width="1080" height="1440" fill="url(#warm)"/>
   <rect x="36" y="36" width="1008" height="1368" fill="none" stroke="#C8A87C" stroke-opacity="0.5" stroke-width="3"/>
 
-  <text x="90" y="210" fill="#C8A87C" font-size="34" letter-spacing="8">家庭服务器 · 折腾实录</text>
+  <text x="90" y="210" fill="#C8A87C" font-size="34" letter-spacing="8">家庭数据中心 · 折腾实录</text>
   <line x1="90" y1="240" x2="560" y2="240" stroke="#C8A87C" stroke-opacity="0.5" stroke-width="2"/>
   <text x="90" y="380" fill="#F5EDE0" font-size="110" font-weight="800">NAS</text>
   <text x="90" y="500" fill="#F5EDE0" font-size="110" font-weight="800">折腾记</text>
-  <text x="90" y="580" fill="#C8A87C" font-size="38">吃灰设备再就业指南</text>
+  <text x="90" y="580" fill="#C8A87C" font-size="38">让数据住进自己家</text>
 
-  <!-- NAS 主机 -->
+  <!-- 中央 NAS 存储池 -->
   <g>
-    <rect x="120" y="700" width="360" height="220" rx="12" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <rect x="330" y="700" width="420" height="220" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="3.5"/>
+    <g fill="none" stroke="#C8A87C" stroke-width="2.5">
+      <rect x="370" y="730" width="150" height="52" rx="4"/>
+      <rect x="370" y="798" width="150" height="52" rx="4"/>
+      <rect x="370" y="866" width="150" height="52" rx="4"/>
+      <rect x="560" y="730" width="150" height="52" rx="4"/>
+      <rect x="560" y="798" width="150" height="52" rx="4"/>
+      <rect x="560" y="866" width="150" height="52" rx="4"/>
+    </g>
     <g fill="#7FB2E8">
-      <circle cx="170" cy="760" r="8"/>
-      <circle cx="170" cy="810" r="8"/>
-      <circle cx="170" cy="860" r="8"/>
+      <circle cx="392" cy="756" r="7"/>
+      <circle cx="392" cy="824" r="7" fill-opacity="0.6"/>
+      <circle cx="392" cy="892" r="7" fill-opacity="0.3"/>
     </g>
-    <g fill="none" stroke="#C8A87C" stroke-width="2">
-      <rect x="220" y="740" width="220" height="40" rx="4"/>
-      <rect x="220" y="800" width="220" height="40" rx="4"/>
-      <rect x="220" y="860" width="220" height="40" rx="4"/>
-    </g>
-    <text x="300" y="968" fill="#C8A87C" font-size="30" text-anchor="middle">NAS · 网盘转存</text>
+    <text x="540" y="968" fill="#C8A87C" font-size="32" text-anchor="middle">存储池 · 数据的家</text>
   </g>
 
-  <!-- WiFi 波纹 -->
-  <g stroke="#7FB2E8" stroke-width="4" fill="none" stroke-linecap="round">
-    <path d="M500,800 a40,40 0 0 1 0,60"/>
-    <path d="M540,770 a80,80 0 0 1 0,120"/>
-    <path d="M580,740 a120,120 0 0 1 0,180"/>
+  <!-- 四端设备环绕取数 -->
+  <g stroke="#C8A87C" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity="0.8">
+    <path d="M240,640 L340,720 M340,720 L318,712 M340,720 L330,700"/>
+    <path d="M840,640 L740,720 M740,720 L762,712 M740,720 L750,700"/>
+    <path d="M240,1240 L340,1160 M340,1160 L318,1168 M340,1160 L330,1180"/>
+    <path d="M840,1240 L740,1160 M740,1160 L762,1168 M740,1160 L750,1180"/>
   </g>
-
-  <!-- 老路由器 -->
+  <!-- 手机 -->
   <g>
-    <rect x="680" y="740" width="220" height="120" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
-    <line x1="710" y1="740" x2="690" y2="640" stroke="#C8A87C" stroke-width="4"/>
-    <line x1="870" y1="740" x2="890" y2="640" stroke="#C8A87C" stroke-width="4"/>
-    <circle cx="740" cy="800" r="8" fill="#7FB2E8"/>
-    <text x="790" y="812" fill="#C8A87C" font-size="30" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">wifi</text>
-    <text x="790" y="968" fill="#C8A87C" font-size="30" text-anchor="middle">老苹果路由</text>
+    <rect x="180" y="540" width="80" height="130" rx="12" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <text x="220" y="720" fill="#C8A87C" font-size="28" text-anchor="middle">手机</text>
   </g>
-
-  <!-- 音箱 + 声波 -->
+  <!-- 笔记本 -->
   <g>
-    <rect x="120" y="1080" width="200" height="280" rx="100" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
-    <circle cx="220" cy="1180" r="52" fill="none" stroke="#C8A87C" stroke-width="3"/>
-    <circle cx="220" cy="1300" r="24" fill="#C8A87C" fill-opacity="0.6"/>
-    <text x="220" y="1410" fill="#C8A87C" font-size="30" text-anchor="middle">有源音箱</text>
+    <path d="M780,640 L910,640 L930,690 L760,690 Z" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <rect x="795" y="560" width="100" height="70" rx="6" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <text x="860" y="720" fill="#C8A87C" font-size="28" text-anchor="middle">电脑</text>
   </g>
-  <g stroke="#C8A87C" stroke-width="4" fill="none" stroke-linecap="round">
-    <path d="M380,1160 a30,30 0 0 1 0,60"/>
-    <path d="M430,1120 a70,70 0 0 1 0,140"/>
-    <path d="M480,1080 a110,110 0 0 1 0,200"/>
+  <!-- 电视 -->
+  <g>
+    <rect x="170" y="1120" width="160" height="100" rx="8" fill="#171310" stroke="#C8A87C" stroke-width="3"/>
+    <line x1="250" y1="1220" x2="250" y2="1240" stroke="#C8A87C" stroke-width="3"/>
+    <text x="250" y="1300" fill="#C8A87C" font-size="28" text-anchor="middle">电视</text>
   </g>
+  <!-- 云 -->
+  <g fill="none" stroke="#C8A87C" stroke-width="3">
+    <path d="M820,1180 a30,30 0 0 1 6,-59 a38,38 0 0 1 72,-8 a26,26 0 0 1 12,51 a20,20 0 0 1 -14,16 Z"/>
+  </g>
+  <path d="M860,1190 L860,1220 M860,1220 L848,1208 M860,1220 L872,1208" stroke="#C8A87C" stroke-width="3" fill="none"/>
+  <text x="860" y="1300" fill="#C8A87C" font-size="28" text-anchor="middle">云端</text>
 
-  <text x="660" y="1180" fill="#F5EDE0" font-size="42" font-weight="700">设备会吃灰，</text>
-  <text x="660" y="1250" fill="#C8A87C" font-size="42" font-weight="700">折腾不会</text>
+  <text x="90" y="1368" fill="#F5EDE0" font-size="42" font-weight="700">设备会吃灰，<tspan fill="#C8A87C">折腾不会</tspan></text>
 </svg>

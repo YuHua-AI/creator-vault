@@ -1,41 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
-  <!-- B 终端风：GitHub 周榜合集封面（竖图 3:4，图文并茂版） -->
+  <!-- B 终端风：GitHub 周榜合集封面（竖图 3:4，开源本体版） -->
   <rect width="1080" height="1440" fill="#0D1117"/>
   <rect x="40" y="80" width="1000" height="1280" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
   <circle cx="100" cy="140" r="12" fill="#FF5F57"/>
   <circle cx="145" cy="140" r="12" fill="#FEBC2E"/>
   <circle cx="190" cy="140" r="12" fill="#28C840"/>
-  <text x="540" y="150" fill="#8B949E" font-size="28" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">weekly-rank — zsh</text>
   <line x1="40" y1="180" x2="1040" y2="180" stroke="#30363D" stroke-width="2"/>
 
-  <g font-family="'SF Mono','Menlo',monospace" font-size="34">
-    <text x="100" y="280" fill="#C9D1D9">$ <tspan fill="#7EE787">github-weekly-rank</tspan> --top 8</text>
+  <text x="100" y="320" fill="#F4F9FE" font-size="84" font-weight="700">GitHub</text>
+  <text x="100" y="420" fill="#F4F9FE" font-size="84" font-weight="700">周 榜</text>
+  <text x="100" y="490" fill="#79C0FF" font-size="36">开源世界的趋势观察</text>
 
-    <text x="100" y="410" fill="#F4F9FE" font-size="84" font-weight="700" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">GitHub</text>
-    <text x="100" y="510" fill="#F4F9FE" font-size="84" font-weight="700" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">周 榜</text>
-    <text x="100" y="580" fill="#79C0FF" font-size="36" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">每周涨星最快的 8 个项目</text>
-
-    <!-- 涨星柱状图 -->
-    <g>
-      <rect x="100" y="680" width="80" height="240" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
-      <rect x="210" y="620" width="80" height="300" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
-      <rect x="320" y="700" width="80" height="220" rx="6" fill="#21262D" stroke="#30363D" stroke-width="2"/>
-      <rect x="430" y="640" width="80" height="280" rx="6" fill="#1F6FEB" fill-opacity="0.9"/>
-      <rect x="540" y="600" width="80" height="320" rx="6" fill="#1F6FEB" fill-opacity="0.75"/>
-      <!-- 增量高亮 -->
-      <rect x="430" y="640" width="80" height="70" rx="6" fill="#7EE787"/>
-      <rect x="540" y="600" width="80" height="90" rx="6" fill="#7EE787"/>
-      <!-- 星标 -->
-      <text x="470" y="595" fill="#E3B341" font-size="44" text-anchor="middle">★</text>
-      <text x="580" y="552" fill="#E3B341" font-size="56" text-anchor="middle">★</text>
-      <!-- 上升箭头 -->
-      <path d="M130,560 L470,470 M470,470 L428,466 M470,470 L448,502" stroke="#7EE787" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <text x="100" y="975" fill="#8B949E" font-size="26">stars / week</text>
-    </g>
-
-    <text x="100" y="1120" fill="#C9D1D9" font-size="30">→ 每周一期 · 数据实测</text>
-    <text x="100" y="1170" fill="#C9D1D9" font-size="30">→ 不搬运 · 只拆解</text>
-
-    <text x="100" y="1280" fill="#7EE787" font-size="34">$ _</text>
+  <!-- Git 分支网络 -->
+  <g stroke="#30363D" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M160,650 L160,1150"/>
+    <path d="M360,700 C360,800 520,800 520,880"/>
+    <path d="M680,620 C680,760 520,760 520,880 M680,620 L680,760"/>
+    <path d="M680,760 C680,900 520,900 520,1010 M680,760 L680,1050"/>
+    <path d="M520,880 L520,1150 M520,1010 L520,1150 M680,1050 L680,1150"/>
+    <path d="M880,680 C880,850 680,850 680,1050"/>
   </g>
+  <g stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M160,650 L160,1150" stroke="#1F6FEB"/>
+    <path d="M360,700 C360,800 520,800 520,880" stroke="#A371F7"/>
+    <path d="M680,620 L680,760" stroke="#7EE787"/>
+    <path d="M680,760 L680,1050" stroke="#7EE787"/>
+    <path d="M520,880 L520,1150" stroke="#1F6FEB"/>
+  </g>
+  <!-- 提交节点 -->
+  <g>
+    <circle cx="160" cy="700" r="16" fill="#0D1117" stroke="#1F6FEB" stroke-width="5"/>
+    <circle cx="160" cy="850" r="16" fill="#0D1117" stroke="#1F6FEB" stroke-width="5"/>
+    <circle cx="160" cy="1000" r="16" fill="#0D1117" stroke="#1F6FEB" stroke-width="5"/>
+    <circle cx="360" cy="700" r="16" fill="#0D1117" stroke="#A371F7" stroke-width="5"/>
+    <circle cx="520" cy="880" r="16" fill="#0D1117" stroke="#E3B341" stroke-width="5"/>
+    <circle cx="520" cy="1010" r="16" fill="#0D1117" stroke="#E3B341" stroke-width="5"/>
+    <circle cx="680" cy="620" r="16" fill="#0D1117" stroke="#7EE787" stroke-width="5"/>
+    <circle cx="680" cy="760" r="16" fill="#0D1117" stroke="#7EE787" stroke-width="5"/>
+    <circle cx="680" cy="1050" r="16" fill="#0D1117" stroke="#7EE787" stroke-width="5"/>
+    <circle cx="880" cy="680" r="16" fill="#0D1117" stroke="#F85149" stroke-width="5"/>
+    <circle cx="160" cy="1150" r="16" fill="#0D1117" stroke="#1F6FEB" stroke-width="5"/>
+    <circle cx="520" cy="1150" r="16" fill="#0D1117" stroke="#1F6FEB" stroke-width="5"/>
+    <circle cx="680" cy="1150" r="16" fill="#0D1117" stroke="#7EE787" stroke-width="5"/>
+  </g>
+  <!-- 星标点缀 -->
+  <text x="900" y="600" fill="#E3B341" font-size="52" text-anchor="middle">★</text>
+  <text x="260" y="620" fill="#E3B341" font-size="36" text-anchor="middle">★</text>
+
+  <text x="100" y="1260" fill="#C9D1D9" font-size="34">追星，也是追技术的方向</text>
 </svg>
