@@ -26,32 +26,32 @@
 
   <!-- 中央 NAS（水平居中 x=540，垂直带 640~890） -->
   <g>
-    <rect x="300" y="640" width="480" height="250" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="4"/>
+    <rect x="300" y="700" width="480" height="250" rx="14" fill="#171310" stroke="#C8A87C" stroke-width="4"/>
     <g fill="none" stroke="#C8A87C" stroke-width="2.5">
-      <rect x="340" y="673" width="190" height="56" rx="5"/>
-      <rect x="340" y="745" width="190" height="56" rx="5"/>
-      <rect x="340" y="817" width="190" height="56" rx="5"/>
-      <rect x="550" y="673" width="190" height="56" rx="5"/>
-      <rect x="550" y="745" width="190" height="56" rx="5"/>
-      <rect x="550" y="817" width="190" height="56" rx="5"/>
+      <rect x="340" y="733" width="190" height="56" rx="5"/>
+      <rect x="340" y="805" width="190" height="56" rx="5"/>
+      <rect x="340" y="877" width="190" height="56" rx="5"/>
+      <rect x="550" y="733" width="190" height="56" rx="5"/>
+      <rect x="550" y="805" width="190" height="56" rx="5"/>
+      <rect x="550" y="877" width="190" height="56" rx="5"/>
     </g>
     <g stroke="#C8A87C" stroke-width="2">
-      <line x1="480" y1="701" x2="515" y2="701"/>
-      <line x1="480" y1="773" x2="515" y2="773"/>
-      <line x1="480" y1="845" x2="515" y2="845"/>
+      <line x1="480" y1="761" x2="515" y2="761"/>
+      <line x1="480" y1="833" x2="515" y2="833"/>
+      <line x1="480" y1="905" x2="515" y2="905"/>
     </g>
-    <circle cx="320" cy="701" r="8" fill="#E8A44C"/>
-    <circle cx="320" cy="773" r="8" fill="#E8A44C" fill-opacity="0.55"/>
-    <circle cx="320" cy="845" r="8" fill="#E8A44C" fill-opacity="0.25"/>
-    <text x="540" y="946" fill="#C8A87C" font-size="32" text-anchor="middle" font-weight="700">存储池 · 数据的家</text>
+    <circle cx="320" cy="761" r="8" fill="#E8A44C"/>
+    <circle cx="320" cy="833" r="8" fill="#E8A44C" fill-opacity="0.55"/>
+    <circle cx="320" cy="905" r="8" fill="#E8A44C" fill-opacity="0.25"/>
+    <text x="540" y="1006" fill="#C8A87C" font-size="32" text-anchor="middle" font-weight="700">存储池 · 数据的家</text>
   </g>
 
   <!-- 四角对称虚线（统一 45° 指向 NAS 四角） -->
   <g stroke="#E8A44C" stroke-width="3" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
-    <path d="M280,568 L322,610"/>
-    <path d="M800,568 L758,610"/>
-    <path d="M280,1108 L322,1066"/>
-    <path d="M800,1108 L758,1066"/>
+    <path d="M256,648 L306,698"/>
+    <path d="M800,660 L764,696"/>
+    <path d="M330,1058 L314,962"/>
+    <path d="M828,1062 L774,966"/>
   </g>
 
   <!-- 左上：手机（图标带 560~680，中心 y=620） -->
