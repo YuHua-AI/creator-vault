@@ -152,10 +152,13 @@ try {
   await page2.waitForTimeout(2500);
   // 校验全文加载：CM6 编辑器 DOM 是虚拟渲染（只有可视区），必须用完整渲染的 #output 预览区判断
   // 以正文最后一段的前几个字为「尾部标记」，它出现即代表全文已加载渲染
+  // 注意：标记与输出文本两侧做同样的归一化（剥 Markdown 符号与空白）再比对，
+  // 否则「AUTOSAR_SWS_Di…」这类带下划线/空格的尾部会在渲染文本里永远匹配不上
+  const NORM_RE = /[*_`#>\[\]()!\-\s]/g;
   const tailMarker = (body.trim().split('\n').filter(Boolean).pop() || '')
-    .replace(/[*_`#>\[\]()!-]/g, '').trim().slice(0, 12);
+    .replace(NORM_RE, '').slice(0, 12);
   await page2.waitForFunction(
-    (m) => (document.querySelector('#output')?.textContent || '').includes(m),
+    (m) => ((document.querySelector('#output')?.textContent || '').replace(/[*_`#>\[\]()!\-\s]/g, '')).includes(m),
     tailMarker, { timeout: 20000 }
   ).catch(() => fail(`预览未渲染完整正文（尾部标记「${tailMarker}」未出现）`));
 
