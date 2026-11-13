@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.3" r="1">
+      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
+  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+
+  <!-- 粒子 -->
+  <circle cx="280" cy="240" r="3" fill="#7FA8D0" opacity="0.35"/>
+  <circle cx="2120" cy="200" r="3" fill="#7FA8D0" opacity="0.4"/>
+  <circle cx="200" cy="1080" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="2200" cy="1100" r="2" fill="#7FA8D0" opacity="0.3"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="880" y="80" width="640" height="60" rx="30" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1200" y="120" text-anchor="middle" font-size="29" fill="#D6E6F5" letter-spacing="5">MAP · 音乐基建四块拼图</text>
+
+  <!-- ===== 块一：Tailscale（左平右凸） ===== -->
+  <g transform="translate(400,430)">
+    <path d="M0 0 L400 0 L400 100 C460 100 460 200 400 200 L400 300 L0 300 Z" fill="#12294D" stroke="#3B9FE8" stroke-width="4" stroke-linejoin="round"/>
+    <!-- globe -->
+    <circle cx="200" cy="150" r="62" fill="none" stroke="#3B9FE8" stroke-width="3.5"/>
+    <ellipse cx="200" cy="150" rx="28" ry="62" fill="none" stroke="#3B9FE8" stroke-width="3" opacity="0.7"/>
+    <line x1="140" y1="150" x2="260" y2="150" stroke="#3B9FE8" stroke-width="3" opacity="0.7"/>
+    <circle cx="200" cy="150" r="9" fill="#3EE8B0" filter="url(#glowG)"/>
+  </g>
+  <text x="600" y="810" text-anchor="middle" font-size="36" font-weight="700" fill="#E8F0F8">Tailscale</text>
+  <text x="600" y="858" text-anchor="middle" font-size="28" fill="#6B8299">外网地基 · 已发布</text>
+
+  <!-- ===== 块二：老路由 HiFi（左凹右凸） ===== -->
+  <g transform="translate(800,430)">
+    <path d="M60 0 L400 0 L400 100 C460 100 460 200 400 200 L400 300 L60 300 L60 200 C100 200 100 100 60 100 Z" fill="#12294D" stroke="#3B9FE8" stroke-width="4" stroke-linejoin="round"/>
+    <!-- 老路由小方盒 -->
+    <rect x="170" y="120" width="170" height="110" rx="20" fill="#16293E" stroke="#3B9FE8" stroke-width="3.5"/>
+    <circle cx="204" cy="146" r="6" fill="#3EE8B0" filter="url(#glowG)"/>
+    <circle cx="306" cy="146" r="6" fill="#3EE8B0" filter="url(#glowG)"/>
+    <!-- 声波弧 -->
+    <g fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linecap="round">
+      <path d="M 118 150 A 44 44 0 0 0 118 210" opacity="0.55"/>
+      <path d="M 92 128 A 76 76 0 0 0 92 232" opacity="0.3"/>
+    </g>
+  </g>
+  <text x="1030" y="810" text-anchor="middle" font-size="36" font-weight="700" fill="#E8F0F8">老路由 Hi-Fi</text>
+  <text x="1030" y="858" text-anchor="middle" font-size="28" fill="#6B8299">播放端 · 已发布</text>
+
+  <!-- ===== 块三：Navidrome（本篇，青绿主角） ===== -->
+  <g transform="translate(1200,430)">
+    <path d="M60 0 L400 0 L400 100 C460 100 460 200 400 200 L400 300 L60 300 L60 200 C100 200 100 100 60 100 Z" fill="#12294D" stroke="#3EE8B0" stroke-width="5" stroke-linejoin="round" filter="url(#glowG)"/>
+    <!-- 文件夹 + 音符 -->
+    <path d="M 140 100 L 210 100 L 232 126 L 320 126 L 320 220 L 140 220 Z" fill="#16293E" stroke="#3EE8B0" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="228" y="196" text-anchor="middle" font-size="58" fill="#3EE8B0" filter="url(#glowG)">♪</text>
+  </g>
+  <rect x="1282" y="368" width="140" height="48" rx="24" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="2"/>
+  <text x="1352" y="401" text-anchor="middle" font-size="26" fill="#3EE8B0" letter-spacing="3" filter="url(#glowG)">本篇</text>
+  <text x="1430" y="810" text-anchor="middle" font-size="36" font-weight="700" fill="#3EE8B0" filter="url(#glowG)">Navidrome</text>
+  <text x="1430" y="858" text-anchor="middle" font-size="28" fill="#8FAECB">曲库大脑 · 点播中枢</text>
+
+  <!-- ===== 块四：无损补货（已发布） ===== -->
+  <g transform="translate(1600,430)">
+    <path d="M60 0 L400 0 L400 300 L60 300 L60 200 C100 200 100 100 60 100 Z" fill="#12294D" stroke="#3B9FE8" stroke-width="4" stroke-linejoin="round"/>
+    <!-- 下载箭头 + 底线 -->
+    <line x1="230" y1="110" x2="230" y2="196" stroke="#3B9FE8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 196 168 L 230 206 L 264 168" fill="none" stroke="#3B9FE8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="170" y1="228" x2="290" y2="228" stroke="#3B9FE8" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <rect x="1692" y="368" width="140" height="48" rx="24" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="2"/>
+  <text x="1762" y="401" text-anchor="middle" font-size="26" fill="#8FAECB" letter-spacing="3">已发布</text>
+  <text x="1830" y="810" text-anchor="middle" font-size="36" font-weight="700" fill="#E8F0F8">无损补货管线</text>
+  <text x="1830" y="858" text-anchor="middle" font-size="28" fill="#6B8299">供给端 · 上篇</text>
+
+  <!-- 底部金句 -->
+  <text x="1200" y="1210" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">四块拼图集齐，<tspan fill="#3EE8B0" filter="url(#glowG)">音乐这一省正式通电</tspan></text>
+</svg>
