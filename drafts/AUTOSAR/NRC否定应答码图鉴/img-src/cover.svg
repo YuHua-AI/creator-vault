@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <!-- A 工程蓝图：NRC 分段地图（封面） -->
+  <defs>
+    <pattern id="g" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">NEGATIVE RESPONSE CODES</text>
+  <line x1="120" y1="175" x2="980" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="245" fill="#F4F9FE" font-size="54" font-weight="800">ECU 说"不"的艺术：NRC 全图鉴</text>
+
+  <!-- 0x00~0xFF 分段条 -->
+  <text x="120" y="400" fill="#9FC3E8" font-size="30">一个字节的三个世界（ISO 14229-1:2020 Annex A.1）</text>
+  <!-- 0x00 -->
+  <rect x="120" y="450" width="160" height="120" rx="8" fill="#0B2440" stroke="#9FC3E8" stroke-width="2.5"/>
+  <text x="200" y="510" fill="#F4F9FE" font-size="40" font-weight="700" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">00</text>
+  <text x="200" y="552" fill="#9FC3E8" font-size="22" text-anchor="middle">正响应保留</text>
+  <!-- 0x01-0x7F -->
+  <rect x="300" y="450" width="900" height="120" rx="8" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="750" y="510" fill="#F4F9FE" font-size="40" font-weight="700" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">01 ~ 7F</text>
+  <text x="750" y="552" fill="#9FC3E8" font-size="22" text-anchor="middle">通信相关：不支持 / 没解锁 / 稍等 / 传输失败</text>
+  <!-- 0x80-0xFF -->
+  <rect x="1220" y="450" width="1060" height="120" rx="8" fill="#1B3A6B" stroke="#E8A44C" stroke-width="3"/>
+  <text x="1750" y="510" fill="#F4F9FE" font-size="40" font-weight="700" text-anchor="middle" font-family="'SF Mono','Menlo',monospace">80 ~ FF</text>
+  <text x="1750" y="552" fill="#E8A44C" font-size="22" text-anchor="middle">具体条件：转速 / 温度 / 电压 / 挡位——0x22 的精细化答案</text>
+
+  <!-- 六大家族 -->
+  <g font-size="28">
+    <rect x="120" y="680" width="700" height="170" rx="10" fill="#0B2440" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="160" y="740" fill="#F4F9FE" font-weight="700" font-size="32">通用拒绝族</text>
+    <text x="160" y="790" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">10 11 12 13 14</text>
+    <text x="160" y="826" fill="#9FC3E8">拒绝 / 不支持 / 格式 / 太长</text>
+
+    <rect x="860" y="680" width="700" height="170" rx="10" fill="#0B2440" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="900" y="740" fill="#F4F9FE" font-weight="700" font-size="32">会话身份族</text>
+    <text x="900" y="790" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">7E 7F（vs 11 12）</text>
+    <text x="900" y="826" fill="#9FC3E8">"换个会话再来"</text>
+
+    <rect x="1600" y="680" width="680" height="170" rx="10" fill="#0B2440" stroke="#E8A44C" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="1640" y="740" fill="#F4F9FE" font-weight="700" font-size="32">安全认证族</text>
+    <text x="1640" y="790" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">33~37 · 50~5D</text>
+    <text x="1640" y="826" fill="#9FC3E8">解锁 / 防爆破 / 证书验证</text>
+
+    <rect x="120" y="900" width="700" height="170" rx="10" fill="#0B2440" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="160" y="960" fill="#F4F9FE" font-weight="700" font-size="32">忙与等</text>
+    <text x="160" y="1010" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">21 busy ≠ 78 pending</text>
+    <text x="160" y="1046" fill="#9FC3E8">"回头再说" vs "马上就好"</text>
+
+    <rect x="860" y="900" width="700" height="170" rx="10" fill="#0B2440" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="900" y="960" fill="#F4F9FE" font-weight="700" font-size="32">刷写传输族</text>
+    <text x="900" y="1010" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">70 71 72 73</text>
+    <text x="900" y="1046" fill="#9FC3E8">不接受 / 中断 / 编程失败 / 序号错</text>
+
+    <rect x="1600" y="900" width="680" height="170" rx="10" fill="#1B3A6B" stroke="#E8A44C" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="1640" y="960" fill="#F4F9FE" font-weight="700" font-size="32">具体条件族</text>
+    <text x="1640" y="1010" fill="#9FC3E8" font-family="'SF Mono','Menlo',monospace" font-size="26">81~94</text>
+    <text x="1640" y="1046" fill="#9FC3E8">转速 / 温度 / 电压 / 挡位</text>
+  </g>
+
+  <text x="1200" y="1190" fill="#F4F9FE" font-size="38" font-weight="700" text-anchor="middle">拒绝也要拒绝得有信息量——<tspan fill="#E8A44C">NRC 是路标，不是路障</tspan></text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="1830" y="1218">FIG. TABLE A.1 MAP</text>
+    <text x="1830" y="1258">ANNEX A.1</text>
+    <text x="2120" y="1218">REV. 2020</text>
+    <text x="2120" y="1258">SHEET 08</text>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'SF Mono','Menlo','PingFang SC',monospace">
+  <!-- B 终端抓包：0x78 连发时间线 -->
+  <rect width="2400" height="1350" fill="#0D1117"/>
+  <rect x="40" y="60" width="2320" height="1230" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+  <circle cx="104" cy="120" r="12" fill="#FF5F57"/>
+  <circle cx="149" cy="120" r="12" fill="#FEBC2E"/>
+  <circle cx="194" cy="120" r="12" fill="#28C840"/>
+  <text x="1200" y="130" fill="#8B949E" font-size="28" text-anchor="middle">candump -tz can0 | grep 7E8</text>
+  <line x1="40" y1="160" x2="2360" y2="160" stroke="#30363D" stroke-width="2"/>
+
+  <g font-size="32">
+    <text x="100" y="250" fill="#8B949E">(1731489024.301843)  can0  TX - -  7E0   [8]  36 45 3E A1 0F …</text>
+    <text x="100" y="320" fill="#F85149">(1731489024.318921)  can0  RX - -  7E8   [3]  7F 36 78</text>
+    <text x="100" y="360" fill="#8B949E" font-size="26">                              └─ 收到且正在干（擦 Flash），别催</text>
+    <text x="100" y="450" fill="#F85149">(1731489034.320110)  can0  RX - -  7E8   [3]  7F 36 78</text>
+    <text x="100" y="490" fill="#8B949E" font-size="26">                              └─ 0x78 可以连发，每条重置 P2* 窗口</text>
+    <text x="100" y="580" fill="#F85149">(1731489044.321806)  can0  RX - -  7E8   [3]  7F 36 78</text>
+    <text x="100" y="620" fill="#8B949E" font-size="26">                              └─ 诊断仪在此期间不得发新请求</text>
+    <text x="100" y="710" fill="#7EE787">(1731489052.402318)  can0  RX - -  7E8   [3]  76 45</text>
+    <text x="100" y="750" fill="#8B949E" font-size="26">                              └─ 最终应答必达——不管抑制位怎么设</text>
+  </g>
+
+  <!-- P2/P2* 时间轴 -->
+  <g>
+    <line x1="100" y1="920" x2="2280" y2="920" stroke="#30363D" stroke-width="3"/>
+    <line x1="150" y1="905" x2="150" y2="935" stroke="#79C0FF" stroke-width="3"/>
+    <text x="150" y="880" fill="#79C0FF" font-size="26" text-anchor="middle">t0 请求</text>
+    <line x1="420" y1="905" x2="420" y2="935" stroke="#7EE787" stroke-width="3"/>
+    <text x="420" y="880" fill="#7EE787" font-size="26" text-anchor="middle">第一条 7F 36 78</text>
+    <line x1="1290" y1="905" x2="1290" y2="935" stroke="#7EE787" stroke-width="3"/>
+    <text x="1290" y="880" fill="#7EE787" font-size="26" text-anchor="middle">…78 连发</text>
+    <line x1="2160" y1="905" x2="2160" y2="935" stroke="#E3B341" stroke-width="3"/>
+    <text x="2160" y="880" fill="#E3B341" font-size="26" text-anchor="middle">76 45 终答</text>
+    <!-- P2 区间 -->
+    <line x1="150" y1="990" x2="420" y2="990" stroke="#79C0FF" stroke-width="4"/>
+    <text x="285" y="1040" fill="#79C0FF" font-size="28" text-anchor="middle">P2 ≈ 50ms：必须先应答（含 78）</text>
+    <!-- P2* 区间 -->
+    <line x1="420" y1="1070" x2="2160" y2="1070" stroke="#E3B341" stroke-width="4"/>
+    <text x="1290" y="1120" fill="#E3B341" font-size="28" text-anchor="middle">P2* = 刷写会话自报的秒级时限（0x10 正应答里 ECU 自己报的）</text>
+  </g>
+
+  <g font-size="30">
+    <text x="100" y="1220" fill="#C9D1D9">$ echo "0x21 是回头再说，0x78 是马上就好" | tee 调试笔记</text>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Songti SC','Noto Serif SC','PingFang SC',serif">
+  <!-- C 技术手册：7F 负应答三字节 + 家族速查 -->
+  <rect width="2400" height="1350" fill="#F7F5F0"/>
+  <line x1="120" y1="130" x2="2280" y2="130" stroke="#1B3A6B" stroke-width="5"/>
+  <line x1="120" y1="144" x2="2280" y2="144" stroke="#1B3A6B" stroke-width="2"/>
+  <text x="120" y="106" fill="#1B3A6B" font-size="36" font-weight="700" letter-spacing="4">负应答的骨架与家族速查</text>
+  <text x="2280" y="106" fill="#B3541E" font-size="36" text-anchor="end">ISO 14229-1:2020 §8.6 / Table A.1</text>
+
+  <!-- 三字节结构 -->
+  <text x="120" y="250" fill="#1B3A6B" font-size="40" font-weight="700">Figure 1　负应答：固定三字节</text>
+  <g font-size="46" font-weight="700" text-anchor="middle">
+    <rect x="160" y="290" width="500" height="130" fill="#B3541E"/>
+    <text x="410" y="372" fill="#F7F5F0">7F</text>
+    <rect x="680" y="290" width="500" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="930" y="372" fill="#1B3A6B">请求 SID</text>
+    <rect x="1200" y="290" width="500" height="130" fill="none" stroke="#1B3A6B" stroke-width="4"/>
+    <text x="1450" y="372" fill="#1B3A6B">NRC</text>
+  </g>
+  <g font-size="30" fill="#3D4A5C" text-anchor="middle">
+    <line x1="410" y1="420" x2="410" y2="470" stroke="#8A94A6" stroke-width="2"/>
+    <text x="410" y="508">负应答 SID，固定 7F</text>
+    <line x1="930" y1="420" x2="930" y2="470" stroke="#8A94A6" stroke-width="2"/>
+    <text x="930" y="508">你刚才问的谁</text>
+    <line x1="1450" y1="420" x2="1450" y2="470" stroke="#8A94A6" stroke-width="2"/>
+    <text x="1450" y="508">为什么拒绝——本篇主角</text>
+  </g>
+
+  <!-- 速查表 -->
+  <text x="120" y="680" fill="#1B3A6B" font-size="40" font-weight="700">Figure 2　高频 NRC 速查</text>
+  <g font-size="30" fill="#3D4A5C">
+    <line x1="120" y1="710" x2="2280" y2="710" stroke="#1B3A6B" stroke-width="3"/>
+    <g font-family="'SF Mono','Menlo',monospace" font-weight="700" fill="#1B3A6B">
+      <text x="140" y="760">NRC</text><text x="440" y="760">名称</text><text x="1100" y="760">人话</text>
+    </g>
+    <line x1="120" y1="780" x2="2280" y2="780" stroke="#8A94A6" stroke-width="1.5"/>
+    <g font-family="'SF Mono','Menlo',monospace" font-weight="700" fill="#B3541E">
+      <text x="140" y="828">11</text><text x="140" y="876">7F</text><text x="140" y="924">33</text>
+      <text x="140" y="972">21</text><text x="140" y="1020">78</text><text x="140" y="1068">72</text>
+      <text x="140" y="1116">92/93</text><text x="140" y="1164">F0~FE</text>
+    </g>
+    <g font-family="'SF Mono','Menlo',monospace" fill="#3D4A5C">
+      <text x="440" y="828">serviceNotSupported</text>
+      <text x="440" y="876">serviceNotSupportedInActiveSession</text>
+      <text x="440" y="924">securityAccessDenied</text>
+      <text x="440" y="972">busyRepeatRequest</text>
+      <text x="440" y="1020">responsePending</text>
+      <text x="440" y="1068">generalProgrammingFailure</text>
+      <text x="440" y="1116">voltageTooHigh / TooLow</text>
+      <text x="440" y="1164">车厂自定义条件段</text>
+    </g>
+    <g>
+      <text x="1100" y="828">没有这个服务——换哪个会话都没有</text>
+      <text x="1100" y="876">这个会话不支持，但别处有——"换房间再来"</text>
+      <text x="1100" y="924">没解锁——前面关卡全过了，就差钥匙</text>
+      <text x="1100" y="972">现在忙，干不了——稍后重发同一条请求</text>
+      <text x="1100" y="1020">收到且正在干——别催，P2* 兜底，必给终答</text>
+      <text x="1100" y="1068">Flash 擦写失败——硬件层面的坏消息</text>
+      <text x="1100" y="1116">电源超出安全窗——谈判解锁都过了，纯电源的锅</text>
+      <text x="1100" y="1164">各家刷写规范里的私有码住这段</text>
+    </g>
+    <line x1="120" y1="1195" x2="2280" y2="1195" stroke="#1B3A6B" stroke-width="3"/>
+  </g>
+
+  <text x="120" y="1280" fill="#3D4A5C" font-size="30">功能寻址（7DF）下被抑制的五个：11 / 12 / 7E / 7F / 31——全车齐喊"不支持"会堵死总线（§8.7.1，0x78 不在抑制之列）</text>
+</svg>
