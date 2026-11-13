@@ -1,5 +1,5 @@
 ---
-title: AUTOSAR 入门番外：ECU 说“不”的艺术——NRC 否定应答码全图鉴
+title: AUTOSAR 入门 - UDS 诊断：ECU 说“不”的艺术——NRC 否定应答码全图鉴
 date: 2026-11-13
 status: draft
 tags: [AUTOSAR, UDS, 诊断, NRC]
