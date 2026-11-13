@@ -3,6 +3,7 @@ title: 老苹果路由别扔！一根音频线，凑出一套 NAS 无线 Hi-Fi
 date: 2026-11-11
 status: published
 tags: [NAS, 音乐, AirPlay, 数字生活]
+collection: NAS
 ---
 
 一套无线 Hi-Fi 的最低成本是多少？我的答案：三件吃灰的老设备，加一根二十块的音频线。

@@ -3,6 +3,7 @@ title: '告别传统 DDNS！给 NAS 装上 Tailscale，实现无感异地访问'
 date: 2026-11-10
 status: published
 tags: [NAS, Tailscale, 内网穿透, 自建服务]
+collection: NAS
 ---
 
 上周五下班，我还在地铁上，编辑微信催稿：那篇稿子改得怎么样了？

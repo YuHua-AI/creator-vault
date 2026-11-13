@@ -3,6 +3,7 @@ title: 'DS218play 跑个 Homepage 就卡死？老 MacBook 再就业'
 date: 2026-11-09
 status: published
 tags: [NAS, Mac, 自建服务, 数字生活]
+collection: NAS
 ---
 
 欢迎登陆「屿华AI」数字岛屿。大家好，我是屿华。
