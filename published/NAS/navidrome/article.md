@@ -1,7 +1,7 @@
 ---
 title: 歌单说没就没？我在吃灰 NAS 上跑了个私人 Spotify
 date: 2026-11-14
-status: review
+status: published
 tags: [NAS, 音乐, Navidrome, Docker, 数字生活]
 platform: [公众号]
 collection: NAS
@@ -41,7 +41,7 @@ collection: NAS
 
 为什么不是 Jellyfin / Plex？一张图看懂：
 
-![为什么是 Navidrome：三方案对比](img/01-三方案对比.jpg)
+![为什么是 Navidrome：三方案对比](img/01-three-options.jpg)
 
 吃灰 NAS 的算力是稀缺资源，**在弱硬件上，「只跑对的服务」比「跑得动什么」更重要。**
 
@@ -114,7 +114,7 @@ docker compose up -d
 
 ### 第 4 步：搞懂它怎么认歌（全文最重要的认知）
 
-![Navidrome 靠内嵌标签认歌，不读目录](img/02-目录标签双轨.jpg)
+![Navidrome 靠内嵌标签认歌，不读目录](img/02-folder-vs-tags.jpg)
 
 Navidrome 靠音频文件的**内嵌标签**（ID3、Vorbis 注释）识别艺人、专辑、年份、封面，**不读目录名**。
 
@@ -157,7 +157,7 @@ Navidrome 靠音频文件的**内嵌标签**（ID3、Vorbis 注释）识别艺�
 3. **目录给人看，标签给机器读**——曲库的本质是一个干净的标签库；
 4. **生态比本体值钱**——Navidrome 本体只有 16 行，全平台的体验来自 Subsonic 生态十几年积累。
 
-![音乐基建四块拼图，本篇补上中心件](img/03-四块拼图.jpg)
+![音乐基建四块拼图，本篇补上中心件](img/03-four-pieces.jpg)
 
 至此，音乐基建四块拼图集齐：Tailscale 打地基、老路由发声、Navidrome 管库。数字岛屿上，音乐这一省正式通电。
 
