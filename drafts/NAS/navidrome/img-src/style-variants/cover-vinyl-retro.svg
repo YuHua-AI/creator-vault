@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'Songti SC','STSong','PingFang SC',serif">
+  <defs>
+    <radialGradient id="labelGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#D9534F"/><stop offset="1" stop-color="#A93226"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 奶油米底 -->
+  <rect width="2848" height="1600" fill="#F5EBD8"/>
+  <!-- 唱片封套双线边框 -->
+  <rect x="56" y="56" width="2736" height="1488" fill="none" stroke="#3E2B1F" stroke-width="5"/>
+  <rect x="84" y="84" width="2680" height="1432" fill="none" stroke="#3E2B1F" stroke-width="2" opacity="0.55"/>
+
+  <!-- ===== 左侧：大黑胶 ===== -->
+  <!-- 唱片 -->
+  <circle cx="620" cy="800" r="520" fill="#2B2B2B"/>
+  <!-- 唱片沟槽 -->
+  <g fill="none" stroke="#4A4A4A" stroke-width="2.5">
+    <circle cx="620" cy="800" r="470" opacity="0.8"/>
+    <circle cx="620" cy="800" r="420" opacity="0.6"/>
+    <circle cx="620" cy="800" r="370" opacity="0.45"/>
+    <circle cx="620" cy="800" r="320" opacity="0.3"/>
+  </g>
+  <g fill="none" stroke="#1A1A1A" stroke-width="2">
+    <circle cx="620" cy="800" r="445" opacity="0.9"/>
+    <circle cx="620" cy="800" r="395" opacity="0.7"/>
+    <circle cx="620" cy="800" r="345" opacity="0.55"/>
+  </g>
+  <!-- 中心标签 -->
+  <circle cx="620" cy="800" r="170" fill="url(#labelGlow)"/>
+  <circle cx="620" cy="800" r="170" fill="none" stroke="#3E2B1F" stroke-width="3"/>
+  <circle cx="620" cy="800" r="16" fill="#F5EBD8" stroke="#3E2B1F" stroke-width="3"/>
+  <text x="620" y="740" text-anchor="middle" font-size="42" font-weight="700" fill="#F5EBD8">私人曲库</text>
+  <text x="620" y="800" text-anchor="middle" font-size="34" fill="#F9D9B8">Private Pressing</text>
+  <text x="620" y="866" text-anchor="middle" font-size="30" fill="#F5EBD8" opacity="0.85">33⅓ RPM · FLAC</text>
+  <!-- 唱针 -->
+  <g stroke="#3E2B1F" stroke-width="7" fill="none" stroke-linecap="round">
+    <line x1="1040" y1="430" x2="860" y2="600"/>
+    <line x1="860" y1="600" x2="780" y2="660"/>
+  </g>
+  <circle cx="1040" cy="430" r="26" fill="#3E2B1F"/>
+  <circle cx="780" cy="660" r="14" fill="#D9534F" stroke="#3E2B1F" stroke-width="4"/>
+
+  <!-- 文件夹小图标（歌从文件夹来） -->
+  <g transform="translate(200,1150)">
+    <path d="M 0 0 L 130 0 L 160 36 L 330 36 L 330 190 L 0 190 Z" fill="#F5EBD8" stroke="#3E2B1F" stroke-width="6" stroke-linejoin="round"/>
+    <g stroke="#3E2B1F" stroke-width="4" stroke-linecap="round">
+      <line x1="40" y1="90" x2="80" y2="90"/><line x1="40" y1="118" x2="240" y2="118"/>
+      <line x1="40" y1="148" x2="200" y2="148"/>
+    </g>
+  </g>
+  <!-- 五线谱音符装饰 -->
+  <g stroke="#3E2B1F" stroke-width="3" opacity="0.5">
+    <line x1="1080" y1="1130" x2="1380" y2="1130"/><line x1="1080" y1="1150" x2="1380" y2="1150"/>
+    <line x1="1080" y1="1170" x2="1380" y2="1170"/><line x1="1080" y1="1190" x2="1380" y2="1190"/>
+    <line x1="1080" y1="1210" x2="1380" y2="1210"/>
+  </g>
+  <g fill="#3E2B1F">
+    <ellipse cx="1140" cy="1186" rx="20" ry="14" transform="rotate(-18 1140 1186)"/>
+    <rect x="1156" y="1110" width="7" height="78"/>
+    <ellipse cx="1260" cy="1166" rx="20" ry="14" transform="rotate(-18 1260 1166)"/>
+    <rect x="1276" y="1090" width="7" height="78"/>
+    <ellipse cx="1330" cy="1206" rx="20" ry="14" transform="rotate(-18 1330 1206)"/>
+    <rect x="1346" y="1130" width="7" height="78"/>
+  </g>
+
+  <!-- ===== 右侧文字区（唱片封套排版） ===== -->
+  <text x="1580" y="240" font-size="34" fill="#8B5E3C" letter-spacing="10">数字岛屿 · 私人曲库篇</text>
+  <line x1="1580" y1="274" x2="2700" y2="274" stroke="#3E2B1F" stroke-width="3"/>
+
+  <text x="1580" y="560" font-size="200" font-weight="900" fill="#3E2B1F" letter-spacing="4">NAVIDROME</text>
+
+  <text x="1580" y="740" font-size="88" font-weight="700" fill="#A93226" letter-spacing="6">一个文件夹</text>
+  <text x="1580" y="856" font-size="88" font-weight="700" fill="#3E2B1F" letter-spacing="6">变私人 Spotify</text>
+
+  <text x="1580" y="970" font-size="38" fill="#5C4A38">16 行配置 · 吃灰 NAS 常开 · 全平台点播</text>
+
+  <g font-size="30" text-anchor="middle" font-weight="700">
+    <rect x="1580" y="1050" width="350" height="70" rx="6" fill="#3E2B1F"/>
+    <text x="1755" y="1096" fill="#F5EBD8" letter-spacing="3">文件夹进 · 点播出</text>
+    <rect x="1954" y="1050" width="350" height="70" rx="6" fill="#A93226"/>
+    <text x="2129" y="1096" fill="#F5EBD8" letter-spacing="3">Subsonic 全平台</text>
+    <rect x="2328" y="1050" width="372" height="70" rx="6" fill="none" stroke="#3E2B1F" stroke-width="3.5"/>
+    <text x="2514" y="1096" fill="#3E2B1F" letter-spacing="3">外网零额外配置</text>
+  </g>
+
+  <text x="2700" y="1480" text-anchor="end" font-size="26" fill="#8B5E3C" letter-spacing="4">屿华AI · YuHua-AIPlay</text>
+</svg>

@@ -1,102 +1,100 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
   <defs>
-    <radialGradient id="bgGlow" cx="0.5" cy="0.3" r="1">
-      <stop offset="0" stop-color="#16294A"/><stop offset="1" stop-color="#0A1826"/>
-    </radialGradient>
-    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-width="1.5"/>
+    <pattern id="dots" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="3" fill="#C9D8E8"/>
     </pattern>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#35D0FF"/>
-    </filter>
-    <filter id="glowG" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#3EE8B0"/>
-    </filter>
   </defs>
 
-  <rect width="2400" height="1350" fill="url(#bgGlow)"/>
-  <rect width="2400" height="1350" fill="url(#grid)" opacity="0.35"/>
+  <rect width="2400" height="1350" fill="#FAF7F2"/>
+  <rect width="2400" height="1350" fill="url(#dots)" opacity="0.5"/>
 
-  <!-- 粒子 -->
-  <circle cx="300" cy="220" r="3" fill="#7FA8D0" opacity="0.35"/>
-  <circle cx="2100" cy="260" r="3" fill="#7FA8D0" opacity="0.4"/>
-  <circle cx="400" cy="1180" r="2" fill="#7FA8D0" opacity="0.3"/>
-  <circle cx="2050" cy="1140" r="2" fill="#7FA8D0" opacity="0.3"/>
+  <!-- 顶部手绘双线胶囊 -->
+  <rect x="860" y="72" width="680" height="64" rx="32" fill="none" stroke="#22405E" stroke-width="4.5"/>
+  <rect x="872" y="82" width="656" height="44" rx="22" fill="none" stroke="#22405E" stroke-width="2" opacity="0.45"/>
+  <text x="1200" y="114" text-anchor="middle" font-size="29" fill="#22405E" letter-spacing="5">LOGIC · 它到底怎么认歌</text>
 
-  <!-- 顶部胶囊 -->
-  <rect x="870" y="70" width="660" height="60" rx="30" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="1200" y="110" text-anchor="middle" font-size="29" fill="#D6E6F5" letter-spacing="5">LOGIC · 它到底怎么认歌</text>
+  <!-- ===== 上轨：目录树（给人看，蓝墨） ===== -->
+  <path d="M 466 196 L 1908 190 L 1914 414 L 460 420 Z" fill="#FFFFFF" stroke="#22405E" stroke-width="5" stroke-linejoin="round" opacity="0.92"/>
+  <!-- 手绘文件夹 -->
+  <path d="M 520 240 L 570 236 L 584 254 L 620 252 L 624 288 L 516 290 Z" fill="none" stroke="#22405E" stroke-width="4.5" stroke-linejoin="round"/>
+  <g font-size="32" fill="#5A7188">
+    <text x="648" y="282">Music /</text>
+    <text x="700" y="330" fill="#22405E">许嵩 /</text>
+    <text x="752" y="378" fill="#22405E">Singles /</text>
+  </g>
+  <g stroke="#22405E" stroke-width="2.5" opacity="0.45">
+    <line x1="666" y1="292" x2="666" y2="386"/>
+    <line x1="718" y1="342" x2="718" y2="390"/>
+  </g>
+  <text x="1120" y="316" font-size="30" fill="#8CA3B8">目录名怎么摆，它一眼都不看</text>
+  <!-- 轨道标签（手绘圈） -->
+  <g fill="none" stroke="#22405E" stroke-width="4">
+    <ellipse cx="1718" cy="248" rx="168" ry="34" transform="rotate(-2 1718 248)"/>
+  </g>
+  <text x="1718" y="260" text-anchor="middle" font-size="28" fill="#22405E" letter-spacing="3">目录 · 给人看</text>
+
+  <!-- 铅笔虚线：文件 → 目录 -->
+  <line x1="1200" y1="560" x2="1200" y2="446" stroke="#22405E" stroke-width="4" stroke-dasharray="16 14" opacity="0.6"/>
+  <circle cx="1200" cy="548" r="9" fill="#FAF7F2" stroke="#22405E" stroke-width="3.5"/>
 
   <!-- ===== 中央：音频文件卡 ===== -->
-  <g filter="url(#glow)">
-    <rect x="1010" y="560" width="380" height="230" rx="18" fill="#12294D" stroke="#35D0FF" stroke-width="5"/>
-  </g>
-  <!-- 折角文件图标 -->
-  <path d="M 1060 620 L 1130 620 L 1160 650 L 1160 720 L 1060 720 Z" fill="#16293E" stroke="#3B9FE8" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M 1130 620 L 1130 650 L 1160 650" fill="none" stroke="#3B9FE8" stroke-width="3" stroke-linejoin="round"/>
-  <text x="1200" y="700" font-size="40" font-weight="700" fill="#E8F0F8">素颜.flac</text>
-  <text x="1200" y="752" font-size="26" fill="#8FAECB">一个音频文件</text>
+  <path d="M 1016 566 L 1392 560 L 1398 786 L 1010 792 Z" fill="#FFFFFF" stroke="#22405E" stroke-width="5.5" stroke-linejoin="round"/>
+  <path d="M 1060 620 L 1130 618 L 1162 648 L 1158 720 L 1056 722 Z" fill="none" stroke="#5A7188" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M 1130 618 L 1130 648 L 1160 648" fill="none" stroke="#5A7188" stroke-width="4" stroke-linejoin="round"/>
+  <text x="1200" y="702" font-size="40" font-weight="700" fill="#22405E">素颜.flac</text>
+  <text x="1200" y="754" font-size="26" fill="#8CA3B8">一个音频文件</text>
 
-  <!-- ===== 上轨：目录树（给人看） ===== -->
-  <g>
-    <rect x="460" y="190" width="1480" height="230" rx="18" fill="#12294D" stroke="#3B9FE8" stroke-width="4"/>
-    <!-- 目录树：缩进行 + 线框文件夹 -->
-    <path d="M 520 240 L 566 240 L 580 254 L 620 254 L 620 286 L 520 286 Z" fill="#16293E" stroke="#3B9FE8" stroke-width="3" stroke-linejoin="round"/>
-    <text x="644" y="278" font-size="32" fill="#8FAECB">Music /</text>
-    <text x="672" y="328" font-size="32" fill="#BBD4EE">许嵩 /</text>
-    <text x="724" y="378" font-size="32" fill="#BBD4EE">Singles /</text>
-    <!-- 树形竖线 -->
-    <g stroke="#3B9FE8" stroke-width="2.5" opacity="0.5">
-      <line x1="648" y1="292" x2="648" y2="390"/>
-      <line x1="700" y1="342" x2="700" y2="392"/>
-    </g>
-    <text x="1050" y="320" font-size="30" fill="#6B8299">目录名怎么摆，它一眼都不看</text>
-    <!-- 轨道标签 -->
-    <rect x="1560" y="218" width="330" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-    <text x="1725" y="256" text-anchor="middle" font-size="28" fill="#BBD4EE" letter-spacing="3">目录 · 给人看</text>
+  <!-- ===== 下轨：标签字段（给机器读，橙） ===== -->
+  <!-- 波浪连线 ×4 -->
+  <g fill="none" stroke="#FF6B35" stroke-width="5" stroke-linecap="round">
+    <path d="M 1100 792 C 1040 880 640 856 560 936"/>
+    <path d="M 1160 792 C 1130 880 1000 856 960 936"/>
+    <path d="M 1250 792 C 1280 880 1400 856 1450 936"/>
+    <path d="M 1320 792 C 1390 880 1780 856 1840 936"/>
   </g>
-  <!-- 文件 → 目录：虚线（弱关联） -->
-  <line x1="1200" y1="560" x2="1200" y2="440" stroke="#3B9FE8" stroke-width="4" stroke-dasharray="14 14" opacity="0.7"/>
-  <circle cx="1200" cy="544" r="9" fill="#0A1826" stroke="#E8F0F8" stroke-width="3"/>
-
-  <!-- ===== 下轨：标签字段（给机器读） ===== -->
-  <!-- 文件 → 四字段：实线发光（真识别） -->
-  <g fill="none" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)">
-    <path d="M 1100 790 C 1050 880 660 860 560 930"/>
-    <path d="M 1160 790 C 1130 880 1010 860 960 930"/>
-    <path d="M 1250 790 C 1280 880 1400 860 1450 930"/>
-    <path d="M 1320 790 C 1380 880 1760 860 1840 930"/>
-  </g>
-  <g fill="#3EE8B0" filter="url(#glowG)">
-    <circle cx="816" cy="874" r="8"/><circle cx="1054" cy="874" r="8"/>
-    <circle cx="1358" cy="874" r="8"/><circle cx="1606" cy="874" r="8"/>
+  <g fill="#FF6B35">
+    <circle cx="816" cy="872" r="8"/><circle cx="1054" cy="872" r="8"/>
+    <circle cx="1358" cy="872" r="8"/><circle cx="1618" cy="872" r="8"/>
   </g>
 
-  <!-- 四张字段卡 -->
+  <!-- 四张手写字段卡 -->
   <g>
-    <rect x="380" y="930" width="360" height="170" rx="16" fill="#12294D" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
-    <text x="560" y="1000" text-anchor="middle" font-size="26" fill="#6B8299" letter-spacing="3">ARTIST</text>
-    <text x="560" y="1064" text-anchor="middle" font-size="40" font-weight="700" fill="#E8F0F8">许嵩</text>
+    <path d="M 386 936 L 730 930 L 736 1104 L 380 1110 Z" fill="#FFFFFF" stroke="#FF6B35" stroke-width="5" stroke-linejoin="round"/>
+    <text x="556" y="1002" text-anchor="middle" font-size="25" fill="#8CA3B8" letter-spacing="4">ARTIST</text>
+    <text x="556" y="1068" text-anchor="middle" font-size="42" font-weight="700" fill="#22405E">许嵩</text>
   </g>
   <g>
-    <rect x="780" y="930" width="360" height="170" rx="16" fill="#12294D" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
-    <text x="960" y="1000" text-anchor="middle" font-size="26" fill="#6B8299" letter-spacing="3">ALBUM</text>
-    <text x="960" y="1064" text-anchor="middle" font-size="40" font-weight="700" fill="#E8F0F8">素颜</text>
+    <path d="M 786 936 L 1130 930 L 1136 1104 L 780 1110 Z" fill="#FFFFFF" stroke="#FF6B35" stroke-width="5" stroke-linejoin="round"/>
+    <text x="956" y="1002" text-anchor="middle" font-size="25" fill="#8CA3B8" letter-spacing="4">ALBUM</text>
+    <text x="956" y="1068" text-anchor="middle" font-size="42" font-weight="700" fill="#22405E">素颜</text>
   </g>
   <g>
-    <rect x="1180" y="930" width="360" height="170" rx="16" fill="#12294D" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
-    <text x="1360" y="1000" text-anchor="middle" font-size="26" fill="#6B8299" letter-spacing="3">YEAR</text>
-    <text x="1360" y="1064" text-anchor="middle" font-size="40" font-weight="700" fill="#E8F0F8">2010</text>
+    <path d="M 1186 936 L 1530 930 L 1536 1104 L 1180 1110 Z" fill="#FFFFFF" stroke="#FF6B35" stroke-width="5" stroke-linejoin="round"/>
+    <text x="1360" y="1002" text-anchor="middle" font-size="25" fill="#8CA3B8" letter-spacing="4">YEAR</text>
+    <text x="1360" y="1068" text-anchor="middle" font-size="42" font-weight="700" fill="#22405E">2010</text>
   </g>
   <g>
-    <rect x="1580" y="930" width="360" height="170" rx="16" fill="#12294D" stroke="#3EE8B0" stroke-width="4" filter="url(#glowG)"/>
-    <text x="1760" y="1000" text-anchor="middle" font-size="26" fill="#6B8299" letter-spacing="3">COVER</text>
-    <text x="1760" y="1068" text-anchor="middle" font-size="44" fill="#3EE8B0" filter="url(#glowG)">♪</text>
+    <path d="M 1586 936 L 1930 930 L 1936 1104 L 1580 1110 Z" fill="#FFFFFF" stroke="#FF6B35" stroke-width="5" stroke-linejoin="round"/>
+    <text x="1760" y="1002" text-anchor="middle" font-size="25" fill="#8CA3B8" letter-spacing="4">COVER</text>
+    <text x="1760" y="1072" text-anchor="middle" font-size="46" fill="#FF6B35">♪</text>
   </g>
-  <!-- 轨道标签 -->
-  <rect x="1960" y="960" width="340" height="56" rx="28" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
-  <text x="2130" y="998" text-anchor="middle" font-size="28" fill="#3EE8B0" letter-spacing="3" filter="url(#glowG)">标签 · 给机器读</text>
+
+  <!-- 轨道标签（橙手绘圈） -->
+  <g fill="none" stroke="#FF6B35" stroke-width="4">
+    <ellipse cx="2138" cy="968" rx="180" ry="36" transform="rotate(-2 2138 968)"/>
+  </g>
+  <text x="2138" y="980" text-anchor="middle" font-size="28" fill="#FF6B35" letter-spacing="3">标签 · 给机器读</text>
+
+  <!-- 手绘装饰：小星 + 叉 -->
+  <g stroke="#22405E" stroke-width="3.5" stroke-linecap="round" opacity="0.5">
+    <path d="M 240 500 L 262 522 M 262 500 L 240 522"/>
+    <path d="M 2160 540 L 2182 562 M 2182 540 L 2160 562"/>
+    <path d="M 300 1160 L 322 1182 M 322 1160 L 300 1182"/>
+  </g>
+  <g stroke="#FF6B35" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.8">
+    <path d="M 2180 1180 L 2190 1206 L 2216 1210 L 2196 1228 L 2202 1254 L 2180 1240 L 2158 1254 L 2164 1228 L 2144 1210 L 2170 1206 Z"/>
+  </g>
 
   <!-- 底部金句 -->
-  <text x="1200" y="1240" text-anchor="middle" font-size="46" font-weight="700" fill="#E8F0F8">曲库的本质，<tspan fill="#3EE8B0" filter="url(#glowG)">是一个干净的标签库</tspan></text>
+  <text x="1200" y="1246" text-anchor="middle" font-size="46" font-weight="700" fill="#22405E">曲库的本质，<tspan fill="#FF6B35">是一个干净的标签库</tspan></text>
 </svg>
