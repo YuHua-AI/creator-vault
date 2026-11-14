@@ -5,6 +5,7 @@ date: 2026-11-11
 status: published
 tags: [GitHub, 开源周报, AI Agent]
 platform: [公众号]
+collection: GitHub 周榜
 ---
 
 本周 GitHub 涨星榜，快被 Agent 包场了——前 8 名里 7 个和 Agent 直接相关。
