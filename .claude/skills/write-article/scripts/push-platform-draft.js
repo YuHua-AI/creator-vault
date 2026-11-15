@@ -96,21 +96,77 @@ if (!editorSel || cfg.loginWall.test(page.url())) {
 if (!editorSel) { console.error('✗ 编辑器未就位（登录超时或页面改版），退出'); await context.close(); process.exit(1); }
 console.log(`  ✓ 编辑器就位（${editorSel}）`);
 
-// ---------- 3. 填标题（等待出现 + 强制点击 + 读回验证） ----------
+// ---------- 3. 填标题 ----------
 await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(cfg.url).origin });
 let titleOk = false;
-for (const sel of cfg.titleSelectors) {
-  try {
-    await page.waitForSelector(sel, { timeout: 8000, state: 'attached' });
-    const el = page.locator(sel).first();
+
+// CSDN 实测机制：标题平时是显示态 DIV（article-bar__title-display，文本「无标题」），
+// 点击激活后键盘直填——fill()/inputValue() 路线全部无效（2026-11-15 三轮实测）
+if (platform === 'csdn') {
+  const activated = await page.evaluate(() => {
+    const el = [...document.querySelectorAll('div,span')]
+      .filter(e => !e.querySelector('*') && /无标题/.test(e.textContent || ''))[0];
+    if (el) { el.scrollIntoView({ block: 'center' }); el.click(); return true; }
+    return false;
+  });
+  if (activated) {
+    await page.waitForTimeout(800);
+    await page.keyboard.press('Meta+A');
+    await page.keyboard.type(title, { delay: 15 });
+    await page.waitForTimeout(300);
+    const shown = await page.evaluate(() => {
+      const el = document.querySelector('.article-bar__title-display, input.article-bar__title');
+      return el ? String(el.value ?? el.textContent ?? '').trim().slice(0, 12) : '';
+    });
+    titleOk = shown === title.slice(0, 12);
+    console.log(titleOk ? '  ✓ 标题已填并验证（display-div → 键盘直填）' : `  · 键盘已输入，读回「${shown}」，请肉眼确认`);
+  }
+}
+
+// 其他平台：几何定位 + 选择器兜底（知乎 textarea 一次命中，维持原逻辑）
+if (!titleOk && platform !== 'csdn') {
+  // 几何定位：在编辑器上方找可见的 input/textarea/contenteditable，按位置排序
+  const geo = await page.evaluate((editorSel) => {
+    const ed = document.querySelector(editorSel);
+    const edTop = ed ? ed.getBoundingClientRect().top : 500;
+    return [...document.querySelectorAll('input, textarea, [contenteditable="true"]')]
+      .filter(e => {
+        const r = e.getBoundingClientRect();
+        if (r.width < 200 || r.height < 12 || r.top < 60 || r.top > edTop - 8) return false;
+        const st = getComputedStyle(e);
+        return st.visibility !== 'hidden' && st.display !== 'none';
+      })
+      .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)
+      .slice(0, 5)
+      .map(e => ({
+        tag: e.tagName, cls: String(e.className).slice(0, 50),
+        ph: e.getAttribute('placeholder') || '', w: Math.round(e.getBoundingClientRect().width),
+      }));
+  }, editorSel).catch(() => []);
+
+  const fillTitle = async (selectorDesc, el) => {
     await el.click({ force: true }).catch(() => {});
     await el.fill(title).catch(async () => { await el.pressSequentially(title, { delay: 20 }); });
-    const v = await el.inputValue().catch(() => '');
-    if (v && v.slice(0, 8) === title.slice(0, 8)) {
-      titleOk = true; console.log(`  ✓ 标题已填并验证（${sel}）`); break;
+    const v = await el.inputValue().catch(() => el.textContent() || '');
+    const ok = v && v.slice(0, 8) === title.slice(0, 8);
+    console.log(ok ? `  ✓ 标题已填并验证（${selectorDesc}）` : `  · ${selectorDesc} 填写未生效`);
+    return ok;
+  };
+  // 优先：几何序里 placeholder 含 标题 的
+  for (const g of geo.filter(g => /无标题|文章标题|标题/.test(g.ph))) {
+    const el = page.locator(`${g.tag.toLowerCase()}[placeholder="${g.ph}"]`).first();
+    if (await el.count() && await fillTitle(`geo:${g.tag}`, el)) { titleOk = true; break; }
+  }
+  // 兜底：配置的 class 选择器（知乎 textarea 一次命中即此路径）
+  if (!titleOk) {
+    for (const sel of cfg.titleSelectors) {
+      try {
+        await page.waitForSelector(sel, { timeout: 4000, state: 'attached' });
+        const el = page.locator(sel).first();
+        if (await fillTitle(sel, el)) { titleOk = true; break; }
+      } catch { /* 试下一个 */ }
     }
-    console.log(`  · ${sel} 填写未生效（读回为空），试下一候选`);
-  } catch { /* 该候选不存在，试下一个 */ }
+  }
 }
 if (!titleOk) console.log(`⚠ 标题没填上，请手动填：《${title}》`);
 
