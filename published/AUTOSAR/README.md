@@ -1,17 +1,19 @@
 # AUTOSAR 站外分发 · 打通手册
 
-**零副本原则**：`published/AUTOSAR/<篇名>/article.md` 就是归档产物，分发直接用它；本目录只存登记（footer、链接、平台操作），不复制内容。
+**零副本原则**：本目录的文章文件夹（article.md + img/）就是归档产物，分发直接用；目录级只放登记（footer、links、平台操作），不复制内容。
 
 ## 结构
 
 ```
-distribution/AUTOSAR/
+published/AUTOSAR/
 ├── README.md            # 本手册
+├── series-plan.md       # 系列总控计划（历史存档）
 ├── footer.md            # 统一尾部模板（占位符 {{链接:slug}}、{{公众号名}}）
 ├── links.json           # 注册表：公众号名 + 各平台已发 URL
-├── gzh/                 # 公众号：专题视图，源稿在 published/AUTOSAR/
+├── gzh/                 # 公众号：本目录即公众号产物本体
 ├── zh/                  # 知乎：专栏/答题操作 + 登记（questions.md）
-└── csdn/                # CSDN：发文操作 + 登记
+├── csdn/                # CSDN：发文操作 + 登记
+└── <各篇文章文件夹>/      # article.md + img/ + img-src/
 ```
 
 ## 贴稿流程（一条命令进剪贴板）

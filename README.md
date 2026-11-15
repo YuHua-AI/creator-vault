@@ -13,7 +13,7 @@ ideas/（选题池） ──► drafts/（AI 草稿+改稿） ──► publishe
                                               粘贴公众号后台发布
                                               （勾选 AI 内容标识）
 
-published/ ──► distribution/（站外分发：知乎/CSDN 等，单份文章+平台登记）
+published/ ──► 站外分发（知乎/CSDN 等）：登记随专题放 published/<专题>/{footer,links,gzh/zh/csdn}
 ```
 
 ## 目录
@@ -22,8 +22,7 @@ published/ ──► distribution/（站外分发：知乎/CSDN 等，单份文�
 |---|---|
 | `ideas/` | 选题池（`pool.md`）与增长策略（`growth-plan.md`） |
 | `drafts/` | 写作中的文章，frontmatter `status: draft`，按专题分子目录 |
-| `published/` | 发布后归档，`status: published`，按专题分子目录 |
-| `distribution/` | 站外分发：`<专题>/{articles/ 单份分发版, footer.md, links.json, gzh/zh/csdn/ 平台登记}`，`gen-dist-versions.js` 一键生成 |
+| `published/` | 发布后归档，`status: published`，按专题分子目录；专题目录内同放分发登记（`footer.md`、`links.json`、`gzh/zh/csdn/`），`gen-dist-versions.js` 一条命令生成贴稿流 |
 | `assets/` | 主题 CSS 备份（`theme.css`）、合集封面（`collection-covers/`）等素材 |
 | `tools/` | 外部数据源仓库（gitignore，如 github-weekly-rank） |
 | `wiki/` | **claude-obsidian 插件管的知识库**（带溯源的素材沉淀），文章不进这里 |

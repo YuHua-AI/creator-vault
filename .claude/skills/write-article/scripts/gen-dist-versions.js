@@ -5,9 +5,9 @@
  *
  *   node gen-dist-versions.js published/AUTOSAR/<篇名> --platform zh | pbcopy
  *
- * 库内零副本；distribution/<专题>/ 只存登记（footer.md / links.json / 平台目录 gzh/zh/csdn）。
+ * 库内零副本；published/<专题>/ 只在文章文件夹之外放登记（footer.md / links.json / 平台目录 gzh/zh/csdn）。
  *
- * 依赖约定（distribution/<专题>/）：
+ * 依赖约定（published/<专题>/）：
  *   - footer.md   尾部模板，占位符 {{链接:<slug>}}、{{公众号名}}
  *   - links.json  { "collection": "…", "公众号名": "", "zh": {"<slug>": "url"}, "csdn": {} }
  *                 collection 字段用于反查专题目录（目录名不必等于 frontmatter 的 collection）
@@ -40,8 +40,8 @@ const pick = (k) => (fmText.match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1] ?? ''
 const collection = pick('collection');
 if (!collection) { console.error('✗ frontmatter 缺 collection（footer/注册表按 collection 定位）'); process.exit(1); }
 
-// 注册表反查：扫描 distribution/*/links.json，按 collection 字段匹配
-const distRoot = join(vaultRoot, 'distribution');
+// 注册表反查：扫描 published/*/links.json，按 collection 字段匹配
+const distRoot = join(vaultRoot, 'published');
 let reg = {}, topicDir = null;
 if (existsSync(distRoot)) {
   for (const d of readdirSync(distRoot, { withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name)) {
@@ -51,7 +51,7 @@ if (existsSync(distRoot)) {
     if (r.collection === collection) { reg = r; topicDir = d; break; }
   }
 }
-if (!topicDir) { console.error(`✗ distribution/ 下没有 collection 为「${collection}」的 links.json`); process.exit(1); }
+if (!topicDir) { console.error(`✗ published/ 下没有 collection 为「${collection}」的 links.json`); process.exit(1); }
 if (!reg[platform]) { console.error(`✗ links.json 缺平台键「${platform}」（现有：${Object.keys(reg).filter(k => k !== 'collection' && k !== '公众号名').join(', ')}）`); process.exit(1); }
 
 const footerPath = join(distRoot, topicDir, 'footer.md');
