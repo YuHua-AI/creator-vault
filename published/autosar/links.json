@@ -1,7 +1,9 @@
 {
   "collection": "AUTOSAR 入门",
   "公众号名": "屿华AI",
-  "zh": {},
+  "zh": {
+    "uds-byte-by-byte": "https://zhuanlan.zhihu.com/p/2105569644786537661"
+  },
   "csdn": {
     "uds-byte-by-byte": "https://blog.csdn.net/fly_xiaocaibi88/article/details/170821042"
   }

@@ -237,35 +237,82 @@ if (platform === 'csdn') {
   console.log(`  ✓ 图片 URL 已替换进 Markdown（${map.size}/${imgs.length}）`);
 }
 
-// ---------- 5. 贴正文（清掉可能的草稿残留 → 写剪贴板 → Cmd+V） ----------
-let pasteOk = false;
-await page.evaluate(t => navigator.clipboard.writeText(t), content);
-for (const sel of cfg.editorSelectors) {
-  const el = page.locator(sel).first();
-  if (await el.count() && await el.isVisible().catch(() => false)) {
-    await el.click();
-    await page.keyboard.press('Meta+A');
-    await page.keyboard.press('Backspace');
-    await page.waitForTimeout(200);
-    await page.keyboard.press('Meta+V');
-    await page.waitForTimeout(1500);
-    pasteOk = true; console.log(`  ✓ 正文已粘贴（${sel}，Cmd+V）`); break;
+// ---------- 5. 贴正文（清掉可能的草稿残留 → 写剪贴板 → Cmd+V；知乎走第 6 步 HTML 粘贴，跳过本步） ----------
+if (platform !== 'zh') {
+  let pasteOk = false;
+  await page.evaluate(t => navigator.clipboard.writeText(t), content);
+  for (const sel of cfg.editorSelectors) {
+    const el = page.locator(sel).first();
+    if (await el.count() && await el.isVisible().catch(() => false)) {
+      await el.click();
+      await page.keyboard.press('Meta+A');
+      await page.keyboard.press('Backspace');
+      await page.waitForTimeout(200);
+      await page.keyboard.press('Meta+V');
+      await page.waitForTimeout(1500);
+      pasteOk = true; console.log(`  ✓ 正文已粘贴（${sel}，Cmd+V）`); break;
+    }
   }
+  if (!pasteOk) console.log('⚠ 自动粘贴失败——正文已在剪贴板，请点正文区按 Cmd+V');
 }
-if (!pasteOk) console.log('⚠ 自动粘贴失败——正文已在剪贴板，请点正文区按 Cmd+V');
 
-// ---------- 6. 知乎：富文本编辑器不吃 Markdown，拖放插图兜底（待升级为 HTML 粘贴） ----------
-if (platform === 'zh' && imgs.length) {
-  let imgsOk = 0;
-  const imgsFail = [];
+// ---------- 6. 知乎：上传截 URL → MD→HTML → 富文本整体粘贴 ----------
+if (platform === 'zh') {
+  const editorEl = page.locator(cfg.editorSelectors[0]).first();
+
+  // 监听上传完成响应（api.zhihu.com/images/{id} status=success 返回正式 src）
+  // 注意：DOM 里的 img src 是 blob: 临时态，粘贴 blob 会「图片导入失败」——必须用网络层的正式 URL
+  const finalSrcs = [];
+  page.on('response', async r => {
+    if (/api\.zhihu\.com\/images\/\d+$/.test(r.url())) {
+      try {
+        const j = await r.json();
+        if (j?.status === 'success' && j?.src) finalSrcs.push(j.src);
+      } catch { /* 忽略 */ }
+    }
+  });
+
+  const urlMap = new Map();
   for (const rel of imgs) {
     const p = join(articleDir, rel);
-    if (!existsSync(p)) { imgsFail.push(`${rel}（文件不存在）`); continue; }
-    (await dropFile(p, editorSel)) ? imgsOk++ : imgsFail.push(rel);
+    if (!existsSync(p)) { console.log(`  ⚠ ${rel} 文件不存在，保留本地引用`); continue; }
+    const before = finalSrcs.length;
+    await dropFile(p, editorSel);
+    const deadline = Date.now() + 25_000;
+    while (finalSrcs.length <= before && Date.now() < deadline) await page.waitForTimeout(500);
+    if (finalSrcs.length > before) {
+      urlMap.set(rel, finalSrcs[before]);
+      console.log(`  ✓ 上传 ${rel} → ${finalSrcs[before].slice(0, 70)}…`);
+    } else {
+      console.log(`  ⚠ ${rel} 上传超时，保留本地引用`);
+    }
   }
-  console.log(imgsOk === imgs.length
-    ? `  ✓ 图片 ${imgsOk}/${imgs.length} 已拖入（位置需人工核对）`
-    : `  ⚠ 图片 ${imgsOk}/${imgs.length}：失败的从 ${join(articleDir, 'img/')} 手动拖 → ${imgsFail.join('、') || '(无)'}`);
+  for (const [rel, url] of urlMap) content = content.split(rel).join(url);
+  console.log(`  ✓ 图片 URL 已替换（${urlMap.size}/${imgs.length}）`);
+
+  // MD→HTML，富文本粘贴（Cmd+A 全选替换，覆盖拖入阶段的临时插入）
+  const { marked } = await import('marked');
+  const html = marked.parse(content, { async: false });
+  await page.evaluate(async h => {
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/html': new Blob([h], { type: 'text/html' }),
+      'text/plain': new Blob(['（知乎富文本粘贴失败时，请用 Markdown 手动流程）'], { type: 'text/plain' }),
+    })]);
+  }, html).catch(async e => {
+    console.log(`  ⚠ HTML 写剪贴板失败（${e.message.split('\n')[0]}），回退纯文本`);
+    await page.evaluate(t => navigator.clipboard.writeText(t), content);
+  });
+  await editorEl.click();
+  await page.keyboard.press('Meta+A');
+  await page.waitForTimeout(150);
+  await page.keyboard.press('Meta+V');
+  await page.waitForTimeout(2000);
+  // 验证：正文图片数与小标题数
+  const check = await page.evaluate(sel => ({
+    imgs: document.querySelectorAll(sel + ' img').length,
+    h2: document.querySelectorAll(sel + ' h2').length,
+  }), cfg.editorSelectors[0]).catch(() => ({}));
+  console.log(`  ✓ 富文本已粘贴并替换（校验 img=${check.imgs} h2=${check.h2}，预期 img=${urlMap.size}）`);
 }
 
 // ---------- 6. 交棒人工 ----------
