@@ -1,0 +1,46 @@
+<svg width="2136" height="910" viewBox="0 0 2136 910" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Segoe UI', sans-serif">
+  <rect width="2136" height="910" fill="#fcfcfb"/>
+
+  <!-- 标题区 -->
+  <text x="80" y="92" font-size="58" font-weight="800" fill="#0b0b0b">一台 1G 内存 NAS 的自救</text>
+  <text x="80" y="152" font-size="34" font-weight="500" fill="#52514e">把 Navidrome 搬上 Mac 的完整实录 · 排障实录 + 实测数据</text>
+  <line x1="80" y1="192" x2="2056" y2="192" stroke="#c3c2b7" stroke-width="2"/>
+
+  <!-- ══ 左：诊断终端窗口（真实输出） ══ -->
+  <rect x="80" y="228" width="1150" height="560" rx="14" fill="#1a1a19"/>
+  <rect x="80" y="228" width="1150" height="52" rx="14" fill="#2c2c2a"/>
+  <rect x="80" y="266" width="1150" height="14" fill="#2c2c2a"/>
+  <circle cx="112" cy="254" r="9" fill="#e34948"/>
+  <circle cx="140" cy="254" r="9" fill="#eda100"/>
+  <circle cx="168" cy="254" r="9" fill="#0ca30c"/>
+  <text x="655" y="262" font-size="22" fill="#c3c2b7" text-anchor="middle" font-family="Menlo, monospace">ssh yaohua@ds218play — 排障现场</text>
+
+  <g font-family="Menlo, 'SF Mono', monospace" font-size="27">
+    <text x="116" y="334" fill="#0ca30c">yaohua@ds218play</text><text x="330" y="334" fill="#c3c2b7">~ %</text><text x="392" y="334" fill="#f0efec">uptime</text>
+    <text x="146" y="378" fill="#f0efec">load average:</text><text x="392" y="378" fill="#e66767" font-weight="700">99.37, 91.64, 52.38</text><text x="830" y="378" fill="#898781">← 4核ARM 假死</text>
+
+    <text x="116" y="446" fill="#0ca30c">yaohua@ds218play</text><text x="330" y="446" fill="#c3c2b7">~ %</text><text x="392" y="446" fill="#f0efec">free -m</text>
+    <text x="146" y="490" fill="#898781">              total    used    available</text>
+    <text x="146" y="534" fill="#f0efec">Mem:             643     530</text><text x="700" y="534" fill="#e66767" font-weight="700">113</text><text x="830" y="534" fill="#898781">← 长期超卖</text>
+    <text x="146" y="578" fill="#f0efec">Swap:           2047     708</text><text x="830" y="578" fill="#898781">← 19GB 累计换页</text>
+
+    <text x="116" y="646" fill="#0ca30c">yaohua@ds218play</text><text x="330" y="646" fill="#c3c2b7">~ %</text><text x="392" y="646" fill="#f0efec">docker ps</text>
+    <text x="146" y="690" fill="#f0efec">navidrome（转码+扫描）  node-exporter</text><text x="830" y="690" fill="#898781">← 算力全压NAS</text>
+    <text x="146" y="740" fill="#0ca30c">▊</text>
+  </g>
+
+  <!-- ══ 右：迁移结果 ══ -->
+  <text x="1650" y="400" font-size="190" font-weight="800" fill="#2a78d6" text-anchor="middle" font-variant-numeric="tabular-nums">0.06</text>
+  <text x="1650" y="456" font-size="32" fill="#52514e" text-anchor="middle">迁移后 · load average 空闲基线</text>
+
+  <g font-size="30" fill="#0b0b0b">
+    <text x="1310" y="540"><tspan fill="#006300" font-weight="700">✓</tspan>  Navidrome 迁 Mac，转码随便跑</text>
+    <text x="1310" y="594"><tspan fill="#006300" font-weight="700">✓</tspan>  1973 首无损迁走，181 条历史保留</text>
+    <text x="1310" y="648"><tspan fill="#006300" font-weight="700">✓</tspan>  断挂 30 秒自愈，蜂窝秒开</text>
+    <text x="1310" y="702"><tspan fill="#006300" font-weight="700">✓</tspan>  NAS 回归纯存储，岁月静好</text>
+  </g>
+
+  <!-- 底部标签 -->
+  <line x1="80" y1="820" x2="2056" y2="820" stroke="#e1e0d9" stroke-width="2"/>
+  <text x="80" y="872" font-size="30" fill="#52514e">存算分离实战　·　swap 风暴定案　·　踩坑清单 7 条　·　自愈链设计</text>
+</svg>

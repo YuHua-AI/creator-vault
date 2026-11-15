@@ -1,0 +1,65 @@
+<svg width="1080" height="780" viewBox="0 0 1080 780" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Segoe UI', sans-serif">
+  <rect width="1080" height="780" fill="#fcfcfb"/>
+  <text x="60" y="64" font-size="30" font-weight="700" fill="#0b0b0b">迁移前后关键指标对比</text>
+  <text x="60" y="98" font-size="17" fill="#52514e">NAS（DS218play · 1GB 内存）实测 · 2026-11-15 · 数据取自迁移当日监控</text>
+  <line x1="60" y1="118" x2="1020" y2="118" stroke="#c3c2b7" stroke-width="1"/>
+
+  <!-- legend -->
+  <rect x="60" y="136" width="14" height="14" rx="3" fill="#eb6834"/>
+  <text x="82" y="149" font-size="16" fill="#0b0b0b">迁移前</text>
+  <rect x="150" y="136" width="14" height="14" rx="3" fill="#2a78d6"/>
+  <text x="172" y="149" font-size="16" fill="#0b0b0b">迁移后</text>
+
+  <!-- Panel 1: NAS 负载峰值（基线380，条形最高130 → 顶端250，标题安全区到224） -->
+  <g>
+    <text x="60" y="200" font-size="19" font-weight="600" fill="#0b0b0b">NAS 负载峰值（load average）</text>
+    <text x="60" y="224" font-size="14" fill="#898781">假死时刻 vs 迁移后空闲基线</text>
+    <line x1="60" y1="380" x2="490" y2="380" stroke="#c3c2b7" stroke-width="1.5"/>
+    <rect x="120" y="250" width="88" height="130" rx="4" fill="#eb6834"/>
+    <text x="164" y="236" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">99.0</text>
+    <rect x="330" y="378" width="88" height="2" rx="1" fill="#2a78d6"/>
+    <text x="374" y="362" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">0.06</text>
+    <text x="164" y="406" font-size="15" fill="#52514e" text-anchor="middle">迁移前</text>
+    <text x="374" y="406" font-size="15" fill="#52514e" text-anchor="middle">迁移后</text>
+  </g>
+
+  <!-- Panel 2: NAS 可用内存（113→85px, 172→130px） -->
+  <g>
+    <text x="570" y="200" font-size="19" font-weight="600" fill="#0b0b0b">NAS 可用内存（MB）</text>
+    <text x="570" y="224" font-size="14" fill="#898781">媒体服务与套件减负后</text>
+    <line x1="570" y1="380" x2="1000" y2="380" stroke="#c3c2b7" stroke-width="1.5"/>
+    <rect x="630" y="295" width="88" height="85" rx="4" fill="#eb6834"/>
+    <text x="674" y="281" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">113</text>
+    <rect x="840" y="250" width="88" height="130" rx="4" fill="#2a78d6"/>
+    <text x="884" y="236" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">172</text>
+    <text x="674" y="406" font-size="15" fill="#52514e" text-anchor="middle">迁移前</text>
+    <text x="884" y="406" font-size="15" fill="#52514e" text-anchor="middle">迁移后</text>
+  </g>
+
+  <!-- Panel 3: NAS 上 Navidrome 常驻内存（22.6→130px, 0→无条形；基线650，顶端520） -->
+  <g>
+    <text x="60" y="470" font-size="19" font-weight="600" fill="#0b0b0b">NAS 上 Navidrome 常驻内存（MB）</text>
+    <text x="60" y="494" font-size="14" fill="#898781">服务整体迁走，扫描/转码尖峰一并消失</text>
+    <line x1="60" y1="650" x2="490" y2="650" stroke="#c3c2b7" stroke-width="1.5"/>
+    <rect x="120" y="520" width="88" height="130" rx="4" fill="#eb6834"/>
+    <text x="164" y="506" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">22.6</text>
+    <text x="374" y="632" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">0</text>
+    <text x="164" y="676" font-size="15" fill="#52514e" text-anchor="middle">迁移前</text>
+    <text x="374" y="676" font-size="15" fill="#52514e" text-anchor="middle">迁移后</text>
+  </g>
+
+  <!-- Panel 4: NAS Docker 容器（2→130px, 1→65px） -->
+  <g>
+    <text x="570" y="470" font-size="19" font-weight="600" fill="#0b0b0b">NAS Docker 容器（个）</text>
+    <text x="570" y="494" font-size="14" fill="#898781">只留守 node-exporter（9 MB）作监控体温计</text>
+    <line x1="570" y1="650" x2="1000" y2="650" stroke="#c3c2b7" stroke-width="1.5"/>
+    <rect x="630" y="520" width="88" height="130" rx="4" fill="#eb6834"/>
+    <text x="674" y="506" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">2</text>
+    <rect x="840" y="585" width="88" height="65" rx="4" fill="#2a78d6"/>
+    <text x="884" y="571" font-size="22" font-weight="700" fill="#0b0b0b" text-anchor="middle">1</text>
+    <text x="674" y="676" font-size="15" fill="#52514e" text-anchor="middle">迁移前</text>
+    <text x="884" y="676" font-size="15" fill="#52514e" text-anchor="middle">迁移后</text>
+  </g>
+
+  <text x="60" y="738" font-size="13" fill="#898781">同一时段同口径对比：负载取假死峰值与迁移后空闲 1 分钟均值；内存取 free -m available；常驻内存取 docker stats 空闲值。</text>
+</svg>
