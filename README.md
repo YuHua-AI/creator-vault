@@ -12,16 +12,20 @@ ideas/（选题池） ──► drafts/（AI 草稿+改稿） ──► publishe
                                                      │
                                               粘贴公众号后台发布
                                               （勾选 AI 内容标识）
+
+published/ ──► distribution/（站外分发：知乎/CSDN 等，单份文章+平台登记）
 ```
 
 ## 目录
 
 | 目录 | 用途 |
 |---|---|
-| `ideas/` | 选题池，一行一个想法，攒够了挑一条进 drafts |
-| `drafts/` | 写作中的文章，frontmatter `status: draft` |
-| `published/` | 发布后归档，`status: published` |
-| `assets/` | doocs/md 主题 CSS 备份（`theme.css`）、题图等素材 |
+| `ideas/` | 选题池（`pool.md`）与增长策略（`growth-plan.md`） |
+| `drafts/` | 写作中的文章，frontmatter `status: draft`，按专题分子目录 |
+| `published/` | 发布后归档，`status: published`，按专题分子目录 |
+| `distribution/` | 站外分发：`<专题>/{articles/ 单份分发版, footer.md, links.json, gzh/zh/csdn/ 平台登记}`，`gen-dist-versions.js` 一键生成 |
+| `assets/` | 主题 CSS 备份（`theme.css`）、合集封面（`collection-covers/`）等素材 |
+| `tools/` | 外部数据源仓库（gitignore，如 github-weekly-rank） |
 | `wiki/` | **claude-obsidian 插件管的知识库**（带溯源的素材沉淀），文章不进这里 |
 | `inbox/` | 插件的捕获暂存区，外部资料先落这再由 wiki-ingest 消化 |
 

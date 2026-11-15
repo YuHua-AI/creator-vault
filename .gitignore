@@ -12,3 +12,6 @@ backups/
 
 # 外部克隆的数据源仓库（自带 .git，周榜数据用 git pull 更新）
 tools/
+
+# Claudian 会话数据（工具本地态）
+.claudian/
