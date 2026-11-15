@@ -1,0 +1,267 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {
+        "type": {
+          "options": [
+            "Task",
+            "Problem",
+            "Learning"
+          ]
+        },
+        "status": {
+          "options": [
+            "Todo",
+            "In Progress",
+            "Done",
+            "Open",
+            "Closed",
+            "Blocked",
+            "Cancelled"
+          ]
+        },
+        "priority": {
+          "options": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "created": {
+          "type": "date"
+        },
+        "completed": {
+          "type": "date"
+        }
+      },
+      "defaultName": "Untitled",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "Work Database",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "Work Database",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "name": {
+                "width": 555
+              },
+              "path": {
+                "hide": true
+              },
+              "status": {
+                "width": 107
+              },
+              "created": {
+                "width": 126
+              },
+              "start": {
+                "width": 104
+              },
+              "type": {
+                "width": 118
+              },
+              "completed": {
+                "width": 112
+              },
+              "tags": {
+                "width": 459
+              },
+              "priority": {
+                "width": 109
+              }
+            },
+            "orderFields": [
+              "name",
+              "type",
+              "status",
+              "created",
+              "start",
+              "completed",
+              "priority",
+              "tags",
+              "parent_task"
+            ]
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "created",
+                "direction": "desc",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
+          },
+          "name": "All Notes",
+          "id": "view-all-notes",
+          "type": "table"
+        },
+        {
+          "config": {
+            "groupByField": "status",
+            "orderSyncField": "weight"
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "priority",
+                "direction": "desc"
+              },
+              {
+                "field": "created",
+                "direction": "desc"
+              }
+            ]
+          },
+          "name": "Status Board",
+          "id": "view-status-board",
+          "type": "board"
+        },
+        {
+          "config": {
+            "interval": "month",
+            "dateField": "created",
+            "checkField": "completed"
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "name": "Calendar",
+          "id": "view-calendar",
+          "type": "calendar"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "name": {
+                "width": 453
+              },
+              "path": {
+                "hide": true
+              }
+            },
+            "orderFields": [
+              "name",
+              "type",
+              "status",
+              "priority",
+              "created",
+              "completed",
+              "tags"
+            ]
+          },
+          "filter": {
+            "conjunction": "or",
+            "conditions": [
+              {
+                "field": "completed",
+                "operator": "is-on-and-after",
+                "value": "2026-11-02"
+              },
+              {
+                "field": "created",
+                "operator": "is-on-and-after",
+                "enabled": true,
+                "value": "2026-11-02"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "created",
+                "direction": "desc"
+              }
+            ]
+          },
+          "name": "This Week",
+          "id": "view-this-week",
+          "type": "table"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "name": {
+                "width": 485
+              }
+            }
+          },
+          "filter": {
+            "conjunction": "or",
+            "conditions": [
+              {
+                "field": "created",
+                "operator": "is-on-and-after",
+                "enabled": true,
+                "value": "2026-10-01"
+              },
+              {
+                "field": "completed",
+                "operator": "is-on-and-after",
+                "enabled": true,
+                "value": "2026-10-01"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "c48c3e73-bb54-414d-b7c2-4bec5a3c5c8c",
+          "name": "This Month",
+          "type": "table"
+        }
+      ],
+      "name": "Work Database",
+      "id": "work-database-project"
+    }
+  ],
+  "archives": [],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    },
+    "locale": {
+      "firstDayOfWeek": "default"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}

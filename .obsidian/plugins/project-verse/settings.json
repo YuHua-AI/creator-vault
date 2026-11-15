@@ -1,0 +1,6 @@
+{
+  "enableDashboard": true,
+  "enableDynamicQuery": true,
+  "enableWorkspaceSync": true,
+  "showSpaceBadge": true
+}
