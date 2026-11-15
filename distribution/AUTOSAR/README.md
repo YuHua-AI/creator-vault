@@ -1,25 +1,33 @@
 # AUTOSAR 站外分发 · 打通手册（知乎 + CSDN）
 
-唯一源：`published/AUTOSAR/<篇名>/article.md`，各平台只做尾部适配（footer），不改正文。配图在每篇 `img/` 下，粘贴后手动拖入编辑器（知乎/CSDN 均自动转存）。
+唯一源：`published/AUTOSAR/<篇名>/article.md`。**平台版由脚本一键生成**：
+
+```bash
+node .claude/skills/write-article/scripts/gen-dist-versions.js published/AUTOSAR/<篇名>
+# 产出 distribution/AUTOSAR/versions/{zhihu,csdn}/<篇名>.md，即贴即用
+```
+
+- 标题：编辑器标题框填 frontmatter 的 `title`
+- 配图：每篇 `img/` 下的 jpg 按位置拖入编辑器（知乎/CSDN 均自动转存）
+- 链接回填：发出一篇后把 URL 登记进 `links.json` → 重跑脚本，后续所有版本自动带上系列目录链接（发布顺序在前面的篇目链接自然先就位）
 
 ## 首次开通（一次性，人工）
 
 **知乎**
 1. 登录网页版知乎 → 个人中心 → 「我的专栏」→ 创建专栏，名称建议与合集同名「AUTOSAR 入门」
-2. 首篇发布 ① `uds-byte-by-byte`：正文粘贴 article.md（去掉 frontmatter），图片逐张拖入对应位置
-3. 尾部粘贴 `footer-zhihu.md`（先补两处占位：{{公众号名}}；本篇链接发出后回填）
-4. 发布时勾选「包含 AI 创作内容」
+2. 发 ①：粘贴 `versions/zhihu/uds-byte-by-byte.md`（先补 `links.json` 的 公众号名），图片拖入
+3. 发布时勾选「包含 AI 创作内容」
 
 **CSDN**
-1. 登录 CSDN → 「创作」→ 文章管理，Markdown 编辑器
-2. 同样流程发 ①，尾部用 `footer-csdn.md`
-3. CSDN 也需勾选 AI 生成内容标识；百度收录约 1~3 天生效
+1. 登录 CSDN → 「创作」→ Markdown 编辑器，同样流程发 `versions/csdn/` 版
+2. CSDN 也需勾选 AI 生成内容标识；百度收录约 1~3 天生效
 
-## 节奏
+## 节奏（2026-11-15 调整：从缓）
 
-- 知乎：每周 1~2 篇，按搜索热度排：① → ③ 0x27 → ⑥ DTC → ② 0x10 → ④ → ⑤ → ⑦ → NRC 番外
-- CSDN：与知乎同篇同步或滞后一周均可（内容互不冲突，两边收录引擎不同）
-- 每篇发出后：把链接回填 footer 里的目录占位，本文件登记一行
+- **每周 1 篇**：库存八篇铺两个月，等续作（DoIP/DEM/P2 并发…）写出来正好接上，不烧库存
+- 发布顺序按搜索热度：① → ③ 0x27 → ⑥ DTC → ② 0x10 → ④ → ⑤ → ⑦ → NRC 番外
+- CSDN 与知乎同篇同步发（一次粘贴两个平台，不占额外节奏）
+- 每篇发出后：URL 登记 `links.json` → 重跑脚本 → 本文件登记一行
 
 ## 答题（比发文更重要）
 
