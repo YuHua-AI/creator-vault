@@ -2,8 +2,9 @@
 
 ## 专栏发文
 
-- 贴稿：`node .claude/skills/write-article/scripts/gen-dist-versions.js published/autosar/<篇名> --platform zh | pbcopy`，粘贴到编辑器（链接指向知乎已发版本）
-- 标题框填 frontmatter 的 `title`；图片按位置拖入，知乎自动转存
+- 准自动（推荐）：`node .claude/skills/write-article/scripts/push-platform-draft.js published/autosar/<篇名> --platform zh`
+  自动填标题/贴正文/拖图，停在发布前；首次运行在打开的窗口里登录一次，会话持久化
+- 手动兜底：`node .claude/skills/write-article/scripts/gen-dist-versions.js published/autosar/<篇名> --platform zh | pbcopy`，粘贴到编辑器
 - 发布时勾选「包含 AI 创作内容」
 - 发出后：URL 登记 `../links.json` 的 `zh` 键 → 下次生成自动回填
 

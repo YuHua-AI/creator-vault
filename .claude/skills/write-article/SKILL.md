@@ -96,6 +96,8 @@ platform: [公众号, 掘金]
 - **Markdown 原生平台**（掘金、知乎、CSDN、语雀、个人博客等）：无需排版，直接粘贴或导入 `article.md`（published 即产物，库内不另存平台副本），代码块由平台自带主题渲染。要拼系列尾部/回填链接的分发流，一条命令进剪贴板：
   `node .claude/skills/write-article/scripts/gen-dist-versions.js <文章文件夹> [--platform zh|csdn] | pbcopy`
   （去 frontmatter + 拼 `published/<专题>/footer.md` + 按 `links.json` 对应平台键回填）；分发登记（footer/links/gzh/zh/csdn 平台目录）与操作手册在 `published/<专题>/README.md`，与文章同目录
+- **知乎/CSDN 准自动推稿**：`node .claude/skills/write-article/scripts/push-platform-draft.js <文章文件夹> --platform zh|csdn`
+  自动完成：打开编辑器（首次需人工登录一次，会话存 `~/.config/gzh/profile-<platform>`）→ 填标题 → 贴正文 → 拖图；**停在发布前**，检查、勾 AI 生成标识、点发布是人工动作。发布是外向且不可控的操作，永不无人值守
 - 一稿多平台时：以 `article.md` 为唯一源，各平台只做排版适配，不改动内容本身
 
 ## 阶段 6：发布（人工操作，给提醒即可）
