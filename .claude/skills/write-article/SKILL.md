@@ -15,7 +15,7 @@ argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当
 - **有参数**：
   - 参数匹配 `drafts/` 下现有文件夹 → 读其 `article.md` 的 frontmatter `status`，进入对应阶段
   - 不匹配任何现有文件夹 → 当作新选题，从阶段 1 开始
-- **无参数**：扫描 `ideas/` 与 `drafts/*/article.md` 的 `status`，列表报告每篇文章的进度，问用户推进哪篇
+- **无参数**：扫描 `ideas/` 与 `drafts/*/*/article.md` 的 `status`，列表报告每篇文章的进度，问用户推进哪篇
 
 status → 阶段映射：
 
@@ -41,9 +41,9 @@ status → 阶段映射：
 
 ## 阶段 3：起草与改稿
 
-建文件夹（每篇一个）：
+建文件夹（每篇一个，按专题归层，专题名与 `published/` 一致）：
 
-- `drafts/<文章短名>/article.md` + `img/`；短名去掉标点用连字符连接
+- `drafts/<专题>/<文章短名>/article.md` + `img/`（现有专题：`autosar` / `nas` / `github-weekly`，新专题先建目录）；短名全小写用连字符连接
 - 正文用相对路径 `img/…` 引用插图，插图紧跟其诠释的小标题
 
 配图（cover + 分节插图，阶段 3 内完成，不拖到终审后；**由 AI 自己生成**）：
@@ -108,7 +108,7 @@ platform: [公众号, 掘金]
 所有目标平台发布完成后执行：
 
 1. frontmatter 改 `status: published`，发布链接可补进 `platform` 字段备注
-2. 整个文章文件夹 `drafts/<短名>/` 移入 `published/`
+2. 整个文章文件夹 `drafts/<专题>/<短名>/` 移入 `published/<专题>/`
 3. git commit（message 如「文章名: 发布归档」）
 4. 若含可复用观点，可选 claude-obsidian 的 `save` 存回 `wiki/`
 
