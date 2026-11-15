@@ -15,7 +15,7 @@ argument-hint: [选题文字 或 drafts/ 下的文章短名；留空则报告当
 ## 形态与硬性限制（微信图片消息）
 
 - 图片 ≤20 张，**首图即封面**（约定 `img/cover.jpg` 在正文排第一）
-- 标题 ≤32 字：frontmatter 可选字段 `post_title`，缺省用 `title`（超 32 字推送时报错）
+- 标题 ≤20 字：frontmatter 可选字段 `post_title`，缺省用 `title`（超 20 字推送时报错）
 - 文案：纯文本 ≤1000 字，自动取 article.md 去图后的正文
 - 文件结构沿用写作管线约定：`drafts/<短名>/article.md + img/ + img-src/`；article.md 是壳：开场 2~3 行 + 按序引用全部图片 + 收尾互动
 - frontmatter 用库约定（title/date/status/tags，另加可选 post_title）

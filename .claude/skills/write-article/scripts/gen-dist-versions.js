@@ -3,7 +3,7 @@
  * 生成分发版（stdout，不落库）：published 的 article.md 是归档产物，分发直接用它；
  * 本脚本只做贴前适配——去 frontmatter + 拼 footer + 按 --platform 回填链接，打进 stdout：
  *
- *   node gen-dist-versions.js published/AUTOSAR/<篇名> --platform zh | pbcopy
+ *   node gen-dist-versions.js published/autosar/<篇名> --platform zh | pbcopy
  *
  * 库内零副本；published/<专题>/ 只在文章文件夹之外放登记（footer.md / links.json / 平台目录 gzh/zh/csdn）。
  *

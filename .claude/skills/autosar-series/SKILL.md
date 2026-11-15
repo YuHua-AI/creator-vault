@@ -1,7 +1,7 @@
 ---
 name: autosar-series
 description: 「AUTOSAR 入门」系列长文每篇生产流程：规范库定位素材 → 逐条求证协议细节 → 起草 → 配图 → 推稿。写 AUTOSAR/UDS/诊断/通信栈等汽车软件主题的公众号文章时用；文章流转、配图管线、推送与归档沿用 write-article skill 的对应阶段。
-argument-hint: [drafts/AUTOSAR 下文章短名或新选题；留空则列进度]
+argument-hint: [drafts/autosar 下文章短名或新选题；留空则列进度]
 ---
 
 # AUTOSAR 入门（系列长文）
@@ -20,13 +20,13 @@ argument-hint: [drafts/AUTOSAR 下文章短名或新选题；留空则列进度]
 | ⑥ | 0x14/0x19 服务：DTC 清除与读取（状态字节 8 位、快照/扩展数据） | ReadDTCInformation | DaVinci + ETAS 配置实操 |
 | ⑦ | 0x34~0x38 服务：刷写与 OTA（传输协商、TransferData、文件传输） | Upload/Download | DaVinci + ETAS 配置实操 |
 
-路线图是活文档：写新一期前回顾，角度/标题可与用户对齐调整；期号顺序尽量稳定。**各篇标题与详细大纲见 `drafts/AUTOSAR/series-plan.md`（总控文档，随系列推进更新）**。
+路线图是活文档：写新一期前回顾，角度/标题可与用户对齐调整；期号顺序尽量稳定。**各篇标题与详细大纲见 `drafts/autosar/series-plan.md`（总控文档，随系列推进更新）**。
 
 ## 系列约定
 
 - **标题**：`AUTOSAR 入门 - <模块名>：钩子副题`——模块名标明主题域（如 `UDS 诊断`），后续新模块（DEM、DoIP、FiM 等）各用自己的模块名，不再用 ①②③ 序号；副题走场景/反差/悬念，禁学院风（如「ISO 14229 详解」）。已发布的旧七篇保留 ①~⑦ 序号格式，不改
 - **阶段升级**：当前为「入门」阶段（基础协议机制 + 配置入门）；后续结合实战内容（真实项目调试、性能、踩坑、架构决策）的文章升级为 `AUTOSAR 进阶 - <模块名>：副题`——前缀随阶段换，模块名规则不变。开写进阶篇时与用户确认阶段定位
-- **目录**：`drafts/AUTOSAR/<文章短名>/`（系列父目录），归档时移入 `published/AUTOSAR/`
+- **目录**：`drafts/autosar/<文章短名>/`（系列父目录），归档时移入 `published/autosar/`
 - **frontmatter**：`tags: [AUTOSAR]` + 主题标签（如 `UDS`、`诊断`）；`platform: [公众号]`
 - **读者**：汽车软件从业者/学生——术语可直接用（首次出现仍给全称），重点是讲透机制：字节流逐字节拆解表、时序参数、工程落地坑点；可适度场景引入但不下沉到修车小白视角
 - **系列钩子**：每篇文末预告下一篇，形成连续阅读路径

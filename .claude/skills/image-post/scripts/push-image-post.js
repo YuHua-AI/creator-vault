@@ -4,7 +4,7 @@
  *
  * 流程：读 article.md → 按正文图片引用顺序逐张传永久素材 → draft/add 建 newspic 草稿
  *   - 首张图即帖图封面（约定 img/cover.jpg 排第一）
- *   - 标题：--title > frontmatter post_title > title（图片消息标题 ≤32 字，超长报错）
+ *   - 标题：--title > frontmatter post_title > title（图片消息标题 ≤20 字，超长报错）
  *   - 文案：--text <文件> > 正文去图去格式后的纯文本（≤1000 字）
  *
  * 用法：node push-image-post.js <文章文件夹> [--title 标题] [--text 文案路径]
@@ -35,11 +35,11 @@ const body = fm ? raw.slice(fm[0].length).trimStart() : raw;
 const pick = (k) => (fmText.match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1] ?? '')
   .replace(/^['"]|['"]$/g, '').trim();
 
-// ---------- 标题（newspic ≤32 字） ----------
+// ---------- 标题（newspic ≤20 字） ----------
 const title = opt('title') || pick('post_title') || pick('title');
 if (!title) fail('没有可用标题（--title / frontmatter post_title / title 均缺）');
 const titleLen = Array.from(title).length;
-if (titleLen > 32) fail(`标题 ${titleLen} 字，超过图片消息上限 32 字（可在 frontmatter 加 post_title: 短标题）`);
+if (titleLen > 20) fail(`标题 ${titleLen} 字，超过图片消息上限 20 字（可在 frontmatter 加 post_title: 短标题）`);
 
 // ---------- 文案（纯文本，≤1000 字） ----------
 const textPath = opt('text');

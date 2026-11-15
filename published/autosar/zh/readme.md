@@ -2,7 +2,7 @@
 
 ## 专栏发文
 
-- 贴稿：`node .claude/skills/write-article/scripts/gen-dist-versions.js published/AUTOSAR/<篇名> --platform zh | pbcopy`，粘贴到编辑器（链接指向知乎已发版本）
+- 贴稿：`node .claude/skills/write-article/scripts/gen-dist-versions.js published/autosar/<篇名> --platform zh | pbcopy`，粘贴到编辑器（链接指向知乎已发版本）
 - 标题框填 frontmatter 的 `title`；图片按位置拖入，知乎自动转存
 - 发布时勾选「包含 AI 创作内容」
 - 发出后：URL 登记 `../links.json` 的 `zh` 键 → 下次生成自动回填

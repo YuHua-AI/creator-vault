@@ -5,8 +5,8 @@
 ## 结构
 
 ```
-published/AUTOSAR/
-├── README.md            # 本手册
+published/autosar/
+├── readme.md            # 本手册
 ├── series-plan.md       # 系列总控计划（历史存档）
 ├── footer.md            # 统一尾部模板（占位符 {{链接:slug}}、{{公众号名}}）
 ├── links.json           # 注册表：公众号名 + 各平台已发 URL
@@ -19,11 +19,11 @@ published/AUTOSAR/
 ## 贴稿流程（一条命令进剪贴板）
 
 ```bash
-node .claude/skills/write-article/scripts/gen-dist-versions.js published/AUTOSAR/<篇名> --platform zh | pbcopy
-node .claude/skills/write-article/scripts/gen-dist-versions.js published/AUTOSAR/<篇名> --platform csdn | pbcopy
+node .claude/skills/write-article/scripts/gen-dist-versions.js published/autosar/<篇名> --platform zh | pbcopy
+node .claude/skills/write-article/scripts/gen-dist-versions.js published/autosar/<篇名> --platform csdn | pbcopy
 ```
 
-去 frontmatter + 拼 footer + 按 `--platform` 回填该平台已发链接，直接粘贴到平台编辑器；图片从 `published/AUTOSAR/<篇名>/img/` 拖入。发出后 URL 登记 `links.json` 对应平台键。
+去 frontmatter + 拼 footer + 按 `--platform` 回填该平台已发链接，直接粘贴到平台编辑器；图片从 `published/autosar/<篇名>/img/` 拖入。发出后 URL 登记 `links.json` 对应平台键。
 
 ## 节奏（2026-11-15 定：从缓）
 

@@ -24,7 +24,7 @@
 
 ## 管线规则
 
-- 标题 ≤32 字（frontmatter `post_title`），文案 ≤1000 字纯文本——微信图片消息硬限制
+- 标题 ≤20 字（frontmatter `post_title`），文案 ≤1000 字纯文本——微信图片消息硬限制（2026-11-14 实测修正：原记 32 字，实际 20）
 - 推送用 `image-post` 的 `push-image-post.js`（按正文图序传永久素材，首图即封面），不用 write-article 的 push-draft.js
 - 出图后逐张视觉自检（截断/重叠/溢出），全过再交人工审图
 - 改动先积累、收尾统一 commit；凭据永不入库

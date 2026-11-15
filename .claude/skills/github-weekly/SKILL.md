@@ -48,7 +48,7 @@ node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116] 
 
 ### ④ 壳文案收尾
 
-脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤32 字。目录约定：`drafts/github-weekly/<周文件日期>/`（系列父目录 + 周日期子目录），归档时整个周目录移入 `published/github-weekly/`。
+脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github-weekly/<周文件日期>/`（系列父目录 + 周日期子目录），归档时整个周目录移入 `published/github-weekly/`。
 
 data.json schema（脚手架产物同构，把 TODO 字段替换为实文即可）：
 
