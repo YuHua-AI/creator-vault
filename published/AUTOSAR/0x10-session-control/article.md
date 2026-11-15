@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ②：ECU 的三重人格——0x10 会话控制，从默认会话到编程会话
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, 会话]
 platform: [公众号]
 collection: AUTOSAR 入门

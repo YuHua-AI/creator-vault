@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ⑦：一次 OTA 刷写，在总线上发生了什么——0x34~0x38 传输五件套
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, OTA, 刷写]
 platform: [公众号]
 collection: AUTOSAR 入门

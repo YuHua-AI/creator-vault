@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ⑤：让 ECU 按指令干活——0x31 例程控制与 RID 工单
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, 例程]
 platform: [公众号]
 collection: AUTOSAR 入门

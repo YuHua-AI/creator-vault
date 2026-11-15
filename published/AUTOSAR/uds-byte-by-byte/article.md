@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ①：诊断仪和 ECU 在 CAN 上说什么？UDS 协议逐字节拆解
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断]
 platform: [公众号]
 collection: AUTOSAR 入门

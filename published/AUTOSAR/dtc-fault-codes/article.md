@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ⑥：八盏故障灯的秘密——0x14 清码与 0x19 读 DTC
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, DTC]
 platform: [公众号]
 collection: AUTOSAR 入门

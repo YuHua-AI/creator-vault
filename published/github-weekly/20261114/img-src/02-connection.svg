@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="52%" r="85%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35D0FF"/><stop offset="1" stop-color="#3EE8B0"/>
+    </linearGradient>
+    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <!-- 大脑图标 -->
+    <g id="ic-brain" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-26 -18 Q-26 -34 -8 -34 Q0 -44 14 -38 Q30 -34 28 -18 Q38 -10 32 4 Q36 20 20 26 Q14 40 -2 36 Q-18 40 -24 26 Q-38 20 -32 4 Q-40 -8 -26 -18 Z" fill="#12294D"/>
+      <path d="M0 -36 L0 34" stroke-dasharray="4 6" opacity="0.7"/>
+      <path d="M-16 -12 Q-6 -8 -14 2 Q-6 8 -12 16" stroke="#3EE8B0"/>
+      <path d="M14 -14 Q4 -10 12 0 Q4 6 10 14" stroke="#3EE8B0"/>
+    </g>
+    <g id="ic-gstack" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-42" y="-34" width="84" height="24" rx="7" fill="#12294D"/>
+      <rect x="-42" y="-4" width="84" height="24" rx="7" fill="#12294D"/>
+      <rect x="-42" y="26" width="84" height="24" rx="7" fill="#12294D"/>
+      <circle cx="-24" cy="-22" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="-22" x2="28" y2="-22"/>
+      <circle cx="-24" cy="8" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="8" x2="28" y2="8"/>
+      <circle cx="-24" cy="38" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="38" x2="28" y2="38"/>
+    </g>
+    <g id="ic-desktop" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-52" y="-38" width="104" height="68" rx="8" fill="#12294D"/>
+      <line x1="-52" y1="-16" x2="52" y2="-16"/>
+      <circle cx="-42" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-33" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-24" cy="-27" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-34" cy="4" r="5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-6" cy="-4" r="5" fill="#35D0FF" stroke="none"/>
+      <circle cx="24" cy="8" r="5" fill="#35D0FF" stroke="none"/>
+      <line x1="-30" y1="1" x2="-11" y2="-2"/>
+      <line x1="-1" y1="0" x2="19" y2="6"/>
+      <line x1="0" y1="30" x2="0" y2="42"/>
+      <line x1="-18" y1="46" x2="18" y2="46"/>
+    </g>
+    <g id="ic-t3" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-30" width="62" height="60" rx="7" fill="#12294D"/>
+      <line x1="-56" y1="-10" x2="6" y2="-10"/>
+      <line x1="-44" y1="6" x2="-6" y2="6"/>
+      <line x1="-44" y1="18" x2="-14" y2="18"/>
+      <rect x="16" y="-40" width="38" height="74" rx="8" fill="#12294D"/>
+      <line x1="28" y1="24" x2="42" y2="24"/>
+      <path d="M30 -18 L22 -8 L30 2" stroke="#3EE8B0"/>
+      <path d="M40 -18 L48 -8 L40 2" stroke="#3EE8B0"/>
+    </g>
+    <g id="ic-hex" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-13" y="-42" width="26" height="52" rx="13" fill="#12294D"/>
+      <line x1="0" y1="10" x2="0" y2="26"/>
+      <path d="M-26 8 Q-26 34 0 34 Q26 34 26 8"/>
+      <line x1="-34" y1="-6" x2="-34" y2="6" stroke="#3EE8B0"/>
+      <line x1="-46" y1="-12" x2="-46" y2="12" stroke="#3EE8B0"/>
+      <line x1="34" y1="-6" x2="34" y2="6" stroke="#3EE8B0"/>
+      <line x1="46" y1="-12" x2="46" y2="12" stroke="#3EE8B0"/>
+    </g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+
+  <!-- 顶部胶囊 + 标题 -->
+  <rect x="440" y="64" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="675" y="100" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 每周精选</text>
+  <text x="675" y="248" text-anchor="middle" font-size="72" font-weight="800" letter-spacing="4" fill="url(#titleGrad)" filter="url(#glowCyan)">一套外设，四块短板</text>
+  <text x="675" y="320" text-anchor="middle" font-size="32" fill="#D6E6F5">Claude Code 是大脑，周边决定它能干多少活</text>
+
+  <!-- 连接线（先画，被节点压住） -->
+  <g stroke-width="3" fill="none">
+    <line x1="560" y1="800" x2="390" y2="660" stroke="#3EE8B0" stroke-opacity="0.75" stroke-dasharray="10 8"/>
+    <line x1="790" y1="800" x2="960" y2="660" stroke="#35D0FF" stroke-opacity="0.75" stroke-dasharray="10 8"/>
+    <line x1="560" y1="1110" x2="390" y2="1250" stroke="#35D0FF" stroke-opacity="0.75" stroke-dasharray="10 8"/>
+    <line x1="790" y1="1110" x2="960" y2="1250" stroke="#3EE8B0" stroke-opacity="0.75" stroke-dasharray="10 8"/>
+  </g>
+  <!-- 连接线端点光点 -->
+  <circle cx="390" cy="660" r="7" fill="#3EE8B0" filter="url(#glowGreen)"/>
+  <circle cx="960" cy="660" r="7" fill="#35D0FF" filter="url(#glowCyan)"/>
+  <circle cx="390" cy="1250" r="7" fill="#35D0FF" filter="url(#glowCyan)"/>
+  <circle cx="960" cy="1250" r="7" fill="#3EE8B0" filter="url(#glowGreen)"/>
+
+  <!-- 连接线上的接入方式标签 -->
+  <g>
+    <rect x="330" y="880" width="230" height="46" rx="23" fill="#0E2A4A" stroke="#3EE8B0" stroke-opacity="0.7" stroke-width="1.5"/>
+    <text x="445" y="911" text-anchor="middle" font-size="23" fill="#3EE8B0">skills 装进工作流</text>
+    <rect x="790" y="880" width="230" height="46" rx="23" fill="#0E2A4A" stroke="#35D0FF" stroke-opacity="0.7" stroke-width="1.5"/>
+    <text x="905" y="911" text-anchor="middle" font-size="23" fill="#35D0FF">MCP 接入即用</text>
+    <rect x="330" y="990" width="230" height="46" rx="23" fill="#0E2A4A" stroke="#35D0FF" stroke-opacity="0.7" stroke-width="1.5"/>
+    <text x="445" y="1021" text-anchor="middle" font-size="23" fill="#35D0FF">局域网 / Tailscale</text>
+    <rect x="790" y="990" width="230" height="46" rx="23" fill="#0E2A4A" stroke="#3EE8B0" stroke-opacity="0.7" stroke-width="1.5"/>
+    <text x="905" y="1021" text-anchor="middle" font-size="23" fill="#3EE8B0">系统快捷键</text>
+  </g>
+
+  <!-- 中心：Claude Code 大脑 -->
+  <g>
+    <rect x="500" y="770" width="350" height="370" rx="28" fill="#0D2036" stroke="#3EE8B0" stroke-opacity="0.65" stroke-width="2.5" filter="url(#glowGreen)"/>
+    <use href="#ic-brain" transform="translate(675 900) scale(1.9)"/>
+    <text x="675" y="1040" text-anchor="middle" font-size="44" font-weight="800" fill="#FFFFFF">Claude Code</text>
+    <text x="675" y="1092" text-anchor="middle" font-size="26" letter-spacing="6" fill="#3EE8B0">大　脑</text>
+  </g>
+
+  <!-- 四角节点 -->
+  <g>
+    <rect x="110" y="480" width="560" height="180" rx="18" fill="#0D2036" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="110" y="494" width="5" height="152" rx="2.5" fill="#3EE8B0"/>
+    <use href="#ic-gstack" transform="translate(200 570) scale(0.75)"/>
+    <text x="270" y="556" font-size="32" font-weight="700" fill="#FFFFFF">gstack</text>
+    <text x="270" y="600" font-size="26" font-weight="700" fill="#3EE8B0">虚拟团队</text>
+    <text x="270" y="638" font-size="22" fill="#8FAECB">CEO / 评审 / QA / 发布，23 个命令</text>
+  </g>
+  <g>
+    <rect x="680" y="480" width="560" height="180" rx="18" fill="#0D2036" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="680" y="494" width="5" height="152" rx="2.5" fill="#35D0FF"/>
+    <use href="#ic-desktop" transform="translate(770 570) scale(0.75)"/>
+    <text x="840" y="556" font-size="32" font-weight="700" fill="#FFFFFF">agent-desktop</text>
+    <text x="840" y="600" font-size="26" font-weight="700" fill="#35D0FF">眼睛和手</text>
+    <text x="840" y="638" font-size="22" fill="#8FAECB">读无障碍树，直接操作桌面 GUI</text>
+  </g>
+  <g>
+    <rect x="110" y="1250" width="560" height="180" rx="18" fill="#0D2036" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="110" y="1264" width="5" height="152" rx="2.5" fill="#35D0FF"/>
+    <use href="#ic-t3" transform="translate(200 1340) scale(0.75)"/>
+    <text x="270" y="1326" font-size="32" font-weight="700" fill="#FFFFFF">t3code</text>
+    <text x="270" y="1370" font-size="26" font-weight="700" fill="#35D0FF">遥控器</text>
+    <text x="270" y="1408" font-size="22" fill="#8FAECB">电脑开工手机批活，离开工位不断线</text>
+  </g>
+  <g>
+    <rect x="680" y="1250" width="560" height="180" rx="18" fill="#0D2036" fill-opacity="0.94" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="680" y="1264" width="5" height="152" rx="2.5" fill="#3EE8B0"/>
+    <use href="#ic-hex" transform="translate(770 1340) scale(0.75)"/>
+    <text x="840" y="1326" font-size="32" font-weight="700" fill="#FFFFFF">hex</text>
+    <text x="840" y="1370" font-size="26" font-weight="700" fill="#3EE8B0">耳朵和嘴</text>
+    <text x="840" y="1408" font-size="22" fill="#8FAECB">按住说话松开上屏，本地转写不出机</text>
+  </g>
+
+  <!-- 底部结语条 -->
+  <rect x="110" y="1520" width="1130" height="120" rx="20" fill="#0E2A4A" fill-opacity="0.9" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="675" y="1572" text-anchor="middle" font-size="30" font-weight="700" fill="#D6E6F5">大脑不换，外设随便加——</text>
+  <text x="675" y="1616" text-anchor="middle" font-size="26" fill="#8FAECB">每一个都只解决一件事，装完即用，卸载无痕</text>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1712" x2="1286" y2="1712" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1768" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">2026.11.14</text>
+</svg>

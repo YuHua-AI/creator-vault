@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="22%" r="90%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35D0FF"/><stop offset="1" stop-color="#3EE8B0"/>
+    </linearGradient>
+    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <!-- gstack: 虚拟团队 - 三层堆叠 + 人形 -->
+    <g id="ic-gstack" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-42" y="-34" width="84" height="24" rx="7" fill="#12294D"/>
+      <rect x="-42" y="-4" width="84" height="24" rx="7" fill="#12294D"/>
+      <rect x="-42" y="26" width="84" height="24" rx="7" fill="#12294D"/>
+      <circle cx="-24" cy="-22" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="-22" x2="28" y2="-22"/>
+      <circle cx="-24" cy="8" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="8" x2="28" y2="8"/>
+      <circle cx="-24" cy="38" r="5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-8" y1="38" x2="28" y2="38"/>
+    </g>
+    <!-- agent-desktop: 显示器 + 无障碍树节点 + 光标 -->
+    <g id="ic-desktop" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-52" y="-38" width="104" height="68" rx="8" fill="#12294D"/>
+      <line x1="-52" y1="-16" x2="52" y2="-16"/>
+      <circle cx="-42" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-33" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-24" cy="-27" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-34" cy="4" r="5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-6" cy="-4" r="5" fill="#35D0FF" stroke="none"/>
+      <circle cx="24" cy="8" r="5" fill="#35D0FF" stroke="none"/>
+      <line x1="-30" y1="1" x2="-11" y2="-2"/>
+      <line x1="-1" y1="0" x2="19" y2="6"/>
+      <line x1="-34" y1="9" x2="-34" y2="20"/>
+      <line x1="-34" y1="20" x2="24" y2="20"/>
+      <line x1="24" y1="20" x2="24" y2="13"/>
+      <path d="M-8 30 L40 30 L22 44 L14 56 Z" fill="#3EE8B0" stroke="none" transform="translate(-8 0) scale(0.8)"/>
+      <line x1="0" y1="30" x2="0" y2="42"/>
+      <line x1="-18" y1="46" x2="18" y2="46"/>
+    </g>
+    <!-- t3code: 手机 + 电脑联动 -->
+    <g id="ic-t3" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-30" width="62" height="60" rx="7" fill="#12294D"/>
+      <line x1="-56" y1="-10" x2="6" y2="-10"/>
+      <line x1="-44" y1="6" x2="-6" y2="6"/>
+      <line x1="-44" y1="18" x2="-14" y2="18"/>
+      <rect x="16" y="-40" width="38" height="74" rx="8" fill="#12294D"/>
+      <line x1="28" y1="24" x2="42" y2="24"/>
+      <path d="M30 -18 L22 -8 L30 2" stroke="#3EE8B0"/>
+      <path d="M40 -18 L48 -8 L40 2" stroke="#3EE8B0"/>
+    </g>
+    <!-- hex: 麦克风 + 声波 -->
+    <g id="ic-hex" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-13" y="-42" width="26" height="52" rx="13" fill="#12294D"/>
+      <line x1="0" y1="10" x2="0" y2="26"/>
+      <path d="M-26 8 Q-26 34 0 34 Q26 34 26 8"/>
+      <line x1="-34" y1="-6" x2="-34" y2="6" stroke="#3EE8B0"/>
+      <line x1="-46" y1="-12" x2="-46" y2="12" stroke="#3EE8B0"/>
+      <line x1="34" y1="-6" x2="34" y2="6" stroke="#3EE8B0"/>
+      <line x1="46" y1="-12" x2="46" y2="12" stroke="#3EE8B0"/>
+    </g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="1100" cy="240" rx="420" ry="260" fill="#14405E" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="56" width="500" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="314" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 每周精选</text>
+  <rect x="840" y="56" width="446" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1063" y="92" text-anchor="middle" font-size="24" letter-spacing="2" fill="#D6E6F5">2026.11.14 · 本期 4 选</text>
+
+  <!-- 标题 -->
+  <circle cx="1120" cy="196" r="5" fill="#3EE8B0" filter="url(#glowGreen)"/>
+  <circle cx="1190" cy="252" r="3.5" fill="#35D0FF" opacity="0.8"/>
+  <circle cx="1060" cy="286" r="3" fill="#7FA8D0" opacity="0.6"/>
+  <text x="675" y="268" text-anchor="middle" font-size="110" font-weight="800" letter-spacing="6" fill="url(#titleGrad)" filter="url(#glowCyan)">给 Agent 装外设</text>
+  <text x="675" y="344" text-anchor="middle" font-size="36" fill="#D6E6F5">4 个开源仓库 · 让 Claude Code 长出<tspan fill="#3EE8B0" font-weight="700">手、眼、耳、遥控器</tspan></text>
+
+  <!-- 4 行仓库卡 -->
+  <g>
+    <rect x="50" y="412" width="1250" height="262" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="426" width="5" height="234" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="510" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">01</text>
+    <line x1="178" y1="442" x2="178" y2="644" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-gstack" transform="translate(252 543) scale(0.95)"/>
+    <text x="330" y="506" font-size="36" font-weight="700" fill="#FFFFFF">garrytan/gstack</text>
+    <text x="330" y="554" font-size="25" fill="#8FAECB">23 个命令，给 Claude Code 配一支虚拟工程团队</text>
+    <rect x="330" y="580" width="170" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="415" y="603" text-anchor="middle" font-size="19" fill="#9FBFDA">Claude Skills</text>
+    <rect x="516" y="580" width="150" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="591" y="603" text-anchor="middle" font-size="19" fill="#9FBFDA">虚拟团队</text>
+    <text x="1226" y="528" text-anchor="end" font-size="40" font-weight="800" fill="#3EE8B0">★141k</text>
+    <text x="1226" y="566" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">GARRYTAN</text>
+  </g>
+  <g>
+    <rect x="50" y="706" width="1250" height="262" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="720" width="5" height="234" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="804" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0">02</text>
+    <line x1="178" y1="736" x2="178" y2="938" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-desktop" transform="translate(252 837) scale(0.95)"/>
+    <text x="330" y="800" font-size="36" font-weight="700" fill="#FFFFFF">vercel-labs/agent-desktop</text>
+    <text x="330" y="848" font-size="25" fill="#8FAECB">不截图不抢鼠标，AI 直接「看见并操作」桌面软件</text>
+    <rect x="330" y="874" width="130" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="395" y="897" text-anchor="middle" font-size="19" fill="#9FBFDA">MCP</text>
+    <rect x="476" y="874" width="170" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="561" y="897" text-anchor="middle" font-size="19" fill="#9FBFDA">无障碍树</text>
+    <text x="1226" y="822" text-anchor="end" font-size="40" font-weight="800" fill="#3EE8B0">★23.5k</text>
+    <text x="1226" y="860" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">VERCEL LABS</text>
+  </g>
+  <g>
+    <rect x="50" y="1000" width="1250" height="262" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="1014" width="5" height="234" rx="2.5" fill="#35D0FF" opacity="0.85"/>
+    <text x="118" y="1098" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">03</text>
+    <line x1="178" y1="1030" x2="178" y2="1232" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-t3" transform="translate(252 1131) scale(0.95)"/>
+    <text x="330" y="1094" font-size="36" font-weight="700" fill="#FFFFFF">pingdotgg/t3code</text>
+    <text x="330" y="1142" font-size="25" fill="#8FAECB">电脑上开工，手机上批活——编码 Agent 的遥控器</text>
+    <rect x="330" y="1168" width="190" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="425" y="1191" text-anchor="middle" font-size="19" fill="#9FBFDA">控制平面</text>
+    <rect x="536" y="1168" width="170" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="621" y="1191" text-anchor="middle" font-size="19" fill="#9FBFDA">手机遥控</text>
+    <text x="1226" y="1116" text-anchor="end" font-size="40" font-weight="800" fill="#35D0FF">★60k</text>
+    <text x="1226" y="1154" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">PINGDOTGG</text>
+  </g>
+  <g>
+    <rect x="50" y="1294" width="1250" height="262" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="1308" width="5" height="234" rx="2.5" fill="#35D0FF" opacity="0.85"/>
+    <text x="118" y="1392" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">04</text>
+    <line x1="178" y1="1324" x2="178" y2="1526" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-hex" transform="translate(252 1425) scale(0.95)"/>
+    <text x="330" y="1388" font-size="36" font-weight="700" fill="#FFFFFF">anomalyco/hex</text>
+    <text x="330" y="1436" font-size="25" fill="#8FAECB">按住说话松开上屏，本地听写数据不出机</text>
+    <rect x="330" y="1462" width="190" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="425" y="1485" text-anchor="middle" font-size="19" fill="#9FBFDA">local-first</text>
+    <rect x="536" y="1462" width="170" height="34" rx="17" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+    <text x="621" y="1485" text-anchor="middle" font-size="19" fill="#9FBFDA">语音输入</text>
+    <text x="1226" y="1410" text-anchor="end" font-size="40" font-weight="800" fill="#35D0FF">★6.6k</text>
+    <text x="1226" y="1448" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">ANOMALYCO</text>
+  </g>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1712" x2="1286" y2="1712" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1768" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">数据截至 2026.11.14 · github.com</text>
+</svg>

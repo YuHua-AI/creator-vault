@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ④：DID，ECU 数据的门牌号——0x22 读数据与 0x2E 写数据
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, DID]
 platform: [公众号]
 collection: AUTOSAR 入门

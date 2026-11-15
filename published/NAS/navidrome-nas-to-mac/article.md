@@ -1,7 +1,7 @@
 ---
 title: 一台 1G 内存 NAS 的自救：把 Navidrome 搬上 Mac 的完整实录
 date: 2026-11-15
-status: review
+status: published
 tags: [NAS, 音乐, Navidrome, Mac, Docker, 数字生活]
 platform: [公众号]
 collection: NAS

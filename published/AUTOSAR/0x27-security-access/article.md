@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 入门 ③：ECU 的钥匙怎么发？0x27 安全解锁，Seed 与 Key 的攻防
 date: 2026-11-12
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, 安全]
 platform: [公众号]
 collection: AUTOSAR 入门

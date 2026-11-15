@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#35D0FF"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <g id="ic-desktop" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-52" y="-38" width="104" height="68" rx="8" fill="#12294D"/>
+      <line x1="-52" y1="-16" x2="52" y2="-16"/>
+      <circle cx="-42" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-33" cy="-27" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-24" cy="-27" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-34" cy="4" r="5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="-6" cy="-4" r="5" fill="#35D0FF" stroke="none"/>
+      <circle cx="24" cy="8" r="5" fill="#35D0FF" stroke="none"/>
+      <line x1="-30" y1="1" x2="-11" y2="-2"/>
+      <line x1="-1" y1="0" x2="19" y2="6"/>
+      <line x1="-34" y1="9" x2="-34" y2="20"/>
+      <line x1="-34" y1="20" x2="24" y2="20"/>
+      <line x1="24" y1="20" x2="24" y2="13"/>
+      <line x1="0" y1="30" x2="0" y2="42"/>
+      <line x1="-18" y1="46" x2="18" y2="46"/>
+    </g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
+  <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="56" width="500" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="314" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB WEEKLY · 每周精选</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">给 Agent 装外设 · 2026.11.14</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#35D0FF" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#35D0FF">NO.02</text>
+
+  <!-- 专属图标 -->
+  <use href="#ic-desktop" transform="translate(675 305) scale(1.6)"/>
+
+  <!-- 项目名 + 作者小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="54" font-weight="800" fill="#FFFFFF">vercel-labs/agent-desktop</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">Vercel Labs · Rust · Apache-2.0 · Win/Mac/Linux</text>
+
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#35D0FF" filter="url(#glowCyan)">不截图，让 AI 直接「看见并操作」桌面</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 23.5k</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#35D0FF" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">接入方式 MCP</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#35D0FF" filter="url(#glowCyan)">一行配置</text>
+
+  <!-- 分隔线 -->
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#3EE8B0" stroke-width="2.5"/>
+
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+  <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
+  <text x="110" y="1044" font-size="27" fill="#B8CCDF">Vercel 实验室出品，读系统无障碍树（macOS AX / Windows</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">UIA / Linux AT-SPI），每个控件一个 ref，AI 看得清清楚楚。</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+  <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
+  <text x="110" y="1260" font-size="27" fill="#B8CCDF">快照→按 ref 点按输入→再快照验证，循环推进。默认无头模式，</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">不动鼠标不抢焦点；agent-desktop mcp 一行配置接入 Claude Code。</text>
+  <text x="110" y="1352" font-size="27" fill="#B8CCDF">操作诊断上位机、CAN 工具界面这类桌面软件都行。</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+  <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
+  <text x="110" y="1476" font-size="27" fill="#B8CCDF">想自动化桌面软件的人——告别截图猜坐标的盲操作时代。</text>
+
+  <!-- 标签 -->
+  <rect x="263.8" y="1564" width="347.7" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="437.7" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">无障碍树</text><rect x="633.5" y="1564" width="188.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="727.8" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">MCP</text><rect x="844.1" y="1564" width="242.1" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="965.2" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">无头操作</text>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/vercel-labs/agent-desktop</text>
+</svg>
