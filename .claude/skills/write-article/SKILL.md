@@ -98,6 +98,7 @@ platform: [公众号, 掘金]
   （去 frontmatter + 拼 `published/<专题>/footer.md` + 按 `links.json` 对应平台键回填）；分发登记（footer/links/gzh/zh/csdn 平台目录）与操作手册在 `published/<专题>/README.md`，与文章同目录
 - **知乎/CSDN 准自动推稿**：`node .claude/skills/write-article/scripts/push-platform-draft.js <文章文件夹> --platform zh|csdn`
   自动完成：打开编辑器（首次需人工登录一次，会话存 `~/.config/gzh/profile-<platform>`）→ 填标题 → 贴正文 → 拖图；**停在发布前**，检查、勾 AI 生成标识、点发布是人工动作。发布是外向且不可控的操作，永不无人值守
+- **站外分发红线**：`published/<专题>/footer.md` 绝不出现公众号/微信引流（CSDN/知乎审核即拒），CTA 用站内关注收藏；不放系列目录（持续更新会过时）；摘要公式与 frontmatter `digest` 约定见 `references/writing-rules.md`
 - 一稿多平台时：以 `article.md` 为唯一源，各平台只做排版适配，不改动内容本身
 
 ## 阶段 6：发布（人工操作，给提醒即可）

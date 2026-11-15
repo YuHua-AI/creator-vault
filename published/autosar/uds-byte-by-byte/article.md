@@ -3,6 +3,7 @@ title: AUTOSAR 入门 ①：诊断仪和 ECU 在 CAN 上说什么？UDS 协议�
 date: 2026-11-12
 status: published
 tags: [AUTOSAR, UDS, 诊断]
+digest: 修车时诊断电脑几分钟就报出 P0300，它怎么知道的？拆解 UDS（ISO 14229）——车载诊断的对话协议：拿一条真实 CAN 报文逐字节拆开，讲清 SID、正负应答、功能寻址与 26 服务全景，最后落到 AUTOSAR DCM 在通信栈的位置。看完你能读懂任意一条诊断报文的每个字节。
 platform: [公众号]
 collection: AUTOSAR 入门
 ---

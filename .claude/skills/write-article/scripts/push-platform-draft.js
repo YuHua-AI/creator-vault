@@ -100,26 +100,45 @@ console.log(`  ✓ 编辑器就位（${editorSel}）`);
 await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(cfg.url).origin });
 let titleOk = false;
 
-// CSDN 实测机制：标题平时是显示态 DIV（article-bar__title-display，文本「无标题」），
-// 点击激活后键盘直填——fill()/inputValue() 路线全部无效（2026-11-15 三轮实测）
+// CSDN 实测（2026-11-15 四轮）：标题栏两种状态——可见 input（placeholder 请输入文章标题）
+// 或显示态 DIV（文本 无标题），且 playwright fill() 路线全部无效。
+// 终案：页面内原生 focus() 到标题 input → 键盘直打 → 读回 value 验证；失败再走显示态点击
 if (platform === 'csdn') {
-  const activated = await page.evaluate(() => {
-    const el = [...document.querySelectorAll('div,span')]
-      .filter(e => !e.querySelector('*') && /无标题/.test(e.textContent || ''))[0];
-    if (el) { el.scrollIntoView({ block: 'center' }); el.click(); return true; }
-    return false;
+  await page.waitForTimeout(1000);
+  const hit = await page.evaluate(() => {
+    for (const i of document.querySelectorAll('input')) {
+      const ph = i.getAttribute('placeholder') || '';
+      const r = i.getBoundingClientRect();
+      if (/文章标题/.test(ph) && r.width > 100 && i.offsetParent) {
+        i.scrollIntoView({ block: 'center' });
+        i.focus();
+        return ph.slice(0, 16);
+      }
+    }
+    return '';
   });
-  if (activated) {
-    await page.waitForTimeout(800);
+  if (hit) {
+    await page.waitForTimeout(300);
     await page.keyboard.press('Meta+A');
     await page.keyboard.type(title, { delay: 15 });
-    await page.waitForTimeout(300);
-    const shown = await page.evaluate(() => {
-      const el = document.querySelector('.article-bar__title-display, input.article-bar__title');
-      return el ? String(el.value ?? el.textContent ?? '').trim().slice(0, 12) : '';
+    await page.waitForTimeout(400);
+    const v = await page.evaluate(() => document.querySelector('input.article-bar__title')?.value ?? '');
+    titleOk = v.slice(0, 8) === title.slice(0, 8);
+    console.log(titleOk ? `  ✓ 标题已填并验证（原生 focus → 键盘直打，input:${hit}）` : `  · 键盘已打，读回「${v.slice(0, 16)}」，请肉眼确认`);
+  } else {
+    const activated = await page.evaluate(() => {
+      const el = [...document.querySelectorAll('div,span')]
+        .filter(e => !e.querySelector('*') && /无标题/.test(e.textContent || ''))[0];
+      if (el) { el.scrollIntoView({ block: 'center' }); el.click(); return true; }
+      return false;
     });
-    titleOk = shown === title.slice(0, 12);
-    console.log(titleOk ? '  ✓ 标题已填并验证（display-div → 键盘直填）' : `  · 键盘已输入，读回「${shown}」，请肉眼确认`);
+    if (activated) {
+      await page.waitForTimeout(800);
+      await page.keyboard.press('Meta+A');
+      await page.keyboard.type(title, { delay: 15 });
+      await page.waitForTimeout(300);
+      console.log('  · 走显示态点击+键盘路径，请肉眼确认标题');
+    }
   }
 }
 
