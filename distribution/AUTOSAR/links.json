@@ -1,8 +1,6 @@
 {
   "collection": "AUTOSAR 入门",
   "公众号名": "",
-  "platforms": {
-    "zhihu": {},
-    "csdn": {}
-  }
+  "zh": {},
+  "csdn": {}
 }
