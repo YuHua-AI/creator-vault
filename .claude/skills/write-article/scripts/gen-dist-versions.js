@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * 生成分发版（单份）：article.md 去 frontmatter → 拼 footer.md → 按 --platform 注册表回填链接
- *   → distribution/<专题>/articles/<slug>.md
- * 内容各平台一致（一篇文章走天下）；贴哪个平台就用哪个 --platform 现生成，
- * 差别只在尾部系列目录的链接指向该平台自己的已发版本。
+ * 生成分发版（stdout，不落库）：published 的 article.md 是归档产物，分发直接用它；
+ * 本脚本只做贴前适配——去 frontmatter + 拼 footer + 按 --platform 回填链接，打进 stdout：
  *
- * 用法：node gen-dist-versions.js <文章文件夹> [--platform zh|csdn]   # 默认 zh
+ *   node gen-dist-versions.js published/AUTOSAR/<篇名> --platform zh | pbcopy
+ *
+ * 库内零副本；distribution/<专题>/ 只存登记（footer.md / links.json / 平台目录 gzh/zh/csdn）。
  *
  * 依赖约定（distribution/<专题>/）：
  *   - footer.md   尾部模板，占位符 {{链接:<slug>}}、{{公众号名}}
  *   - links.json  { "collection": "…", "公众号名": "", "zh": {"<slug>": "url"}, "csdn": {} }
  *                 collection 字段用于反查专题目录（目录名不必等于 frontmatter 的 collection）
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { resolve, dirname, join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -27,7 +27,7 @@ const val = (flag, dflt) => {
 };
 const platform = val('--platform', 'zh');
 const target = resolve(args.find(a => !a.startsWith('--')));
-if (!target) { console.error('用法: node gen-dist-versions.js <文章文件夹> [--platform zh|csdn]'); process.exit(1); }
+if (!target) { console.error('用法: node gen-dist-versions.js <文章文件夹> [--platform zh|csdn] | pbcopy'); process.exit(1); }
 
 const mdPath = target.endsWith('.md') ? target : join(target, 'article.md');
 if (!existsSync(mdPath)) { console.error(`✗ 找不到 ${mdPath}`); process.exit(1); }
@@ -38,7 +38,6 @@ const fmText = fm ? fm[1] : '';
 const body = (fm ? raw.slice(fm[0].length) : raw).trimStart();
 const pick = (k) => (fmText.match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1] ?? '').trim();
 const collection = pick('collection');
-const slug = basename(dirname(mdPath));
 if (!collection) { console.error('✗ frontmatter 缺 collection（footer/注册表按 collection 定位）'); process.exit(1); }
 
 // 注册表反查：扫描 distribution/*/links.json，按 collection 字段匹配
@@ -62,8 +61,6 @@ const filled = (body + '\n\n' + readFileSync(footerPath, 'utf8').trim() + '\n')
   .replace(/\{\{链接:([^}]+)\}\}/g, (_, s) => reg[platform][s] || `{{链接:${s}}}`)
   .replace(/\{\{公众号名\}\}/g, reg['公众号名'] || '{{公众号名}}');
 
-const out = join(distRoot, topicDir, 'articles', `${slug}.md`);
-mkdirSync(dirname(out), { recursive: true });
-writeFileSync(out, filled);
+process.stdout.write(filled); // 正文进 stdout（接 pbcopy）
 const left = filled.match(/\{\{[^}]+\}\}/g) ?? [];
-console.log(`✓ [${platform}] ${out}${left.length ? `（残留占位 ${[...new Set(left)].join(' ')}）` : '，链接齐全'}`);
+console.error(`✓ [${platform}] ${basename(dirname(mdPath))}${left.length ? `（残留占位 ${[...new Set(left)].join(' ')}）` : '，链接齐全'} → 剪贴板`);

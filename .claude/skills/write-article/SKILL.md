@@ -92,9 +92,9 @@ platform: [公众号, 掘金]
   - 前提：doocs/md 在 http://localhost:8080 运行；凭据在 `~/.config/gzh/env`（`GZH_APPID` / `GZH_SECRET`，可选 `GZH_AUTHOR` ≤8 字），凭据永不入库
   - 主题：首次运行为默认主题；跑一次 `--show`（有头模式）手动选好主题，配置留在 `~/.config/gzh/browser-profile`，此后无头运行沿用。自定义主题 CSS 备份在 `assets/theme.css`
   - 家宽 IP 变化会报 40164：按 errmsg 里报的新 IP 去微信开发者平台更新白名单后重跑
-- **Markdown 原生平台**（掘金、知乎、CSDN、语雀、个人博客等）：无需排版，代码块由平台自带主题渲染。带系列目录尾部的分发版可一键生成：
-  `node .claude/skills/write-article/scripts/gen-dist-versions.js <文章文件夹> [--platform zh|csdn]`
-  产出 `distribution/<专题>/articles/<篇名>.md`（单份，内容各平台一致；去 frontmatter + 拼 `footer.md` + 按 `links.json` 对应平台键回填系列链接），发布仍是人工粘贴；专题分发结构 `{articles/, footer.md, links.json, gzh/, zh/, csdn/}` 与操作手册见 `distribution/<专题>/README.md`
+- **Markdown 原生平台**（掘金、知乎、CSDN、语雀、个人博客等）：无需排版，直接粘贴或导入 `article.md`（published 即产物，库内不另存平台副本），代码块由平台自带主题渲染。要拼系列尾部/回填链接的分发流，一条命令进剪贴板：
+  `node .claude/skills/write-article/scripts/gen-dist-versions.js <文章文件夹> [--platform zh|csdn] | pbcopy`
+  （去 frontmatter + 拼 `distribution/<专题>/footer.md` + 按 `links.json` 对应平台键回填）；分发登记与操作手册在 `distribution/<专题>/README.md`
 - 一稿多平台时：以 `article.md` 为唯一源，各平台只做排版适配，不改动内容本身
 
 ## 阶段 6：发布（人工操作，给提醒即可）
