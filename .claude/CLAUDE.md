@@ -12,7 +12,7 @@ ideas/（选题池，一行一个想法）→ drafts/（AI 草稿+改稿）→ p
 
 每篇文章一个文件夹：`drafts/<专题>/<文章短名>/article.md + img/`（图片命名主图 `cover.jpg`、插图 `01-xxx.jpg` 递增，正文用相对路径 `img/…` 引用）。发布归档时整个文件夹移入 `published/<专题>/`。
 
-**命名规则（2026-11-15 定）：库内一切文件与目录名——全小写字母，词间用 `-` 连接**（kebab-case，数字可用；如 `navidrome-nas-to-mac/`、`published/autosar/`、`readme.md`）。`tools/` 下外部克隆仓库除外。
+**命名规则（2026-11-15 定）：库内一切文件与目录名——全小写字母，词间用 `-` 连接**（kebab-case，数字可用；如 `navidrome-nas-to-mac/`、`published/autosar/`）。**例外：`README.md` 保留通用大写惯例**；`tools/` 下外部克隆仓库除外。
 
 ## 双体系分界（claude-obsidian 插件 vs 写作管线）
 

@@ -6,7 +6,7 @@
 
 ```
 published/autosar/
-├── readme.md            # 本手册
+├── README.md            # 本手册
 ├── series-plan.md       # 系列总控计划（历史存档）
 ├── footer.md            # 统一尾部模板（占位符 {{链接:slug}}、{{公众号名}}）
 ├── links.json           # 注册表：公众号名 + 各平台已发 URL
