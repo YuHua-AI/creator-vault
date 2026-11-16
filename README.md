@@ -1,4 +1,4 @@
-# gzh-vault — 公众号写作库
+# creator-vault — 创作库
 
 AI 生成 → 人工终审 → 排版发布的文章生产线。备份自动同步到 NAS。
 

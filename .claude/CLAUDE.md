@@ -1,4 +1,4 @@
-# gzh-vault — 公众号文章写作库
+# creator-vault — 创作库
 
 AI 写作助手在此库工作时的约定。管线：**Claude Code 生成/改稿 → Obsidian 人工终审 → doocs/md（http://localhost:8080）排版 → 粘贴公众号后台发布**。
 
