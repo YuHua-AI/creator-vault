@@ -9,7 +9,7 @@
  *
  * 依赖约定（published/<专题>/）：
  *   - footer.md   尾部模板，占位符 {{链接:<slug>}}、{{公众号名}}
- *   - links.json  { "collection": "…", "公众号名": "", "zh": {"<slug>": "url"}, "csdn": {} }
+ *   - links.json  { "collection": "…" | ["系列A", "系列B"]（一个专题目录多系列用数组）, "公众号名": "", "zh": {"<slug>": "url"}, "csdn": {} }
  *                 collection 字段用于反查专题目录（目录名不必等于 frontmatter 的 collection）
  */
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -48,7 +48,7 @@ if (existsSync(distRoot)) {
     const p = join(distRoot, d, 'links.json');
     if (!existsSync(p)) continue;
     const r = JSON.parse(readFileSync(p, 'utf8'));
-    if (r.collection === collection) { reg = r; topicDir = d; break; }
+    if (r.collection === collection || (Array.isArray(r.collection) && r.collection.includes(collection))) { reg = r; topicDir = d; break; }
   }
 }
 if (!topicDir) { console.error(`✗ published/ 下没有 collection 为「${collection}」的 links.json`); process.exit(1); }

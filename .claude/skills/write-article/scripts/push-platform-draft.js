@@ -22,9 +22,10 @@ const vaultRoot = resolve(scriptDir, '../../../../');
 
 const args = process.argv.slice(2);
 const platform = args.includes('--platform') ? args[args.indexOf('--platform') + 1] : '';
+const saveDraft = args.includes('--save-draft'); // 填完后自动点「保存草稿」并退出（不进人工等待环）
 const target = resolve(args.find(a => !a.startsWith('--')));
 if (!platform || !target) {
-  console.error('用法: node push-platform-draft.js <文章文件夹> --platform zh|csdn');
+  console.error('用法: node push-platform-draft.js <文章文件夹> --platform zh|csdn [--save-draft]');
   process.exit(1);
 }
 
@@ -100,45 +101,65 @@ console.log(`  ✓ 编辑器就位（${editorSel}）`);
 await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(cfg.url).origin });
 let titleOk = false;
 
-// CSDN 实测（2026-11-15 四轮）：标题栏两种状态——可见 input（placeholder 请输入文章标题）
-// 或显示态 DIV（文本 无标题），且 playwright fill() 路线全部无效。
-// 终案：页面内原生 focus() 到标题 input → 键盘直打 → 读回 value 验证；失败再走显示态点击
+// CSDN 实测（2026-11-15 四轮 + 2026-11-16 复盘）：标题栏两种状态——可见 input（placeholder
+// 请输入文章标题）或显示态 DIV（文本 无标题），且 playwright fill() 路线全部无效。
+// 三级路径依次兜底，每级读回 value 验证：①原生 focus→键盘直打 ②点显示态 DIV 切编辑态后重走①
+// ③原生 setter + input/change 事件（controlled input 不可见/不可聚焦也能写入组件状态）
 if (platform === 'csdn') {
   await page.waitForTimeout(1000);
-  const hit = await page.evaluate(() => {
+  const readBack = () => page.evaluate(() => document.querySelector('input.article-bar__title')?.value
+    ?? [...document.querySelectorAll('input')].find(i => /文章标题/.test(i.getAttribute('placeholder') || ''))?.value ?? '').catch(() => '');
+  const focusInput = () => page.evaluate(() => {
     for (const i of document.querySelectorAll('input')) {
-      const ph = i.getAttribute('placeholder') || '';
-      const r = i.getBoundingClientRect();
-      if (/文章标题/.test(ph) && r.width > 100 && i.offsetParent) {
-        i.scrollIntoView({ block: 'center' });
-        i.focus();
-        return ph.slice(0, 16);
+      if (/文章标题/.test(i.getAttribute('placeholder') || '') && i.getBoundingClientRect().width > 100) {
+        i.scrollIntoView({ block: 'center' }); i.focus(); return true;
       }
     }
-    return '';
-  });
-  if (hit) {
+    return false;
+  }).catch(() => false);
+  const typeTitle = async () => {
     await page.waitForTimeout(300);
     await page.keyboard.press('Meta+A');
     await page.keyboard.type(title, { delay: 15 });
     await page.waitForTimeout(400);
-    const v = await page.evaluate(() => document.querySelector('input.article-bar__title')?.value ?? '');
+  };
+  // 路径①：可见 input → focus → 键盘直打 → 读回验证
+  if (await focusInput()) {
+    await typeTitle();
+    const v = await readBack();
     titleOk = v.slice(0, 8) === title.slice(0, 8);
-    console.log(titleOk ? `  ✓ 标题已填并验证（原生 focus → 键盘直打，input:${hit}）` : `  · 键盘已打，读回「${v.slice(0, 16)}」，请肉眼确认`);
-  } else {
+    console.log(titleOk ? '  ✓ 标题已填并验证（路径① focus→键盘）' : `  · 路径① 读回「${v.slice(0, 16)}」未过，续兜底`);
+  }
+  // 路径②：点「无标题」显示态切编辑态，重走①
+  if (!titleOk) {
     const activated = await page.evaluate(() => {
       const el = [...document.querySelectorAll('div,span')]
         .filter(e => !e.querySelector('*') && /无标题/.test(e.textContent || ''))[0];
       if (el) { el.scrollIntoView({ block: 'center' }); el.click(); return true; }
       return false;
-    });
+    }).catch(() => false);
     if (activated) {
       await page.waitForTimeout(800);
-      await page.keyboard.press('Meta+A');
-      await page.keyboard.type(title, { delay: 15 });
-      await page.waitForTimeout(300);
-      console.log('  · 走显示态点击+键盘路径，请肉眼确认标题');
+      if (await focusInput()) {
+        await typeTitle();
+        const v = await readBack();
+        titleOk = v.slice(0, 8) === title.slice(0, 8);
+        console.log(titleOk ? '  ✓ 标题已填并验证（路径② 显示态点击→键盘）' : `  · 路径② 读回「${v.slice(0, 16)}」未过，续兜底`);
+      }
     }
+  }
+  // 路径③：原生 setter + input/change 事件兜底
+  if (!titleOk) {
+    const v = await page.evaluate((t) => {
+      const el = document.querySelector('input.article-bar__title')
+        || [...document.querySelectorAll('input')].find(i => /文章标题/.test(i.getAttribute('placeholder') || ''));
+      if (!el) return '';
+      Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(el, t);
+      for (const type of ['input', 'change']) el.dispatchEvent(new Event(type, { bubbles: true }));
+      return el.value;
+    }, title).catch(() => '');
+    titleOk = v.slice(0, 8) === title.slice(0, 8);
+    console.log(titleOk ? '  ✓ 标题已填并验证（路径③ 原生 setter+事件）' : `  · 路径③ 写入「${v.slice(0, 16)}」未生效`);
   }
 }
 
@@ -316,12 +337,38 @@ if (platform === 'zh') {
 }
 
 // ---------- 6. 交棒人工 ----------
-console.log('\n③ 预填完成——请在浏览器中：检查排版 → 补漏（标题/图）→ 勾选 AI 生成标识 → 点发布');
-console.log(`   发布后 URL 登记 published/<专题>/links.json 的 "${platform}" 键`);
-console.log('   发布完成回到终端 Ctrl+C 退出（浏览器随之关闭；15 分钟无操作自动退出）');
-await new Promise(r => {
-  process.on('SIGINT', r);
-  setTimeout(r, 15 * 60_000);
-});
-await context.close();
-console.log('✓ 结束');
+if (saveDraft) {
+  // --save-draft 模式：显式落草稿后退出，内容不依赖编辑器自动保存（防进程中断丢稿）
+  console.log('\n③ --save-draft 模式：显式保存草稿后退出...');
+  if (!titleOk) console.log(`  ⚠⚠ 标题未填成功！草稿将缺标题，需人工补：《${title}》`);
+  if (platform === 'csdn') {
+    try {
+      const btn = page.locator('button:has-text("保存草稿"), [role="button"]:has-text("保存草稿")').first();
+      await btn.click({ timeout: 8000 });
+      await page.waitForTimeout(5000); // 等保存请求 + toast
+      const toast = await page.evaluate(() =>
+        [...document.querySelectorAll('[class*="toast" i], [class*="message" i], [class*="tip" i]')]
+          .map(e => (e.innerText || '').trim()).filter(Boolean).join(' | ')
+      ).catch(() => '');
+      console.log(toast ? `  ✓ 保存反馈：${toast.slice(0, 120)}` : '  ✓ 已点「保存草稿」（无 toast 反馈，以后台草稿箱为准）');
+    } catch (e) {
+      console.log(`  ⚠ 点「保存草稿」失败：${String(e).split('\n')[0]}——内容可能仅存于编辑器自动保存`);
+    }
+  } else {
+    console.log('  知乎编辑器为自动保存，多等 8 秒确保进草稿箱...');
+    await page.waitForTimeout(8000);
+  }
+  await page.screenshot({ path: `/tmp/save-draft-${platform}.png` }).catch(() => {});
+  await context.close();
+  console.log('✓ 草稿已保存，结束（发布仍是人工动作：后台草稿箱 → 检查 → 勾 AI 标识 → 发布）');
+} else {
+  console.log('\n③ 预填完成——请在浏览器中：检查排版 → 补漏（标题/图）→ 勾选 AI 生成标识 → 点发布');
+  console.log(`   发布后 URL 登记 published/<专题>/links.json 的 "${platform}" 键`);
+  console.log('   发布完成回到终端 Ctrl+C 退出（浏览器随之关闭；15 分钟无操作自动退出）');
+  await new Promise(r => {
+    process.on('SIGINT', r);
+    setTimeout(r, 15 * 60_000);
+  });
+  await context.close();
+  console.log('✓ 结束');
+}

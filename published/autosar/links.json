@@ -1,5 +1,5 @@
 {
-  "collection": "AUTOSAR 入门",
+  "collection": ["AUTOSAR 入门", "AUTOSAR 实战-诊断工具"],
   "公众号名": "屿华AI",
   "zh": {
     "uds-byte-by-byte": "https://zhuanlan.zhihu.com/p/2105569644786537661"
