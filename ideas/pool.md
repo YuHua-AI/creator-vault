@@ -16,3 +16,4 @@
   ⑤「AUTOSAR 实战-诊断工具 | 用 Claude Code 开发诊断测试工具：AI 协作开发实践」——superpowers 工作流全记录（brainstorm → plans/specs 设计文档 → TDD 实现 → 测试，docs/superpowers 目录为证）；工具的 AI 友好设计（YAML 用例可由 AI 生成、CLI 可被 Agent 编排调用、结构化日志/CSV 可断言验证）；需求→设计→实现→测试的证据链片段；诊断工程师 + AI 的协作范式总结
   三平台（公众号+知乎+CSDN，CSDN ④ 主推吃 DEM 存量权重）；素材源 develop_workflow/tools/DiagnosticTester，**不开源**；脱敏红线：项目代号全虚构、configs 密钥材料绝不入文、develop 内部算法只讲机制；UI 截图不得带 mikasa 背景（版权），演示全走 mock（2026-11-16 已定题）
 - AI 周报（系列帖图，**2026-11-16 搁置**——多事件杂烩无单一钩子，同日毙掉早报变体；雷达方法论保留供单点深拚选题用，产线 .claude/skills/ai-weekly/ 封存待解封）：每周雷达扫 AI 大事件（HN Algolia 7 天窗 + WebSearch 补漏 + 中文查重定增量）→ 8~9 条事件卡帖图。第 1 期 20261116：黄仁勋辞职 4054pt 领衔 + Anthropic IPO + Fable/Mythos 双发 + Gemini 隐私 + Nvidia 循环融资 + 美联航封杀 agent + Lovable 泄露 + Amazon 换模型省千万 + Jane Street 开源 skills
+- AI 专题文章线（AI 观察/周报/早报/产线文）：2026-11-16 整线暂缓——热点与账号身份不匹配（多轮验证），主线回归 AUTOSAR 系列吃搜索长尾 + 每篇做「可转发工作群」的收藏钩子；Gemini 稿留在 drafts/ai-watch/ 未发布，产线文 idea 备用。解封条件：热点落在自己领域（汽车软件×AI 交叉）
