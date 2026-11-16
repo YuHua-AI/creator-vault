@@ -62,6 +62,32 @@ const ICONS = {
       <rect x="-18" y="-36" width="44" height="72" rx="9" fill="#12294D"/>
       <line x1="-6" y1="24" x2="14" y2="24"/>
       <path d="M10 -20 L-2 2 L4 2 L0 20 L12 -2 L6 -2 Z" fill="#3EE8B0" stroke="none"/></g>`,
+  // 设计系统：2×2 组件格 + 主题滑杆（组件与 CSS 变量换肤）
+  designsystem: `<g id="ic-designsystem" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-54" y="-54" width="46" height="46" rx="6" fill="#12294D"/>
+      <rect x="8" y="-54" width="46" height="46" rx="6" fill="#12294D"/>
+      <rect x="-54" y="8" width="46" height="46" rx="6" fill="#12294D"/>
+      <rect x="8" y="8" width="46" height="46" rx="6" fill="#3EE8B0" fill-opacity="0.22" stroke="#3EE8B0"/>
+      <circle cx="-31" cy="-31" r="8"/>
+      <line x1="18" y1="-38" x2="44" y2="-38"/><line x1="18" y1="-26" x2="36" y2="-26"/>
+      <line x1="-42" y1="24" x2="-16" y2="24"/><line x1="-42" y1="38" x2="-24" y2="38"/>
+      <line x1="16" y1="38" x2="46" y2="38"/><circle cx="34" cy="38" r="5" fill="#3EE8B0" stroke="none"/></g>`,
+  // 模拟器：横置掌机（屏 + 十字键 + 双钮）
+  gamepad: `<g id="ic-gamepad" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-30" width="112" height="60" rx="20" fill="#12294D"/>
+      <rect x="-26" y="-16" width="52" height="32" rx="5"/>
+      <path d="M-44 -5 H-32 M-38 -11 V1"/>
+      <circle cx="40" cy="-8" r="4" fill="#3EE8B0" stroke="none"/>
+      <circle cx="40" cy="9" r="4" fill="#3EE8B0" stroke="none"/>
+      <path d="M-8 -38 Q0 -44 8 -38" stroke="#3EE8B0"/></g>`,
+  // 播放器：窗口 + 播放键 + 进度条（聚合播放器）
+  player: `<g id="ic-player" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-50" y="-34" width="100" height="68" rx="8" fill="#12294D"/>
+      <line x1="-50" y1="-16" x2="50" y2="-16"/>
+      <circle cx="-39" cy="-25" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-30" cy="-25" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-21" cy="-25" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <path d="M-14 -6 L10 4 L-14 14 Z" fill="#3EE8B0" stroke="none"/>
+      <line x1="22" y1="-2" x2="42" y2="-2"/><line x1="22" y1="10" x2="34" y2="10"/>
+      <line x1="-38" y1="24" x2="42" y2="24"/><circle cx="-12" cy="24" r="4.5" fill="#3EE8B0" stroke="none"/></g>`,
 };
 
 module.exports = { ICONS };
