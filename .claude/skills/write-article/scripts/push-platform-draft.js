@@ -297,16 +297,23 @@ if (platform === 'zh') {
   for (const rel of imgs) {
     const p = join(articleDir, rel);
     if (!existsSync(p)) { console.log(`  ⚠ ${rel} 文件不存在，保留本地引用`); continue; }
-    const before = finalSrcs.length;
-    await dropFile(p, editorSel);
-    const deadline = Date.now() + 25_000;
-    while (finalSrcs.length <= before && Date.now() < deadline) await page.waitForTimeout(500);
-    if (finalSrcs.length > before) {
-      urlMap.set(rel, finalSrcs[before]);
-      console.log(`  ✓ 上传 ${rel} → ${finalSrcs[before].slice(0, 70)}…`);
-    } else {
-      console.log(`  ⚠ ${rel} 上传超时，保留本地引用`);
+    // 知乎上传/URL 捕获随机失败（实测 2026-11-16 两跑分别 3/5、4/5），逐图重试最多 3 次
+    let done = false;
+    for (let attempt = 1; attempt <= 3 && !done; attempt++) {
+      const before = finalSrcs.length;
+      await dropFile(p, editorSel);
+      const deadline = Date.now() + 30_000;
+      while (finalSrcs.length <= before && Date.now() < deadline) await page.waitForTimeout(500);
+      if (finalSrcs.length > before) {
+        urlMap.set(rel, finalSrcs[before]);
+        console.log(`  ✓ 上传 ${rel} → ${finalSrcs[before].slice(0, 70)}…`);
+        done = true;
+      } else if (attempt < 3) {
+        console.log(`  · ${rel} 第 ${attempt} 次上传超时，重试...`);
+        await page.waitForTimeout(2000);
+      }
     }
+    if (!done) console.log(`  ⚠ ${rel} 三次上传均超时，保留本地引用`);
   }
   for (const [rel, url] of urlMap) content = content.split(rel).join(url);
   console.log(`  ✓ 图片 URL 已替换（${urlMap.size}/${imgs.length}）`);
