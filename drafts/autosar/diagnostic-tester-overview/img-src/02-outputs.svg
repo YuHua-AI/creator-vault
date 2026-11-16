@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：三路落盘 -->
+  <defs>
+    <pattern id="g1" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g1)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">OUTPUTS · 三路落盘</text>
+  <line x1="120" y1="175" x2="720" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">一次运行，三种读者</text>
+
+  <!-- 左：一次运行 -->
+  <g transform="translate(430,700)">
+    <rect x="-260" y="-140" width="520" height="280" rx="14" fill="#123A63" stroke="#F4F9FE" stroke-width="3.5"/>
+    <text y="-35" fill="#F4F9FE" font-size="44" font-weight="800" text-anchor="middle">一次测试运行</text>
+    <text y="35" fill="#9FC3E8" font-size="28" text-anchor="middle">时间戳目录</text>
+    <text y="95" fill="#7FB2E8" font-size="26" text-anchor="middle" font-family="'Consolas','Menlo',monospace">logs/&lt;用例&gt;/&lt;时间戳&gt;/</text>
+  </g>
+
+  <!-- 三张产物卡 -->
+  <g transform="translate(1450,430)">
+    <rect x="-560" y="-105" width="1120" height="210" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+    <text x="-510" y="-35" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'Consolas','Menlo',monospace">run.log</text>
+    <text x="-510" y="30" fill="#9FC3E8" font-size="30">人读 · 事件流水：每步 TX/RX · NRC · 判定 · 0x78 · 解锁过程</text>
+    <text x="510" y="-35" fill="#E8A44C" font-size="30" text-anchor="end">排查</text>
+  </g>
+  <g transform="translate(1450,700)">
+    <rect x="-560" y="-105" width="1120" height="210" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+    <text x="-510" y="-35" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'Consolas','Menlo',monospace">result.csv</text>
+    <text x="-510" y="30" fill="#9FC3E8" font-size="30">机器读 · 一行一步：seq / 请求 / 响应 / NRC / 判定 / 耗时</text>
+    <text x="510" y="-35" fill="#E8A44C" font-size="30" text-anchor="end">报表</text>
+  </g>
+  <g transform="translate(1450,970)">
+    <rect x="-560" y="-105" width="1120" height="210" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+    <text x="-510" y="-35" fill="#F4F9FE" font-size="40" font-weight="800" font-family="'Consolas','Menlo',monospace">trace.blf</text>
+    <text x="-510" y="30" fill="#9FC3E8" font-size="30">总线原始帧 · 诊断 ID 全收 · CANoe 直接回放逐帧分析</text>
+    <text x="510" y="-35" fill="#E8A44C" font-size="30" text-anchor="end">回放</text>
+  </g>
+
+  <!-- 源 → 三路的连线 -->
+  <g stroke="#DCE9F5" stroke-opacity="0.7" stroke-width="2.5" fill="none">
+    <path d="M690,620 C860,540 950,470 890,430" />
+    <path d="M690,700 L890,700"/>
+    <path d="M690,780 C860,860 950,930 890,970"/>
+  </g>
+  <g fill="#DCE9F5" fill-opacity="0.8">
+    <path d="M890,430 L862,432 L874,452 Z"/>
+    <path d="M890,700 L862,690 L862,710 Z"/>
+    <path d="M890,970 L862,948 L874,968 Z"/>
+  </g>
+
+  <!-- 底部细节注 -->
+  <text x="120" y="1230" fill="#6E96C2" font-size="28">同秒重跑自动追加 _1 / _2 后缀，运行产物互不覆盖</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. TOOL-2</text>
+    <text x="1830" y="1258">TRI-OUTPUT</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 02</text>
+  </g>
+</svg>
