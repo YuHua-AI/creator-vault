@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 实战-诊断工具 | 用 Claude Code 开发诊断测试工具：AI 协作开发实践
 date: 2026-11-16
-status: draft
+status: published
 tags: [AUTOSAR, UDS, Claude Code, AI 协作, Python]
 digest: 系列收官篇揭秘：这个诊断测试工具本身就是人机协作开发的产物。完整的证据链可查——brainstorm 到设计文档、到带勾选框的实施计划、再到 TDD 实现，17 个测试文件全部跑在 Mock 之上。这一篇拆开工作流：AI 为什么适合开发这种工具，哪些判断必须人来做，以及诊断工程师和 AI 的协作范式。
 platform: [公众号, 知乎, CSDN]

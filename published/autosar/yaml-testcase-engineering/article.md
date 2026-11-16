@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 实战-诊断工具 | 基于 YAML 的诊断测试用例工程：轮询、断言与回归
 date: 2026-11-16
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, YAML, 回归测试]
 digest: 「YAML 写用例」听起来像口号，落到工程里要回答一串问题：拼错的字段名会不会静默失效？轮询等待怎么表达？两次响应的一致性怎么断言？失败该中止还是继续？这一篇把诊断测试用例当成一门小型语言来设计：三类步骤、加载期强校验、while 轮询、跨步骤断言、失败策略与 timing 覆盖，最后用 result.csv 和 BLF 闭环到 CANoe 回放。
 platform: [公众号, 知乎, CSDN]

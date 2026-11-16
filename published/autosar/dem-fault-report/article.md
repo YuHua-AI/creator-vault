@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 实战-诊断工具 | DTC/Event/FiM 故障报告自动化：DEM 诊断数据采集与解析
 date: 2026-11-16
-status: draft
+status: published
 tags: [AUTOSAR, UDS, DEM, DTC, FiM]
 digest: 交付前拉全车故障是诊断测试里最重复也最该自动化的活：19 02 0F 读 DTC、22 读 event 和 FiM 位图，再对着 Excel 把编号翻译成人话。这一篇讲 dem 命令的完整设计：五项采集流程、三张映射表解码、DTC 状态位八位拆解，外加一个给「现场只有 CANoe 抓包」场景准备的离线解析模式。
 platform: [公众号, 知乎, CSDN]
