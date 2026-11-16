@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：注册表机制——统一签名与 schema 校验 -->
+  <defs>
+    <pattern id="g8" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g8)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">REGISTRY · 算法注册表机制</text>
+  <line x1="120" y1="175" x2="760" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">统一签名隔离两端：协议栈不认识算法，算法不认识总线</text>
+
+  <!-- 左：注册表条目 -->
+  <g transform="translate(180,330)">
+    <rect x="0" y="0" width="900" height="560" rx="14" fill="#0B2440" stroke="#7FB2E8" stroke-width="3"/>
+    <text x="45" y="75" fill="#9FC3E8" font-family="'Consolas','Menlo',monospace" font-size="30">ALGORITHMS[name]</text>
+    <line x1="45" y1="105" x2="855" y2="105" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g font-family="'Consolas','Menlo',monospace" font-size="29" fill="#F4F9FE">
+      <text x="45" y="170"><tspan fill="#7FB2E8">"key"</tspan>:  fn(seed, params, df)</text>
+      <text x="45" y="235"><tspan fill="#7FB2E8">"seed_len"</tspan>:  算法声明的种子长度</text>
+      <text x="45" y="300"><tspan fill="#7FB2E8">"key_len"</tspan>:   算法声明的密钥长度</text>
+      <text x="45" y="365"><tspan fill="#7FB2E8">"params"</tspan>:    参数 schema（名·类型·长度）</text>
+    </g>
+    <line x1="45" y1="420" x2="855" y2="420" stroke="#DCE9F5" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="45" y="480" fill="#E8A44C" font-size="28">新算法 = 加一个条目：一个函数 + 三行声明</text>
+    <text x="45" y="525" fill="#6E96C2" font-size="27">流程引擎 / UI / CLI / 落盘对其一无所知</text>
+  </g>
+
+  <!-- 右：compute_key 调用链 -->
+  <g transform="translate(1320,330)" text-anchor="middle">
+    <g transform="translate(0,80)">
+      <rect x="-370" y="-65" width="740" height="130" rx="12" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-8" fill="#F4F9FE" font-size="32" font-weight="800">SecLevel.compute_key(seed)</text>
+      <text y="42" fill="#9FC3E8" font-size="25" font-family="'Consolas','Menlo',monospace">查表 → 校验 len(seed)==seed_len → 调用</text>
+    </g>
+    <g transform="translate(0,270)">
+      <rect x="-370" y="-65" width="740" height="130" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-8" fill="#F4F9FE" font-size="32" font-weight="800">fn(seed, params, df) → key</text>
+      <text y="42" fill="#9FC3E8" font-size="25">统一签名：种子进，密钥出，仅此一个契约</text>
+    </g>
+    <g transform="translate(0,460)">
+      <rect x="-370" y="-65" width="740" height="130" rx="12" fill="#0B2440" stroke="#E8A44C" stroke-width="3"/>
+      <text y="-8" fill="#F4F9FE" font-size="32" font-weight="800">加载期 schema 校验</text>
+      <text y="42" fill="#9FC3E8" font-size="25" font-family="'Consolas','Menlo',monospace">未知参数 / 缺参数 / mask_table 项数</text>
+    </g>
+  </g>
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M1690,470 L1690,500 M1690,500 L1674,473 M1690,500 L1706,473"/>
+    <path d="M1690,660 L1690,690 M1690,690 L1674,663 M1690,690 L1706,663"/>
+  </g>
+
+  <!-- 底部：df 参数说明 -->
+  <rect x="180" y="980" width="2040" height="180" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+  <text x="1200" y="1045" fill="#9FC3E8" font-size="29" font-weight="800" text-anchor="middle">签名里的 df（派生因子）是极少数算法需要的第三输入：缺省随机，可由配置指定</text>
+  <text x="1200" y="1105" fill="#6E96C2" font-size="27" text-anchor="middle">绝大多数算法不用它——但签名统一，注册表就不需要为「特殊算法」开特例入口</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. SEC-0</text>
+    <text x="1830" y="1258">REGISTRY MECHANISM</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 00</text>
+  </g>
+</svg>

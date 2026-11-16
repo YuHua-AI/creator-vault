@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：run 真实输出（Mock 模式实跑，失败路径照常判定/落盘/汇总） -->
+  <defs>
+    <linearGradient id="bar3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar3)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">run 真实输出（Mock 模式，免硬件）—— 判定、失败策略、汇总、退出码</text>
+
+  <g font-size="30">
+    <text x="110" y="240" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run steps.yaml --config example_mock.yaml</text>
+    <text x="110" y="300" fill="#8B949E">运行目录：...\logs\steps\20261116_140242</text>
+
+    <text x="110" y="380" fill="#8B949E">[14:02:42] Flow start: 2 steps, on_fail=abort</text>
+    <text x="110" y="450" fill="#8B949E">[14:02:42] [1] 进扩展会话</text>
+    <text x="110" y="510" fill="#E8A44C">[14:02:42] [1] UDS TX: 1003</text>
+    <text x="110" y="570" fill="#E8A44C">[14:02:42] [1] UDS RX: (timeout)</text>
+    <text x="110" y="630" fill="#F85149">[14:02:42] [1] Result: TIMEOUT Expected: 6203</text>
+    <text x="110" y="700" fill="#F85149">[14:02:42] Step failed and on_fail=abort, aborting flow</text>
+    <text x="110" y="770" fill="#8B949E">[14:02:43] Flow finished: PASS 0 / FAIL 0 / TIMEOUT 1 / total 1/2</text>
+
+    <text x="110" y="860" fill="#F4F9FE">PS&gt; echo $LASTEXITCODE</text>
+    <text x="110" y="925" fill="#E8A44C" font-weight="bold">1</text>
+  </g>
+
+  <!-- 右侧注解 -->
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="1490" y="380" width="800" height="560" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <text x="1530" y="440" fill="#58A6FF" font-size="28" font-weight="bold">读法</text>
+    <line x1="1530" y1="465" x2="2260" y2="465" stroke="#30363D" stroke-width="1.5"/>
+    <g fill="#8B949E">
+      <text x="1530" y="525">· 每步 TX/RX 逐行留痕，期望值</text>
+      <text x="1530" y="570">  与判定结果同行给出</text>
+      <text x="1530" y="640">· on_fail=abort：首个失败即中止，</text>
+      <text x="1530" y="685">  已执行步骤照常汇总</text>
+      <text x="1530" y="755">· 退出码对齐 CI：1 = 有失败或超时</text>
+      <text x="1530" y="825">· Mock 无 ECU 应答，失败路径</text>
+      <text x="1530" y="870">  照样被判定、落盘、汇总——</text>
+      <text x="1530" y="915">  流程引擎的正确性不依赖硬件</text>
+    </g>
+  </g>
+
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. TOOL-3 · REAL CLI OUTPUT · 2026</text>
+  </g>
+</svg>

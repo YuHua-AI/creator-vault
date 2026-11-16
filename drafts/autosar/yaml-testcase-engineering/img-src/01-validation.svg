@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：加载期校验真实报错（消息文本逐字来自真实运行输出） -->
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <!-- 窗口标题栏 -->
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">Windows PowerShell — python DiagnosticTester.py run（Mock 模式，免硬件）</text>
+
+  <!-- 正文区 -->
+  <g font-size="30">
+    <!-- 注释条 -->
+    <rect x="60" y="200" width="2280" height="88" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <text x="110" y="255" fill="#8B949E" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="29"># 下面每一条报错都是真实运行的输出——写错的用例根本跑不起来，加载期即拦截</text>
+
+    <!-- ① 拼错字段名 -->
+    <text x="110" y="360" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run bad_1.yaml --config example_mock.yaml</text>
+    <text x="110" y="420" fill="#E8A44C" font-weight="bold">配置错误：steps[0]: 未知字段 ['except']</text>
+    <text x="110" y="470" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="27">        # expect 拼成 except——若静默忽略，断言失效、用例「假绿」</text>
+
+    <!-- ② security_access 混写 -->
+    <text x="110" y="570" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run bad_2.yaml --config example_mock.yaml</text>
+    <text x="110" y="630" fill="#E8A44C" font-weight="bold">配置错误：steps[0]: security_access 步骤不支持 request/expect</text>
+    <text x="110" y="680" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="27">        # 解锁是完整序列，混写 request 等于语义不明</text>
+
+    <!-- ③ while 只支持物理寻址 -->
+    <text x="110" y="780" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run bad_3.yaml --config example_mock.yaml</text>
+    <text x="110" y="840" fill="#E8A44C" font-weight="bold">配置错误：steps[0]: while 轮询只支持物理寻址 physical</text>
+    <text x="110" y="890" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="27">        # 功能寻址的响应来自「任意一个应答者」，轮询语义不成立</text>
+
+    <!-- ④ 断言互斥 -->
+    <text x="110" y="990" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run bad_4.yaml --config example_mock.yaml</text>
+    <text x="110" y="1050" fill="#E8A44C" font-weight="bold">配置错误：steps[0]: expect_equals_var 与 expect_not_equals_var 互斥</text>
+    <text x="110" y="1100" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="27">        # 「必须相等」和「必须不等」同时写，作者自己没想清楚</text>
+
+    <!-- 退出码 -->
+    <text x="110" y="1200" fill="#8B949E">exit code = 2（配置错误）　　# 0 成功 / 1 失败或超时 / 2 配置错误 / 3 运行期异常</text>
+  </g>
+
+  <!-- 角落 FIG -->
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. TC-2 · REAL CLI OUTPUT · 2026</text>
+  </g>
+</svg>

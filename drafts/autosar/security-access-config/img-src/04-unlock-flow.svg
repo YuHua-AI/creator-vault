@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：perform_unlock 序列与 NRC 失败分支 -->
+  <defs>
+    <pattern id="g3" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g3)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">UNLOCK SEQUENCE · perform_unlock</text>
+  <line x1="120" y1="175" x2="760" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">解锁序列与 NRC 失败分支</text>
+
+  <!-- 两条生命线 -->
+  <rect x="330" y="320" width="340" height="90" rx="10" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="500" y="380" fill="#F4F9FE" font-size="36" font-weight="800" text-anchor="middle">Tester</text>
+  <line x1="500" y1="410" x2="500" y2="1130" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+  <rect x="1730" y="320" width="340" height="90" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="1900" y="380" fill="#F4F9FE" font-size="36" font-weight="800" text-anchor="middle">ECU</text>
+  <line x1="1900" y1="410" x2="1900" y2="1130" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+
+  <!-- 消息 1：magic 可选前置 -->
+  <g transform="translate(0,490)">
+    <text x="250" y="-14" fill="#6E96C2" font-size="26" font-family="'Consolas','Menlo',monospace">[可选]</text>
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#6E96C2" stroke-width="2.5" stroke-dasharray="10 8"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#6E96C2"/>
+    <text x="1200" y="-14" fill="#9FC3E8" font-size="28" text-anchor="middle" font-family="'Consolas','Menlo',monospace">27 seed_sub + magic</text>
+  </g>
+
+  <!-- 消息 2：取种子 -->
+  <g transform="translate(0,600)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">27 seed_sub</text>
+  </g>
+
+  <!-- 消息 3：回种子 -->
+  <g transform="translate(0,700)">
+    <line x1="1900" y1="0" x2="500" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="500,0 532,-12 532,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">67 seed_sub + seed</text>
+    <rect x="640" y="16" width="520" height="70" rx="8" fill="#0B2440" stroke="#7FB2E8" stroke-width="2"/>
+    <text x="900" y="60" fill="#9FC3E8" font-size="26" text-anchor="middle">双重校验：正响应头 · 种子长度</text>
+  </g>
+
+  <!-- 消息 4：算密钥（自环） -->
+  <g transform="translate(0,840)">
+    <path d="M500,0 C400,0 400,90 500,90" stroke="#F4F9FE" stroke-width="2.5" fill="none"/>
+    <polygon points="500,90 472,72 466,104" fill="#F4F9FE"/>
+    <text x="300" y="55" fill="#F4F9FE" font-size="28" text-anchor="end" font-family="'Consolas','Menlo',monospace">compute_key</text>
+    <text x="300" y="95" fill="#6E96C2" font-size="24" text-anchor="end">fn(seed, params, df)</text>
+  </g>
+
+  <!-- 消息 5：发密钥 -->
+  <g transform="translate(0,1010)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">27 key_sub + key</text>
+  </g>
+
+  <!-- 消息 6：解锁完成 -->
+  <g transform="translate(0,1110)">
+    <line x1="1900" y1="0" x2="500" y2="0" stroke="#3EE8B0" stroke-width="3"/>
+    <polygon points="500,0 532,-12 532,12" fill="#3EE8B0"/>
+    <text x="1200" y="-14" fill="#3EE8B0" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">67 key_sub</text>
+    <text x="1960" y="8" fill="#3EE8B0" font-size="28" text-anchor="start">解锁完成</text>
+  </g>
+
+  <!-- 左侧 NRC 分支注记 -->
+  <g transform="translate(0,0)">
+    <rect x="120" y="440" width="380" height="640" rx="12" fill="#0B2440" stroke="#E8A44C" stroke-width="2.5"/>
+    <text x="150" y="500" fill="#E8A44C" font-size="30" font-weight="800">NRC 失败分支</text>
+    <line x1="150" y1="525" x2="470" y2="525" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g fill="#F4F9FE" font-size="26">
+      <text x="150" y="585" font-family="'Consolas','Menlo',monospace" fill="#E8A44C">0x7F</text>
+      <text x="230" y="585">默认会话拒 0x27</text>
+      <text x="150" y="655" font-family="'Consolas','Menlo',monospace" fill="#E8A44C">0x7E</text>
+      <text x="230" y="655">应用会话拒 boot 级</text>
+      <text x="150" y="725" font-family="'Consolas','Menlo',monospace" fill="#E8A44C">0x35</text>
+      <text x="230" y="725">密钥错 / 时序违例</text>
+      <text x="150" y="795" font-family="'Consolas','Menlo',monospace" fill="#E8A44C">0x36</text>
+      <text x="230" y="795">尝试次数超限</text>
+      <text x="150" y="880" fill="#6E96C2" font-size="24">会话前置不自动切换</text>
+      <text x="150" y="920" fill="#6E96C2" font-size="24">先 1003 再解锁，或写进用例</text>
+      <text x="150" y="1000" fill="#9FC3E8" font-size="24">同周期重复取种子</text>
+      <text x="150" y="1040" fill="#9FC3E8" font-size="24">逐字节相同 → 可断言</text>
+    </g>
+  </g>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. SEC-2</text>
+    <text x="1830" y="1258">UNLOCK FLOW</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 02</text>
+  </g>
+</svg>

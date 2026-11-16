@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：pytest 真实输出（255 passed in 11.10s，全 Mock 零硬件） -->
+  <defs>
+    <linearGradient id="bar4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar4)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">pytest 真实输出 —— 18 个测试文件全部跑在 Mock 之上，零硬件</text>
+
+  <g font-size="30">
+    <text x="110" y="240" fill="#3EE8B0">PS&gt; python -m pytest tests/ -q</text>
+    <text x="110" y="320" fill="#8B949E">........................................................................</text>
+    <text x="110" y="385" fill="#8B949E">........................................................................</text>
+    <text x="110" y="450" fill="#8B949E">........................................................................</text>
+    <text x="110" y="515" fill="#8B949E">.......................................                                  [100%]</text>
+    <text x="110" y="600" fill="#3EE8B0" font-weight="bold">255 passed in 11.10s</text>
+  </g>
+
+  <!-- 覆盖面注解 -->
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="110" y="690" width="2180" height="480" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <text x="150" y="755" fill="#58A6FF" font-size="28" font-weight="bold">测的是什么（按层，不是按行数凑数）</text>
+    <line x1="150" y1="780" x2="2250" y2="780" stroke="#30363D" stroke-width="1.5"/>
+    <g fill="#8B949E">
+      <text x="150" y="840">· ISO-TP 传输层：拆包组包 · 流控 · N_Bs / N_Cr 超时</text>
+      <text x="150" y="900">· UDS 会话层：0x78 循环等待 · P2 / P2* 切换 · NRC 解析</text>
+      <text x="150" y="960">· 流程引擎：前缀判定 · while 轮询 · 变量断言 · abort / continue</text>
+      <text x="150" y="1020">· 0x27 安全解锁：七个算法 · 等级校验 · 解锁序列</text>
+      <text x="150" y="1080">· UI 与落盘：会话管理 · 保活 · run.log / result.csv 格式</text>
+      <text x="150" y="1140" fill="#3EE8B0">CanDriver 接口够窄 → Mock 二十几行顶替真卡 → 每层独立可验证</text>
+    </g>
+  </g>
+
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. TOOL-4 · REAL PYTEST OUTPUT · 2026</text>
+  </g>
+</svg>

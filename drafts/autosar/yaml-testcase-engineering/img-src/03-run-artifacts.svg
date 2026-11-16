@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：三路落盘真实产物（run.log / result.csv 实拍内容） -->
+  <defs>
+    <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <!-- 窗口标题栏 -->
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar2)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">run.log 与 result.csv —— Mock 模式真实运行产物（功能寻址 · 只发不判）</text>
+
+  <!-- 左：run.log -->
+  <text x="120" y="240" fill="#58A6FF" font-size="32" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei',sans-serif">logs/&lt;时间戳&gt;/run.log — 人读的事件流水</text>
+  <line x1="120" y1="265" x2="1150" y2="265" stroke="#30363D" stroke-width="2"/>
+  <g font-size="28">
+    <text x="120" y="330" fill="#8B949E">[13:49:32] Flow start: 1 steps, on_fail=abort</text>
+    <text x="120" y="395" fill="#8B949E">[13:49:32] [1] 读版本 (functional addressing,</text>
+    <text x="120" y="440" fill="#8B949E">           no response expected)</text>
+    <text x="120" y="505" fill="#E8A44C">[13:49:32] [1] UDS TX: 22F195</text>
+    <text x="120" y="570" fill="#3EE8B0">[13:49:32] [1] Result: SENT</text>
+    <text x="120" y="635" fill="#8B949E">[13:49:33] Flow finished: PASS 1 / FAIL 0 /</text>
+    <text x="120" y="680" fill="#8B949E">           TIMEOUT 0 / total 1/1</text>
+  </g>
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="120" y="790" fill="#8B949E"># 发出去即记 SENT 而非 PASS：</text>
+    <text x="120" y="835" fill="#8B949E"># 对端给不给响应本就不在预期里，</text>
+    <text x="120" y="880" fill="#8B949E"># result.csv 的语义才诚实</text>
+    <text x="120" y="975" fill="#58A6FF" font-size="30" font-weight="bold">FAIL 时的判定行三样并排：</text>
+    <text x="120" y="1040" fill="#F4F9FE" font-size="28">Result: FAIL  Expected: 62F195</text>
+    <text x="120" y="1090" fill="#F4F9FE" font-size="28">Actual: 7F2231  NRC: 0x31</text>
+    <text x="120" y="1160" fill="#8B949E" font-size="26"># 对着看就知道差在哪一环</text>
+  </g>
+
+  <!-- 分隔线 -->
+  <line x1="1200" y1="220" x2="1200" y2="1260" stroke="#30363D" stroke-width="2"/>
+
+  <!-- 右：result.csv -->
+  <text x="1280" y="240" fill="#58A6FF" font-size="32" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei',sans-serif">result.csv — 一行一个步骤，给脚本消费</text>
+  <line x1="1280" y1="265" x2="2290" y2="265" stroke="#30363D" stroke-width="2"/>
+  <g font-size="26">
+    <text x="1280" y="330" fill="#6E7681">seq,step,addressing,request,</text>
+    <text x="1280" y="375" fill="#6E7681">    response,nrc,result,elapsed_ms</text>
+    <text x="1280" y="450" fill="#8B949E">1,读版本,functional,22F195,</text>
+    <text x="1280" y="495" fill="#8B949E">  ,,SENT,0.0,2026-11-16 13:49:32</text>
+  </g>
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="1280" y="600" fill="#8B949E"># 行数与已执行步骤严格对齐：</text>
+    <text x="1280" y="645" fill="#8B949E"># abort 中止时未执行的步骤</text>
+    <text x="1280" y="690" fill="#8B949E"># 不出现——「没跑」不会误读成</text>
+    <text x="1280" y="735" fill="#8B949E"># 「跑了没过」</text>
+    <text x="1280" y="830" fill="#58A6FF" font-size="30" font-weight="bold">第三路：trace.blf</text>
+    <text x="1280" y="895" fill="#F4F9FE" font-size="28">总线原始帧逐条落盘，</text>
+    <text x="1280" y="945" fill="#F4F9FE" font-size="28">CANoe 直接回放。</text>
+    <text x="1280" y="1010" fill="#3EE8B0" font-size="28">退出码：0 成功 / 1 失败超时 /</text>
+    <text x="1280" y="1060" fill="#3EE8B0" font-size="28">2 配置错误 / 3 异常</text>
+    <text x="1280" y="1125" fill="#8B949E" font-size="26"># CI 流水线直接消费，无需包装脚本</text>
+  </g>
+
+  <!-- 角落 FIG -->
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. TC-4 · REAL ARTIFACTS · 2026</text>
+  </g>
+</svg>

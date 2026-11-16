@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：security 节真实校验报错（消息逐字来自真实运行输出） -->
+  <defs>
+    <linearGradient id="bar5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar5)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">security 节加载期校验的真实报错 —— 密钥问题在配置加载时就暴露，不上总线</text>
+
+  <g font-size="29">
+    <!-- ① key_sub 规则 -->
+    <text x="110" y="240" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run tc.yaml --config cfg_1.yaml</text>
+    <text x="110" y="300" fill="#E8A44C" font-weight="bold">配置错误：security: app.key_sub: 必须为 seed_sub+1（0x01→0x02），当前 3</text>
+    <text x="110" y="350" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="26">        # 奇偶规则提前校验：比跑起来收 NRC 再排查快得多</text>
+
+    <!-- ② 未知算法 -->
+    <text x="110" y="450" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run tc.yaml --config cfg_2.yaml</text>
+    <text x="110" y="510" fill="#E8A44C" font-weight="bold">配置错误：security: app.algorithm: 只能是 ['aes_cmac_df_token', 'aes_cmac_seed', ...]</text>
+    <text x="110" y="560" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="26">        # 算法名必须已在注册表——报错列表顺带起到「文档」作用</text>
+
+    <!-- ③ mask_table 长度 -->
+    <text x="110" y="660" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run tc.yaml --config cfg_3.yaml</text>
+    <text x="110" y="720" fill="#E8A44C" font-weight="bold">配置错误：security: app.params.mask_table: 应为 16 项列表</text>
+    <text x="110" y="770" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="26">        # 参数 schema 逐项校验：类型、长度、范围都在加载期核对</text>
+
+    <!-- ④ 等级不存在 -->
+    <text x="110" y="870" fill="#3EE8B0">PS&gt; python DiagnosticTester.py run tc.yaml --config example_mock.yaml</text>
+    <text x="110" y="930" fill="#E8A44C" font-weight="bold">配置错误：steps[0].security_access: 只能是 ['develop']</text>
+    <text x="110" y="980" fill="#6E7681" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="26">        # 用例引用的等级必须在配置 security 节或内置 develop</text>
+  </g>
+
+  <text x="110" y="1090" fill="#8B949E">exit code = 2（配置错误）</text>
+  <text x="110" y="1160" fill="#58A6FF" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="28">设计取向一致：密钥材料可以错在配置里，但不能错在总线上。</text>
+
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. SEC-3 · REAL CLI OUTPUT · 2026</text>
+  </g>
+</svg>

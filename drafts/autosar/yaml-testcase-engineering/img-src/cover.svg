@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 封面：YAML 诊断测试用例工程 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 实战 · 诊断工具 ③</text>
+  <text x="160" y="340" fill="#F4F9FE" font-size="92" font-weight="800">YAML 诊断测试用例工程</text>
+  <text x="160" y="440" fill="#9FC3E8" font-size="52">三类步骤 · while 轮询 · 跨步骤断言 · 回归闭环</text>
+  <line x1="160" y1="480" x2="2560" y2="480" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 左：YAML 用例卡 -->
+  <g transform="translate(160,580)">
+    <rect x="0" y="0" width="740" height="820" rx="14" fill="#0B2440" stroke="#7FB2E8" stroke-width="3"/>
+    <text x="40" y="70" fill="#9FC3E8" font-family="'Consolas','Menlo',monospace" font-size="30">testcase.yaml</text>
+    <line x1="40" y1="95" x2="700" y2="95" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g font-family="'Consolas','Menlo',monospace" font-size="28" fill="#F4F9FE">
+      <text x="40" y="155">- name: <tspan fill="#E8A44C">等待标定完成</tspan></text>
+      <text x="40" y="210">  request: <tspan fill="#7FB2E8">"3103FF00"</tspan></text>
+      <text x="40" y="265">  while:</text>
+      <text x="40" y="320">    in_progress: <tspan fill="#7FB2E8">"7103FF0001"</tspan></text>
+      <text x="40" y="375">    delay_ms: <tspan fill="#7FB2E8">200</tspan></text>
+      <text x="40" y="430">    max_cycles: <tspan fill="#7FB2E8">100</tspan></text>
+      <text x="40" y="485">  expect: <tspan fill="#7FB2E8">"7103FF0000"</tspan></text>
+      <text x="40" y="560">- name: <tspan fill="#E8A44C">取种子</tspan></text>
+      <text x="40" y="615">  set_var: <tspan fill="#E8A44C">seed1</tspan></text>
+      <text x="40" y="670">  expect_equals_var: <tspan fill="#E8A44C">seed1</tspan></text>
+    </g>
+    <text x="40" y="760" fill="#6E96C2" font-size="26">流程组合从人的记忆</text>
+    <text x="40" y="805" fill="#6E96C2" font-size="26">搬进版本库里的文本</text>
+  </g>
+
+  <!-- 中：三类步骤 -->
+  <g transform="translate(1484,580)" text-anchor="middle">
+    <g transform="translate(0,90)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">普通步骤</text>
+      <text y="45" fill="#9FC3E8" font-size="27">request · expect 前缀判定 · timeout</text>
+    </g>
+    <g transform="translate(0,310)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">安全解锁步骤</text>
+      <text y="45" fill="#9FC3E8" font-size="27">security_access: 等级名 · 算法在配置</text>
+    </g>
+    <g transform="translate(0,530)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">while 轮询步骤</text>
+      <text y="45" fill="#9FC3E8" font-size="27">in_progress · delay_ms · max_cycles</text>
+    </g>
+    <g transform="translate(0,750)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#123A63" stroke="#E8A44C" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">on_fail 策略</text>
+      <text y="45" fill="#9FC3E8" font-size="27">abort 步骤相依 · continue 一次拉全</text>
+    </g>
+  </g>
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M1484,760 L1484,800 M1484,800 L1468,774 M1484,800 L1500,774"/>
+    <path d="M1484,980 L1484,1100 M1484,1100 L1468,1074 M1484,1100 L1500,1074"/>
+    <path d="M1484,1280 L1484,1320 M1484,1320 L1468,1294 M1484,1320 L1500,1294"/>
+  </g>
+
+  <!-- 右：回归闭环 -->
+  <g transform="translate(2378,580)" text-anchor="middle">
+    <text y="20" fill="#9FC3E8" font-size="30" font-weight="700">回归闭环</text>
+    <g font-size="29" fill="#F4F9FE">
+      <g transform="translate(0,120)">
+        <rect x="-310" y="-52" width="620" height="104" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="8">YAML 用例 → git</text>
+      </g>
+      <g transform="translate(0,270)">
+        <rect x="-310" y="-52" width="620" height="104" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="8">run → 退出码</text>
+      </g>
+      <g transform="translate(0,420)">
+        <rect x="-310" y="-52" width="620" height="104" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="8">log / csv / blf</text>
+      </g>
+      <g transform="translate(0,570)">
+        <rect x="-310" y="-52" width="620" height="104" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="8">定位 · CANoe 回放</text>
+      </g>
+      <g transform="translate(0,720)">
+        <rect x="-310" y="-52" width="620" height="104" rx="12" fill="#123A63" stroke="#E8A44C" stroke-width="3"/>
+        <text y="8" fill="#E8A44C">同一 YAML 重跑</text>
+      </g>
+    </g>
+  </g>
+  <g stroke="#E8A44C" stroke-width="2.5" fill="none">
+    <path d="M2378,757 L2378,793 M2378,793 L2362,767 M2378,793 L2394,767"/>
+    <path d="M2378,907 L2378,943 M2378,943 L2362,917 M2378,943 L2394,917"/>
+    <path d="M2378,1057 L2378,1093 M2378,1093 L2362,1067 M2378,1093 L2394,1067"/>
+    <path d="M2378,1207 L2378,1243 M2378,1243 L2362,1217 M2378,1243 L2394,1217"/>
+  </g>
+
+  <!-- 底部注脚 -->
+  <text x="160" y="1500" fill="#6E96C2" font-size="28">ISO 14229 · steps / on_fail / timing</text>
+  <text x="2688" y="1500" fill="#6E96C2" font-size="28" text-anchor="end">测试资产沉淀为 git 里的文本</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：配置与用例拆两份 -->
+  <defs>
+    <pattern id="g7" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g7)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">CONFIG × TESTCASE · 两个文件</text>
+  <line x1="120" y1="175" x2="760" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">项目差异与测试流程拆开，跨项目复用的关键</text>
+
+  <!-- 左：项目配置 -->
+  <g transform="translate(180,330)">
+    <rect x="0" y="0" width="900" height="700" rx="14" fill="#0B2440" stroke="#7FB2E8" stroke-width="3"/>
+    <text x="45" y="75" fill="#9FC3E8" font-family="'Consolas','Menlo',monospace" font-size="30">configs/&lt;项目&gt;/&lt;项目&gt;.yaml</text>
+    <text x="45" y="130" fill="#F4F9FE" font-size="40" font-weight="800">项目配置</text>
+    <text x="45" y="185" fill="#E8A44C" font-size="30">回答：这台 ECU 怎么测（每 ECU 一份）</text>
+    <line x1="45" y1="225" x2="855" y2="225" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g font-family="'Consolas','Menlo',monospace" font-size="28" fill="#F4F9FE">
+      <text x="45" y="290"><tspan fill="#7FB2E8">can:</tspan>        device / fd / baudrate</text>
+      <text x="45" y="355"><tspan fill="#7FB2E8">diagnostic:</tspan> 7E0 / 7E8 / 7DF</text>
+      <text x="45" y="420"><tspan fill="#7FB2E8">timing:</tspan>     p2 / p2* / step_delay</text>
+      <text x="45" y="485"><tspan fill="#7FB2E8">security:</tspan>   等级 · 算法 · 参数</text>
+    </g>
+    <text x="45" y="600" fill="#6E96C2" font-size="28">换卡 = 改一行 device</text>
+    <text x="45" y="655" fill="#6E96C2" font-size="28">换 ECU = 换一份配置目录</text>
+  </g>
+
+  <!-- 右：测试用例 -->
+  <g transform="translate(1320,330)">
+    <rect x="0" y="0" width="900" height="700" rx="14" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+    <text x="45" y="75" fill="#9FC3E8" font-family="'Consolas','Menlo',monospace" font-size="30">testcase/&lt;项目&gt;/&lt;流程&gt;.yaml</text>
+    <text x="45" y="130" fill="#F4F9FE" font-size="40" font-weight="800">测试用例</text>
+    <text x="45" y="185" fill="#E8A44C" font-size="30">回答：测什么（每流程一份，进 git）</text>
+    <line x1="45" y1="225" x2="855" y2="225" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g font-family="'Consolas','Menlo',monospace" font-size="28" fill="#F4F9FE">
+      <text x="45" y="290"><tspan fill="#7FB2E8">steps:</tspan>      步骤 · 判定 · 轮询 · 断言</text>
+      <text x="45" y="355"><tspan fill="#7FB2E8">on_fail:</tspan>   abort / continue</text>
+      <text x="45" y="420"><tspan fill="#7FB2E8">timing:</tspan>    可选覆盖，只覆盖出现的键</text>
+    </g>
+    <text x="45" y="600" fill="#6E96C2" font-size="28">评审 · 复用 · diff 期望值</text>
+    <text x="45" y="655" fill="#6E96C2" font-size="28">同一份用例跨版本原样重跑</text>
+  </g>
+
+  <!-- 中间组合箭头 -->
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M1090,680 L1200,680 M1200,680 L1172,664 M1200,680 L1172,696"/>
+    <path d="M1310,680 L1310,680"/>
+  </g>
+  <text x="1200" y="640" fill="#E8A44C" font-size="28" text-anchor="middle">run 时组合</text>
+
+  <!-- 底部收益条 -->
+  <rect x="180" y="1090" width="2040" height="130" rx="12" fill="#0B2440" stroke="#E8A44C" stroke-width="2.5"/>
+  <text x="1200" y="1150" fill="#F4F9FE" font-size="32" font-weight="800" text-anchor="middle">「换项目只换配置」在这两个文件上兑现：流程引擎、协议栈、落盘逻辑一行不改</text>
+  <text x="1200" y="1198" fill="#9FC3E8" font-size="27" text-anchor="middle">加载期校验把拼错字段、超长功能寻址请求、互斥断言全部挡在总线之前</text>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. TOOL-2</text>
+    <text x="1830" y="1258">CONFIG / TESTCASE</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 02</text>
+  </g>
+</svg>

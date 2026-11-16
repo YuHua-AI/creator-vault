@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：dem-map 离线解析真实输出（DTC 与 event/FiM 位图翻译） -->
+  <defs>
+    <linearGradient id="bar6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar6)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">dem-map 真实输出 —— 不连硬件，粘贴原始响应，离线走与在线同一套解析</text>
+
+  <g font-size="28">
+    <text x="110" y="230" fill="#3EE8B0">PS&gt; python DiagnosticTester.py dem-map --config example</text>
+    <text x="110" y="285" fill="#8B949E">===== DEM 手动解析 =====</text>
+    <text x="110" y="345" fill="#8B949E">DTCStatus(190209): 待用户输入(直接回车即为空，直接跳过)</text>
+
+    <!-- DTC 输入输出 -->
+    <text x="110" y="410" fill="#F4F9FE">59 02 0F EA0788 2F          ← 用户粘贴（CANoe 抓包里抄来的）</text>
+    <text x="110" y="470" fill="#8B949E">  输入: 59 02 0F EA 07 88 2F</text>
+    <text x="110" y="530" fill="#E8A44C">  EA0788  DemDTC_U2A0788_CAN_ACAN_Busoff  0x2F</text>
+    <text x="110" y="585" fill="#E8A44C">          testFailed|testFailedThisOperationCycle|pendingDTC</text>
+    <text x="110" y="640" fill="#E8A44C">          |confirmedDTC|testFailedSinceLastClear</text>
+
+    <!-- event 位图 -->
+    <text x="110" y="715" fill="#8B949E">CurrentEventStatus(222A0D): 待用户输入(...)</text>
+    <text x="110" y="775" fill="#F4F9FE">62 2A 0D 03                 ← 位图 0x03 = 第 1、2 位置位</text>
+    <text x="110" y="835" fill="#E8A44C">  1: DemEvent_HCTDTC_1</text>
+    <text x="110" y="890" fill="#E8A44C">  2: DemEvent_HCTDTC_2</text>
+
+    <!-- FiM 位图 -->
+    <text x="110" y="955" fill="#8B949E">FiMFIDStatus(222A1D): 待用户输入(...)</text>
+    <text x="110" y="1015" fill="#F4F9FE">62 2A 1D 01</text>
+    <text x="110" y="1075" fill="#E8A44C">  1: FiM_Function_Xxx       ← 车速显示功能被抑制</text>
+  </g>
+
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="1490" y="360" width="800" height="540" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <text x="1530" y="420" fill="#58A6FF" font-size="28" font-weight="bold">读法</text>
+    <line x1="1530" y1="445" x2="2260" y2="445" stroke="#30363D" stroke-width="1.5"/>
+    <g fill="#8B949E">
+      <text x="1530" y="505">· 输入接受完整 62+DID 头，</text>
+      <text x="1530" y="550">  也接受裸 payload</text>
+      <text x="1530" y="620">· DTC：3 字节编码查 dtc_map，</text>
+      <text x="1530" y="665">  status 八位逐位拆解</text>
+      <text x="1530" y="735">· 位图：byte0 bit0 = 1 号，</text>
+      <text x="1530" y="780">  逐位查 event/fimfid map</text>
+      <text x="1530" y="850">· 解析是纯函数：在线 dem 和</text>
+      <text x="1530" y="895" fill="#3EE8B0">  离线 dem-map 走同一段代码，</text>
+      <text x="1530" y="940" fill="#3EE8B0">  离线结论 = 在线结论</text>
+    </g>
+  </g>
+
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. DEM-2 · REAL CLI OUTPUT · 2026</text>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'Consolas','Menlo','Courier New',monospace">
+  <!-- 终端风：dem 在线采集真实输出（Mock 模式，失败不阻断的直接证据） -->
+  <defs>
+    <linearGradient id="bar7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2D333B"/>
+      <stop offset="1" stop-color="#22272E"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="#0D1117"/>
+
+  <rect x="60" y="60" width="2280" height="90" rx="18" fill="url(#bar7)"/>
+  <circle cx="130" cy="105" r="16" fill="#FF5F57"/>
+  <circle cx="180" cy="105" r="16" fill="#FEBC2E"/>
+  <circle cx="230" cy="105" r="16" fill="#28C840"/>
+  <text x="1200" y="118" fill="#8B949E" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">dem 真实输出（Mock 模式）—— 五项采集逐项执行，任何一项失败都不阻断</text>
+
+  <g font-size="28">
+    <text x="110" y="230" fill="#3EE8B0">PS&gt; python DiagnosticTester.py dem --config example_mock</text>
+    <text x="110" y="290" fill="#8B949E">===== DEM 故障报告 =====</text>
+
+    <text x="110" y="355" fill="#8B949E">[会话] 进扩展会话（10 03）</text>
+    <text x="110" y="410" fill="#E8A44C">UDS TX: 10 03</text>
+    <text x="110" y="465" fill="#E8A44C">UDS RX: (timeout)</text>
+    <text x="110" y="525" fill="#F85149">进扩展会话失败，按默认会话继续读取   ← 失败，不阻断</text>
+
+    <text x="110" y="595" fill="#8B949E">[DTC 故障]</text>
+    <text x="110" y="650" fill="#E8A44C">UDS TX: 19 02 0F</text>
+    <text x="110" y="705" fill="#E8A44C">UDS RX: (timeout)</text>
+
+    <text x="110" y="775" fill="#8B949E">[当前 event]</text>
+    <text x="110" y="830" fill="#E8A44C">UDS TX: 22 2A 0D    UDS RX: (timeout)</text>
+    <text x="110" y="890" fill="#8B949E">[本周期 event]</text>
+    <text x="110" y="945" fill="#E8A44C">UDS TX: 22 2A 0E    UDS RX: (timeout)</text>
+    <text x="110" y="1005" fill="#8B949E">[历史 event]</text>
+    <text x="110" y="1060" fill="#E8A44C">UDS TX: 22 2A 0F    UDS RX: (timeout)</text>
+    <text x="110" y="1120" fill="#8B949E">[当前 fimfid]</text>
+    <text x="110" y="1175" fill="#E8A44C">UDS TX: 22 2A 1D    UDS RX: (timeout)</text>
+  </g>
+
+  <g font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="1490" y="300" width="800" height="640" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <text x="1530" y="360" fill="#58A6FF" font-size="28" font-weight="bold">读法</text>
+    <line x1="1530" y1="385" x2="2260" y2="385" stroke="#30363D" stroke-width="1.5"/>
+    <g fill="#8B949E">
+      <text x="1530" y="445">· 会话失败照样把五项读完——</text>
+      <text x="1530" y="490">  报告的价值是把能看到的</text>
+      <text x="1530" y="535">  都看到，不是全盘退出</text>
+      <text x="1530" y="605">· 接真 ECU 时，每项 RX 后面</text>
+      <text x="1530" y="650">  跟的就是翻译好的故障清单：</text>
+      <text x="1530" y="695">  编号 + 名称 + 状态位拆解</text>
+      <text x="1530" y="765">· 退出码：全部正响应为 0，</text>
+      <text x="1530" y="810">  任一项失败为 1——成败</text>
+      <text x="1530" y="855">  信息不丢，反映在退出码上</text>
+      <text x="1530" y="925" fill="#3EE8B0">· 图中 timeout 是 Mock 无 ECU</text>
+      <text x="1530" y="970" fill="#3EE8B0">  的正常表现：流程完整性</text>
+      <text x="1530" y="1015" fill="#3EE8B0">  不依赖硬件</text>
+    </g>
+  </g>
+
+  <g font-size="22" fill="#8B949E">
+    <text x="2220" y="1290" text-anchor="end">FIG. DEM-3 · REAL CLI OUTPUT · 2026</text>
+  </g>
+</svg>

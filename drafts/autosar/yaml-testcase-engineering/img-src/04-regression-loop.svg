@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：回归闭环 -->
+  <defs>
+    <pattern id="g4" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g4)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">REGRESSION LOOP · 回归闭环</text>
+  <line x1="120" y1="175" x2="720" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">同一份 YAML，重跑零成本</text>
+
+  <!-- 环形六节点 -->
+  <g text-anchor="middle">
+    <g transform="translate(760,430)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="34" font-weight="800">① 写用例</text>
+      <text y="42" fill="#9FC3E8" font-size="26">YAML · 评审 · diff</text>
+    </g>
+    <g transform="translate(1520,430)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="34" font-weight="800">② run 全部用例</text>
+      <text y="42" fill="#9FC3E8" font-size="26">退出码 → CI 过 / 不过</text>
+    </g>
+    <g transform="translate(1900,780)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="34" font-weight="800">③ 三路落盘</text>
+      <text y="42" fill="#9FC3E8" font-size="26">run.log · result.csv · trace.blf</text>
+    </g>
+    <g transform="translate(1520,1130)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="34" font-weight="800">④ FAIL 定位</text>
+      <text y="42" fill="#9FC3E8" font-size="26">log 查 NRC · BLF 喂 CANoe 回放</text>
+    </g>
+    <g transform="translate(760,1130)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-10" fill="#F4F9FE" font-size="34" font-weight="800">⑤ 修复</text>
+      <text y="42" fill="#9FC3E8" font-size="26">ECU 软件或用例期望值</text>
+    </g>
+    <g transform="translate(380,780)">
+      <rect x="-260" y="-65" width="520" height="130" rx="12" fill="#123A63" stroke="#E8A44C" stroke-width="3"/>
+      <text y="-10" fill="#E8A44C" font-size="34" font-weight="800">⑥ 再回归</text>
+      <text y="42" fill="#9FC3E8" font-size="26">同一 YAML 原样重跑</text>
+    </g>
+  </g>
+
+  <!-- 环形箭头 -->
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M1030,430 L1250,430 M1250,430 L1222,414 M1250,430 L1222,446"/>
+    <path d="M1710,510 L1830,700 M1830,700 L1828,668 M1830,700 L1802,688"/>
+    <path d="M1900,910 L1780,1060 M1780,1060 L1782,1028 M1780,1060 L1808,1046"/>
+    <path d="M1250,1130 L1030,1130 M1030,1130 L1058,1114 M1030,1130 L1058,1146"/>
+    <path d="M570,1060 L450,910 M450,910 L452,942 M450,910 L478,922"/>
+    <path d="M380,700 L500,510 M500,510 L468,522 M500,510 L498,554"/>
+  </g>
+
+  <!-- 右侧注记 -->
+  <g transform="translate(0,0)">
+    <rect x="120" y="960" width="900" height="260" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+    <text x="150" y="1020" fill="#9FC3E8" font-size="28" font-weight="800">为什么闭环成立</text>
+    <line x1="150" y1="1040" x2="990" y2="1040" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g fill="#F4F9FE" font-size="26">
+      <text x="150" y="1090">用例是文本 → 评审、复用、diff 全部免费</text>
+      <text x="150" y="1135">csv 一行一步骤 → 脚本可断言、报表可生成</text>
+      <text x="150" y="1180">blf 总线原始帧 → CANoe 逐帧回放现场</text>
+    </g>
+  </g>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. TC-1</text>
+    <text x="1830" y="1258">LOOP 6 STEPS</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 01</text>
+  </g>
+</svg>

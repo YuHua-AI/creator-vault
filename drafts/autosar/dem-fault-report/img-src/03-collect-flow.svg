@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：dem 五项采集流程 -->
+  <defs>
+    <pattern id="g5" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g5)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">DEM COLLECT · 五项采集流程</text>
+  <line x1="120" y1="175" x2="720" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">失败不阻断：把能看到的都看到</text>
+
+  <!-- 两条生命线 -->
+  <rect x="330" y="320" width="340" height="90" rx="10" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="500" y="380" fill="#F4F9FE" font-size="36" font-weight="800" text-anchor="middle">dem 命令</text>
+  <line x1="500" y1="410" x2="500" y2="1130" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+  <rect x="1730" y="320" width="340" height="90" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+  <text x="1900" y="380" fill="#F4F9FE" font-size="36" font-weight="800" text-anchor="middle">ECU</text>
+  <line x1="1900" y1="410" x2="1900" y2="1130" stroke="#DCE9F5" stroke-opacity="0.6" stroke-width="2"/>
+
+  <!-- 1 会话 -->
+  <g transform="translate(0,500)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">10 03 进扩展会话</text>
+    <text x="1960" y="8" fill="#6E96C2" font-size="24" text-anchor="start">失败继续读</text>
+  </g>
+  <!-- 2 解锁 -->
+  <g transform="translate(0,610)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3" stroke-dasharray="14 8"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#9FC3E8" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">0x27 安全解锁 [可选]</text>
+    <text x="1960" y="8" fill="#6E96C2" font-size="24" text-anchor="start">失败置码 1</text>
+  </g>
+  <!-- 3 DTC -->
+  <g transform="translate(0,720)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">19 02 0F 读全部 DTC</text>
+    <text x="640" y="26" fill="#9FC3E8" font-size="24">59 02 → DTC×3B + status×1B 逐条拆</text>
+  </g>
+  <!-- 4 event -->
+  <g transform="translate(0,840)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">22 2A0D / 2A0E / 2A0F</text>
+    <text x="640" y="26" fill="#9FC3E8" font-size="24">当前 / 本周期 / 历史 event · 位图逐位翻译</text>
+  </g>
+  <!-- 5 FiM -->
+  <g transform="translate(0,960)">
+    <line x1="500" y1="0" x2="1900" y2="0" stroke="#E8A44C" stroke-width="3"/>
+    <polygon points="1900,0 1868,-12 1868,12" fill="#E8A44C"/>
+    <text x="1200" y="-14" fill="#F4F9FE" font-size="30" text-anchor="middle" font-family="'Consolas','Menlo',monospace">22 2A1D 读 FiM FID 位图</text>
+    <text x="1960" y="8" fill="#6E96C2" font-size="24" text-anchor="start">DID 可按平台覆盖</text>
+  </g>
+
+  <!-- 右下：dem-map 注记 -->
+  <g transform="translate(0,0)">
+    <rect x="120" y="480" width="380" height="560" rx="12" fill="#0B2440" stroke="#E8A44C" stroke-width="2.5"/>
+    <text x="150" y="540" fill="#E8A44C" font-size="30" font-weight="800">dem-map 离线模式</text>
+    <line x1="150" y1="565" x2="470" y2="565" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g fill="#F4F9FE" font-size="25">
+      <text x="150" y="620">现场只有 CANoe 抓包？</text>
+      <text x="150" y="660">五项原始响应逐项粘贴</text>
+      <text x="150" y="700">不连硬件，同套解析</text>
+      <text x="150" y="775" fill="#9FC3E8">解析是纯函数：</text>
+      <text x="150" y="815" fill="#9FC3E8">字节进、行文本出</text>
+      <text x="150" y="890" fill="#6E96C2" font-size="24">62+DID 头或裸 payload</text>
+      <text x="150" y="930" fill="#6E96C2" font-size="24">皆可，缺项回车跳过</text>
+      <text x="150" y="1005" fill="#6E96C2" font-size="24">离线结论 = 在线结论</text>
+    </g>
+  </g>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. DEM-1</text>
+    <text x="1830" y="1258">COLLECT 5 ITEMS</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 01</text>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 分节图：六类种子密钥算法结构对照 -->
+  <defs>
+    <pattern id="g2" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1350" fill="#0E2A47"/>
+  <rect width="2400" height="1350" fill="url(#g2)"/>
+  <rect x="40" y="40" width="2320" height="1270" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="60" y="60" width="2280" height="1230" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="120" y="150" fill="#9FC3E8" font-size="32" letter-spacing="8">ALGORITHM FAMILIES · 六类种子密钥算法</text>
+  <line x1="120" y1="175" x2="760" y2="175" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="120" y="240" fill="#F4F9FE" font-size="54" font-weight="800">名字不说，结构可以拆：拿到新算法先归类</text>
+
+  <!-- 表头 -->
+  <g font-size="28" fill="#9FC3E8" font-weight="800">
+    <text x="150" y="330">#</text>
+    <text x="230" y="330">流派</text>
+    <text x="760" y="330">输入 / 输出</text>
+    <text x="1130" y="330">核心运算</text>
+    <text x="1880" y="330">一句话机制</text>
+  </g>
+  <line x1="120" y1="355" x2="2280" y2="355" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2.5"/>
+
+  <!-- 六行 -->
+  <g text-anchor="start">
+    <g transform="translate(0,430)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#123A63" stroke="#F4F9FE" stroke-width="2.5"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">①</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">CMAC 直算型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">16B → 16B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">Key = CMAC(K, Seed)</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">标准原语套皮，一行调用</text>
+    </g>
+    <g transform="translate(0,565)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="2.5"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">②</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">CMAC 派生型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">16B → 32B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">SK=CMAC(KF,DF) · Key=DF‖CMAC(SK,Seed)</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">会话密钥动态派生</text>
+    </g>
+    <g transform="translate(0,700)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="2.5"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">③</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">查表迭代型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">2B → 4B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">seed%16 选掩码 → 移位乘加异或迭代</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">app / boot 骨架同，迭代式不同</text>
+    </g>
+    <g transform="translate(0,835)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="2.5"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">④</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">CRC 式位运算型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">2B → 2B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">初值自定义 · 按位切双多项式</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">像标准 CRC，但套标准必翻车</text>
+    </g>
+    <g transform="translate(0,970)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#0B2440" stroke="#F4F9FE" stroke-width="2.5"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">⑤</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">移位乘法异或型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">4B → 4B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">左移 · 乘常数 · 异或 · 再移位</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">无查表的位运算流水线</text>
+    </g>
+    <g transform="translate(0,1105)">
+      <rect x="120" y="-55" width="2160" height="110" rx="10" fill="#123A63" stroke="#E8A44C" stroke-width="3"/>
+      <text x="150" y="12" fill="#E8A44C" font-size="36" font-weight="800">⑥</text>
+      <text x="230" y="12" fill="#F4F9FE" font-size="34" font-weight="800">AES 加密型</text>
+      <text x="760" y="12" fill="#9FC3E8" font-size="30" font-family="'Consolas','Menlo',monospace">12B → 12B</text>
+      <text x="1130" y="12" fill="#F4F9FE" font-size="30" font-family="'Consolas','Menlo',monospace">拼接掩码 ⊕ IV → AES-ECB → 重排</text>
+      <text x="1880" y="12" fill="#9FC3E8" font-size="28">规范级流程，已是「过程」不是「函数」</text>
+    </g>
+  </g>
+
+  <!-- 图纸角标 -->
+  <g font-size="22" fill="#9FC3E8">
+    <rect x="1810" y="1190" width="500" height="80" fill="none" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="1810" y1="1230" x2="2310" y2="1230" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="2080" y1="1190" x2="2080" y2="1270" stroke="#DCE9F5" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="1830" y="1218">FIG. SEC-1</text>
+    <text x="1830" y="1258">6 FAMILIES</text>
+    <text x="2100" y="1218">REV. 2026</text>
+    <text x="2100" y="1258">SHEET 01</text>
+  </g>
+</svg>

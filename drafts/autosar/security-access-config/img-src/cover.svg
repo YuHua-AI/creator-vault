@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <!-- 封面：0x27 安全访问的配置化实现 -->
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="2848" height="1600" fill="#0E2A47"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+  <rect x="48" y="48" width="2752" height="1504" fill="none" stroke="#DCE9F5" stroke-opacity="0.55" stroke-width="3"/>
+  <rect x="72" y="72" width="2704" height="1456" fill="none" stroke="#DCE9F5" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="160" y="220" fill="#9FC3E8" font-size="40" letter-spacing="10">AUTOSAR 实战 · 诊断工具 ②</text>
+  <text x="160" y="340" fill="#F4F9FE" font-size="92" font-weight="800">0x27 安全访问的配置化实现</text>
+  <text x="160" y="440" fill="#9FC3E8" font-size="52">种子密钥算法插件化 · 算法注册表 · YAML security 节</text>
+  <line x1="160" y1="480" x2="2560" y2="480" stroke="#DCE9F5" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- 左：YAML security 节 -->
+  <g transform="translate(160,580)">
+    <rect x="0" y="0" width="740" height="820" rx="14" fill="#0B2440" stroke="#7FB2E8" stroke-width="3"/>
+    <text x="40" y="70" fill="#9FC3E8" font-family="'Consolas','Menlo',monospace" font-size="30">config.yaml</text>
+    <line x1="40" y1="95" x2="700" y2="95" stroke="#DCE9F5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <g font-family="'Consolas','Menlo',monospace" font-size="29" fill="#F4F9FE">
+      <text x="40" y="160">security:</text>
+      <text x="40" y="225">  app:</text>
+      <text x="40" y="290">    seed_sub: <tspan fill="#7FB2E8">0x01</tspan></text>
+      <text x="40" y="355">    key_sub: <tspan fill="#7FB2E8">0x02</tspan></text>
+      <text x="40" y="420">    algorithm: <tspan fill="#E8A44C">cmac_seed</tspan></text>
+      <text x="40" y="485">    params:</text>
+      <text x="40" y="550">      key: <tspan fill="#6E96C2">"****"</tspan></text>
+    </g>
+    <text x="40" y="660" fill="#6E96C2" font-size="26">等级与算法写在配置里</text>
+    <text x="40" y="710" fill="#6E96C2" font-size="26">密钥材料不出本地</text>
+    <text x="40" y="770" fill="#E8A44C" font-size="26">新算法 = 注册一个函数</text>
+  </g>
+
+  <!-- 中：算法注册表流程 -->
+  <g transform="translate(1484,580)" text-anchor="middle">
+    <g transform="translate(0,90)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">ECU Seed</text>
+      <text y="45" fill="#9FC3E8" font-size="27">27 + seed_sub → 67 + seed</text>
+    </g>
+    <g transform="translate(0,310)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">算法注册表</text>
+      <text y="45" fill="#9FC3E8" font-size="27">cmac · 查表迭代 · CRC 式 · AES</text>
+    </g>
+    <g transform="translate(0,530)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#0B2440" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">compute_key</text>
+      <text y="45" fill="#9FC3E8" font-size="27">fn(seed, params, df) → key</text>
+    </g>
+    <g transform="translate(0,750)">
+      <rect x="-370" y="-80" width="740" height="160" rx="12" fill="#123A63" stroke="#F4F9FE" stroke-width="3"/>
+      <text y="-18" fill="#F4F9FE" font-size="40" font-weight="700">Tester Key</text>
+      <text y="45" fill="#9FC3E8" font-size="27">27 + key_sub + key → 67</text>
+    </g>
+  </g>
+  <g stroke="#E8A44C" stroke-width="3" fill="none">
+    <path d="M1484,760 L1484,800 M1484,800 L1468,774 M1484,800 L1500,774"/>
+    <path d="M1484,980 L1484,1100 M1484,1100 L1468,1074 M1484,1100 L1500,1074"/>
+    <path d="M1484,1280 L1484,1320 M1484,1320 L1468,1294 M1484,1320 L1500,1294"/>
+  </g>
+
+  <!-- 右：握手时序 -->
+  <g transform="translate(2378,580)" text-anchor="middle">
+    <text y="20" fill="#9FC3E8" font-size="30" font-weight="700">解锁时序</text>
+    <g font-family="'Consolas','Menlo',monospace" font-size="30" fill="#F4F9FE">
+      <g transform="translate(0,110)">
+        <rect x="-310" y="-55" width="620" height="110" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="-8" text-anchor="start" x="-270">27 01</text>
+        <text y="34" text-anchor="start" x="-270" font-size="24" fill="#9FC3E8">取种子（可选 magic）</text>
+      </g>
+      <g transform="translate(0,260)">
+        <rect x="-310" y="-55" width="620" height="110" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="-8" text-anchor="start" x="-270">67 01 + seed</text>
+        <text y="34" text-anchor="start" x="-270" font-size="24" fill="#9FC3E8">头与长度双重校验</text>
+      </g>
+      <g transform="translate(0,410)">
+        <rect x="-310" y="-55" width="620" height="110" rx="12" fill="#0B2440" stroke="#7FB2E8" stroke-width="2.5"/>
+        <text y="-8" text-anchor="start" x="-270">27 02 + key</text>
+        <text y="34" text-anchor="start" x="-270" font-size="24" fill="#9FC3E8">算法算密钥</text>
+      </g>
+      <g transform="translate(0,560)">
+        <rect x="-310" y="-55" width="620" height="110" rx="12" fill="#123A63" stroke="#E8A44C" stroke-width="3"/>
+        <text y="-8" text-anchor="start" x="-270" fill="#E8A44C">67 02</text>
+        <text y="34" text-anchor="start" x="-270" font-size="24" fill="#9FC3E8">解锁完成 · 0x33 解除</text>
+      </g>
+    </g>
+  </g>
+  <g stroke="#E8A44C" stroke-width="2.5" fill="none">
+    <path d="M2334,750 L2334,780 M2334,780 L2318,754 M2334,780 L2350,754"/>
+    <path d="M2334,900 L2334,930 M2334,930 L2318,904 M2334,930 L2350,904"/>
+    <path d="M2334,1050 L2334,1080 M2334,1080 L2318,1054 M2334,1080 L2350,1054"/>
+  </g>
+
+  <!-- 底部注脚 -->
+  <text x="160" y="1500" fill="#6E96C2" font-size="28">ISO 14229 · 0x27 securityAccess</text>
+  <text x="2688" y="1500" fill="#6E96C2" font-size="28" text-anchor="end">SecLevel · ALGORITHMS Registry · YAML Config</text>
+</svg>
