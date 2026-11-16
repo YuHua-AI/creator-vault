@@ -1,0 +1,248 @@
+{
+  "week": "20261116",
+  "period": "2026.11.10 – 11.15",
+  "subtitle": "本周涨星最快的 8 个开源项目",
+  "subtitleHighlight": "Agent 还是主旋律，5 个老面孔还在涨",
+  "cards": [
+    {
+      "file": "01-craft-anything",
+      "icon": "craft",
+      "no": 1,
+      "owner": "storytold",
+      "repo": "craft-anything",
+      "lang": "Rust",
+      "coverIntro": "看懂任意软件，再复刻一个",
+      "coverTags": ["Rust", "净室复刻"],
+      "pitch": "上榜第二周，冲到第一",
+      "total": "32.6k",
+      "growth": "28,744",
+      "what": [
+        "纯 Rust 的净室引擎，还在早期 alpha",
+        "指向任意网站、App 或游戏，让 Agent 复刻"
+      ],
+      "can": [
+        "四步走：Study → Build → Check → Ready",
+        "320 个工具全部开放成 CLI 与 MCP"
+      ],
+      "who": [
+        "想逆向搞懂软件如何工作的工程师",
+        "想让 Agent 照着原型造新东西的人"
+      ],
+      "tags": ["纯 Rust", "MCP 工具", "早期 alpha"],
+      "_research": {
+        "created": "2026-11-03",
+        "desc": "Craft Anything: understand how any software works, and craft your own."
+      }
+    },
+    {
+      "file": "02-dsh-superagent-prototype",
+      "icon": "superagent",
+      "no": 2,
+      "owner": "deepseek-ai",
+      "repo": "dsh-superagent-prototype",
+      "lang": "TypeScript",
+      "coverIntro": "会自己开工交 PR 的值守 Agent",
+      "coverTags": ["DeepSeek", "研究原型"],
+      "pitch": "少占注意力，多干实事",
+      "total": "23.1k",
+      "growth": "21,020",
+      "what": [
+        "DeepSeek 研究原型，不是正式产品",
+        "守一个仓库：听 GitHub，自己开工"
+      ],
+      "can": [
+        "被叫到或规则允许才动手，不瞎忙",
+        "活干完用 PR 回话，面板标出要人的事"
+      ],
+      "who": [
+        "想让 Agent 长期值守仓库的团队",
+        "追踪 Agent 自主性的研究者"
+      ],
+      "tags": ["DeepSeek 官方", "值守 Agent", "研究原型"],
+      "_research": {
+        "created": "2026-11-01",
+        "desc": "Towards a More Autonomous Agent System"
+      }
+    },
+    {
+      "file": "03-dsh-go",
+      "icon": "remote",
+      "no": 3,
+      "owner": "ccch1mneyyy",
+      "repo": "dsh-Go",
+      "lang": "Dart",
+      "coverIntro": "DSH 手机端，内置 Linux 环境",
+      "coverTags": ["手机端", "内置 Linux"],
+      "pitch": "手机跑 Harness，桌宠陪你盯活",
+      "total": "22.7k",
+      "growth": "20,251",
+      "what": [
+        "DeepSeek Harness 手机 App",
+        "安卓版已发，iOS 还在真机测试"
+      ],
+      "can": [
+        "内置 Linux 环境，免 Root 免 Termux",
+        "电脑上的 DSH 一键切过去接着用"
+      ],
+      "who": [
+        "想躺在沙发上盯 Agent 干活的人",
+        "安卓用户先行体验"
+      ],
+      "tags": ["手机端", "桌面宠物", "内置 Linux"],
+      "_research": {
+        "created": "2026-10-31",
+        "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。"
+      }
+    },
+    {
+      "file": "04-astryx",
+      "icon": "astryx",
+      "no": 4,
+      "owner": "facebook",
+      "repo": "astryx",
+      "lang": "TypeScript",
+      "coverIntro": "Meta 设计系统开源，组件管够",
+      "coverTags": ["Meta", "设计系统"],
+      "pitch": "Meta 内部八年，开门迎客",
+      "total": "28k",
+      "growth": "14,190",
+      "what": [
+        "Meta 用得最多的设计系统开源",
+        "150+ 组件，喂饱过 13000+ 应用"
+      ],
+      "can": [
+        "主题就是一组 CSS 变量，随便改",
+        "文档与 CLI 为人和 Agent 一起设计"
+      ],
+      "who": [
+        "想给产品换大厂设计底座的团队",
+        "想让 AI 写出规范界面的开发者"
+      ],
+      "tags": ["React 19", "150+ 组件", "Beta"],
+      "_research": {
+        "created": "2026-01-10",
+        "desc": "An open source design system that's fully customizable and agent ready"
+      }
+    },
+    {
+      "file": "05-unslop",
+      "icon": "uiwin",
+      "no": 5,
+      "owner": "heydamir",
+      "repo": "unslop",
+      "lang": "JavaScript",
+      "coverIntro": "先审计再动手的去 AI 味神器",
+      "coverTags": ["Claude 插件", "去 AI 味"],
+      "pitch": "先开审计清单，再逐遍修",
+      "total": "15.9k",
+      "growth": "12,565",
+      "what": [
+        "Claude Code 插件，专治一眼 AI 味",
+        "紫渐变、荧光、emoji 标签全揪出来"
+      ],
+      "can": [
+        "先出审计报告和方向，点头才动手",
+        "间距、颜色、文案逐遍过，像红笔审稿"
+      ],
+      "who": [
+        "vibe coding 做出成品的前端",
+        "没有设计师的小团队"
+      ],
+      "tags": ["Claude 插件", "UI 审计", "全栈通用"],
+      "_research": {
+        "created": "2026-11-01",
+        "desc": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
+      }
+    },
+    {
+      "file": "06-claude-code-game-studios",
+      "icon": "gamestudio",
+      "no": 6,
+      "owner": "Donchitos",
+      "repo": "Claude-Code-Game-Studios",
+      "lang": "Shell",
+      "coverIntro": "问几句就交出能玩的游戏",
+      "coverTags": ["游戏原型", "Claude Code"],
+      "pitch": "先问你几句，再交能玩的游戏",
+      "total": "39.5k",
+      "growth": "8,510",
+      "what": [
+        "Claude Code 游戏工作室模板",
+        "问几个问题，写一页 brief 再开工"
+      ],
+      "can": [
+        "无头浏览器替你先玩一遍再交付",
+        "每次确认的修改都是可回退存档点"
+      ],
+      "who": [
+        "有游戏点子但不会写代码的人",
+        "要快速出浏览器原型的团队"
+      ],
+      "tags": ["游戏模板", "浏览器游戏", "MIT"],
+      "_research": {
+        "created": "2026-02-12",
+        "desc": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills."
+      }
+    },
+    {
+      "file": "07-lichii",
+      "icon": "lichii",
+      "no": 7,
+      "owner": "zortos293",
+      "repo": "Lichii",
+      "lang": "C++",
+      "coverIntro": "实验性 Switch 2 模拟器",
+      "coverTags": ["模拟器", "C++"],
+      "pitch": "Switch 2 模拟器，开源实验局",
+      "total": "9.2k",
+      "growth": "6,987",
+      "what": [
+        "C++ 写的 Switch、Switch 2 模拟器",
+        "接续 yuzu、Eden 一脉，独立分支"
+      ],
+      "can": [
+        "Windows、Linux、macOS 都能跑",
+        "兼容性网站看社区实测，只认官方下载"
+      ],
+      "who": [
+        "模拟器与 homebrew 爱好者",
+        "想学图形渲染的 C++ 玩家"
+      ],
+      "tags": ["Switch 2", "开源模拟器", "实验性"],
+      "_research": {
+        "created": "2026-11-06",
+        "desc": "VERY experimental Nintendo Switch 2 emulator"
+      }
+    },
+    {
+      "file": "08-hghub",
+      "icon": "hghub",
+      "no": 8,
+      "owner": "Minireel",
+      "repo": "HGhub",
+      "lang": "Rust",
+      "coverIntro": "插件化通用视频播放器",
+      "coverTags": ["Tauri", "插件化"],
+      "pitch": "播放器是壳，插件才是内容",
+      "total": "8.8k",
+      "growth": "6,593",
+      "what": [
+        "通用视频播放器，内容全靠插件接",
+        "不内置任何源，也不发第三方插件"
+      ],
+      "can": [
+        "浏览、搜索、追更、片库一站搞定",
+        "支持 HLS 与多线路，桌面手机都有"
+      ],
+      "who": [
+        "喜欢自己折腾内容源的用户",
+        "想写播放插件的开发者"
+      ],
+      "tags": ["视频播放器", "Tauri 2", "非商业"],
+      "_research": {
+        "created": "2026-11-08",
+        "desc": "YellowFruit third-party client"
+      }
+    }
+  ]
+}
