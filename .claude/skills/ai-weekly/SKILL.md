@@ -6,6 +6,8 @@ argument-hint: [期号日期如 20261116；留空则以上周一~周日为周期
 
 # AI 周报（每期帖图）
 
+> **状态：2026-11-16 搁置封存**——周更新闻盘点在公众号结构性吃亏（时效/竞品/帖图无搜索长尾），引流改走 `ai-morning-brief`（工作日图文早报）+ 事件深拆长文。本 skill 的选题雷达方法论由 ai-morning-brief 延用；帖图产线保留，若解封直接复用。
+
 本 skill 是 image-post 管线在「本周 AI 大事盘点」选题上的特化，与 github-weekly 平行：数据源换成**选题雷达**（无本地数据仓，每期现扫），卡片从项目卡换成**事件卡**。图即内容，正文只做壳。
 
 - 目录约定：`drafts/ai-weekly/<期号>/`（期号=周期周日日期 YYYYMMDD），归档进 `published/ai-weekly/`
@@ -25,6 +27,7 @@ argument-hint: [期号日期如 20261116；留空则以上周一~周日为周期
    按 points 降序通读，AI 相关条目全部入选候选池
 2. **定向关键词补漏**（防高分帖漏网）：`AI / LLM / OpenAI / Anthropic / Claude / Gemini / Nvidia / agent` 各查一遍（`points>25`），大厂官方动作即使分不高也要（Vercel 文档、微软开源等）
 3. **WebSearch 面扫**：英文「AI news this week + 日期」补 HN 盲区（发布会、政策、融资）
+4. **国内源必扫**（2026-11-16 实测盲区：阿里 Qwen4-Max 发布 HN 零信号）：量子位 qbitai.com 首页/RSS + 机器之心 jiqizhixin.com，国内大厂发布、政策、融资只在这里有信号
 
 热度数字（pt/评论数）**一律以 API 返回为准**，不凭印象写。
 
