@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 实战-诊断工具 | 基于 Python 与 USB-CANFD 的 UDS 诊断测试工具设计与实现
 date: 2026-11-16
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, Python, CAN]
 digest: 做诊断测试，CANoe 强大但也昂贵笨重：脚本封闭、换项目要重搭工程、回归测试靠人肉。这个系列把镜头对准一个自研替代方案——用 Python 和 USB-CANFD 卡搭一套 UDS 诊断测试工具。第一篇讲设计与实现：驱动抽象、ISO-TP 传输、UDS 会话、流程引擎四层架构，YAML 写用例，三个命令覆盖日常测试，测试结果三路落盘，Mock 驱动免硬件可跑。
 platform: [公众号, 知乎, CSDN]

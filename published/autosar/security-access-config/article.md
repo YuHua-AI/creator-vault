@@ -1,7 +1,7 @@
 ---
 title: AUTOSAR 实战-诊断工具 | UDS 0x27 安全访问的配置化实现：种子密钥算法插件化设计
 date: 2026-11-16
-status: draft
+status: published
 tags: [AUTOSAR, UDS, 诊断, 0x27, Python]
 digest: 做 UDS 诊断测试绕不开 0x27 安全访问：每个 OEM 的种子密钥算法都不一样，传统做法是每个项目写一份散落各处的解锁脚本。这一篇讲怎么把「解锁」做成配置——SecLevel 数据结构、算法注册表、YAML security 节，六类常见算法按结构拆开讲清机制，最后给出「新增一个算法要写多少代码」的答案：一个函数。
 platform: [公众号, 知乎, CSDN]
