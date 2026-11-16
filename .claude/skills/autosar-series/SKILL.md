@@ -59,4 +59,4 @@ argument-hint: [drafts/autosar 下文章短名或新选题；留空则列进度]
 
 1. **定位素材**：按主题查素材地图 → `ls` 实际目录 → Read 对应 PDF 章节
 2. **对齐**：与用户确认标题、结构（一般：场景钩子 → 概念 → 核心机制逐个拆 → 工程视角 → 预告）
-3. 之后全部走 write-article 阶段 3~7（起草/配图/终审/推送/归档）。**配图用本系列专属三风格体系**（见 `references/style-spec.md`）：A 工程蓝图＝封面/结构图，B 终端抓包＝报文交互分析，C 技术手册＝单条报文格式讲解；不与 write-article 的 `illustration-spec.md`（旧系列霓虹风）混用。图内术语用规范英文缩写（SID、DID、DTC）+ 中文标注
+3. 之后全部走 write-article 阶段 3~7（起草/配图/终审/推送/归档）。**配图用本系列专属风格体系**（见 `references/style-spec.md`）：A 工程蓝图＝封面/结构图，B/B+ 终端＝报文交互与真实 CLI 输出转录（实战系列主力，遵守真实证据铁律），C 技术手册＝单条报文格式讲解；另守 style-spec 内「SVG 生产规则」（字重层级/图片编号不重号/三栏网格/文案红线）。不与 write-article 的 `illustration-spec.md`（旧系列霓虹风）混用。图内术语用规范英文缩写（SID、DID、DTC）+ 中文标注
