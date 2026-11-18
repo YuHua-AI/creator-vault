@@ -1,9 +1,10 @@
 ---
 title: agent-autoloop 中控台：让 AI 无人值守跑通工单全流程
 date: 2026-11-18
-status: draft
+status: published
 tags: [agent, 自动化, AI 编程, claude-code, 开源]
-platform: [公众号]
+platform: [公众号, CSDN, 知乎]
+collection: GitHub 实战
 digest: AI 编程工具最大的问题不是不会干，而是要人盯。开源项目 agent-autoloop 把 AI Agent 变成值班的员工：rules.json 写岗位说明书，check 验规格，run 派活，拿不准的发卡片回来等人拍板。本文从安装讲到接入真实需求开发工作流。
 ---
 
