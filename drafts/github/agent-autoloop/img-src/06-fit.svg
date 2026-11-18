@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F9FD"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#D5E4F0" stroke-opacity="0.5"/>
+    </pattern>
+    <filter id="gG" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0FA97E" flood-opacity="0.35"/></filter>
+    <filter id="gR" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#D64545" flood-opacity="0.35"/></filter>
+    <filter id="gC" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0E8FC7" flood-opacity="0.35"/></filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bg)"/>
+  <rect width="2400" height="1350" fill="url(#grid)"/>
+
+  <!-- particles -->
+  <g fill="#8AA5C0">
+    <circle cx="200" cy="280" r="3" opacity="0.4"/>
+    <circle cx="500" cy="170" r="2" opacity="0.35"/>
+    <circle cx="2150" cy="240" r="3" opacity="0.4"/>
+    <circle cx="2260" cy="1040" r="2.5" opacity="0.35"/>
+    <circle cx="160" cy="1000" r="2.5" opacity="0.3"/>
+    <circle cx="1200" cy="130" r="2" opacity="0.35"/>
+  </g>
+
+  <!-- top capsule -->
+  <rect x="950" y="100" width="500" height="60" rx="30" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+  <text x="1200" y="140" text-anchor="middle" font-size="30" fill="#33547A" letter-spacing="6">LESSONS · 交给它什么</text>
+
+  <!-- node 1: suitable (green check) -->
+  <g filter="url(#gG)">
+    <circle cx="560" cy="620" r="110" fill="#FFFFFF" stroke="#0FA97E" stroke-width="4.5"/>
+  </g>
+  <path d="M508 622 L546 660 L616 582" fill="none" stroke="#0FA97E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="560" y="840" text-anchor="middle" font-size="40" font-weight="700" fill="#14324F">适合</text>
+  <text x="560" y="888" text-anchor="middle" font-size="28" fill="#5E7A99">边界清晰 · 结果可验证</text>
+
+  <!-- node 2: unsuitable (red cross) -->
+  <g filter="url(#gR)">
+    <circle cx="1200" cy="620" r="110" fill="#FFFFFF" stroke="#D64545" stroke-width="4.5"/>
+  </g>
+  <path d="M1155 575 L1245 665 M1245 575 L1155 665" fill="none" stroke="#D64545" stroke-width="8" stroke-linecap="round"/>
+  <rect x="1155" y="762" width="90" height="7" rx="3.5" fill="#D64545" filter="url(#gR)"/>
+  <text x="1200" y="840" text-anchor="middle" font-size="40" font-weight="700" fill="#14324F">不适合</text>
+  <text x="1200" y="888" text-anchor="middle" font-size="28" fill="#5E7A99">目标模糊 · 要来回讨论</text>
+
+  <!-- node 3: middle ground (balance) -->
+  <g filter="url(#gC)">
+    <line x1="1840" y1="500" x2="1730" y2="540" stroke="#0E8FC7" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="1840" y1="500" x2="1950" y2="540" stroke="#0E8FC7" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="1840" y1="500" x2="1840" y2="700" stroke="#0E8FC7" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="1780" y1="700" x2="1900" y2="700" stroke="#0E8FC7" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="1840" cy="500" r="12" fill="#FFFFFF" stroke="#0E8FC7" stroke-width="4"/>
+    <path d="M1670 620 L1790 620 L1760 660 L1700 660 Z" fill="#EAF3FB" stroke="#0E8FC7" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="1730" y1="540" x2="1730" y2="608" stroke="#0E8FC7" stroke-width="3.5"/>
+    <path d="M1890 620 L2010 620 L1980 660 L1920 660 Z" fill="#EAF3FB" stroke="#0E8FC7" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="1950" y1="540" x2="1950" y2="608" stroke="#0E8FC7" stroke-width="3.5"/>
+  </g>
+  <text x="1840" y="840" text-anchor="middle" font-size="40" font-weight="700" fill="#14324F">中间地带</text>
+  <text x="1840" y="888" text-anchor="middle" font-size="28" fill="#5E7A99">AI 到 90 分，人拍板</text>
+
+  <!-- bottom quote -->
+  <text x="1200" y="1160" text-anchor="middle" font-size="46" font-weight="700" fill="#14324F">最后十分，<tspan fill="#0FA97E">始终在人</tspan></text>
+</svg>

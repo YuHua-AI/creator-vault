@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F9FD"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#D5E4F0" stroke-opacity="0.5"/>
+    </pattern>
+    <filter id="gC" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0E8FC7" flood-opacity="0.35"/></filter>
+    <filter id="gB" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3E7BD6" flood-opacity="0.3"/></filter>
+    <filter id="gG" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0FA97E" flood-opacity="0.35"/></filter>
+    <filter id="gR" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#D64545" flood-opacity="0.35"/></filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bg)"/>
+  <rect width="2400" height="1350" fill="url(#grid)"/>
+
+  <!-- particles -->
+  <g fill="#8AA5C0">
+    <circle cx="180" cy="300" r="3" opacity="0.4"/>
+    <circle cx="420" cy="180" r="2" opacity="0.35"/>
+    <circle cx="2200" cy="260" r="3" opacity="0.4"/>
+    <circle cx="2280" cy="1050" r="2.5" opacity="0.35"/>
+    <circle cx="140" cy="1020" r="2.5" opacity="0.3"/>
+    <circle cx="1180" cy="140" r="2" opacity="0.35"/>
+    <circle cx="700" cy="1240" r="2.5" opacity="0.3"/>
+  </g>
+
+  <!-- top capsule -->
+  <rect x="950" y="100" width="500" height="60" rx="30" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+  <text x="1200" y="140" text-anchor="middle" font-size="30" fill="#33547A" letter-spacing="6">WORKFLOW · 工单全流程</text>
+
+  <!-- chain connectors (behind nodes) -->
+  <g stroke="#0E8FC7" stroke-width="3.5" fill="none" filter="url(#gC)">
+    <path d="M430 630 C 540 630, 590 630, 790 630"/>
+    <path d="M1010 630 C 1120 630, 1170 630, 1360 630"/>
+    <path d="M1600 630 C 1700 630, 1750 630, 1930 630"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-width="3.5">
+    <circle cx="430" cy="630" r="9"/><circle cx="790" cy="630" r="9"/>
+    <circle cx="1010" cy="630" r="9"/><circle cx="1360" cy="630" r="9"/>
+    <circle cx="1600" cy="630" r="9"/><circle cx="1930" cy="630" r="9"/>
+  </g>
+  <g fill="#0FA97E">
+    <circle cx="610" cy="630" r="6" filter="url(#gG)"/>
+    <circle cx="1185" cy="630" r="6" filter="url(#gG)"/>
+    <circle cx="1765" cy="630" r="6" filter="url(#gG)"/>
+  </g>
+
+  <!-- node 1: task card -->
+  <g filter="url(#gC)">
+    <rect x="330" y="510" width="200" height="240" rx="14" fill="#FFFFFF" stroke="#0E8FC7" stroke-width="4"/>
+  </g>
+  <line x1="360" y1="560" x2="500" y2="560" stroke="#5E7A99" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <line x1="360" y1="615" x2="470" y2="615" stroke="#0FA97E" stroke-width="6" stroke-linecap="round"/>
+  <line x1="360" y1="670" x2="490" y2="670" stroke="#5E7A99" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+  <text x="430" y="850" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">任务卡片</text>
+  <text x="430" y="893" text-anchor="middle" font-size="28" fill="#5E7A99">devtask 事件触发</text>
+
+  <!-- node 2: agent robot -->
+  <g filter="url(#gB)">
+    <rect x="800" y="535" width="210" height="190" rx="20" fill="#EAF3FB" stroke="#3E7BD6" stroke-width="4"/>
+    <line x1="905" y1="535" x2="905" y2="498" stroke="#3E7BD6" stroke-width="3.5"/>
+    <circle cx="905" cy="488" r="10" fill="#0FA97E" filter="url(#gG)"/>
+  </g>
+  <circle cx="862" cy="618" r="9" fill="#0FA97E"/>
+  <circle cx="948" cy="618" r="9" fill="#0FA97E"/>
+  <line x1="850" y1="672" x2="960" y2="672" stroke="#5E7A99" stroke-width="5" stroke-linecap="round" opacity="0.45"/>
+  <text x="905" y="850" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">Agent 连续推进</text>
+  <text x="905" y="893" text-anchor="middle" font-size="28" fill="#5E7A99">设计 → 编码 → 编译</text>
+
+  <!-- node 3: ECU controller -->
+  <g filter="url(#gC)">
+    <rect x="1390" y="545" width="210" height="170" rx="18" fill="#FFFFFF" stroke="#0E8FC7" stroke-width="4"/>
+  </g>
+  <path d="M1510 580 L1470 645 L1500 645 L1488 690 L1535 622 L1505 622 Z" fill="#0FA97E" filter="url(#gG)"/>
+  <circle cx="1432" cy="580" r="8" fill="#0FA97E"/>
+  <line x1="1420" y1="668" x2="1465" y2="668" stroke="#5E7A99" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  <text x="1495" y="850" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">实车控制器</text>
+  <text x="1495" y="893" text-anchor="middle" font-size="28" fill="#5E7A99">刷写 · 自动验证</text>
+  <rect x="1450" y="922" width="90" height="7" rx="3.5" fill="#D64545" filter="url(#gR)"/>
+  <text x="1495" y="968" text-anchor="middle" font-size="28" fill="#40608A">台架没电 → 发卡片暂停</text>
+
+  <!-- node 4: PR merge -->
+  <g filter="url(#gB)">
+    <circle cx="1975" cy="560" r="30" fill="#FFFFFF" stroke="#3E7BD6" stroke-width="4"/>
+    <circle cx="2105" cy="560" r="30" fill="#FFFFFF" stroke="#3E7BD6" stroke-width="4"/>
+    <path d="M1975 590 C 1975 680, 2040 660, 2040 700" fill="none" stroke="#3E7BD6" stroke-width="4"/>
+    <path d="M2105 590 C 2105 680, 2040 660, 2040 700" fill="none" stroke="#3E7BD6" stroke-width="4"/>
+  </g>
+  <g filter="url(#gG)">
+    <circle cx="2040" cy="712" r="34" fill="#FFFFFF" stroke="#0FA97E" stroke-width="4"/>
+  </g>
+  <path d="M2022 712 L2034 724 L2060 698" fill="none" stroke="#0FA97E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="2040" y="850" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">PR · CI · 流转</text>
+  <text x="2040" y="893" text-anchor="middle" font-size="28" fill="#5E7A99">通过自动合并</text>
+
+  <!-- bottom quote -->
+  <text x="1200" y="1180" text-anchor="middle" font-size="46" font-weight="700" fill="#14324F">AI 连续推进，<tspan fill="#0FA97E">卡点才找人</tspan></text>
+</svg>

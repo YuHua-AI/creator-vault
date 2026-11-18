@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2848 1600" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="76%" cy="18%" r="85%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F9FD"/>
+    </radialGradient>
+    <radialGradient id="bl" cx="8%" cy="95%" r="55%">
+      <stop offset="0%" stop-color="#DCEBF7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#DCEBF7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0E8FC7"/>
+      <stop offset="100%" stop-color="#5B8CFF"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#D5E4F0" stroke-opacity="0.5"/>
+    </pattern>
+    <filter id="gC" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0E8FC7" flood-opacity="0.35"/></filter>
+    <filter id="gB" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3E7BD6" flood-opacity="0.3"/></filter>
+    <filter id="gG" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#0FA97E" flood-opacity="0.35"/></filter>
+  </defs>
+
+  <rect width="2848" height="1600" fill="url(#bg)"/>
+  <rect width="2848" height="1600" fill="url(#bl)"/>
+  <rect width="2848" height="1600" fill="url(#grid)"/>
+
+  <!-- particles -->
+  <g fill="#8AA5C0">
+    <circle cx="220" cy="260" r="3" opacity="0.45"/>
+    <circle cx="480" cy="150" r="2" opacity="0.35"/>
+    <circle cx="1330" cy="220" r="3" opacity="0.4"/>
+    <circle cx="1230" cy="1320" r="2.5" opacity="0.35"/>
+    <circle cx="150" cy="1150" r="2" opacity="0.3"/>
+    <circle cx="2700" cy="1120" r="3" opacity="0.35"/>
+    <circle cx="2620" cy="240" r="2" opacity="0.4"/>
+    <circle cx="2350" cy="1420" r="2.5" opacity="0.3"/>
+  </g>
+
+  <!-- desk line -->
+  <line x1="150" y1="1400" x2="1430" y2="1400" stroke="#0E8FC7" stroke-width="3" opacity="0.5" filter="url(#gC)"/>
+
+  <!-- clock node -->
+  <g filter="url(#gB)">
+    <circle cx="330" cy="470" r="95" fill="#FFFFFF" stroke="#3E7BD6" stroke-width="4"/>
+    <line x1="330" y1="470" x2="330" y2="398" stroke="#14324F" stroke-width="5" stroke-linecap="round"/>
+    <line x1="330" y1="470" x2="386" y2="470" stroke="#14324F" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="330" cy="470" r="7" fill="#0FA97E"/>
+  </g>
+  <text x="330" y="625" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">定时触发</text>
+  <text x="330" y="668" text-anchor="middle" font-size="28" fill="#5E7A99">cron · 事件</text>
+
+  <!-- scheduler console -->
+  <g filter="url(#gC)">
+    <rect x="560" y="620" width="380" height="260" rx="24" fill="#FFFFFF" stroke="#0E8FC7" stroke-width="4"/>
+  </g>
+  <line x1="600" y1="690" x2="760" y2="690" stroke="#0FA97E" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  <line x1="600" y1="745" x2="880" y2="745" stroke="#5E7A99" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+  <line x1="600" y1="800" x2="820" y2="800" stroke="#5E7A99" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <rect x="828" y="786" width="18" height="28" fill="#0FA97E" opacity="0.9"/>
+  <text x="750" y="955" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">调度器</text>
+  <text x="750" y="998" text-anchor="middle" font-size="28" fill="#5E7A99">agent-autoloop</text>
+
+  <!-- agent robot -->
+  <g filter="url(#gB)">
+    <rect x="240" y="990" width="210" height="170" rx="20" fill="#EAF3FB" stroke="#3E7BD6" stroke-width="3.5"/>
+    <line x1="345" y1="990" x2="345" y2="952" stroke="#3E7BD6" stroke-width="3.5"/>
+    <circle cx="345" cy="942" r="10" fill="#0FA97E" filter="url(#gG)"/>
+  </g>
+  <circle cx="305" cy="1068" r="9" fill="#0FA97E"/>
+  <circle cx="385" cy="1068" r="9" fill="#0FA97E"/>
+  <text x="345" y="1235" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">Agent ×N</text>
+  <text x="345" y="1278" text-anchor="middle" font-size="28" fill="#5E7A99">无人值守干活</text>
+
+  <!-- task card flying to person -->
+  <path d="M470 1090 C 640 1180, 880 1150, 1040 1080" fill="none" stroke="#0E8FC7" stroke-width="3.5" filter="url(#gC)"/>
+  <circle cx="470" cy="1090" r="9" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="1040" cy="1080" r="9" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="700" cy="1148" r="6" fill="#0FA97E" filter="url(#gG)"/>
+  <circle cx="880" cy="1130" r="5" fill="#0FA97E" opacity="0.8"/>
+  <g filter="url(#gG)">
+    <rect x="700" y="960" width="130" height="86" rx="10" fill="#FFFFFF" stroke="#0FA97E" stroke-width="3"/>
+  </g>
+  <line x1="722" y1="990" x2="808" y2="990" stroke="#5E7A99" stroke-width="5" stroke-linecap="round"/>
+  <line x1="722" y1="1022" x2="790" y2="1022" stroke="#0FA97E" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- person -->
+  <g filter="url(#gB)">
+    <circle cx="1150" cy="1040" r="42" fill="#3E7BD6"/>
+    <rect x="1085" y="1092" width="130" height="92" rx="30" fill="#EAF3FB" stroke="#3E7BD6" stroke-width="3.5"/>
+  </g>
+  <text x="1150" y="1265" text-anchor="middle" font-size="36" font-weight="700" fill="#14324F">人工拍板</text>
+  <text x="1150" y="1308" text-anchor="middle" font-size="28" fill="#5E7A99">同会话接力续跑</text>
+
+  <!-- clock -> scheduler -->
+  <path d="M420 540 C 480 600, 520 630, 560 660" fill="none" stroke="#3E7BD6" stroke-width="3.5"/>
+  <circle cx="420" cy="540" r="9" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="560" cy="660" r="9" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="495" cy="602" r="5" fill="#0FA97E"/>
+
+  <!-- dashed return: person -> scheduler -->
+  <path d="M1120 990 C 1040 880, 990 830, 945 790" fill="none" stroke="#0FA97E" stroke-width="3" stroke-dasharray="10 10" opacity="0.8"/>
+  <circle cx="945" cy="790" r="8" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+
+  <!-- ===== right text block ===== -->
+  <rect x="1560" y="190" width="620" height="64" rx="32" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+  <text x="1870" y="233" text-anchor="middle" font-size="28" fill="#33547A" letter-spacing="6">开源实战 · AGENT-AUTOLOOP 篇</text>
+
+  <text x="1560" y="360" font-size="56" fill="#8AA5C0" letter-spacing="12" font-weight="600">AGENT</text>
+  <text x="1560" y="520" font-size="150" font-weight="800" fill="url(#title)" letter-spacing="4">AUTOLOOP</text>
+  <text x="1560" y="665" font-size="94" font-weight="800" fill="#14324F">AI 无人值守</text>
+
+  <text x="1560" y="768" font-size="40" fill="#40608A">规则派活 · 卡片拍板 · <tspan fill="#0FA97E" font-weight="700">红线留给人</tspan></text>
+
+  <g font-size="30" fill="#33547A" text-anchor="middle">
+    <rect x="1560" y="840" width="226" height="64" rx="32" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+    <text x="1673" y="883">本地调度</text>
+    <rect x="1810" y="840" width="226" height="64" rx="32" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+    <text x="1923" y="883">卡片拍板</text>
+    <rect x="2060" y="840" width="226" height="64" rx="32" fill="#FFFFFF" stroke="#9DBBDA" stroke-width="1.5"/>
+    <text x="2173" y="883">会话接力</text>
+  </g>
+
+  <text x="2712" y="1508" text-anchor="end" font-size="24" fill="#8AA5C0">屿华AI · YuHua-AIPlay</text>
+</svg>
