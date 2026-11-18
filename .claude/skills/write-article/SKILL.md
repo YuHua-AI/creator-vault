@@ -98,7 +98,7 @@ platform: [公众号, 掘金]
   （去 frontmatter + 拼 `published/<专题>/footer.md` + 按 `links.json` 对应平台键回填）；分发登记（footer/links/gzh/zh/csdn 平台目录）与操作手册在 `published/<专题>/README.md`，与文章同目录
 - **知乎/CSDN 准自动推稿**：`node .claude/skills/write-article/scripts/push-platform-draft.js <文章文件夹> --platform zh|csdn [--save-draft]`
   自动完成：打开编辑器（首次需人工登录一次，会话存 `~/.config/gzh/profile-<platform>`）→ 填标题 → 贴正文 → 拖图；`--save-draft` 显式落草稿后退出（推荐，防进程中断丢稿），不带则停编辑器等人工发布。**点发布永远是人工动作**
-- **多平台推稿规程（2026-11-16 实战沉淀）**：逐篇**串行**跑，顺序公众号 → CSDN → 知乎（并行会互相挤兑出上传超时废稿）；每步核对日志硬指标——「标题已填并验证」「图片 URL 已替换（n/n）」**满分**、「已进草稿箱」，缺一项就单平台重推该篇（知乎图传随机超时，脚本已内置逐图 3 次重试；CSDN 标题目前仅路径③「原生 setter+事件」生效，①②已随编辑器改版失效，脚本已内置三级兜底）。三平台全绿 → 直接进阶段 7 归档
+- **多平台推稿规程（2026-11-16 实战沉淀）**：逐篇**串行**跑，顺序公众号 → CSDN → 知乎（并行会互相挤兑出上传超时废稿）；每步核对日志硬指标——「标题已填并验证」「图片 URL 已替换（n/n）」**满分**、「已进草稿箱」，缺一项就单平台重推该篇（知乎图传随机超时，脚本已内置逐图 3 次重试；CSDN 标题目前仅路径③「原生 setter+事件」生效，①②已随编辑器改版失效，脚本已内置三级兜底）。**新专题首次推 CSDN/知乎 前置条件**：文章 frontmatter 带 `collection`，且 `published/<专题>/` 已建 `links.json`（collection 字段匹配）+ `footer.md`，缺了脚本直接报「frontmatter 缺 collection」（2026-11-18 github 专题首推踩到）。三平台全绿 → 直接进阶段 7 归档
 - **站外分发红线**：`published/<专题>/footer.md` 绝不出现公众号/微信引流（CSDN/知乎审核即拒），CTA 用站内关注收藏；不放系列目录（持续更新会过时）；摘要公式与 frontmatter `digest` 约定见 `references/writing-rules.md`
 - 一稿多平台时：以 `article.md` 为唯一源，各平台只做排版适配，不改动内容本身
 
