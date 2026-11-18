@@ -15,9 +15,9 @@ argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一�
 | 内容 | 当周涨星最快 Top 8 排名 | 主题策展，选 3~5 个仓讲一个主题 |
 | 产线 | fetch-data.js 脚手架 + data.json + gen-*.js 批量出 9 图 | 手写主题卡片 SVG（无 data.json、不走 gen-*.js），图数随主题定 |
 | frontmatter | `collection: GitHub 周榜`，标题带「GitHub 周榜｜」前缀 | `collection: GitHub 每周精选`，标题即主题钩子 |
-| 首例 | `published/github-weekly/20261109/` | `drafts/github-weekly/20261114/`（Claude Code 四件套） |
+| 首例 | `published/github/weekly-20261109/` | `drafts/github/weekly-20261114/`（Claude Code 四件套） |
 
-两种期型共用：目录 `github-weekly/<周日期>/`、1350×1800 竖版画幅、深蓝霓虹线框风、图片消息管线与全部生产规则。下面 ①~⑥ 流程是**周榜专用**；周精选参考首例手写卡片，规则同 `references/rules.md`。
+两种期型共用：目录 `github/weekly-<周日期>/`、1350×1800 竖版画幅、深蓝霓虹线框风、图片消息管线与全部生产规则。下面 ①~⑥ 流程是**周榜专用**；周精选参考首例手写卡片，规则同 `references/rules.md`。
 
 **生产规则**（内容/版式/管线的硬规则，做期中持续沉淀）以 `references/rules.md` 为准，出图前过一遍。
 
@@ -29,7 +29,7 @@ argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一�
 node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116]   # 缺省取最新一周
 ```
 
-自动完成：`tools/github-weekly-rank` git pull（走代理，失败用本地数据继续）→ 定位当周 `YYYY/MM/YYYYMMDD.md` → 解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 若 `drafts/github-weekly/<week>/` 不存在则脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
+自动完成：`tools/github-weekly-rank` git pull（走代理，失败用本地数据继续）→ 定位当周 `YYYY/MM/YYYYMMDD.md` → 解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 若 `drafts/github/weekly-<week>/` 不存在则脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
 
 **星数一律以周榜文件解析结果为准，不凭印象写。**
 
@@ -40,7 +40,7 @@ node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116] 
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
 - `coverIntro` + `coverTags`：封面榜单行的短介绍与 2 个标签；`tags`：卡片底部 3 个标签
-- 口吻面向公众号读者：说人话、有钩子，参考往期 `published/github-weekly/*/img-src/data.json`
+- 口吻面向公众号读者：说人话、有钩子，参考往期 `published/github/*/img-src/data.json`
 
 ### ③ 图标映射
 
@@ -48,7 +48,7 @@ node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116] 
 
 ### ④ 壳文案收尾
 
-脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github-weekly/<周文件日期>/`（系列父目录 + 周日期子目录），归档时整个周目录移入 `published/github-weekly/`。
+脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github/weekly-<周文件日期>/`，归档时整个周目录移入 `published/github/`。
 
 data.json schema（脚手架产物同构，把 TODO 字段替换为实文即可）：
 

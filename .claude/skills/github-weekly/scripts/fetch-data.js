@@ -5,7 +5,7 @@
  * 做三件事：
  *   1. tools/github-weekly-rank 执行 git pull（走本机代理 127.0.0.1:7890，失败则用本地已有数据继续）
  *   2. 解析当周 YYYYMMDD.md：周期、Top8（owner/repo、总星标、周增长）、前 3 名详情（描述/建仓时间）
- *   3. 若 drafts/github-weekly/<week>/ 不存在 → 生成脚手架：img-src/data.json（数值字段已填，
+ *   3. 若 drafts/github/weekly-<week>/ 不存在 → 生成脚手架：img-src/data.json（数值字段已填，
  *      文案类字段为 TODO，留给调研阶段）+ article.md 壳（图片引用已按序排好）
  *
  * 用法：node fetch-data.js [周日期如 20261116]   # 缺省取数据源里最新一周
@@ -17,7 +17,7 @@ import { execSync } from 'node:child_process';
 
 const VAULT = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const REPO = join(VAULT, 'tools/github-weekly-rank');
-const SERIES = join(VAULT, 'drafts/github-weekly');
+const SERIES = join(VAULT, 'drafts/github');
 const wantWeek = process.argv[2] || '';
 
 // ---------- ① git pull ----------
@@ -69,9 +69,9 @@ for (const block of raw.split('**榜单增长：').slice(1)) {
 }
 
 // ---------- ④ 脚手架 ----------
-const issueDir = join(SERIES, week);
+const issueDir = join(SERIES, 'weekly-' + week);
 if (existsSync(issueDir)) {
-  console.log(`④ drafts/github-weekly/${week}/ 已存在，跳过脚手架（不覆盖已有稿件）`);
+  console.log(`④ drafts/github/weekly-${week}/ 已存在，跳过脚手架（不覆盖已有稿件）`);
 } else {
   const slug = (repo) => repo.toLowerCase().replace(/_/g, '-').replace(/[^a-z0-9-]/g, '').slice(0, 40);
   const cards = rows.map(r => ({
@@ -113,10 +113,10 @@ ${imgs}
 
 ---
 
-<!-- TODO: 收尾互动 + 关注引导（参考往期 published/github-weekly/*/article.md） -->
+<!-- TODO: 收尾互动 + 关注引导（参考往期 published/github/*/article.md） -->
 `);
 
-  console.log(`④ 已脚手架 drafts/github-weekly/${week}/（data.json + article.md）`);
+  console.log(`④ 已脚手架 drafts/github/weekly-${week}/（data.json + article.md）`);
 }
 
 // ---------- ⑤ 摘要 ----------
