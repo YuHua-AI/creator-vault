@@ -58,13 +58,15 @@ node .claude/skills/image-post/scripts/push-image-post.js <文章文件夹> [--t
 - 前提：凭据在 `~/.config/gzh/env`（GZH_APPID / GZH_SECRET，可选 GZH_AUTHOR ≤8 字），库外永不入库；**不需要** doocs/md
 - 家宽 IP 变化报 40164：按 errmsg 里的新 IP 更新微信开发者平台白名单后重跑
 
-## 阶段 6：发布（人工操作）
+## 阶段 6：发布（人工操作，不阻塞归档）
 
-后台 → 草稿箱 → 打开帖图草稿 → 预览（确认首图封面裁剪与图序）→ **勾选 AI 生成内容标识** → 发布。
+后台 → 草稿箱 → 打开帖图草稿 → 预览（确认首图封面裁剪与图序）→ **勾选 AI 生成内容标识** → 发布。重推过草稿时，先删后台旧草稿再发新的。
 
-## 阶段 7：归档
+## 阶段 7：归档（推送即归档，不等发布）
 
-`status: published` → 整个文件夹移入 `published/` → git commit（「文章名: 发布归档」）。
+阶段 5 推送成功即归档（2026-11-19 起，与 write-article「草稿箱就绪归档」同口径）：`status: published` → 整个文件夹移入 `published/` → git commit（「文章名: 草稿箱就绪归档」）。阶段 6 的后台发布由用户自行完成，AI 不等确认。
+
+坑：`git mv` 只把 index 里的旧内容搬到新路径，移动前改的 frontmatter 仍挂在工作区——归档 commit 前必须 `git add <新路径>/article.md`（agent-autoloop 与 wireless-battery 两次漏 add 都靠 amend 补救）。
 
 ## 始终遵守
 

@@ -1,11 +1,11 @@
 ---
-title: 无线设备电量，直接看任务栏
+title: 查电量开三层菜单？开源工具把它钉进任务栏
 date: 2026-11-19
-status: draft
+status: published
 tags: [Windows, 开源, 效率工具, GitHub]
 collection: GitHub 实战
 platform: [公众号]
-post_title: 无线设备电量，直接看任务栏
+post_title: 查电量开三层菜单？开源工具把它钉进任务栏
 ---
 
 家里无线设备一多，查电量就成了高频动作：打开设置 → 蓝牙和其他设备 → 逐个点进去看，一步都省不了。
