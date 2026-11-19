@@ -34,7 +34,7 @@ async function getText(url, ms = 10000) {
   return r.text();
 }
 
-// ---------- ① HN Algolia：各线关键词近 7 天高分帖 ----------
+// ---------- ① HN Algolia：各线关键词近 7 天高分帖（points>100，作次级信号） ----------
 // advancedSyntax=true 让多词引号短语精确匹配；关键词宁窄勿宽（裸 "NAS" 会撞航空管制新闻）
 const HN_QUERIES = [
   { line: 'nas', kw: ['self-hosted', 'homelab', 'TrueNAS', 'Unraid', 'Synology', 'Proxmox', 'home server'] },
@@ -49,7 +49,7 @@ async function fetchHN() {
   for (const { line, kw } of HN_QUERIES) {
     for (const q of kw) {
       try {
-        const url = `https://hn.algolia.com/api/v1/search?query=${encodeURIComponent(q)}&advancedSyntax=true&tags=story&numericFilters=points%3E40,created_at_i%3E${now - WEEK}`;
+        const url = `https://hn.algolia.com/api/v1/search?query=${encodeURIComponent(q)}&advancedSyntax=true&tags=story&numericFilters=points%3E100,created_at_i%3E${now - WEEK}`;
         const j = await getJson(url);
         for (const h of j.hits || []) {
           if (seen.has(h.objectID)) continue;
@@ -68,7 +68,39 @@ async function fetchHN() {
       } catch (e) { errors[`hn:${q}`] = String(e.message || e); }
     }
   }
-  return out.sort((a, b) => b.points - a.points).slice(0, 40);
+  return out.sort((a, b) => b.points - a.points).slice(0, 30);
+}
+
+// ---------- ①b HN 首页此刻在榜（硬热度，关键词本地分类） ----------
+const LINE_WORDS = {
+  nas: /\b(self-?host\w*|homelab|home lab|truenas|unraid|synology|proxmox|\bnas\b|docker|raspberry pi|pi hole|pihole)\b/i,
+  autosar: /(autosar|can bus|can-fd|\bobd\b|uds diagnostic|automotive|ecu |vector (canoe|da Vinci))/i,
+  obsidian: /(obsidian|pkm|second brain|zettelkasten|note-?taking|knowledge (base|management))/i,
+};
+
+async function fetchFrontPage() {
+  const out = [];
+  try {
+    const j = await getJson('https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=40');
+    for (const h of j.hits || []) {
+      const title = h.title || '';
+      let line = 'github'; // 首页默认归 github 线（开源/工具向）
+      for (const [l, re] of Object.entries(LINE_WORDS)) {
+        if (re.test(title)) { line = l; break; }
+      }
+      out.push({
+        line,
+        kw: 'front_page',
+        title,
+        url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
+        points: h.points || 0,
+        comments: h.num_comments || 0,
+        hnId: h.objectID,
+        created: h.created_at?.slice(0, 10) || '',
+      });
+    }
+  } catch (e) { errors['hn:front_page'] = String(e.message || e); }
+  return out.sort((a, b) => b.points - a.points);
 }
 
 // ---------- ② Reddit RSS top/week ----------
@@ -115,6 +147,38 @@ async function fetchForum() {
   return out;
 }
 
+// ---------- ②c GitHub 新爆款仓：7 天内创建按星标排序（硬热度，Search API 免登录） ----------
+const NEW_LINE_WORDS = {
+  nas: /(self-?host\w*|homelab|docker|nas|media server|home assistant|pi-hole|backup)/i,
+  autosar: /(autosar|can bus|obd|automotive|ecu|embedded)/i,
+  obsidian: /(obsidian|pkm|note-?taking|knowledge|markdown editor|second brain)/i,
+};
+
+async function fetchGithubNew() {
+  const since = new Date(Date.now() - WEEK * 1000).toISOString().slice(0, 10);
+  try {
+    const j = await getJson(`https://api.github.com/search/repositories?q=created:>${since}&sort=stars&order=desc&per_page=20`);
+    const out = [];
+    for (const r of j.items || []) {
+      const text = `${r.name} ${r.description || ''} ${r.language || ''}`;
+      let line = 'github';
+      for (const [l, re] of Object.entries(NEW_LINE_WORDS)) {
+        if (re.test(text)) { line = l; break; }
+      }
+      out.push({
+        line,
+        repo: r.full_name,
+        desc: r.description || '',
+        stars: r.stargazers_count,
+        lang: r.language || '',
+        url: r.html_url,
+        created: r.created_at?.slice(0, 10) || '',
+      });
+    }
+    return out;
+  } catch (e) { errors['github:new'] = String(e.message || e); return []; }
+}
+
 // ---------- ③ GitHub 涨星：tools/github-weekly-rank 最新周 ----------
 function latestRankFile() {
   const root = join(VAULT, 'tools/github-weekly-rank');
@@ -155,8 +219,11 @@ function fetchGithub() {
 }
 
 // ---------- main ----------
-const [hn, reddit, forum, github] = await Promise.all([fetchHN(), fetchReddit(), fetchForum(), Promise.resolve(fetchGithub())]);
+const [hn, front, reddit, forum, github, ghNew] = await Promise.all([
+  fetchHN(), fetchFrontPage(), fetchReddit(), fetchForum(),
+  Promise.resolve(fetchGithub()), fetchGithubNew(),
+]);
 console.log(JSON.stringify({
   date: new Date().toISOString().slice(0, 10),
-  hn, reddit, forum, github, errors,
+  hn, frontPage: front, reddit, forum, github, githubNew: ghNew, errors,
 }, null, 2));

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(git -C tools/github-weekly-rank:*)",
+      "WebFetch(domain:hn.algolia.com)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:forum.obsidian.md)",
+      "WebFetch(domain:www.autosar.org)",
+      "WebFetch(domain:autosar.org)",
+      "WebFetch(domain:www.vector.com)",
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:old.reddit.com)"
+    ]
+  }
+}
