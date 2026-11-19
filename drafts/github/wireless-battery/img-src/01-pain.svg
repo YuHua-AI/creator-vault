@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <rect width="1350" height="1800" fill="#F5F9FD"/>
+  <circle cx="70" cy="130" r="230" fill="#E3EEF8" opacity="0.5"/>
+
+  <rect x="80" y="96" width="400" height="56" rx="28" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="1.5"/>
+  <text x="280" y="133" text-anchor="middle" font-size="26" letter-spacing="4" fill="#33547A">WHY · 为什么要它</text>
+
+  <text x="80" y="300" font-size="84" font-weight="700" fill="#14324F">查个电量，要开<tspan fill="#D64545">三层菜单</tspan></text>
+  <text x="80" y="372" font-size="32" fill="#5E7A99">无线设备一多，这件事就变成了每天的高频动作</text>
+
+  <!-- old flow chain -->
+  <text x="80" y="490" font-size="30" font-weight="600" fill="#33547A">老流程 · 每一步都省不掉</text>
+  <g>
+    <rect x="80" y="530" width="560" height="110" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="120" y="596" font-size="36" fill="#33547A">① 回到桌面，打开设置</text>
+    <rect x="710" y="530" width="560" height="110" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="750" y="596" font-size="36" fill="#33547A">② 蓝牙和其他设备</text>
+    <rect x="80" y="680" width="560" height="110" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="120" y="746" font-size="36" fill="#33547A">③ 在设备列表里找到它</text>
+    <rect x="710" y="680" width="560" height="110" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="750" y="746" font-size="36" fill="#33547A">④ 点进去，才看到电量</text>
+    <path d="M 655 585 h 40 m -12 -12 l 12 12 l -12 12" stroke="#9DBBDA" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 360 650 v 18" stroke="#9DBBDA" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 655 735 h 40 m -12 -12 l 12 12 l -12 12" stroke="#9DBBDA" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- vendor bloat -->
+  <text x="80" y="930" font-size="30" font-weight="600" fill="#33547A">另一条路更糟 · 装厂商全家桶</text>
+  <g font-size="34" font-weight="600" fill="#33547A">
+    <rect x="80" y="970" width="370" height="120" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="265" y="1022" text-anchor="middle">罗技 G HUB</text>
+    <text x="265" y="1064" text-anchor="middle" font-size="24" font-weight="400" fill="#9DBBDA">几百 MB · 常驻后台</text>
+    <rect x="490" y="970" width="370" height="120" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="675" y="1022" text-anchor="middle">雷蛇 Synapse</text>
+    <text x="675" y="1064" text-anchor="middle" font-size="24" font-weight="400" fill="#9DBBDA">一个品牌一个</text>
+    <rect x="900" y="970" width="370" height="120" rx="24" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="1085" y="1022" text-anchor="middle">海盗船 iCUE</text>
+    <text x="1085" y="1064" text-anchor="middle" font-size="24" font-weight="400" fill="#9DBBDA">只为了看个电量</text>
+  </g>
+  <text x="80" y="1150" font-size="28" fill="#5E7A99">三四个品牌的设备，就要装三四个几百 MB 的套件——只为了看电量</text>
+
+  <!-- conclusion -->
+  <rect x="80" y="1240" width="1190" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+  <rect x="80" y="1240" width="10" height="170" rx="5" fill="#D64545"/>
+  <text x="140" y="1318" font-size="44" font-weight="700" fill="#14324F">「我就想看个电量」</text>
+  <text x="140" y="1374" font-size="30" fill="#5E7A99">这个再简单不过的需求，Windows 一直没有原生答案</text>
+
+  <!-- new flow teaser -->
+  <rect x="80" y="1460" width="1190" height="110" rx="26" fill="#EAF9F4"/>
+  <text x="675" y="1528" text-anchor="middle" font-size="38" font-weight="600" fill="#0FA97E">新流程 · 瞟一眼任务栏，0 步</text>
+
+  <line x1="80" y1="1640" x2="1270" y2="1640" stroke="#D5E4F0" stroke-width="2"/>
+  <text x="80" y="1700" font-size="26" fill="#9DBBDA">屿华AI · YuHua-AIPlay</text>
+  <text x="1270" y="1700" text-anchor="end" font-size="26" fill="#9DBBDA">02 / 06</text>
+</svg>

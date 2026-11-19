@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <rect width="1350" height="1800" fill="#F5F9FD"/>
+  <circle cx="70" cy="1740" r="220" fill="#E3EEF8" opacity="0.5"/>
+
+  <rect x="80" y="96" width="460" height="56" rx="28" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="1.5"/>
+  <text x="310" y="133" text-anchor="middle" font-size="26" letter-spacing="4" fill="#33547A">INSTALL · 两条路装好</text>
+
+  <text x="80" y="300" font-size="84" font-weight="700" fill="#14324F">两条路，都<tspan fill="#0FA97E">不用管理员</tspan></text>
+  <text x="80" y="372" font-size="32" fill="#5E7A99">GitHub Releases 页下载，先看一眼 SHA256SUMS.txt 更稳妥</text>
+
+  <!-- Route A -->
+  <rect x="80" y="440" width="1190" height="500" rx="30" fill="#FFFFFF" stroke="#0E8FC7" stroke-width="2.5"/>
+  <rect x="120" y="410" width="180" height="60" rx="30" fill="#0E8FC7"/>
+  <text x="210" y="450" text-anchor="middle" font-size="30" font-weight="600" fill="#FFFFFF">推荐 · 安装包</text>
+  <text x="1240" y="450" text-anchor="end" font-size="26" fill="#9DBBDA">省事首选</text>
+  <g>
+    <circle cx="150" cy="560" r="26" fill="#EAF6FD"/><text x="150" y="571" text-anchor="middle" font-size="28" font-weight="600" fill="#0E8FC7">1</text>
+    <text x="200" y="572" font-size="36" fill="#33547A">Releases 页下载 WirelessBattery-Setup.exe</text>
+    <circle cx="150" cy="680" r="26" fill="#EAF6FD"/><text x="150" y="691" text-anchor="middle" font-size="28" font-weight="600" fill="#0E8FC7">2</text>
+    <text x="200" y="692" font-size="36" fill="#33547A">双击运行，一路下一步</text>
+    <circle cx="150" cy="800" r="26" fill="#EAF6FD"/><text x="150" y="811" text-anchor="middle" font-size="28" font-weight="600" fill="#0E8FC7">3</text>
+    <text x="200" y="812" font-size="36" fill="#33547A">托盘右键菜单 → 打开 Start with Windows</text>
+  </g>
+  <rect x="120" y="860" width="1110" height="60" rx="18" fill="#F5F9FD"/>
+  <text x="150" y="899" font-size="26" fill="#5E7A99">装完即用：任务栏立刻出现设备电量，支持 15 种品牌色显示</text>
+
+  <!-- Route B -->
+  <rect x="80" y="1000" width="1190" height="440" rx="30" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+  <rect x="120" y="970" width="220" height="60" rx="30" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="2"/>
+  <text x="230" y="1010" text-anchor="middle" font-size="30" font-weight="600" fill="#33547A">绿色 · Portable</text>
+  <text x="1240" y="1010" text-anchor="end" font-size="26" fill="#9DBBDA">解压即用，不留痕迹</text>
+  <g>
+    <circle cx="150" cy="1130" r="26" fill="#EAF9F4"/><text x="150" y="1141" text-anchor="middle" font-size="28" font-weight="600" fill="#0FA97E">1</text>
+    <text x="200" y="1142" font-size="36" fill="#33547A">下载 BatteryHub-portable.zip（约 1.5MB）</text>
+    <circle cx="150" cy="1250" r="26" fill="#EAF9F4"/><text x="150" y="1261" text-anchor="middle" font-size="28" font-weight="600" fill="#0FA97E">2</text>
+    <text x="200" y="1262" font-size="36" fill="#33547A">解压到固定目录，运行 BatteryHub.exe</text>
+  </g>
+  <rect x="120" y="1330" width="1110" height="60" rx="18" fill="#F5F9FD"/>
+  <text x="150" y="1369" font-size="26" fill="#5E7A99">目录别放临时文件夹——路径太深会让语音模型加载失败（Windows 260 字符限制）</text>
+
+  <!-- note -->
+  <rect x="80" y="1490" width="1190" height="90" rx="24" fill="#EAF9F4"/>
+  <text x="675" y="1546" text-anchor="middle" font-size="32" font-weight="600" fill="#0FA97E">两条路都免管理员权限 · 想自启就在菜单里开一下</text>
+
+  <line x1="80" y1="1640" x2="1270" y2="1640" stroke="#D5E4F0" stroke-width="2"/>
+  <text x="80" y="1700" font-size="26" fill="#9DBBDA">屿华AI · YuHua-AIPlay</text>
+  <text x="1270" y="1700" text-anchor="end" font-size="26" fill="#9DBBDA">04 / 06</text>
+</svg>

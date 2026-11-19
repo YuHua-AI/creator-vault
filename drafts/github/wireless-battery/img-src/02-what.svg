@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <rect width="1350" height="1800" fill="#F5F9FD"/>
+  <circle cx="1300" cy="1700" r="240" fill="#E3EEF8" opacity="0.5"/>
+
+  <rect x="80" y="96" width="440" height="56" rx="28" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="1.5"/>
+  <text x="300" y="133" text-anchor="middle" font-size="26" letter-spacing="4" fill="#33547A">WHAT · 它是什么</text>
+
+  <text x="80" y="300" font-size="84" font-weight="700" fill="#14324F">350KB 的小工具，<tspan fill="#0E8FC7">全干完了</tspan></text>
+  <text x="80" y="372" font-size="32" fill="#5E7A99">C++/Win32 直连设备协议，中间不经过任何厂商软件</text>
+
+  <!-- spec stats -->
+  <g>
+    <rect x="80" y="440" width="575" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="368" y="530" text-anchor="middle" font-size="60" font-weight="700" fill="#0E8FC7">350KB</text>
+    <text x="368" y="580" text-anchor="middle" font-size="26" fill="#5E7A99">安装包体积，几秒装完</text>
+    <rect x="695" y="440" width="575" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="982" y="530" text-anchor="middle" font-size="60" font-weight="700" fill="#14324F">约 2MB</text>
+    <text x="982" y="580" text-anchor="middle" font-size="26" fill="#5E7A99">运行内存，可忽略不计</text>
+    <rect x="80" y="650" width="575" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="368" y="740" text-anchor="middle" font-size="60" font-weight="700" fill="#14324F">0</text>
+    <text x="368" y="790" text-anchor="middle" font-size="26" fill="#5E7A99">后台服务 · 无自启残留</text>
+    <rect x="695" y="650" width="575" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <text x="982" y="740" text-anchor="middle" font-size="60" font-weight="700" fill="#0FA97E">免管理员</text>
+    <text x="982" y="790" text-anchor="middle" font-size="26" fill="#5E7A99">普通权限直接运行</text>
+  </g>
+
+  <!-- supported devices -->
+  <text x="80" y="950" font-size="30" font-weight="600" fill="#33547A">支持的设备（部分）</text>
+  <g font-size="30" fill="#33547A">
+    <rect x="80" y="990" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="219" y="1040" text-anchor="middle">罗技</text>
+    <rect x="386" y="990" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="525" y="1040" text-anchor="middle">雷蛇</text>
+    <rect x="692" y="990" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="831" y="1040" text-anchor="middle">赛睿</text>
+    <rect x="998" y="990" width="272" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="1134" y="1040" text-anchor="middle">海盗船</text>
+    <rect x="80" y="1098" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="219" y="1148" text-anchor="middle">HyperX</text>
+    <rect x="386" y="1098" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="525" y="1148" text-anchor="middle">Glorious</text>
+    <rect x="692" y="1098" width="278" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="831" y="1148" text-anchor="middle">PS / Xbox 手柄</text>
+    <rect x="998" y="1098" width="272" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="1134" y="1148" text-anchor="middle">三星 Buds</text>
+    <rect x="80" y="1206" width="576" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="368" y="1256" text-anchor="middle">蓝牙耳机 *</text>
+    <rect x="684" y="1206" width="586" height="80" rx="20" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/><text x="977" y="1256" text-anchor="middle">Jabra / JBL 等耳机</text>
+  </g>
+  <text x="80" y="1330" font-size="26" fill="#9DBBDA">* Windows 认识电量的蓝牙设备都支持；游戏耳机走内置 HeadsetControl 协议库</text>
+
+  <!-- punch -->
+  <rect x="80" y="1390" width="1190" height="170" rx="26" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+  <rect x="80" y="1390" width="10" height="170" rx="5" fill="#0FA97E"/>
+  <text x="140" y="1468" font-size="44" font-weight="700" fill="#14324F">厂商全家桶，可以彻底不装了</text>
+  <text x="140" y="1524" font-size="30" fill="#5E7A99">它直接跟设备的接收器和协议对话，G HUB / Synapse / iCUE 保持关闭也不影响</text>
+
+  <line x1="80" y1="1640" x2="1270" y2="1640" stroke="#D5E4F0" stroke-width="2"/>
+  <text x="80" y="1700" font-size="26" fill="#9DBBDA">屿华AI · YuHua-AIPlay</text>
+  <text x="1270" y="1700" text-anchor="end" font-size="26" fill="#9DBBDA">03 / 06</text>
+</svg>

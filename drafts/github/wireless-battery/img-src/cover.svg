@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="titleG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14324F"/>
+      <stop offset="1" stop-color="#0E8FC7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1350" height="1800" fill="#F5F9FD"/>
+  <circle cx="1290" cy="120" r="260" fill="#E3EEF8" opacity="0.55"/>
+  <circle cx="60" cy="1760" r="200" fill="#E3EEF8" opacity="0.45"/>
+
+  <!-- capsule -->
+  <rect x="80" y="96" width="480" height="56" rx="28" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="1.5"/>
+  <text x="320" y="133" text-anchor="middle" font-size="26" letter-spacing="4" fill="#33547A">GITHUB 实测 · WINDOWS 小工具</text>
+
+  <!-- title -->
+  <text x="80" y="330" font-size="104" font-weight="700" fill="url(#titleG)">无线设备电量</text>
+  <text x="80" y="470" font-size="104" font-weight="700" fill="#14324F">直接看<tspan fill="#0E8FC7">任务栏</tspan></text>
+  <text x="80" y="560" font-size="34" fill="#5E7A99">开源小工具 Wireless Battery · 350KB 常驻托盘 · 瞟一眼全知道</text>
+
+  <!-- taskbar mockup -->
+  <g>
+    <rect x="80" y="640" width="1190" height="150" rx="30" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+    <rect x="80" y="640" width="1190" height="150" rx="30" fill="none" stroke="#0E8FC7" stroke-width="0" />
+    <!-- start -->
+    <g transform="translate(140,715)" fill="#5E7A99">
+      <rect x="-16" y="-16" width="13" height="13" rx="3"/><rect x="3" y="-16" width="13" height="13" rx="3"/>
+      <rect x="-16" y="3" width="13" height="13" rx="3"/><rect x="3" y="3" width="13" height="13" rx="3"/>
+    </g>
+    <line x1="200" y1="668" x2="200" y2="762" stroke="#E3EEF8" stroke-width="2"/>
+    <!-- headphone item -->
+    <g transform="translate(280,715)">
+      <g stroke="#0E8FC7" stroke-width="4.5" fill="none" stroke-linecap="round">
+        <path d="M -26 6 v -4 a 26 26 0 0 1 52 0 v 4"/>
+        <rect x="-30" y="2" width="12" height="22" rx="6" fill="#EAF6FD"/>
+        <rect x="18" y="2" width="12" height="22" rx="6" fill="#EAF6FD"/>
+      </g>
+      <text x="52" y="-6" font-size="34" font-weight="600" fill="#14324F">35%</text>
+      <text x="52" y="30" font-size="22" fill="#5E7A99">耳机</text>
+    </g>
+    <!-- mouse item -->
+    <g transform="translate(510,715)">
+      <g stroke="#0FA97E" stroke-width="4.5" fill="none" stroke-linecap="round">
+        <rect x="-22" y="-30" width="44" height="60" rx="22" fill="#EAF9F4"/>
+        <line x1="0" y1="-16" x2="0" y2="2"/>
+      </g>
+      <text x="40" y="-6" font-size="34" font-weight="600" fill="#14324F">93%</text>
+      <text x="40" y="30" font-size="22" fill="#5E7A99">鼠标</text>
+    </g>
+    <!-- keyboard item -->
+    <g transform="translate(730,715)">
+      <g stroke="#3E7BD6" stroke-width="4.5" fill="none" stroke-linecap="round">
+        <rect x="-44" y="-24" width="88" height="48" rx="10" fill="#EDF4FC"/>
+        <line x1="-30" y1="-8" x2="-22" y2="-8"/><line x1="-8" y1="-8" x2="0" y2="-8"/><line x1="14" y1="-8" x2="22" y2="-8"/>
+        <line x1="-26" y1="8" x2="26" y2="8"/>
+      </g>
+      <text x="62" y="-6" font-size="34" font-weight="600" fill="#14324F">87%</text>
+      <text x="62" y="30" font-size="22" fill="#5E7A99">键盘</text>
+    </g>
+    <!-- gamepad item -->
+    <g transform="translate(960,715)">
+      <g stroke="#8B6FD8" stroke-width="4.5" fill="none" stroke-linecap="round">
+        <path d="M -38 -8 a 14 14 0 0 1 14 -14 h 48 a 14 14 0 0 1 14 14 l 8 22 a 10 10 0 0 1 -18 8 l -12 -12 h -32 l -12 12 a 10 10 0 0 1 -18 -8 z" fill="#F3EFFC"/>
+        <line x1="-20" y1="-15" x2="-20" y2="-5"/><line x1="-25" y1="-10" x2="-15" y2="-10"/>
+        <circle cx="20" cy="-8" r="3.5" fill="#8B6FD8" stroke="none"/><circle cx="28" cy="0" r="3.5" fill="#8B6FD8" stroke="none"/>
+      </g>
+      <text x="66" y="-6" font-size="34" font-weight="600" fill="#14324F">100%</text>
+      <text x="66" y="30" font-size="22" fill="#5E7A99">手柄</text>
+    </g>
+    <!-- clock -->
+    <text x="1220" y="708" text-anchor="end" font-size="26" fill="#33547A">14:32</text>
+    <text x="1220" y="744" text-anchor="end" font-size="20" fill="#9DBBDA">2026/11/19</text>
+  </g>
+  <text x="675" y="850" text-anchor="middle" font-size="26" fill="#9DBBDA">▲ 装完后，你的任务栏（示意）</text>
+
+  <!-- feature row -->
+  <g font-size="30" fill="#33547A" font-weight="500">
+    <rect x="80" y="920" width="370" height="90" rx="22" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/>
+    <circle cx="130" cy="965" r="8" fill="#0E8FC7"/><text x="156" y="976">低电量自动变红</text>
+    <rect x="490" y="920" width="370" height="90" rx="22" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/>
+    <circle cx="540" cy="965" r="8" fill="#0FA97E"/><text x="566" y="976">充电中显示 ⚡</text>
+    <rect x="900" y="920" width="370" height="90" rx="22" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="1.5"/>
+    <circle cx="950" cy="965" r="8" fill="#3E7BD6"/><text x="976" y="976">多显示器都显示</text>
+  </g>
+
+  <!-- badges -->
+  <g>
+    <rect x="80" y="1090" width="420" height="120" rx="26" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="2"/>
+    <text x="290" y="1150" text-anchor="middle" font-size="52" font-weight="700" fill="#0E8FC7">3.4k+</text>
+    <text x="290" y="1192" text-anchor="middle" font-size="24" fill="#5E7A99">GitHub Stars</text>
+    <rect x="465" y="1090" width="420" height="120" rx="26" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="2"/>
+    <text x="675" y="1150" text-anchor="middle" font-size="52" font-weight="700" fill="#14324F">350KB</text>
+    <text x="675" y="1192" text-anchor="middle" font-size="24" fill="#5E7A99">安装包体积 · 免管理员</text>
+    <rect x="850" y="1090" width="420" height="120" rx="26" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="2"/>
+    <text x="1060" y="1150" text-anchor="middle" font-size="52" font-weight="700" fill="#0FA97E">免费开源</text>
+    <text x="1060" y="1192" text-anchor="middle" font-size="24" fill="#5E7A99">Windows 任务栏插件级体验</text>
+  </g>
+
+  <!-- quote -->
+  <rect x="80" y="1300" width="1190" height="150" rx="26" fill="#EAF6FD"/>
+  <text x="675" y="1368" text-anchor="middle" font-size="40" font-weight="600" fill="#14324F">厂商全家桶可以卸了，电量本来就只该占一条任务栏</text>
+  <text x="675" y="1416" text-anchor="middle" font-size="26" fill="#5E7A99">350KB · 约 2MB 内存 · 无后台服务</text>
+
+  <!-- footer -->
+  <line x1="80" y1="1640" x2="1270" y2="1640" stroke="#D5E4F0" stroke-width="2"/>
+  <text x="80" y="1700" font-size="26" fill="#9DBBDA">屿华AI · YuHua-AIPlay</text>
+  <text x="1270" y="1700" text-anchor="end" font-size="26" fill="#9DBBDA">01 / 06</text>
+</svg>

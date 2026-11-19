@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <rect width="1350" height="1800" fill="#F5F9FD"/>
+  <circle cx="70" cy="120" r="220" fill="#E3EEF8" opacity="0.5"/>
+
+  <rect x="80" y="96" width="440" height="56" rx="28" fill="#FFFFFF" stroke="#C9DCEF" stroke-width="1.5"/>
+  <text x="300" y="133" text-anchor="middle" font-size="26" letter-spacing="4" fill="#33547A">实测提醒 · LIMIT</text>
+
+  <text x="80" y="300" font-size="84" font-weight="700" fill="#14324F">一个<tspan fill="#D64545">实测提醒</tspan></text>
+  <text x="80" y="372" font-size="32" fill="#5E7A99">好用是真好用，但它不是万能的——先看你的设备怎么连</text>
+
+  <!-- limitation -->
+  <rect x="80" y="430" width="1190" height="320" rx="30" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+  <rect x="80" y="430" width="10" height="320" rx="5" fill="#D64545"/>
+  <text x="150" y="518" font-size="42" font-weight="700" fill="#14324F">蓝牙耳机读不到？先别怪它</text>
+  <text x="150" y="588" font-size="32" fill="#33547A">实测 Bose QC（蓝牙直连）不显示电量——耳机没有</text>
+  <text x="150" y="646" font-size="32" fill="#33547A">向 Windows 暴露电量服务（GATT Battery）。</text>
+  <text x="150" y="704" font-size="32" fill="#33547A">这种情况下任何 PC 工具都无解，只能手机厂商 App 看。</text>
+
+  <!-- fit / not fit -->
+  <text x="80" y="850" font-size="30" font-weight="600" fill="#33547A">能不能读，取决于设备怎么连</text>
+  <rect x="80" y="890" width="1190" height="600" rx="30" fill="#FFFFFF" stroke="#D5E4F0" stroke-width="2"/>
+  <g font-size="32">
+    <text x="140" y="970" font-size="34" font-weight="600" fill="#0FA97E">✓ 通常能读</text>
+    <text x="160" y="1040" fill="#33547A">· 罗技 / 雷蛇 / 赛睿等 2.4G 接收器设备</text>
+    <text x="160" y="1100" fill="#33547A">· 游戏耳机（走 HeadsetControl 协议库）</text>
+    <text x="160" y="1160" fill="#33547A">· Windows 认识电量的蓝牙设备</text>
+    <text x="160" y="1220" fill="#33547A">· PS / Xbox 无线手柄</text>
+    <text x="140" y="1310" font-size="34" font-weight="600" fill="#D64545">✗ 通常读不到</text>
+    <text x="160" y="1380" fill="#33547A">· 不暴露电量的普通蓝牙耳机（不少降噪款）</text>
+    <text x="160" y="1440" fill="#33547A">· 协议不公开的杂牌 2.4G 外设</text>
+  </g>
+
+  <!-- github -->
+  <rect x="80" y="1530" width="1190" height="110" rx="26" fill="#14324F"/>
+  <text x="675" y="1580" text-anchor="middle" font-size="36" font-weight="600" fill="#FFFFFF">github.com/krisgfx9/Wireless-Device-Battery-Monitor</text>
+  <text x="675" y="1622" text-anchor="middle" font-size="25" fill="#9DBBDA">免费开源 · 你的设备能读吗？评论区报型号，一起攒实测清单</text>
+
+  <line x1="80" y1="1680" x2="1270" y2="1680" stroke="#D5E4F0" stroke-width="2"/>
+  <text x="80" y="1736" font-size="26" fill="#9DBBDA">屿华AI · YuHua-AIPlay</text>
+  <text x="1270" y="1736" text-anchor="end" font-size="26" fill="#9DBBDA">06 / 06</text>
+</svg>
