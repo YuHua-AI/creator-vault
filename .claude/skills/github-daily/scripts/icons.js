@@ -111,6 +111,74 @@ const ICONS = {
       <rect x="-28" y="-20" width="56" height="40" rx="8" fill="#12294D"/>
       <path d="M-14 -6 L-6 2 L-14 10" stroke="#3EE8B0"/>
       <line x1="0" y1="10" x2="14" y2="10" stroke="#3EE8B0"/></g>`,
+  // 漏洞狩猎：放大镜里一只虫子（Claude-BugHunter）
+  bughunt: `<g id="ic-bughunt" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="8" cy="8" r="30" fill="#12294D"/>
+      <line x1="-13" y1="-13" x2="-38" y2="-38" stroke-width="6"/>
+      <ellipse cx="8" cy="8" rx="11" ry="14" stroke="#3EE8B0"/>
+      <path d="M-3 4 H19 M-3 14 H19" stroke="#3EE8B0"/>
+      <line x1="8" y1="-6" x2="8" y2="-13" stroke="#3EE8B0"/>
+      <line x1="-7" y1="-1" x2="-15" y2="-7" stroke="#3EE8B0"/>
+      <line x1="23" y1="-1" x2="31" y2="-7" stroke="#3EE8B0"/></g>`,
+  // 方法论流水线：规格 → 多个子代理 → 验收勾（superpowers）
+  flow: `<g id="ic-flow" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-30" y="-52" width="60" height="22" rx="6" fill="#12294D"/>
+      <line x1="-14" y1="-46" x2="14" y2="-46" stroke="#3EE8B0"/>
+      <line x1="-10" y1="-24" x2="-24" y2="0"/>
+      <line x1="10" y1="-24" x2="24" y2="0"/>
+      <circle cx="-32" cy="12" r="12" fill="#12294D"/>
+      <circle cx="0" cy="22" r="12" fill="#12294D"/>
+      <circle cx="32" cy="12" r="12" fill="#12294D"/>
+      <path d="M-12 50 L0 60 L20 36" stroke="#3EE8B0" stroke-width="5"/></g>`,
+  // 近 30 天检索：日历 + 放大镜（last30days）
+  search30: `<g id="ic-search30" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-48" y="-34" width="56" height="54" rx="8" fill="#12294D"/>
+      <line x1="-48" y1="-16" x2="8" y2="-16"/>
+      <line x1="-32" y1="-44" x2="-32" y2="-28"/>
+      <line x1="-8" y1="-44" x2="-8" y2="-28"/>
+      <circle cx="24" cy="16" r="22" fill="#0A1826"/>
+      <line x1="39" y1="31" x2="54" y2="46" stroke-width="6"/>
+      <circle cx="18" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="24" cy="10" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="30" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/></g>`,
+  // 网页转 Markdown：浏览器窗口 + 漏斗 + 文本行（firecrawl）
+  scraper: `<g id="ic-scraper" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-46" width="92" height="46" rx="7" fill="#12294D"/>
+      <line x1="-46" y1="-32" x2="46" y2="-32"/>
+      <circle cx="-37" cy="-39" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-28" cy="-39" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-30" y1="-20" x2="12" y2="-20"/>
+      <line x1="20" y1="-20" x2="36" y2="-20"/>
+      <path d="M-40 4 H40 L6 28 V42 H-6 V28 Z" fill="#12294D"/>
+      <line x1="18" y1="34" x2="44" y2="34" stroke="#3EE8B0"/>
+      <line x1="18" y1="46" x2="38" y2="46" stroke="#3EE8B0"/></g>`,
+  // 可执行文件移植：左侧程序块 + 虚线迁移 → 右侧双平台方块（AnyPS5）
+  relink: `<g id="ic-relink" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-20" width="34" height="44" rx="8" fill="#12294D"/>
+      <path d="M-47 -6 L-32 2 L-47 10 Z" fill="#3EE8B0" stroke="none"/>
+      <line x1="-14" y1="2" x2="8" y2="2" stroke="#5B8CFF" stroke-dasharray="5 6"/>
+      <path d="M10 -3 L19 2 L10 7 Z" fill="#35D0FF" stroke="none"/>
+      <rect x="22" y="-34" width="34" height="28" rx="6" fill="#12294D"/>
+      <line x1="30" y1="-20" x2="48" y2="-20"/>
+      <rect x="22" y="10" width="34" height="28" rx="6" fill="#12294D" stroke="#3EE8B0"/>
+      <line x1="30" y1="24" x2="48" y2="24" stroke="#3EE8B0"/></g>`,
+  // 全能下载：向下箭头 + 速度线 + 收纳托盘（Ghost-Downloader）
+  getdown: `<g id="ic-getdown" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="-44" y1="-22" x2="-22" y2="-22" stroke="#3EE8B0"/>
+      <line x1="-50" y1="-4" x2="-26" y2="-4" stroke="#3EE8B0"/>
+      <line x1="0" y1="-46" x2="0" y2="12"/>
+      <path d="M-16 -4 L0 12 L16 -4" stroke="#3EE8B0"/>
+      <path d="M-36 24 H36 L26 48 H-26 Z" fill="#12294D"/></g>`,
+  // Agent 原生 CLI：终端窗口 + 提示符 + 光标 + 外连箭头（CLI-Anything）
+  terminal: `<g id="ic-terminal" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-52" y="-36" width="88" height="64" rx="8" fill="#12294D"/>
+      <line x1="-52" y1="-20" x2="36" y2="-20"/>
+      <circle cx="-42" cy="-28" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-33" cy="-28" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <path d="M-36 -6 L-24 4 L-36 14" stroke="#3EE8B0"/>
+      <line x1="-14" y1="14" x2="8" y2="14"/>
+      <rect x="14" y="2" width="12" height="12" fill="#3EE8B0" stroke="none"/>
+      <path d="M40 -22 L50 -32 M50 -32 H42 M50 -32 V-24" stroke="#3EE8B0"/></g>`,
 };
 
 module.exports = { ICONS };

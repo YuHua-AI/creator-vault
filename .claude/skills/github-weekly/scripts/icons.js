@@ -87,6 +87,70 @@ const ICONS = {
       <rect x="24" y="-10" width="14" height="20" rx="4" fill="#12294D"/>
       <line x1="38" y1="-5.5" x2="48" y2="-5.5" stroke="#3EE8B0"/>
       <line x1="38" y1="5.5" x2="48" y2="5.5" stroke="#3EE8B0"/></g>`,
+  // 漏洞狩猎：放大镜里一只虫子（Claude-BugHunter）
+  bughunt: `<g id="ic-bughunt" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="8" cy="8" r="30" fill="#12294D"/>
+      <line x1="-13" y1="-13" x2="-38" y2="-38" stroke-width="6"/>
+      <ellipse cx="8" cy="8" rx="11" ry="14" stroke="#3EE8B0"/>
+      <path d="M-3 4 H19 M-3 14 H19" stroke="#3EE8B0"/>
+      <line x1="8" y1="-6" x2="8" y2="-13" stroke="#3EE8B0"/>
+      <line x1="-7" y1="-1" x2="-15" y2="-7" stroke="#3EE8B0"/>
+      <line x1="23" y1="-1" x2="31" y2="-7" stroke="#3EE8B0"/></g>`,
+  // 方法论流水线：规格 → 多个子代理 → 验收勾（superpowers）
+  flow: `<g id="ic-flow" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-30" y="-52" width="60" height="22" rx="6" fill="#12294D"/>
+      <line x1="-14" y1="-46" x2="14" y2="-46" stroke="#3EE8B0"/>
+      <line x1="-10" y1="-24" x2="-24" y2="0"/>
+      <line x1="10" y1="-24" x2="24" y2="0"/>
+      <circle cx="-32" cy="12" r="12" fill="#12294D"/>
+      <circle cx="0" cy="22" r="12" fill="#12294D"/>
+      <circle cx="32" cy="12" r="12" fill="#12294D"/>
+      <path d="M-12 50 L0 60 L20 36" stroke="#3EE8B0" stroke-width="5"/></g>`,
+  // Office 套件：表格网格 + 高亮单元格（univer）
+  office: `<g id="ic-office" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-38" width="92" height="76" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="-16" x2="46" y2="-16"/>
+      <line x1="-16" y1="-16" x2="-16" y2="38"/>
+      <line x1="16" y1="-16" x2="16" y2="38"/>
+      <line x1="-46" y1="4" x2="46" y2="4"/>
+      <line x1="-46" y1="22" x2="46" y2="22"/>
+      <rect x="-12" y="-10" width="24" height="10" rx="2" fill="#3EE8B0" fill-opacity="0.3" stroke="#3EE8B0"/>
+      <rect x="-42" y="-34" width="16" height="12" rx="2" fill="#3EE8B0" fill-opacity="0.5" stroke="none"/></g>`,
+  // 性能仪表：半圆刻度 + 指针（ECC harness 调优）
+  gauge: `<g id="ic-gauge" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-46 26 A 46 46 0 0 1 46 26" fill="#12294D"/>
+      <path d="M-46 26 A 46 46 0 0 1 -32 -14" stroke="#3EE8B0"/>
+      <line x1="0" y1="26" x2="22" y2="-14" stroke="#3EE8B0" stroke-width="5"/>
+      <circle cx="0" cy="26" r="6" fill="#3EE8B0" stroke="none"/>
+      <line x1="-23" y1="-24" x2="-18" y2="-18"/><line x1="0" y1="-34" x2="0" y2="-26"/><line x1="23" y1="-24" x2="18" y2="-18"/></g>`,
+  // 近 30 天检索：日历 + 放大镜（last30days）
+  search30: `<g id="ic-search30" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-48" y="-34" width="56" height="54" rx="8" fill="#12294D"/>
+      <line x1="-48" y1="-16" x2="8" y2="-16"/>
+      <line x1="-32" y1="-44" x2="-32" y2="-28"/>
+      <line x1="-8" y1="-44" x2="-8" y2="-28"/>
+      <circle cx="24" cy="16" r="22" fill="#0A1826"/>
+      <line x1="39" y1="31" x2="54" y2="46" stroke-width="6"/>
+      <circle cx="18" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="24" cy="10" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="30" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/></g>`,
+  // 交付回路：循环箭头 + 中心方块（LoopForge）
+  loop: `<g id="ic-loop" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-40 -8 A 42 42 0 1 1 -14 38"/>
+      <path d="M-52 -16 L-38 -8 L-46 6" stroke="#3EE8B0"/>
+      <path d="M40 8 A 42 42 0 1 1 14 -38"/>
+      <path d="M52 16 L38 8 L46 -6" stroke="#3EE8B0"/>
+      <rect x="-13" y="-13" width="26" height="26" rx="5" fill="#12294D" stroke="#3EE8B0"/></g>`,
+  // 官方技能集：四宫格 + 一格星芒（anthropics/skills）
+  skillgrid: `<g id="ic-skillgrid" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-46" width="34" height="34" rx="7" fill="#12294D"/>
+      <rect x="8" y="-46" width="34" height="34" rx="7" fill="#12294D"/>
+      <rect x="-46" y="8" width="34" height="34" rx="7" fill="#12294D"/>
+      <rect x="8" y="8" width="34" height="34" rx="7" fill="#12294D" stroke="#3EE8B0"/>
+      <line x1="25" y1="15" x2="25" y2="35" stroke="#3EE8B0"/>
+      <line x1="15" y1="25" x2="35" y2="25" stroke="#3EE8B0"/>
+      <line x1="18" y1="18" x2="32" y2="32" stroke="#3EE8B0"/>
+      <line x1="32" y1="18" x2="18" y2="32" stroke="#3EE8B0"/></g>`,
 };
 
 module.exports = { ICONS };

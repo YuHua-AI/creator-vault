@@ -95,7 +95,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" fon
   <!-- 底部 -->
   <line x1="64" y1="1712" x2="1286" y2="1712" stroke="#1E3A56" stroke-width="2"/>
   <text x="64" y="1768" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
-  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">数据源 OpenGithubs/github-weekly-rank</text>
+  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">数据源 git-homed.org/weekly</text>
 </svg>
 `;
 

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <g id="ic-scraper" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-46" width="92" height="46" rx="7" fill="#12294D"/>
+      <line x1="-46" y1="-32" x2="46" y2="-32"/>
+      <circle cx="-37" cy="-39" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-28" cy="-39" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-30" y1="-20" x2="12" y2="-20"/>
+      <line x1="20" y1="-20" x2="36" y2="-20"/>
+      <path d="M-40 4 H40 L6 28 V42 H-6 V28 Z" fill="#12294D"/>
+      <line x1="18" y1="34" x2="44" y2="34" stroke="#3EE8B0"/>
+      <line x1="18" y1="46" x2="38" y2="46" stroke="#3EE8B0"/></g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
+  <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB DAILY · 开源日榜</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计日期 2026.11.23</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3EE8B0" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#3EE8B0">NO.02</text>
+
+  <!-- 专属图标 -->
+  <use href="#ic-scraper" transform="translate(675 305) scale(1.6)"/>
+
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">firecrawl</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">firecrawl · TypeScript</text>
+
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">把网页变成 Agent 能吃的 Markdown</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 207.3k</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#3EE8B0" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">今日增长 DAILY</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">▲ 915</text>
+
+  <!-- 分隔线 -->
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
+    <text x="110" y="1044" font-size="27" fill="#B8CCDF">网页抓取、爬站、站点地图一条龙</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">抓完直接转成干净的 Markdown</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
+    <text x="110" y="1260" font-size="27" fill="#B8CCDF">本地二进制跑，不要数据库和容器</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">一条命令注册进 Claude Code 等 MCP</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
+    <text x="110" y="1476" font-size="27" fill="#B8CCDF">给 Agent 喂网页资料的开发者</text>
+  <text x="110" y="1522" font-size="27" fill="#B8CCDF">要批量抓站做知识库的团队</text>
+
+  <!-- 标签 -->
+  <rect x="383.4" y="1564" width="135.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="451.1" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">MCP</text><rect x="540.9" y="1564" width="135.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="608.7" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">自托管</text><rect x="698.5" y="1564" width="268.2" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="832.6" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">Markdown</text>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/firecrawl/firecrawl</text>
+</svg>

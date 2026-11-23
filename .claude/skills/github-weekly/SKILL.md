@@ -1,7 +1,7 @@
 ---
 name: github-weekly
 description: 「GitHub 周榜 / 周精选」系列帖图每期生产流程。周榜（涨星排名）：拉周榜数据 → 调研 Top8 → 填 data.json → 生成 9 张卡片图 → 视觉自检 → 推图片消息草稿。做新一期 GitHub 周报帖图时用；审图/推送/发布/归档沿用 image-post skill 的对应阶段。
-argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一周；周精选期不带参数手动开工]
+argument-hint: [--dry-run 只预览解析结果；周精选期不带参数手动开工]
 ---
 
 # GitHub 周榜 / 周精选（每期帖图）
@@ -26,16 +26,16 @@ argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一�
 ### ① 拉数据（周榜期一键自动）
 
 ```
-node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116]   # 缺省取最新一周
+node .claude/skills/github-weekly/scripts/fetch-data.js [--dry-run]   # 抓 git-homed 周榜；--dry-run 只解析预览
 ```
 
-自动完成：`tools/github-weekly-rank` git pull（直连，失败用本地数据继续）→ **与已发布/在稿对比：最新周文件若已有 `published/github/weekly-<week>/` 或 `drafts/github/weekly-<week>/`，输出「无更新」即结束，不往下走** → 否则定位当周 `YYYY/MM/YYYYMMDD.md`，解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
+自动完成：抓 `https://git-homed.org/weekly`（每日重建，直连，失败重试一次）→ 解析页面 `Last updated` 与涨星 Top 10（owner/repo、总星标、周增长、语言、描述）→ **与已发布/在稿对比：期号取数据更新日（UTC），若已有 `published/github/weekly-<期号>/` 或 `drafts/github/weekly-<期号>/`，输出「无更新」即结束，不往下走** → 否则脚手架 `img-src/data.json`（数值、语言、描述已填好，第 9/10 名留作备选）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
 
-**星数一律以周榜文件解析结果为准，不凭印象写。**
+**星数一律以 git-homed 页面解析结果为准，不凭印象写。** 数据口径是截止 `Last updated` 的滚动 7 天窗口（不是自然周），出稿时按该时刻写统计区间。
 
 ### ② 调研 8 个仓库，补齐 data.json 的 TODO
 
-脚手架已把数值字段填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API 或 raw.githubusercontent.com，不走代理，如 `gh api repos/<owner>/<repo>/readme`），提炼：
+脚手架已把数值、语言和描述填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API 或 raw.githubusercontent.com，不走代理，如 `gh api repos/<owner>/<repo>/readme`），提炼：
 
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
@@ -48,7 +48,7 @@ node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116] 
 
 ### ④ 壳文案收尾
 
-脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github/weekly-<周文件日期>/`，归档时整个周目录移入 `published/github/`。
+脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（本周趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的本周亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github/weekly-<数据更新日>/`，归档时整个周目录移入 `published/github/`。
 
 data.json schema（脚手架产物同构，把 TODO 字段替换为实文即可）：
 
@@ -107,4 +107,4 @@ SVG 与 JPG 都落在 draft 的 `img-src/`、`img/`（skill 只持有生成器�
 ## 始终遵守
 
 - 永不在此库存放任何密码、token、密钥；收尾统一 commit
-- 数据以 tools/github-weekly-rank 为准；帖图文案克制，信息进卡片
+- 数据以 git-homed.org/weekly 为准；帖图文案克制，信息进卡片

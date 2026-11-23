@@ -1,7 +1,7 @@
 ---
 name: github-daily
-description: 「GitHub 日榜」系列帖图每期生产流程，GitHub 周榜的姊妹系列。拉 OpenGithubs/github-daily-rank 日榜数据 → 调研 Top8 → 填 data.json → 生成 9 张卡片图 → 视觉自检 → 推图片消息草稿。做新一期 GitHub 日榜帖图时用；审图/推送/发布/归档沿用 image-post skill 的对应阶段。
-argument-hint: [日榜文件日期如 20261116；留空则取数据源最新一天]
+description: 「GitHub 日榜」系列帖图每期生产流程，GitHub 周榜的姊妹系列。抓 git-homed.org/trending 日榜数据 → 调研 Top8 → 填 data.json → 生成 9 张卡片图 → 视觉自检 → 推图片消息草稿。做新一期 GitHub 日榜帖图时用；审图/推送/发布/归档沿用 image-post skill 的对应阶段。
+argument-hint: [--dry-run 只预览解析结果]
 ---
 
 # GitHub 日榜（每期帖图）
@@ -11,7 +11,7 @@ argument-hint: [日榜文件日期如 20261116；留空则取数据源最新一�
 | | 日榜（本 skill） | 周榜（github-weekly） |
 |---|---|---|
 | 内容 | 当日涨星最快 Top 8 排名 | 当周涨星最快 Top 8 排名 |
-| 数据源 | `tools/github-daily-rank`（OpenGithubs/github-daily-rank） | `tools/github-weekly-rank` |
+| 数据源 | `git-homed.org/trending`（每日重建，滚动 24 小时） | `git-homed.org/weekly`（每日重建，滚动 7 天） |
 | 生成器 | 本 skill `scripts/`（今日增长 DAILY / 开源日榜） | 周榜 skill `scripts/`（本周增长 WEEKLY / 开源周榜） |
 | frontmatter | `collection: GitHub 日榜`，标题带「GitHub 日榜｜」前缀 | `collection: GitHub 周榜` |
 | 目录 | `github/daily-<日期>/` | `github/weekly-<周日期>/` |
@@ -23,16 +23,16 @@ argument-hint: [日榜文件日期如 20261116；留空则取数据源最新一�
 ### ① 拉数据（一键自动）
 
 ```
-node .claude/skills/github-daily/scripts/fetch-data.js [日期如 20261116]   # 缺省取最新一天
+node .claude/skills/github-daily/scripts/fetch-data.js [--dry-run]   # 抓 git-homed 日榜；--dry-run 只解析预览
 ```
 
-自动完成：`tools/github-daily-rank` git pull（直连，失败用本地数据继续）→ **与已发布/在稿对比：数据源不是每天更新，最新日文件若已有 `published/github/daily-<day>/` 或 `drafts/github/daily-<day>/`，输出「无更新」即结束，不往下走** → 否则定位当日 `YYYY/MM/YYYYMMDD.md`，解析涨星 Top 8（owner/repo、总星标、日增长，详情段挂 `_research`：描述/建仓时间/上周月增长）→ 脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
+自动完成：抓 `https://git-homed.org/trending`（每日重建，直连，失败重试一次）→ 解析页面 `Last updated` 与涨星 Top 10（owner/repo、总星标、日增长、语言、描述）→ **与已发布/在稿对比：期号取数据更新日（UTC），若已有 `published/github/daily-<期号>/` 或 `drafts/github/daily-<期号>/`，输出「无更新」即结束，不往下走** → 否则脚手架 `img-src/data.json`（数值、语言、描述已填好，第 9/10 名留作备选）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
 
-**星数一律以日榜文件解析结果为准，不凭印象写。** 数据源通常每日更新前一日的榜，脚手架的 `daily-<日期>` 以数据文件日期为准。
+**星数一律以 git-homed 页面解析结果为准，不凭印象写。** 页面通常早上（约 06:48 UTC）重建，08:37 定时跑会拿到前一日那期；期号以页面 `Last updated` 的 UTC 日期为准。
 
 ### ② 调研 8 个仓库，补齐 data.json 的 TODO
 
-脚手架已把数值字段填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API 或 raw.githubusercontent.com，不走代理，如 `gh api repos/<owner>/<repo>/readme`），提炼：
+脚手架已把数值、语言和描述填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API 或 raw.githubusercontent.com，不走代理，如 `gh api repos/<owner>/<repo>/readme`），提炼：
 
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
@@ -45,7 +45,7 @@ node .claude/skills/github-daily/scripts/fetch-data.js [日期如 20261116]   # 
 
 ### ④ 壳文案收尾
 
-脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（今日趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的今日亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github/daily-<日文件日期>/`，归档时整个日目录移入 `published/github/`。
+脚手架已生成 `article.md` 骨架与图序，补上：开场 2~3 行（今日趋势，与 `subtitleHighlight` 呼应）、收尾互动、frontmatter `title` 的今日亮点；确认 `post_title` ≤20 字。目录约定：`drafts/github/daily-<数据更新日>/`，归档时整个日目录移入 `published/github/`。
 
 data.json schema（脚手架产物同构，把 TODO 字段替换为实文即可；`period` 为单个日期）：
 
@@ -109,4 +109,4 @@ agent-autoloop 有「日榜」定时规则（每日早上拉最新日榜数据�
 ## 始终遵守
 
 - 永不在此库存放任何密码、token、密钥；收尾统一 commit
-- 数据以 tools/github-daily-rank 为准；帖图文案克制，信息进卡片
+- 数据以 git-homed.org/trending 为准；帖图文案克制，信息进卡片

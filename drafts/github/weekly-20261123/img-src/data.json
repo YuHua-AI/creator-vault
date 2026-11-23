@@ -1,0 +1,245 @@
+{
+  "week": "20261123",
+  "period": "2026.11.16 – 2026.11.23",
+  "_source": {
+    "url": "https://git-homed.org/weekly",
+    "updatedAt": "2026-11-23 06:48 UTC",
+    "window": "滚动 7 天"
+  },
+  "subtitle": "本周涨星最快的 8 个开源项目",
+  "subtitleHighlight": "8 个里 7 个在讲 Agent 与技能",
+  "cards": [
+    {
+      "file": "01-claude-bughunter",
+      "icon": "bughunt",
+      "no": 1,
+      "owner": "elementalsouls",
+      "repo": "Claude-BugHunter",
+      "lang": "Python",
+      "coverIntro": "把 Claude 调成红队研究员",
+      "coverTags": ["安全", "Skills"],
+      "pitch": "把 Claude 调成红队研究员",
+      "total": "18.3k",
+      "growth": "11,269",
+      "what": [
+        "83 个技能 + 15 个斜杠命令的技能包",
+        "从 681 份已披露漏洞报告里提炼打法"
+      ],
+      "can": [
+        "按漏洞类自动加载检测思路与绕过表",
+        "覆盖 M365、Okta、vCenter 等企业链"
+      ],
+      "who": [
+        "授权范围内的红队与漏洞猎人",
+        "想系统学 Web 安全打法的工程师"
+      ],
+      "tags": ["83 个技能", "Burp MCP", "红队"],
+      "_research": {
+        "desc": "A self-contained Claude skill bundle for bug hunting and external red-team work: 83 skills, 15 slash commands, 681 disclosed-report patterns across 24 core vulnerability classes."
+      }
+    },
+    {
+      "file": "02-superpowers",
+      "icon": "flow",
+      "no": 2,
+      "owner": "obra",
+      "repo": "superpowers",
+      "lang": "Shell",
+      "coverIntro": "让编码 Agent 先想清楚再动手",
+      "coverTags": ["方法论", "Skills"],
+      "pitch": "让 Agent 先想清楚再写码",
+      "total": "324.4k",
+      "growth": "7,956",
+      "what": [
+        "一套可组合的软件开发方法论技能集",
+        "Claude Code 官方插件市场可一键装"
+      ],
+      "can": [
+        "先问清需求，再出规格与实施计划",
+        "拆给子代理照计划干活，自主跑数小时"
+      ],
+      "who": [
+        "想让 Agent 按工程流程写码的团队",
+        "用任意 CLI 的独立开发者"
+      ],
+      "tags": ["开发方法论", "TDD", "子代理"],
+      "_research": {
+        "desc": "A complete software development methodology for coding agents, built on composable skills: brainstorm, spec, plan, TDD and subagent-driven development."
+      }
+    },
+    {
+      "file": "03-univer",
+      "icon": "office",
+      "no": 3,
+      "owner": "dream-num",
+      "repo": "univer",
+      "lang": "TypeScript",
+      "coverIntro": "把 Office 能力嵌进你的产品",
+      "coverTags": ["Office", "SDK"],
+      "pitch": "在你的产品里造一个 Office",
+      "total": "31.3k",
+      "growth": "6,436",
+      "what": [
+        "开源 Office SDK：表格、文档、幻灯片",
+        "可嵌进自家产品，也能接 Agent 流程"
+      ],
+      "can": [
+        "编辑、公式计算、协作、文件处理",
+        "Facade API 与事件连接应用和 Agent"
+      ],
+      "who": [
+        "要自建在线表格与文档的产品团队",
+        "想给 Agent 加办公能力的开发者"
+      ],
+      "tags": ["Office SDK", "TypeScript", "可自托管"],
+      "_research": {
+        "desc": "Univer is an Office SDK for building Office applications inside your own product: spreadsheets, documents, presentations, tables, canvases and PDFs."
+      }
+    },
+    {
+      "file": "04-mattpocock-skills",
+      "icon": "skillfile",
+      "no": 4,
+      "owner": "mattpocock",
+      "repo": "skills",
+      "lang": "Shell",
+      "coverIntro": "真工程师每天在用的技能集",
+      "coverTags": ["Skills", "工程"],
+      "pitch": "小而能改的工程师技能集",
+      "total": "330.7k",
+      "growth": "5,545",
+      "what": [
+        "作者日常在用的一套 Agent 技能",
+        "主打小巧、可改、可组合，任何模型"
+      ],
+      "can": [
+        "Claude Code、Codex、Copilot 都能装",
+        "skills.sh 拷进项目，随手改成自己的"
+      ],
+      "who": [
+        "反感重流程、想保留控制权的工程师",
+        "想把技能改造成团队规范的人"
+      ],
+      "tags": ["工程师技能", "可组合", "多模型"],
+      "_research": {
+        "desc": "My agent skills that I use every day to do real engineering - small, easy to adapt and composable, designed to work with any model."
+      }
+    },
+    {
+      "file": "05-ecc",
+      "icon": "gauge",
+      "no": 5,
+      "owner": "affaan-m",
+      "repo": "ECC",
+      "lang": "JavaScript",
+      "coverIntro": "给 Agent 装一套操作系统",
+      "coverTags": ["Harness", "Claude Code"],
+      "pitch": "给 Agent 装一套操作系统",
+      "total": "309.2k",
+      "growth": "5,444",
+      "what": [
+        "MIT 协议的 Agent harness 增强系统",
+        "72 个 Agent、328 个技能、99 条命令"
+      ],
+      "can": [
+        "钩子、规则、记忆、持续学习齐备",
+        "AgentShield 扫安全，多 harness 适配"
+      ],
+      "who": [
+        "重度使用 Claude Code 的开发者",
+        "想统一团队 Agent 配置的人"
+      ],
+      "tags": ["Agent harness", "MIT", "安全扫描"],
+      "_research": {
+        "desc": "ECC - the agent harness operating system: 72 agents, 328 skills, hooks, rules, memory, continuous learning and AgentShield security scanning."
+      }
+    },
+    {
+      "file": "06-last30days",
+      "icon": "search30",
+      "no": 6,
+      "owner": "mvanhorn",
+      "repo": "last30days-skill",
+      "lang": "Python",
+      "coverIntro": "按真实互动排序的近 30 天情报",
+      "coverTags": ["搜索", "Agent"],
+      "pitch": "搜人，不搜编辑挑过的网页",
+      "total": "73.0k",
+      "growth": "4,731",
+      "what": [
+        "AI Agent 跑的跨平台近 30 天检索",
+        "Reddit、X、YouTube、HN 等并行汇总"
+      ],
+      "can": [
+        "按点赞、观看、真金白银的赔率打分",
+        "多平台并行搜，合成一份情报简报"
+      ],
+      "who": [
+        "做尽调、见人前想摸清近况的人",
+        "追 AI 动态、嫌资讯太慢的人"
+      ],
+      "tags": ["AI 搜索", "多平台", "简报"],
+      "_research": {
+        "desc": "An AI agent-led search engine scored by upvotes, likes, and real money - not editors. Searches Reddit, X, YouTube, HN, Polymarket and more."
+      }
+    },
+    {
+      "file": "07-loopforge",
+      "icon": "loop",
+      "no": 7,
+      "owner": "Tencent",
+      "repo": "LoopForge",
+      "lang": "Go",
+      "coverIntro": "自托管的 Agent 交付编排台",
+      "coverTags": ["腾讯开源", "自托管"],
+      "pitch": "把编码 Agent 编排成流水线",
+      "total": "5.8k",
+      "growth": "4,316",
+      "what": [
+        "腾讯开源的 coding agent 交付平台",
+        "Docker 一键自托管，MIT 协议"
+      ],
+      "can": [
+        "聊天派活，沙箱里执行后自动开 PR",
+        "SOP 固化流程，人工审批门把住"
+      ],
+      "who": [
+        "想让团队 Agent 流程可复用的团队",
+        "需要私有化部署的企业"
+      ],
+      "tags": ["自托管", "Docker", "SOP"],
+      "_research": {
+        "desc": "LoopForge is a self-hosted workspace where your team ships software with coding agents: Docker sandboxes, project roles, SOPs with human gates, PR delivery."
+      }
+    },
+    {
+      "file": "08-anthropics-skills",
+      "icon": "skillgrid",
+      "no": 8,
+      "owner": "anthropics",
+      "repo": "skills",
+      "lang": "Python",
+      "coverIntro": "看官方怎么写 SKILL.md",
+      "coverTags": ["官方", "Skills"],
+      "pitch": "官方 Skills 的参考实现",
+      "total": "199.1k",
+      "growth": "3,864",
+      "what": [
+        "Anthropic 官方的 Skills 示例仓库",
+        "含 docx、pdf、pptx、xlsx 生产能力"
+      ],
+      "can": [
+        "按官方规范学怎么写 SKILL.md",
+        "注册插件市场，按技能组安装"
+      ],
+      "who": [
+        "想学 Skills 写法的开发者",
+        "要用文档处理能力的团队"
+      ],
+      "tags": ["Anthropic 官方", "Skills 规范", "文档处理"],
+      "_research": {
+        "desc": "This repository contains Anthropic's implementation of skills for Claude, including the document skills (docx, pdf, pptx, xlsx) and the Agent Skills spec."
+      }
+    }
+  ]
+}
