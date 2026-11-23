@@ -3,7 +3,7 @@
  * 周榜数据更新自动化：git pull → 找最新周 → 解析 Top8 → 脚手架新期目录
  *
  * 做三件事：
- *   1. tools/github-weekly-rank 执行 git pull（走本机代理 127.0.0.1:7890，失败则用本地已有数据继续）
+ *   1. tools/github-weekly-rank 执行 git pull（git 直连；失败则用本地已有数据继续）
  *   2. 解析当周 YYYYMMDD.md：周期、Top8（owner/repo、总星标、周增长）、前 3 名详情（描述/建仓时间）
  *   3. 若 drafts/github/weekly-<week>/ 不存在 → 生成脚手架：img-src/data.json（数值字段已填，
  *      文案类字段为 TODO，留给调研阶段）+ article.md 壳（图片引用已按序排好）
@@ -25,7 +25,6 @@ console.log('① git pull 数据源 ...');
 try {
   const out = execSync('git pull --ff-only', {
     cwd: REPO, stdio: 'pipe', encoding: 'utf8',
-    env: { ...process.env, https_proxy: 'http://127.0.0.1:7890' },
   }).trim();
   console.log(`  ✓ ${out.split('\n').pop() || '已是最新'}`);
 } catch (e) {
@@ -44,6 +43,18 @@ if (!weeks.length) { console.error('✗ 数据源里没有周文件'); process.e
 weeks.sort();
 const week = wantWeek && weeks.includes(wantWeek) ? wantWeek : weeks[weeks.length - 1];
 if (wantWeek && !weeks.includes(wantWeek)) console.warn(`  ⚠ 没有周文件 ${wantWeek}，改用最新一周 ${week}`);
+
+// ---------- ②' 与已发布/在稿对比：无新的一周就到此为止 ----------
+const draftDir = join(SERIES, 'weekly-' + week);
+const publishedDir = join(VAULT, 'published/github', 'weekly-' + week);
+if (existsSync(draftDir) || existsSync(publishedDir)) {
+  const where = existsSync(publishedDir)
+    ? `已发布（published/github/weekly-${week}/）`
+    : `已在稿（drafts/github/weekly-${week}/，待人工审）`;
+  console.log(`✓ 无更新：数据源最新周文件 ${week} 的这一期${where}，没有新数据可做，本轮结束`);
+  process.exit(0);
+}
+
 const mdPath = join(REPO, week.slice(0, 4), week.slice(4, 6), `${week}.md`);
 const raw = readFileSync(mdPath, 'utf8');
 console.log(`② 解析 ${mdPath.replace(VAULT + '/', '')} ...`);
@@ -69,7 +80,7 @@ for (const block of raw.split('**榜单增长：').slice(1)) {
 }
 
 // ---------- ④ 脚手架 ----------
-const issueDir = join(SERIES, 'weekly-' + week);
+const issueDir = draftDir;
 if (existsSync(issueDir)) {
   console.log(`④ drafts/github/weekly-${week}/ 已存在，跳过脚手架（不覆盖已有稿件）`);
 } else {

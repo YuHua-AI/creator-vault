@@ -29,13 +29,13 @@ argument-hint: [周榜文件日期如 20261116；留空则取数据源最新一�
 node .claude/skills/github-weekly/scripts/fetch-data.js [周日期如 20261116]   # 缺省取最新一周
 ```
 
-自动完成：`tools/github-weekly-rank` git pull（走代理，失败用本地数据继续）→ 定位当周 `YYYY/MM/YYYYMMDD.md` → 解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 若 `drafts/github/weekly-<week>/` 不存在则脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
+自动完成：`tools/github-weekly-rank` git pull（直连，失败用本地数据继续）→ **与已发布/在稿对比：最新周文件若已有 `published/github/weekly-<week>/` 或 `drafts/github/weekly-<week>/`，输出「无更新」即结束，不往下走** → 否则定位当周 `YYYY/MM/YYYYMMDD.md`，解析周期与涨星 Top 8（owner/repo、总星标、周增长，前 3 名描述挂 `_research`）→ 脚手架 `img-src/data.json`（数值已填好）+ `article.md` 壳（图序已排）。已存在的稿件不会覆盖。
 
 **星数一律以周榜文件解析结果为准，不凭印象写。**
 
 ### ② 调研 8 个仓库，补齐 data.json 的 TODO
 
-脚手架已把数值字段填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API，同样走代理，如 `https_proxy=http://127.0.0.1:7890 gh api repos/<owner>/<repo>/readme`），提炼：
+脚手架已把数值字段填好，剩下 TODO 字段靠调研：每仓读 README 与仓库元数据（GitHub API 或 raw.githubusercontent.com，不走代理，如 `gh api repos/<owner>/<repo>/readme`），提炼：
 
 - `pitch`：一句话（绿色霓虹标语）
 - `what` / `can` / `who`（项目速览·核心玩法·适用人群）：各 2 行，每行 ≤40 字
