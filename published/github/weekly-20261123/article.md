@@ -2,7 +2,7 @@
 title: GitHub 周榜｜涨星最快 8 个项目，7 个在讲 Agent 与技能
 post_title: GitHub 周榜｜8 个涨星最快项目
 date: 2026-11-23
-status: draft
+status: published
 tags: [GitHub, 开源周报, AI Agent]
 platform: [公众号]
 collection: GitHub 周榜

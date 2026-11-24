@@ -2,7 +2,7 @@
 title: GitHub 日榜｜涨星最快 8 个项目，移植与下载器也上榜
 post_title: GitHub 日榜｜今日涨星最快项目
 date: 2026-11-23
-status: draft
+status: published
 collection: GitHub 日榜
 tags: [GitHub, 开源日报, AI Agent]
 platform: [公众号]
