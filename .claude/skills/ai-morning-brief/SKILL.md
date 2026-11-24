@@ -44,6 +44,8 @@ HN Algolia：`curl -s "https://hn.algolia.com/api/v1/search?tags=story&numericFi
 
 封面 SVG（深蓝霓虹风：期号 + 日期 + 当天 3 行事件标题）→ `render-img.js` 出 cover.jpg → 用户终审 → `node .claude/skills/write-article/scripts/push-draft.js <文件夹>`（只有封面图，插图阶段自动跳过内文图）。发布人工：勾 AI 生成内容标识。
 
+**推送成功即按 write-article 阶段 7 归档**（与全库「推完即归档、不等发布回报」同口径）：`status: published` → `drafts/ai-morning-brief/<期号>/` 整夹移入 `published/ai-morning-brief/` → git commit「AI 早报 <期号>: 草稿箱就绪归档」。
+
 ### ⑤ 每日记账 & 复盘
 
 发布后把阅读数记进本 skill `references/metrics.md`（日期/标题/阅读/在看/新增关注）。**试运行框架：10 个工作日（2026-11-17 起）**，任一触发即停，回归每周 1~2 篇深拆主线：平均阅读 < GitHub 周榜一半；掉粉明显；关注转化趋零。
