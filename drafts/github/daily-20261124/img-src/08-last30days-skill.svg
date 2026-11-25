@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <g id="ic-search30" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-48" y="-34" width="56" height="54" rx="8" fill="#12294D"/>
+      <line x1="-48" y1="-16" x2="8" y2="-16"/>
+      <line x1="-32" y1="-44" x2="-32" y2="-28"/>
+      <line x1="-8" y1="-44" x2="-8" y2="-28"/>
+      <circle cx="24" cy="16" r="22" fill="#0A1826"/>
+      <line x1="39" y1="31" x2="54" y2="46" stroke-width="6"/>
+      <circle cx="18" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="24" cy="10" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="30" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/></g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="240" cy="1600" rx="480" ry="300" fill="#14405E" opacity="0.28"/>
+  <circle cx="1200" cy="180" r="3" fill="#7FA8D0" opacity="0.45"/>
+  <circle cx="130" cy="760" r="2.5" fill="#7FA8D0" opacity="0.3"/>
+  <circle cx="1240" cy="980" r="2.5" fill="#7FA8D0" opacity="0.35"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB DAILY · 开源日榜</text>
+  <text x="64" y="146" font-size="20" letter-spacing="2" fill="#4E6A85">统计日期 2026.11.24</text>
+  <rect x="1074" y="56" width="212" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.8"/>
+  <text x="1180" y="93" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3" fill="#7FA8D0">NO.08</text>
+
+  <!-- 专属图标 -->
+  <use href="#ic-search30" transform="translate(675 305) scale(1.6)"/>
+
+  <!-- 项目名标题 + 作者·语言小字 -->
+  <text x="675" y="505" text-anchor="middle" font-size="72" font-weight="800" fill="#FFFFFF">last30days-skill</text>
+  <text x="675" y="562" text-anchor="middle" font-size="26" letter-spacing="1" fill="#8FAECB">mvanhorn · Python</text>
+
+  <!-- 一句话介绍 -->
+  <text x="675" y="655" text-anchor="middle" font-size="46" font-weight="700" fill="#3EE8B0" filter="url(#glowGreen)">搜人，不搜编辑挑过的网页</text>
+
+  <!-- 星数 -->
+  <rect x="65" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#29527A" stroke-width="1.5"/>
+  <text x="345" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">总星标 TOTAL</text>
+  <text x="345" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#FFFFFF"><tspan fill="#35D0FF">★</tspan> 73,767</text>
+  <rect x="725" y="706" width="560" height="140" rx="18" fill="#0E2038" fill-opacity="0.9" stroke="#3EE8B0" stroke-opacity="0.55" stroke-width="1.8"/>
+  <text x="1005" y="748" text-anchor="middle" font-size="20" letter-spacing="6" fill="#6B8299">今日增长 DAILY</text>
+  <text x="1005" y="816" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">▲ 797</text>
+
+  <!-- 分隔线 -->
+  <line x1="220" y1="880" x2="1130" y2="880" stroke="#29527A" stroke-width="2"/>
+  <circle cx="675" cy="880" r="6" fill="#0A1826" stroke="#35D0FF" stroke-width="2.5"/>
+
+  <!-- 正文三段 -->
+  <rect x="110" y="952" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="981" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">项目速览</text>
+    <text x="110" y="1044" font-size="27" fill="#B8CCDF">AI Agent 跑的跨平台近 30 天检索</text>
+  <text x="110" y="1090" font-size="27" fill="#B8CCDF">Reddit、X、YouTube、HN 并行汇总</text>
+  <rect x="110" y="1168" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1197" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">核心玩法</text>
+    <text x="110" y="1260" font-size="27" fill="#B8CCDF">按点赞、观看、真金白银赔率打分</text>
+  <text x="110" y="1306" font-size="27" fill="#B8CCDF">同一事件跨平台合并成一份简报</text>
+  <rect x="110" y="1384" width="140" height="42" rx="21" fill="none" stroke="#3EE8B0" stroke-opacity="0.75" stroke-width="1.8"/>
+    <text x="180" y="1413" text-anchor="middle" font-size="24" letter-spacing="4" fill="#3EE8B0">适用人群</text>
+    <text x="110" y="1476" font-size="27" fill="#B8CCDF">做尽调、见人前想摸清近况的人</text>
+  <text x="110" y="1522" font-size="27" fill="#B8CCDF">追 AI 动态嫌资讯滞后的人</text>
+
+  <!-- 标签 -->
+  <rect x="436.4" y="1564" width="188.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="530.7" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">AI 搜索</text><rect x="647.0" y="1564" width="135.6" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="714.8" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">多平台</text><rect x="804.6" y="1564" width="109.0" height="52" rx="26" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+    <text x="859.1" y="1600" text-anchor="middle" font-size="26" fill="#D6E6F5">简报</text>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1664" x2="1286" y2="1664" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1722" font-size="26" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1722" text-anchor="end" font-size="24" fill="#4E6A85">github.com/mvanhorn/last30days-skill</text>
+</svg>

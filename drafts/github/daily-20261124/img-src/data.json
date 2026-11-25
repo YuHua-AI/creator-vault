@@ -1,0 +1,245 @@
+{
+  "day": "20261124",
+  "period": "2026.11.24",
+  "_source": {
+    "url": "https://git-homed.org/trending",
+    "updatedAt": "2026-11-24 10:58 UTC",
+    "window": "滚动 24 小时"
+  },
+  "subtitle": "今日涨星最快的 8 个开源项目",
+  "subtitleHighlight": "安全技能包蝉联榜首，AI 剪辑和炼模型两员新将杀入",
+  "cards": [
+    {
+      "file": "01-claude-bughunter",
+      "icon": "bughunt",
+      "no": 1,
+      "owner": "elementalsouls",
+      "repo": "Claude-BugHunter",
+      "lang": "Python",
+      "coverIntro": "蝉联榜首的漏洞狩猎技能包",
+      "coverTags": ["安全", "Skills"],
+      "pitch": "681 份真实漏洞报告喂出来的猎手",
+      "total": "20,529",
+      "growth": "2,029",
+      "what": [
+        "84 个技能 + 15 个斜杠命令的红队工具箱",
+        "打法从 681 份已披露报告里提炼而来"
+      ],
+      "can": [
+        "按漏洞类自动带出检测思路与绕过表",
+        "M365、Okta、vCenter 等企业链全覆盖"
+      ],
+      "who": [
+        "授权范围内的红队与安全工程师",
+        "想按实战案例学 Web 安全的开发者"
+      ],
+      "tags": ["蝉联榜首", "红队技能", "24 类漏洞"],
+      "_research": {
+        "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes"
+      }
+    },
+    {
+      "file": "02-ghost-downloader-3",
+      "icon": "getdown",
+      "no": 2,
+      "owner": "XiaoYouChR",
+      "repo": "Ghost-Downloader-3",
+      "lang": "Python",
+      "coverIntro": "下载器集大成者日增再破千",
+      "coverTags": ["下载器", "全平台"],
+      "pitch": "一个下载器，装下所有协议",
+      "total": "16,886",
+      "growth": "1,087",
+      "what": [
+        "HTTP、BT、FTP、m3u8、eD2k 全都吃",
+        "YouTube、B 站可挑清晰度和字幕"
+      ],
+      "can": [
+        "浏览器插件跟着视频出下载按钮",
+        "兼容 aria2 RPC，断点续传不丢进度"
+      ],
+      "who": [
+        "受不了装五个下载器的人",
+        "经常批量下视频和镜像源的人"
+      ],
+      "tags": ["全平台", "插件化", "aria2 RPC"],
+      "_research": {
+        "desc": "The only downloader you need. 下载器的集大成者。"
+      }
+    },
+    {
+      "file": "03-skills",
+      "icon": "skillfile",
+      "no": 3,
+      "owner": "mattpocock",
+      "repo": "skills",
+      "lang": "Shell",
+      "coverIntro": "33 万星技能集稳定日增千星",
+      "coverTags": ["Skills", "工程"],
+      "pitch": "小而能改的工程师技能集",
+      "total": "331,772",
+      "growth": "1,000",
+      "what": [
+        "作者日常在用的 Agent 技能直出",
+        "小巧、可改、可组合，不绑模型"
+      ],
+      "can": [
+        "Claude Code、Codex、Copilot 都能装",
+        "一条命令拷进项目，随手改成自己的"
+      ],
+      "who": [
+        "反感重流程、想留控制权的工程师",
+        "想把个人习惯沉淀成团队规范的人"
+      ],
+      "tags": ["工程师技能", "可组合", "多模型"],
+      "_research": {
+        "desc": "Skills for Real Engineers. Straight from my .agents directory."
+      }
+    },
+    {
+      "file": "04-firecrawl",
+      "icon": "scraper",
+      "no": 4,
+      "owner": "firecrawl",
+      "repo": "firecrawl",
+      "lang": "TypeScript",
+      "coverIntro": "Agent 的网页知识基建",
+      "coverTags": ["爬虫", "MCP"],
+      "pitch": "把网页变成 Agent 能吃的 Markdown",
+      "total": "208,361",
+      "growth": "924",
+      "what": [
+        "抓取、爬站、站点地图一条龙",
+        "550+ 数据源统一一个 API 接"
+      ],
+      "can": [
+        "本地二进制就跑，不要数据库容器",
+        "一条命令注册进 Claude Code 等 MCP"
+      ],
+      "who": [
+        "给 Agent 喂网页资料的开发者",
+        "要批量抓站建知识库的团队"
+      ],
+      "tags": ["MCP", "自托管", "550+ 数据源"],
+      "_research": {
+        "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API."
+      }
+    },
+    {
+      "file": "05-autoclip",
+      "icon": "autoclip",
+      "no": 5,
+      "owner": "zhouxiaoka",
+      "repo": "autoclip",
+      "lang": "Python",
+      "coverIntro": "一小时长视频七分钟出片",
+      "coverTags": ["AI 剪辑", "本地"],
+      "pitch": "一个链接，一键出片",
+      "total": "14,971",
+      "growth": "907",
+      "what": [
+        "长视频自动找高光、剪成短视频",
+        "字幕、封面、发布文案一次生成"
+      ],
+      "can": [
+        "本地渲染不上传，LLM 成本几毛钱",
+        "抖音、小红书、TikTok 尺寸一键切"
+      ],
+      "who": [
+        "播客、访谈、游戏主播等创作者",
+        "想批量出切片又重视隐私的人"
+      ],
+      "tags": ["自动剪辑", "本地优先", "多平台"],
+      "_research": {
+        "desc": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing."
+      }
+    },
+    {
+      "file": "06-superpowers",
+      "icon": "flow",
+      "no": 6,
+      "owner": "obra",
+      "repo": "superpowers",
+      "lang": "Shell",
+      "coverIntro": "Agent 工程方法论持续霸榜",
+      "coverTags": ["方法论", "Skills"],
+      "pitch": "让 Agent 先想清楚再写码",
+      "total": "325,508",
+      "growth": "840",
+      "what": [
+        "一套可组合的软件开发方法论技能集",
+        "Claude Code 官方插件市场一键装"
+      ],
+      "can": [
+        "先问清需求，再出规格与实施计划",
+        "拆给子代理照计划干，自主跑数小时"
+      ],
+      "who": [
+        "想让 Agent 按工程流程交付的团队",
+        "用任意 CLI 的独立开发者"
+      ],
+      "tags": ["开发方法论", "TDD", "子代理"],
+      "_research": {
+        "desc": "An agentic skills framework & software development methodology that works."
+      }
+    },
+    {
+      "file": "07-minimind",
+      "icon": "minimind",
+      "no": 7,
+      "owner": "jingyaogong",
+      "repo": "minimind",
+      "lang": "Python",
+      "coverIntro": "单卡 3090 炼出自己的大模型",
+      "coverTags": ["炼模型", "教程"],
+      "pitch": "两小时，从 0 训出你的大模型",
+      "total": "69,868",
+      "growth": "828",
+      "what": [
+        "从 tokenizer 到 RLHF 全链路手写复现",
+        "结构对齐 Qwen3，算法 PyTorch 原生"
+      ],
+      "can": [
+        "mini 数据 2.3 小时约 3 元训出对话模型",
+        "LoRA 能跑 CPU，多卡加速到分钟级"
+      ],
+      "who": [
+        "想搞懂 LLM 底层实现的学习者",
+        "不愿只会调包的算法工程师"
+      ],
+      "tags": ["从 0 训练", "LoRA", "MoE"],
+      "_research": {
+        "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours."
+      }
+    },
+    {
+      "file": "08-last30days-skill",
+      "icon": "search30",
+      "no": 8,
+      "owner": "mvanhorn",
+      "repo": "last30days-skill",
+      "lang": "Python",
+      "coverIntro": "按真实互动排序的情报引擎",
+      "coverTags": ["搜索", "Agent"],
+      "pitch": "搜人，不搜编辑挑过的网页",
+      "total": "73,767",
+      "growth": "797",
+      "what": [
+        "AI Agent 跑的跨平台近 30 天检索",
+        "Reddit、X、YouTube、HN 并行汇总"
+      ],
+      "can": [
+        "按点赞、观看、真金白银赔率打分",
+        "同一事件跨平台合并成一份简报"
+      ],
+      "who": [
+        "做尽调、见人前想摸清近况的人",
+        "追 AI 动态嫌资讯滞后的人"
+      ],
+      "tags": ["AI 搜索", "多平台", "简报"],
+      "_research": {
+        "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary"
+      }
+    }
+  ]
+}

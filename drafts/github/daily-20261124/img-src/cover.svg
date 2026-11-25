@@ -1,0 +1,328 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1800" font-family="'PingFang SC','Hiragino Sans GB',sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="42%" cy="22%" r="90%">
+      <stop offset="0%" stop-color="#16294A"/><stop offset="100%" stop-color="#0A1826"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35D0FF"/><stop offset="1" stop-color="#3EE8B0"/>
+    </linearGradient>
+    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#35D0FF"/>
+    </filter>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3EE8B0"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#132440" stroke-opacity="0.35" stroke-width="1.5"/>
+    </pattern>
+    <g id="ic-superagent" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <ellipse cx="0" cy="16" rx="54" ry="20" stroke="#5B8CFF" stroke-dasharray="5 9" opacity="0.85"/>
+      <circle cx="-54" cy="16" r="5.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="47" cy="-2" r="4.5" fill="#35D0FF" stroke="none"/>
+      <line x1="0" y1="-14" x2="0" y2="-25"/><circle cx="0" cy="-29" r="4.5" fill="#3EE8B0" stroke="none"/>
+      <rect x="-27" y="-14" width="54" height="48" rx="11" fill="#12294D"/>
+      <circle cx="-12" cy="8" r="5" fill="#3EE8B0" stroke="none"/><circle cx="12" cy="8" r="5" fill="#3EE8B0" stroke="none"/>
+      <path d="M-10 26 H10"/></g>
+    <g id="ic-gamestudio" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-40 -12 Q-40 -26 -24 -26 H24 Q40 -26 40 -12 V10 Q40 24 26 22 L14 15 H-14 L-26 22 Q-40 24 -40 10 Z" fill="#12294D"/>
+      <path d="M-22 -6 V8 M-29 1 H-15"/>
+      <path d="M12 -9 L28 0 L12 9 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M32 -20 Q42 -16 40 -6" stroke="#3EE8B0"/></g>
+    <g id="ic-remote" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-32" width="36" height="64" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="22" x2="-30" y2="22"/>
+      <path d="M-14 -14 Q0 0 -14 14"/>
+      <path d="M-6 -24 Q16 0 -6 24" stroke="#3EE8B0"/>
+      <rect x="10" y="-26" width="46" height="34" rx="5" fill="#12294D"/>
+      <line x1="33" y1="8" x2="33" y2="16"/>
+      <line x1="21" y1="16" x2="45" y2="16"/>
+      <path d="M22 -15 L33 -7 L25 -1 Z" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-skillfile" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-30 -40 H12 L34 -18 V40 H-30 Z" fill="#12294D"/>
+      <path d="M12 -40 V-18 H34"/>
+      <path d="M-20 -4 L-14 2 L-2 -10" stroke="#3EE8B0"/>
+      <path d="M-20 16 L-14 22 L-2 10" stroke="#3EE8B0"/>
+      <line x1="-8" y1="32" x2="16" y2="32"/></g>
+    <g id="ic-uiwin" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-32" width="92" height="64" rx="8" fill="#12294D"/>
+      <line x1="-46" y1="-12" x2="46" y2="-12"/>
+      <circle cx="-36" cy="-22" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-27" cy="-22" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-18" cy="-22" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <rect x="-34" y="-2" width="32" height="26" rx="4" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/>
+      <line x1="6" y1="2" x2="34" y2="2"/><line x1="6" y1="14" x2="26" y2="14"/><line x1="6" y1="26" x2="34" y2="26"/></g>
+    <g id="ic-craft" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-50" y="-30" width="80" height="58" rx="8" fill="#12294D"/>
+      <line x1="-50" y1="-12" x2="30" y2="-12"/>
+      <circle cx="-40" cy="-21" r="2.5" fill="#35D0FF" stroke="none"/><circle cx="-31" cy="-21" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-38" y1="4" x2="6" y2="4"/>
+      <circle cx="-20" cy="16" r="4" fill="#3EE8B0" stroke="none"/>
+      <line x1="14" y1="34" x2="42" y2="6" stroke-width="5"/>
+      <line x1="31" y1="-5" x2="55" y2="19" stroke-width="10"/></g>
+    <g id="ic-isoplay" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0 -36 L32 -18 L32 18 L0 36 L-32 18 L-32 -18 Z" fill="#12294D"/>
+      <path d="M0 -36 L0 0 L32 18 M0 0 L-32 18"/>
+      <path d="M-26 -6 L-12 2 L-26 10 Z" fill="#3EE8B0" stroke="none"/>
+      <path d="M36 -34 Q46 -22 40 -8" stroke="#3EE8B0"/></g>
+    <g id="ic-boltphone" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-40" y="-26" width="44" height="72" rx="9" stroke="#5B8CFF" stroke-dasharray="5 7" opacity="0.75"/>
+      <rect x="-18" y="-36" width="44" height="72" rx="9" fill="#12294D"/>
+      <line x1="-6" y1="24" x2="14" y2="24"/>
+      <path d="M10 -20 L-2 2 L4 2 L0 20 L12 -2 L6 -2 Z" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-astryx" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-38" y="-46" width="64" height="40" rx="7" stroke="#5B8CFF" stroke-dasharray="5 7" opacity="0.7"/>
+      <rect x="-30" y="-30" width="64" height="40" rx="7" stroke="#5B8CFF" stroke-dasharray="5 7" opacity="0.85"/>
+      <rect x="-22" y="-14" width="64" height="44" rx="7" fill="#12294D"/>
+      <rect x="-12" y="-4" width="26" height="10" rx="5" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/>
+      <line x1="18" y1="1" x2="32" y2="1"/>
+      <circle cx="-12" cy="20" r="5" fill="#3EE8B0" stroke="none"/><circle cx="4" cy="20" r="5" fill="#35D0FF" stroke="none"/><circle cx="20" cy="20" r="5" fill="#35D0FF" stroke="none"/></g>
+    <g id="ic-lichii" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-24" width="112" height="48" rx="22" fill="#12294D"/>
+      <circle cx="-34" cy="0" r="13"/>
+      <circle cx="-34" cy="0" r="4" fill="#3EE8B0" stroke="none"/>
+      <circle cx="34" cy="0" r="13" fill="#3EE8B0" fill-opacity="0.2" stroke="#3EE8B0"/>
+      <circle cx="34" cy="0" r="4" fill="#3EE8B0" stroke="none"/>
+      <line x1="-6" y1="-12" x2="6" y2="-12"/><line x1="-10" y1="-2" x2="2" y2="-2"/>
+      <line x1="-4" y1="14" x2="4" y2="14"/></g>
+    <g id="ic-hghub" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="-22" cy="0" r="30" fill="#12294D"/>
+      <path d="M-31 -12 L3 0 L-31 12 Z" fill="#3EE8B0" stroke="none"/>
+      <line x1="8" y1="0" x2="24" y2="0"/>
+      <rect x="24" y="-10" width="14" height="20" rx="4" fill="#12294D"/>
+      <line x1="38" y1="-5.5" x2="48" y2="-5.5" stroke="#3EE8B0"/>
+      <line x1="38" y1="5.5" x2="48" y2="5.5" stroke="#3EE8B0"/></g>
+    <g id="ic-iosflags" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-36" y="-58" width="72" height="116" rx="16" fill="#12294D"/>
+      <line x1="-10" y1="-44" x2="10" y2="-44"/>
+      <line x1="-20" y1="-18" x2="20" y2="-18"/>
+      <circle cx="8" cy="-18" r="6" fill="#3EE8B0" stroke="none"/>
+      <line x1="-20" y1="8" x2="20" y2="8"/>
+      <circle cx="-6" cy="8" r="6" fill="#35D0FF" stroke="none"/>
+      <line x1="-20" y1="34" x2="20" y2="34"/>
+      <circle cx="14" cy="34" r="6" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-tunnel" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-52 32 V-6 Q-52 -42 -16 -42 H16 Q52 -42 52 -6 V32" fill="#12294D"/>
+      <path d="M-34 32 V-4 Q-34 -24 -16 -24 H16 Q34 -24 34 -4 V32" stroke="#5B8CFF" stroke-dasharray="5 7" opacity="0.85"/>
+      <line x1="-46" y1="14" x2="-16" y2="14"/><line x1="16" y1="14" x2="46" y2="14"/>
+      <path d="M-8 6 L4 14 L-8 22" stroke="#3EE8B0" stroke-width="4"/></g>
+    <g id="ic-loopbot" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="0" cy="0" r="50" stroke="#5B8CFF" stroke-dasharray="8 10" opacity="0.9"/>
+      <path d="M38 -36 L50 -30 L36 -18" stroke="#3EE8B0"/>
+      <path d="M-38 36 L-50 30 L-36 18" stroke="#3EE8B0"/>
+      <rect x="-28" y="-20" width="56" height="40" rx="8" fill="#12294D"/>
+      <path d="M-14 -6 L-6 2 L-14 10" stroke="#3EE8B0"/>
+      <line x1="0" y1="10" x2="14" y2="10" stroke="#3EE8B0"/></g>
+    <g id="ic-bughunt" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="8" cy="8" r="30" fill="#12294D"/>
+      <line x1="-13" y1="-13" x2="-38" y2="-38" stroke-width="6"/>
+      <ellipse cx="8" cy="8" rx="11" ry="14" stroke="#3EE8B0"/>
+      <path d="M-3 4 H19 M-3 14 H19" stroke="#3EE8B0"/>
+      <line x1="8" y1="-6" x2="8" y2="-13" stroke="#3EE8B0"/>
+      <line x1="-7" y1="-1" x2="-15" y2="-7" stroke="#3EE8B0"/>
+      <line x1="23" y1="-1" x2="31" y2="-7" stroke="#3EE8B0"/></g>
+    <g id="ic-flow" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-30" y="-52" width="60" height="22" rx="6" fill="#12294D"/>
+      <line x1="-14" y1="-46" x2="14" y2="-46" stroke="#3EE8B0"/>
+      <line x1="-10" y1="-24" x2="-24" y2="0"/>
+      <line x1="10" y1="-24" x2="24" y2="0"/>
+      <circle cx="-32" cy="12" r="12" fill="#12294D"/>
+      <circle cx="0" cy="22" r="12" fill="#12294D"/>
+      <circle cx="32" cy="12" r="12" fill="#12294D"/>
+      <path d="M-12 50 L0 60 L20 36" stroke="#3EE8B0" stroke-width="5"/></g>
+    <g id="ic-search30" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-48" y="-34" width="56" height="54" rx="8" fill="#12294D"/>
+      <line x1="-48" y1="-16" x2="8" y2="-16"/>
+      <line x1="-32" y1="-44" x2="-32" y2="-28"/>
+      <line x1="-8" y1="-44" x2="-8" y2="-28"/>
+      <circle cx="24" cy="16" r="22" fill="#0A1826"/>
+      <line x1="39" y1="31" x2="54" y2="46" stroke-width="6"/>
+      <circle cx="18" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="24" cy="10" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="30" cy="16" r="2.5" fill="#3EE8B0" stroke="none"/></g>
+    <g id="ic-scraper" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-46" y="-46" width="92" height="46" rx="7" fill="#12294D"/>
+      <line x1="-46" y1="-32" x2="46" y2="-32"/>
+      <circle cx="-37" cy="-39" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-28" cy="-39" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <line x1="-30" y1="-20" x2="12" y2="-20"/>
+      <line x1="20" y1="-20" x2="36" y2="-20"/>
+      <path d="M-40 4 H40 L6 28 V42 H-6 V28 Z" fill="#12294D"/>
+      <line x1="18" y1="34" x2="44" y2="34" stroke="#3EE8B0"/>
+      <line x1="18" y1="46" x2="38" y2="46" stroke="#3EE8B0"/></g>
+    <g id="ic-relink" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-56" y="-20" width="34" height="44" rx="8" fill="#12294D"/>
+      <path d="M-47 -6 L-32 2 L-47 10 Z" fill="#3EE8B0" stroke="none"/>
+      <line x1="-14" y1="2" x2="8" y2="2" stroke="#5B8CFF" stroke-dasharray="5 6"/>
+      <path d="M10 -3 L19 2 L10 7 Z" fill="#35D0FF" stroke="none"/>
+      <rect x="22" y="-34" width="34" height="28" rx="6" fill="#12294D"/>
+      <line x1="30" y1="-20" x2="48" y2="-20"/>
+      <rect x="22" y="10" width="34" height="28" rx="6" fill="#12294D" stroke="#3EE8B0"/>
+      <line x1="30" y1="24" x2="48" y2="24" stroke="#3EE8B0"/></g>
+    <g id="ic-getdown" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="-44" y1="-22" x2="-22" y2="-22" stroke="#3EE8B0"/>
+      <line x1="-50" y1="-4" x2="-26" y2="-4" stroke="#3EE8B0"/>
+      <line x1="0" y1="-46" x2="0" y2="12"/>
+      <path d="M-16 -4 L0 12 L16 -4" stroke="#3EE8B0"/>
+      <path d="M-36 24 H36 L26 48 H-26 Z" fill="#12294D"/></g>
+    <g id="ic-terminal" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="-52" y="-36" width="88" height="64" rx="8" fill="#12294D"/>
+      <line x1="-52" y1="-20" x2="36" y2="-20"/>
+      <circle cx="-42" cy="-28" r="2.5" fill="#35D0FF" stroke="none"/>
+      <circle cx="-33" cy="-28" r="2.5" fill="#3EE8B0" stroke="none"/>
+      <path d="M-36 -6 L-24 4 L-36 14" stroke="#3EE8B0"/>
+      <line x1="-14" y1="14" x2="8" y2="14"/>
+      <rect x="14" y="2" width="12" height="12" fill="#3EE8B0" stroke="none"/>
+      <path d="M40 -22 L50 -32 M50 -32 H42 M50 -32 V-24" stroke="#3EE8B0"/></g>
+    <g id="ic-autoclip" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-30 -40 L6 14" />
+      <path d="M30 -40 L-6 14" />
+      <circle cx="0" cy="5" r="4" fill="#3EE8B0" stroke="none"/>
+      <path d="M-4 12 L-11 26"/>
+      <path d="M4 12 L11 26"/>
+      <circle cx="-16" cy="34" r="10"/>
+      <circle cx="16" cy="34" r="10"/>
+      <path d="M-8 -30 L10 -21 L-8 -12 Z" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/></g>
+    <g id="ic-minimind" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-10 -44 H10 V-14 L28 28 Q31 40 20 40 H-20 Q-31 40 -28 28 L-10 -14 Z" fill="#12294D"/>
+      <line x1="-2" y1="-52" x2="2" y2="-52"/>
+      <path d="M-16 14 H16 L21 28 Q23 35 16 35 H-16 Q-23 35 -21 28 Z" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/>
+      <circle cx="-6" cy="8" r="3.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="8" cy="4" r="3" fill="#3EE8B0" stroke="none"/>
+      <path d="M34 -14 L38 -24 L42 -14 L38 -4 Z" fill="#3EE8B0" stroke="none"/>
+      <circle cx="46" cy="-2" r="3" fill="#35D0FF" stroke="none"/></g>
+  </defs>
+
+  <rect width="1350" height="1800" fill="url(#bgGlow)"/>
+  <rect width="1350" height="1800" fill="url(#grid)"/>
+  <ellipse cx="1100" cy="240" rx="420" ry="260" fill="#14405E" opacity="0.25"/>
+
+  <!-- 顶部胶囊 -->
+  <rect x="64" y="56" width="470" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="299" y="92" text-anchor="middle" font-size="26" letter-spacing="5" fill="#D6E6F5">GITHUB DAILY · 开源日榜</text>
+  <rect x="790" y="56" width="496" height="54" rx="27" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.5"/>
+  <text x="1038" y="92" text-anchor="middle" font-size="24" letter-spacing="2" fill="#D6E6F5">统计日期 2026.11.24</text>
+
+  <!-- 标题 -->
+  <circle cx="1120" cy="196" r="5" fill="#3EE8B0" filter="url(#glowGreen)"/>
+  <circle cx="1190" cy="252" r="3.5" fill="#35D0FF" opacity="0.8"/>
+  <circle cx="1060" cy="286" r="3" fill="#7FA8D0" opacity="0.6"/>
+  <text x="675" y="268" text-anchor="middle" font-size="118" font-weight="800" letter-spacing="6" fill="url(#titleGrad)" filter="url(#glowCyan)">GitHub 日榜</text>
+  <text x="675" y="344" text-anchor="middle" font-size="36" fill="#D6E6F5">今日涨星最快的 8 个开源项目 · <tspan fill="#3EE8B0" font-weight="700">安全技能包蝉联榜首，AI 剪辑和炼模型两员新将杀入</tspan></text>
+
+  <!-- 8 行榜单 -->
+  <g>
+    <rect x="50" y="412" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="426" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="506" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">01</text>
+    <line x1="178" y1="438" x2="178" y2="528" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-bughunt" transform="translate(248 483) scale(0.7)"/>
+    <text x="316" y="474" font-size="34" font-weight="700" fill="#FFFFFF">Claude-BugHunter</text>
+    <text x="316" y="510" font-size="22" fill="#8FAECB">蝉联榜首的漏洞狩猎技能包</text>
+    <rect x="316" y="520" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="346.7" y="539" text-anchor="middle" font-size="16" fill="#9FBFDA">安全</text><rect x="389.36" y="520" width="124.1" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="451.4" y="539" text-anchor="middle" font-size="16" fill="#9FBFDA">Skills</text>
+    <text x="1226" y="494" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲2,029</text>
+    <text x="1226" y="526" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="570" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="584" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="664" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">02</text>
+    <line x1="178" y1="596" x2="178" y2="686" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-getdown" transform="translate(248 641) scale(0.7)"/>
+    <text x="316" y="632" font-size="34" font-weight="700" fill="#FFFFFF">Ghost-Downloader-3</text>
+    <text x="316" y="668" font-size="22" fill="#8FAECB">下载器集大成者日增再破千</text>
+    <rect x="316" y="678" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="354.5" y="697" text-anchor="middle" font-size="16" fill="#9FBFDA">下载器</text><rect x="405.03999999999996" y="678" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="443.6" y="697" text-anchor="middle" font-size="16" fill="#9FBFDA">全平台</text>
+    <text x="1226" y="652" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲1,087</text>
+    <text x="1226" y="684" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="728" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    <rect x="50" y="742" width="5" height="114" rx="2.5" fill="#3EE8B0" opacity="0.85"/>
+    <text x="118" y="822" text-anchor="middle" font-size="56" font-weight="800" fill="#3EE8B0" filter="url(#glowGreen)">03</text>
+    <line x1="178" y1="754" x2="178" y2="844" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-skillfile" transform="translate(248 799) scale(0.7)"/>
+    <text x="316" y="790" font-size="34" font-weight="700" fill="#FFFFFF">skills</text>
+    <text x="316" y="826" font-size="22" fill="#8FAECB">33 万星技能集稳定日增千星</text>
+    <rect x="316" y="836" width="124.1" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="378.0" y="855" text-anchor="middle" font-size="16" fill="#9FBFDA">Skills</text><rect x="452.08" y="836" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="482.8" y="855" text-anchor="middle" font-size="16" fill="#9FBFDA">工程</text>
+    <text x="1226" y="810" text-anchor="end" font-size="34" font-weight="800" fill="#3EE8B0">▲1,000</text>
+    <text x="1226" y="842" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="886" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="980" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">04</text>
+    <line x1="178" y1="912" x2="178" y2="1002" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-scraper" transform="translate(248 957) scale(0.7)"/>
+    <text x="316" y="948" font-size="34" font-weight="700" fill="#FFFFFF">firecrawl</text>
+    <text x="316" y="984" font-size="22" fill="#8FAECB">Agent 的网页知识基建</text>
+    <rect x="316" y="994" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="346.7" y="1013" text-anchor="middle" font-size="16" fill="#9FBFDA">爬虫</text><rect x="389.36" y="994" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="427.9" y="1013" text-anchor="middle" font-size="16" fill="#9FBFDA">MCP</text>
+    <text x="1226" y="968" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲924</text>
+    <text x="1226" y="1000" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1044" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1138" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">05</text>
+    <line x1="178" y1="1070" x2="178" y2="1160" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-autoclip" transform="translate(248 1115) scale(0.7)"/>
+    <text x="316" y="1106" font-size="34" font-weight="700" fill="#FFFFFF">autoclip</text>
+    <text x="316" y="1142" font-size="22" fill="#8FAECB">一小时长视频七分钟出片</text>
+    <rect x="316" y="1152" width="108.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="370.2" y="1171" text-anchor="middle" font-size="16" fill="#9FBFDA">AI 剪辑</text><rect x="436.4" y="1152" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="467.1" y="1171" text-anchor="middle" font-size="16" fill="#9FBFDA">本地</text>
+    <text x="1226" y="1126" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲907</text>
+    <text x="1226" y="1158" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1202" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1296" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">06</text>
+    <line x1="178" y1="1228" x2="178" y2="1318" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-flow" transform="translate(248 1273) scale(0.7)"/>
+    <text x="316" y="1264" font-size="34" font-weight="700" fill="#FFFFFF">superpowers</text>
+    <text x="316" y="1300" font-size="22" fill="#8FAECB">Agent 工程方法论持续霸榜</text>
+    <rect x="316" y="1310" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="354.5" y="1329" text-anchor="middle" font-size="16" fill="#9FBFDA">方法论</text><rect x="405.03999999999996" y="1310" width="124.1" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="467.1" y="1329" text-anchor="middle" font-size="16" fill="#9FBFDA">Skills</text>
+    <text x="1226" y="1284" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲840</text>
+    <text x="1226" y="1316" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1360" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1454" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">07</text>
+    <line x1="178" y1="1386" x2="178" y2="1476" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-minimind" transform="translate(248 1431) scale(0.7)"/>
+    <text x="316" y="1422" font-size="34" font-weight="700" fill="#FFFFFF">minimind</text>
+    <text x="316" y="1458" font-size="22" fill="#8FAECB">单卡 3090 炼出自己的大模型</text>
+    <rect x="316" y="1468" width="77.0" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="354.5" y="1487" text-anchor="middle" font-size="16" fill="#9FBFDA">炼模型</text><rect x="405.03999999999996" y="1468" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="435.7" y="1487" text-anchor="middle" font-size="16" fill="#9FBFDA">教程</text>
+    <text x="1226" y="1442" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲828</text>
+    <text x="1226" y="1474" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+  <g>
+    <rect x="50" y="1518" width="1250" height="142" rx="16" fill="#0D2036" fill-opacity="0.92" stroke="#29527A" stroke-width="1.5"/>
+    
+    <text x="118" y="1612" text-anchor="middle" font-size="56" font-weight="800" fill="#7FA8D0">08</text>
+    <line x1="178" y1="1544" x2="178" y2="1634" stroke="#1E3A56" stroke-width="2"/>
+    <use href="#ic-search30" transform="translate(248 1589) scale(0.7)"/>
+    <text x="316" y="1580" font-size="34" font-weight="700" fill="#FFFFFF">last30days-skill</text>
+    <text x="316" y="1616" font-size="22" fill="#8FAECB">按真实互动排序的情报引擎</text>
+    <rect x="316" y="1626" width="61.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="346.7" y="1645" text-anchor="middle" font-size="16" fill="#9FBFDA">搜索</text><rect x="389.36" y="1626" width="108.4" height="27" rx="13.5" fill="#0E2A4A" stroke="#3E6E9E" stroke-width="1.2"/>
+      <text x="443.6" y="1645" text-anchor="middle" font-size="16" fill="#9FBFDA">Agent</text>
+    <text x="1226" y="1600" text-anchor="end" font-size="34" font-weight="800" fill="#35D0FF">▲797</text>
+    <text x="1226" y="1632" text-anchor="end" font-size="15" letter-spacing="2" fill="#6B8299">日涨星</text>
+  </g>
+
+  <!-- 底部 -->
+  <line x1="64" y1="1712" x2="1286" y2="1712" stroke="#1E3A56" stroke-width="2"/>
+  <text x="64" y="1768" font-size="24" letter-spacing="3" fill="#8FAECB">屿华AI · YuHua-AIPlay</text>
+  <text x="1286" y="1768" text-anchor="end" font-size="20" fill="#4E6A85">数据源 git-homed.org/trending</text>
+</svg>

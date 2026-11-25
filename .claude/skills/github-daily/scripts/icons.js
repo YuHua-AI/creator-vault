@@ -179,6 +179,25 @@ const ICONS = {
       <line x1="-14" y1="14" x2="8" y2="14"/>
       <rect x="14" y="2" width="12" height="12" fill="#3EE8B0" stroke="none"/>
       <path d="M40 -22 L50 -32 M50 -32 H42 M50 -32 V-24" stroke="#3EE8B0"/></g>`,
+  // 自动出片：剪刀双刃剪出播放键（AutoClip 剪高光片段）
+  autoclip: `<g id="ic-autoclip" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-30 -40 L6 14" />
+      <path d="M30 -40 L-6 14" />
+      <circle cx="0" cy="5" r="4" fill="#3EE8B0" stroke="none"/>
+      <path d="M-4 12 L-11 26"/>
+      <path d="M4 12 L11 26"/>
+      <circle cx="-16" cy="34" r="10"/>
+      <circle cx="16" cy="34" r="10"/>
+      <path d="M-8 -30 L10 -21 L-8 -12 Z" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/></g>`,
+  // 炼小模型：锥形瓶 + 绿液 + 智能火花（MiniMind 从 0 炼模型）
+  minimind: `<g id="ic-minimind" fill="none" stroke="#35D0FF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-10 -44 H10 V-14 L28 28 Q31 40 20 40 H-20 Q-31 40 -28 28 L-10 -14 Z" fill="#12294D"/>
+      <line x1="-2" y1="-52" x2="2" y2="-52"/>
+      <path d="M-16 14 H16 L21 28 Q23 35 16 35 H-16 Q-23 35 -21 28 Z" fill="#3EE8B0" fill-opacity="0.25" stroke="#3EE8B0"/>
+      <circle cx="-6" cy="8" r="3.5" fill="#3EE8B0" stroke="none"/>
+      <circle cx="8" cy="4" r="3" fill="#3EE8B0" stroke="none"/>
+      <path d="M34 -14 L38 -24 L42 -14 L38 -4 Z" fill="#3EE8B0" stroke="none"/>
+      <circle cx="46" cy="-2" r="3" fill="#35D0FF" stroke="none"/></g>`,
 };
 
 module.exports = { ICONS };
